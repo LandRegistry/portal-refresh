@@ -208,7 +208,7 @@
       <form id="search" style="">
 
     <div class="govuk-grid-column-one-quarter">
-                <details class="govuk-details" data-module="govuk-details" style="margin-top: 50px;">
+                <details class="govuk-details" data-module="govuk-details" style="margin-top: 40px;">
                 <summary class="govuk-details__summary">
 
                   <a class="details" style="font-size: 16px; float: left; ">Filter by application type</a>
@@ -247,7 +247,7 @@
 
 
 
-              <div class="govuk-grid-column-one-quarter" style="margin-top: 50px;">
+              <div class="govuk-grid-column-one-quarter" style="margin-top: 40px;">
 
                 <details class="govuk-details" data-module="govuk-details">
                 <summary class="govuk-details__summary">
@@ -272,12 +272,6 @@
                   text: "Received"   ,
                   checked: false,
                   id: "Received"
-                  },
-                  {
-                  value: "In progress",
-                  text: "In progress"   ,
-                    checked: false,
-                  id: "In progress"
                   },
                   {
                   value: "Cancelled",
@@ -305,7 +299,7 @@
 
 
             <div class="govuk-grid-column-one-half">
-            <h2 class="govuk-body govuk-!-font-size-16" style="font-weight: normal; padding-left: 25px; margin-top: 0px; margin-bottom: 0px;"> Search by Customer reference,<br> Title number or HMLR reference</h2>
+            <h2 class="govuk-body govuk-!-font-size-16" style="font-weight: normal; padding-left: 25px; margin-top: -40px; margin-bottom: 0px;"> Search by Customer reference,<br> Title number or HMLR reference</h2>
             <input type="text" id="search-input" style="width: 300px; margin-left: 25px; margin-top: 10px;; height: 35px; font-size: 14px; border-color: black; border-width: 1px; border-radius: 2px;"><button style="float: right;" id="search-button"> Search </button>
             <a href="#" id="reset" class="govuk-link govuk-link--no-visited-state" style="float: right; font-size: 14px; margin-top: 0px; margin-left: 200px;"><br> Reset search and filters</a>
             </div>
@@ -324,7 +318,7 @@
 
 <div class="govuk-grid-column-three-quarters" style="float: right;">
   <tr class="govuk-table__row"><p style="font-size: 14px; float: right; text-align: right; margin-top: -25px;">
-      Estimated completion dates are calculated using average completion times. <br> Dates may change depending on current wait times and the status of an application. </p> </th>
+      Estimated completion dates are calculated using average completion times. <br> Dates may change depending on current wait times and the status of an application.* </p> </th>
   </tr>
 
 
@@ -339,7 +333,7 @@
           <th class="govuk-table__header govuk-!-width-one-sixth " scope="col">Application type</th>
           <th class="govuk-table__header govuk-!-width-one-sixth sortable" style="cursor: pointer;" scope="col">Received by HMLR </th>
           <th class="govuk-table__header govuk-!-width-one-sixth  " scope="col" style="width: 20%;">Application progress</th>
-          <th class="govuk-table__header govuk-!-width-one-sixth sortable" style="cursor: pointer;" scope="col">Estimated completion </th>
+          <th class="govuk-table__header govuk-!-width-one-sixth sortable" style="cursor: pointer;" scope="col">Estimated completion* </th>
           <th class="govuk-table__header govuk-!-width-one-twelfth" style="cursor: pointer; width: 6%;" scope="col"><a style="font-weight: bold; font-size: 14px;" class="expandyAll">View details</a></th>
           </tr>
 
@@ -353,9 +347,9 @@
             <td class="govuk-table__cell "></td>
             <td class="govuk-table__cell " scope="row">LP92831 <p class="govuk-visually-hidden"> L012YTW </p><!-- THIS IS PAGE {{page}} --></td>
             <td class="govuk-table__cell ">Brown/231/ATK</td>
-            <td class="govuk-table__cell Substantive" id="">Register Update<p class="govuk-visually-hidden"> Substantive Delayed </p></td>
+            <td class="govuk-table__cell Substantive" id="">Register Update<p class="govuk-visually-hidden"> Substantive Received </p></td>
             <td class="govuk-table__cell " scope="row" data-sortable="2019-05-29">29/05/19</td>
-            <td class="govuk-table__cell " scope="row">In progress</td>
+            <td class="govuk-table__cell " scope="row">Received</td>
             <td class="govuk-table__cell " style="padding-left: 10px;"  data-sortable="2019-07-">28/07/19</td>
             <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
           </tr>
@@ -399,9 +393,9 @@
               <td class="govuk-table__cell "></td>
               <td class="govuk-table__cell" scope="row">LP92136 <p class="govuk-visually-hidden"> M821KLA </p> </td>
               <td class="govuk-table__cell">Hawkins/424/ATK</td>
-              <td class="govuk-table__cell Substantive">New Lease <p class="govuk-visually-hidden"> Substantive In progress </p></td>
+              <td class="govuk-table__cell Substantive">New Lease <p class="govuk-visually-hidden"> Substantive Received </p></td>
               <td class="govuk-table__cell" scope="row" data-sortable="2019-04-01">01/04/19</td>
-              <td  class="govuk-table__cell"> <t class="govuk-tag--progress">In progress</t></td>
+              <td  class="govuk-table__cell"> <t class="govuk-tag--progress">Received</t></td>
               <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2019-07-28">28/07/19</td>
               <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
             </tr>
