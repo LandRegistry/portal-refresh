@@ -23,7 +23,7 @@
         <div class="govuk-grid-column-full" id="headerdiv">
             <img src="public/images/headerlogo.svg">
             <br>
-            <a style="float: right; font-size: 14px; font-weight: ; margin-top: -15px;"> Logout </a>
+            <!-- <a style="float: right; font-size: 14px; font-weight: ; margin-top: -15px;"> Logout </a> -->
 
             <a style="float: right; font-size: 14px; font-weight: ; padding-right: 10px; margin-top: -15px;"> Customer Support
       </a>
@@ -128,7 +128,7 @@
                     cursor: pointer;
                 }
                 /* Style the button that is used to open and close the collapsible content */
-                
+
                 .collapsible {
                     background-color: none;
                     cursor: pointer;
@@ -143,13 +143,13 @@
                     width: 200px;
                 }
                 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-                
+
                 .active,
                 .collapsible:hover {
                     background-color: #D4E039;
                 }
                 /* Style the collapsible content. Note: hidden by default */
-                
+
                 .content {
                     padding-left: 10px;
                     font-size: 12px;
@@ -158,7 +158,7 @@
                     font-family: arial;
                     cursor: pointer;
                 }
-                
+
                 .item {
                     width: 190px;
                     padding-top: 1px;
@@ -166,11 +166,11 @@
                     margin-bottom: 5px;
                     margin-top: 5px;
                 }
-                
+
                 .item:hover {
                     background: #E5EC89;
                 }
-                
+
                 .link:hover {
                     background: #E5EC89;
                     text-decoration: underline;
@@ -232,18 +232,26 @@
 
 
     </div>
+
+    <br>
     <!-- Footer -->
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-            <br>
-            <br>
-            <hr>
+
+
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full" id="headerdiv">
+
+                    <br>
+                    <br>
+                    <hr style="height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
+                </div>
+            </div>
 
 
             <br>
-            <a style="text-color: grey; text-decoration: none;"> Terms and conditions</a>
-            <a style="text-color: grey; text-decoration: none;">| Freedom of information</a>
-            <a style="text-color: grey; text-decoration: none;">| © Crown copyright </a>
+            <a style="text-color: grey; text-decoration: none;"><u> Terms and conditions</u></a>
+            <a style="text-color: grey; text-decoration: none;">| <u>Freedom of information</u></a>
+            <a style="text-color: grey; text-decoration: none;">| <u>© Crown copyright</u></a>
 
             <a style="float:right;" href="/prototype-admin/clear-data"> Clear data </a>
         </div>

@@ -4,7 +4,7 @@
         cursor: pointer;
     }
     /* Style the button that is used to open and close the collapsible content */
-    
+
     .collapsible {
         background-color: transparent;
         cursor: pointer;
@@ -19,12 +19,12 @@
         width: 200px;
     }
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    
+
     .collapsible:hover {
         background-color: #D4E039;
     }
     /* Style the collapsible content. Note: hidden by default */
-    
+
     .content {
         padding-left: 10px;
         font-size: 12px;
@@ -33,7 +33,7 @@
         font-family: arial;
         cursor: pointer;
     }
-    
+
     .item {
         width: 190px;
         padding-top: 1px;
@@ -41,30 +41,66 @@
         margin-bottom: 5px;
         margin-top: 5px;
     }
-    
+
     .item:hover {
         background: #E5EC89;
     }
-    
+
     .link:hover {
         background: #E5EC89;
         text-decoration: underline;
     }
-    
+
     a:visited {
         color: #4c2c92;
     }
-    
+
     a:link {
         color: #005ea5;
+    }
+
+    .black-link-row:hover {
+      color:#000000;
     }
 </style>
 
 <div class="govuk-grid-row">
     <div class="govuk-width-container">
+      <!-- Phase banner ----->
+      <!-- <div class="govuk-phase-banner">
+          <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag">
+          Prototype
+        </strong>
+              <span class="govuk-phase-banner__text">
+          This is a prototype and not a real service.
+        </span>
+          </p>
+      </div>
+      <br>
+      <br> -->
+
+      <!-- Header -->
+      <!-- <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full" id="headerdiv">
+              <img src="public/images/headerlogo.svg">
+              <br>
+              <a style="float: right; font-size: 14px; font-weight: ; margin-top: -15px;"></a>
+
+              <a style="float: right; font-size: 14px; font-weight: ; padding-right: 10px; margin-top: -15px;"> Customer Support
+        </a>
+
+              <a style="float: right; font-size: 14px; font-weight: ; padding-right: 10px; margin-top: -15px; padding-bottom: 0px;">
+          Jane Doe </a>
+
+
+              <hr style="height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
+          </div>
+      </div>
+      <br>
+      <br> -->
         <a href="index.html" class="govuk-link">My Portal Home page</a>
         <meta charset="utf-8" />
-        <a href="index.html" style="float: right;" class="govuk-link">Logout</a>
+        <!-- <a href="index.html" style="float: right;" class="govuk-link">Logout</a> -->
     </div>
     <div class="govuk-grid-column-one-quarter">
     </div>
@@ -112,7 +148,7 @@
         {% macro rows(page) %}
         <!-- 1 -->
         <tbody class="govuk-table__body">
-            <tr class="govuk-table__row govuk-link">
+            <tr class="govuk-table__row govuk-link black-link-row">
                 <td class="govuk-table__cell "></td>
                 <td class="govuk-table__cell " scope="row">LP92831
                     <p class="govuk-visually-hidden"> L012YTW </p>
@@ -154,7 +190,7 @@
 
 <!-- 2 -->
 <tbody class="govuk-table__body">
-    <tr class="govuk-table__row govuk-link">
+    <tr class="govuk-table__row govuk-link black-link-row">
         <td class="govuk-table__cell "></td>
         <td class="govuk-table__cell" scope="row">LP92136
             <p class="govuk-visually-hidden"> M821KLA </p>
@@ -195,7 +231,7 @@
 
 <tbody class="govuk-table__body">
 
-    <tr class="govuk-table__row govuk-link">
+    <tr class="govuk-table__row govuk-link black-link-row">
         <td class="govuk-table__cell govuk-link"></td>
         <td class="govuk-table__cell" scope="row">LP94745
             <p class="govuk-visually-hidden"> T661MNA </p>
@@ -220,7 +256,7 @@
         <div>
             <!-- HMLR reference -->
             <td class="govuk-table__cell" colspan="2" style="padding-top: 0px; vertical-align: top;">
-                <b> Application progress - details<br></b> <br>Completed <br><br><br>
+                <!-- <b> Application progress - details<br></b> <br>Completed <br><br><br> -->
             </td>
 
             <!-- Correspondence -->
@@ -255,7 +291,7 @@
 
 <tbody class="govuk-table__body ">
 
-    <tr class="govuk-table__row govuk-link">
+    <tr class="govuk-table__row govuk-link black-link-row">
         <td class="govuk-table__cell "></td>
         <td class="govuk-table__cell" scope="row">LP97564
             <p class="govuk-visually-hidden"> P914FGE </p>
@@ -281,7 +317,7 @@
             <!-- HMLR reference -->
 
             <td class="govuk-table__row" colspan="2" style="padding-top: 0px; vertical-align: top;">
-                <b> Application progress - details<br></b> <br>Completed <br><br>
+                <!-- <b> Application progress - details<br></b> <br>Completed <br><br> -->
                 <b>Correspondence</b><br><br>
                 <a href="#" style="font-size: 14px;">Notification of Cancellation</a><br>
             </td>
@@ -325,7 +361,7 @@
 <tbody class="govuk-table__body ">
 
 
-    <tr class="govuk-table__row govuk-link">
+    <tr class="govuk-table__row govuk-link black-link-row">
         <td class="govuk-table__cell "></td>
         <td class="govuk-table__cell" scope="row">LP92334
             <p class="govuk-visually-hidden"> Q210MTH </p>
@@ -375,7 +411,7 @@
 
 <tbody class="govuk-table__body ">
 
-    <tr class="govuk-table__row govuk-link">
+    <tr class="govuk-table__row govuk-link black-link-row">
         <td class="govuk-table__cell "></td>
         <td class="govuk-table__cell" scope="row">LP89323
             <p class="govuk-visually-hidden"> N796IDO </p>
@@ -401,7 +437,7 @@
             <div>
                 <!-- HMLR reference -->
                 <td class="govuk-table__row" colspan="2" style="padding-top: 0px; vertical-align: top;">
-                    <b>Application progress - details<br></b> <br>Completed <br>
+                    <!-- <b>Application progress - details<br></b> <br>Completed <br> -->
                 </td>
                 <!-- Correspondence -->
                 <td class="govuk-table__cell" colspan="4" style="padding-top: 0px; vertical-align: top;">
@@ -446,7 +482,7 @@
 
 <tbody class="govuk-table__body ">
 
-    <tr class="govuk-table__row govuk-link">
+    <tr class="govuk-table__row govuk-link black-link-row">
         <td class="govuk-table__cell "></td>
         <td class="govuk-table__cell" scope="row">LP73939
             <p class="govuk-visually-hidden"> X991KMZ </p>
@@ -472,7 +508,7 @@
             <!-- HMLR reference -->
 
             <td class="govuk-table__row" colspan="2" style="padding-top: 0px; vertical-align: top;">
-                <b> Application progress - details<br></b> <br>Completed <br><br>
+                <!-- <b> Application progress - details<br></b> <br>Completed <br><br> -->
             </td>
             <!-- Correspondence -->
             <td class="govuk-table__cell" colspan="4" style="padding-top: 0px; vertical-align: top;">
@@ -512,7 +548,7 @@
 
 <tbody class="govuk-table__body ">
 
-    <tr class="govuk-table__row govuk-link">
+    <tr class="govuk-table__row govuk-link black-link-row">
         <td class="govuk-table__cell "></td>
         <td class="govuk-table__cell" scope="row">LP32732
             <p class="govuk-visually-hidden"> P861HJS </p>
@@ -536,7 +572,7 @@
 
             <!-- HMLR reference -->
             <td class="govuk-table__row" colspan="2" style="padding-top: 0px; vertical-align: top;">
-                <b> Application progress - details<br></b> <br>Completed <br><br>
+                <!-- <b> Application progress - details<br></b> <br>Completed <br><br> -->
                 <!-- Correspondence -->
                 <td class="govuk-table__cell" colspan="4" style="padding-top: 0px; vertical-align: top;">
                     <b> HMLR Reference</b>
@@ -563,7 +599,7 @@
 
 <tbody class="govuk-table__body">
 
-    <tr class="govuk-table__row govuk-link">
+    <tr class="govuk-table__row govuk-link black-link-row">
         <td class="govuk-table__cell "></td>
         <td class="govuk-table__cell" scope="row">LP92892
             <p class="govuk-visually-hidden"> Y761LKS </p>
@@ -587,7 +623,7 @@
             <!-- HMLR reference -->
 
             <td class="govuk-table__cell" colspan="2" style="padding-top: 0px; vertical-align: top;">
-                <b>Application progress - details<br></b> <br>Completed <br><br>
+                <!-- <b>Application progress - details<br></b> <br>Completed <br><br> -->
 
             </td>
             <!-- Correspondence -->
@@ -618,7 +654,7 @@
 <tbody class="govuk-table__body ">
 
 
-    <tr class="govuk-table__row govuk-link">
+    <tr class="govuk-table__row govuk-link black-link-row">
         <td class="govuk-table__cell "></td>
         <td class="govuk-table__cell" scope="row">LP38366
             <p class="govuk-visually-hidden"> L012YTW </p>
@@ -701,8 +737,27 @@
 
 
       </footer> -->
-</div>
 
+      <!-- <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full" id="headerdiv">
+      <div class="govuk-width-container">
+              <br>
+              <br>
+              <hr style="height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
+
+
+
+      <br>
+      <a style="text-color: grey; text-decoration: none;"><u> Terms and conditions</u></a>
+      <a style="text-color: grey; text-decoration: none;">| <u>Freedom of information</u></a>
+      <a style="text-color: grey; text-decoration: none;">| <u>© Crown copyright</u></a>
+
+      <a style="float:right;" href="/prototype-admin/clear-data"> Clear data </a>
+      <br>
+      <br>
+      </div>
+      </div>
+      </div> -->
 
 
 {% endblock %}
