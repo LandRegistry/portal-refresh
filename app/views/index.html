@@ -1,6 +1,15 @@
 {% extends "layout_unbranded.html" %} {% block pageTitle %} Index {% endblock %} {% block content %}
 
 
+<style>
+
+  .footer-link {
+    color: #747576;
+  }
+  
+</style>
+
+
 <!-- Back & clear data top -->
 <div class="govuk-width-container">
 
@@ -293,7 +302,6 @@
                   <br><br>
                   • Agreed to retain "Customer Support" link after "Logout" within the header.
                   <br>
-                  <br>
                   • Added hover text "Opens in a new window" instead of a pop-out icon.
                   <br><br>
                   • We agreed to retain the “Customer Support” link next to “Logout” in the VMA header. We discussed whether we should also add the “pop-out” window icon. It was felt that for the short term we add hover text “Opens in a new window”.
@@ -314,32 +322,33 @@
     </div>
 
     <br>
-    <!-- Footer -->
 
+    <!-- </footer> -->
 
-
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full" id="headerdiv">
-
-                    <br>
-                    <br>
-                    <hr style="height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
-                </div>
-            </div>
-
-
+    <div class="govuk-grid-row footer-link">
+        <div class="govuk-grid-column-full" id="headerdiv">
+    <div class="govuk-width-container">
             <br>
-            <a style="text-color: grey; text-decoration: none;"><u> Terms and conditions</u></a>
-            <a style="text-color: grey; text-decoration: none;">| <u>Freedom of information</u></a>
-            <a style="text-color: grey; text-decoration: none;">| <u>© Crown copyright</u></a>
-
-            <a style="float:right;" href="/prototype-admin/clear-data"> Clear data </a>
-        </div>
+            <br>
+            <hr style="height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
 
 
+
+    <br>
+    <a style="text-color: grey; text-decoration: none;"><u> Terms and conditions</u></a>
+    <a style="text-color: grey; text-decoration: none;">| <u>Accessibility Statement</u></a>
+    <a style="text-color: grey; text-decoration: none;">| <u>Freedom of information</u></a>
+    <a style="text-color: grey; text-decoration: none;">| <u>© Crown copyright</u></a>
+
+    <a style="float:right;" href="/prototype-admin/clear-data"> Clear data </a>
+    <br>
+    <br>
+    <a style="text-color: grey; text-decoration: none;"><i>These links will open in a new window.</i></a>
+    <p></p>
+    </div>
+    </div>
     </div>
 
-</div>
 
 
 

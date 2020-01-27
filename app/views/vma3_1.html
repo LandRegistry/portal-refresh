@@ -56,6 +56,15 @@
   color: #747576;
 }
 
+.footlink:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.footlink-no:hover {
+  color: grey;
+}
+
 </style>
 
 <!-- Back & clear data top -->
@@ -395,9 +404,9 @@
 
 
 <div class="govuk-grid-column-three-quarters" style="float: right;">
-  <!-- <tr class="govuk-table__row"><p style="font-size: 14px; float: right; text-align: right; margin-top: -25px;">
+  <tr class="govuk-table__row"><p style="font-size: 14px; float: right; text-align: right; margin-top: -25px;">
       Estimated completion dates are calculated using average completion times. <br> Dates may change depending on current wait times and the status of an application.*
-     </p> </th> -->
+     </p> </th>
   </tr>
 
 <!-- My Work Table -->
@@ -411,7 +420,7 @@
           <th class="govuk-table__header govuk-!-width-one-sixth " scope="col">Application type</th>
           <th class="govuk-table__header govuk-!-width-one-sixth sortable" style="cursor: pointer;" scope="col">Received by HMLR </th>
           <th class="govuk-table__header govuk-!-width-one-sixth  " scope="col" style="width: 20%;">Application progress</th>
-          <th class="govuk-table__header govuk-!-width-one-sixth sortable" style="cursor: pointer;" scope="col">Estimated completion </th>
+          <th class="govuk-table__header govuk-!-width-one-sixth sortable" style="cursor: pointer;" scope="col">Estimated completion* </th>
           <th class="govuk-table__header govuk-!-width-one-twelfth" style="cursor: pointer; width: 6%;" scope="col"><a style="font-weight: bold; font-size: 14px;" class="expandyAll">View details</a></th>
           </tr>
 
@@ -993,15 +1002,15 @@
 
 
 <br>
-<a style="text-color: grey; text-decoration: none;"><u> Terms and conditions</u></a>
-<a style="text-color: grey; text-decoration: none;">| <u>Accessibility Statement</u></a>
-<a style="text-color: grey; text-decoration: none;">| <u>Freedom of information</u></a>
-<a style="text-color: grey; text-decoration: none;">| <u>© Crown copyright</u></a>
+<a class="footlink" style="text-color: grey; text-decoration: none;"><u>Terms and conditions</u></a>
+<a class="footlink" style="text-color: grey; text-decoration: none;">| <u>Accessibility Statement</u></a>
+<a class="footlink" style="text-color: grey; text-decoration: none;">| <u>Freedom of information</u></a>
+<a class="footlink" style="text-color: grey; text-decoration: none;">| <u>© Crown copyright</u></a>
 
 <a style="float:right;" href="/prototype-admin/clear-data"> Clear data </a>
 <br>
 <br>
-<a style="text-color: grey; text-decoration: none;"><i>These links will open in a new window.</i></a>
+<a class="footlink-no" style="text-color: grey; text-decoration: none;"><i>These links will open in a new window.</i></a>
 <p></p>
 </div>
 </div>
