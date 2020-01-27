@@ -8,15 +8,47 @@
 
 <style>
 
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 0px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 .collapsible {
-  color: #516715
+  color: #516715;
+  text-decoration: none;
 }
 
 .URL2 {
   color: #516715
 }
 
-.govuk-link-black {
+.govuk-link {
   text-decoration: none
 }
 
@@ -30,8 +62,6 @@
 <div class="govuk-width-container">
     <a href="index.html" class="govuk-back-link">Back to Index</a>
     <meta charset="utf-8"/>
-
-
 
 <br> <br>
 
@@ -56,8 +86,8 @@
     <img src="public/images/headerlogo.svg" alt="hmlrlogo">
   </a>
     <br>
-    <a href="#" style="float: right; font-size: 14px; font-weight: ; text-decoration: none; margin-top: -17px;"> Customer Support <img src="public/images/pop-out.png"></a>
-    <a href="#" style="float: right; font-size: 14px; font-weight: ; text-decoration: none; margin-right: 15px; padding-right: 0px; margin-top: -15px;"> Logout </a>
+    <a class="tooltip" href="#" style="float: right; font-size: 14px; font-weight: ; text-decoration: none; margin-top: 0px; margin-top :-15px;"> Customer Support <span class="tooltiptext">Opens in a new window</span></a>
+    <a href="#" style="float: right; font-size: 14px; font-weight: ; text-decoration: none; margin-right: 5px; padding-right: 10px; margin-top: -15px;"> Logout </a>
     <hr style= "height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
     </div>
 
@@ -75,7 +105,7 @@
     <button class="collapsible"><strong><a href="portalhomepage.html" style="text-decoration: none;"><font color="#516715">My Portal Homepage</a></strong></button>
 
     <!--VIEW MY APPLICATIONS DROPDOWN-->
-    <div><button class="collapsible"><strong><a class="URL" href="" style="text-decoration: none; color:#000000;">NEW: View My Applications</a></strong></button></div>
+    <div><button class="collapsible"><strong><a class="URL" href="" style="text-decoration: none; color:#516715;">NEW: View My Applications</a></strong></button></div>
     <!-- <div class="content">
     <div class="item"><a class="link" href="RequestOfficialCopies">Request official copies</a><br> </div>
     <div class="item"><a class="link">Official Search of Whole with Priority</a></div>
@@ -184,7 +214,7 @@
 
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .collapsible:hover {
-    background-color: #D4E039;
+    background-color: #;
   }
 
   /* Style the collapsible content. Note: hidden by default */
@@ -350,7 +380,7 @@
             <div class="govuk-grid-column-one-half">
             <h2 class="govuk-body govuk-!-font-size-14" style="font-weight: normal; padding-left: 0px; margin-left: 7px; margin-top: -40px; margin-bottom: 0px;"> Search by Customer reference, Title number or HMLR reference</h2>
             <input type="text" id="search-input" style="width: 320px; margin-left: 7px; margin-top: 0px;; height: 35px; font-size: 14px; border-color: black; border-width: 1px; border-radius: 2px;"><button style="float: right;" id="search-button"> Search </button>
-            <a href="#" id="reset" class="govuk-link govuk-link--no-visited-state" style="float: right; font-size: 14px; margin-top: 0px; margin-left: 200px;"><br><u>Reset search and filters</u></a>
+            <a href="#" id="reset" class="govuk-link govuk-link--no-visited-state" style="float: right; font-size: 14px; margin-top: 0px; margin-left: 200px;"><br><u> Reset search and filters</u></a>
             </div>
 
     </div>
@@ -381,7 +411,7 @@
           <th class="govuk-table__header govuk-!-width-one-sixth " scope="col">Application type</th>
           <th class="govuk-table__header govuk-!-width-one-sixth sortable" style="cursor: pointer;" scope="col">Received by HMLR </th>
           <th class="govuk-table__header govuk-!-width-one-sixth  " scope="col" style="width: 20%;">Application progress</th>
-          <th class="govuk-table__header govuk-!-width-one-sixth sortable" style="cursor: pointer;" scope="col">Estimated completion* </th>
+          <th class="govuk-table__header govuk-!-width-one-sixth sortable" style="cursor: pointer;" scope="col">Estimated completion </th>
           <th class="govuk-table__header govuk-!-width-one-twelfth" style="cursor: pointer; width: 6%;" scope="col"><a style="font-weight: bold; font-size: 14px;" class="expandyAll">View details</a></th>
           </tr>
 
@@ -391,7 +421,7 @@
 {% macro rows(page) %}
           <!-- 1 -->
       <tbody class="govuk-table__body">
-          <tr class="govuk-table__row govuk-link-black">
+          <tr class="govuk-table__row govuk-link">
             <td class="govuk-table__cell "></td>
             <td class="govuk-table__cell " scope="row">LP123456 <p class="govuk-visually-hidden"> L927GDU </p><!-- THIS IS PAGE {{page}} --></td>
             <td class="govuk-table__cell ">Jones.20313</td>
@@ -450,7 +480,7 @@
 
           <!-- 2 -->
           <tbody class="govuk-table__body">
-            <tr class="govuk-table__row govuk-link-black">
+            <tr class="govuk-table__row govuk-link">
               <td class="govuk-table__cell "></td>
               <td class="govuk-table__cell" scope="row">LP980123 <p class="govuk-visually-hidden"> S827LKJ </p> </td>
               <td class="govuk-table__cell">JT/391/Williams</td>
@@ -498,7 +528,7 @@
 
   <tbody class="govuk-table__body">
 
-  <tr class="govuk-table__row  govuk-link-black">
+  <tr class="govuk-table__row  govuk-link">
   <td class="govuk-table__cell "></td>
   <td class="govuk-table__cell" scope="row">LP09209 <p class="govuk-visually-hidden"> Y917GSY </p> </td>
   <td class="govuk-table__cell">Bartlett.23124</td>
@@ -552,7 +582,7 @@
 
   <tbody class="govuk-table__body ">
 
-  <tr class="govuk-table__row govuk-link-black">
+  <tr class="govuk-table__row govuk-link">
 <td class="govuk-table__cell "></td>
   <td class="govuk-table__cell" scope="row">LP980165<p class="govuk-visually-hidden"> E921HSK </p></td>
   <td class="govuk-table__cell">JT/938/Watkins</td>
@@ -609,7 +639,7 @@
   <!-- 5 --><tbody class="govuk-table__body ">
 
 
-  <tr class="govuk-table__row govuk-link-black">
+  <tr class="govuk-table__row govuk-link">
 <td class="govuk-table__cell "></td>
   <td class="govuk-table__cell" scope="row">LP45173 <p class="govuk-visually-hidden"> M928SAI </p></td>
   <td class="govuk-table__cell">Smith.20313</td>
@@ -660,7 +690,7 @@
 
   <tbody class="govuk-table__body ">
 
-  <tr class="govuk-table__row govuk-link-black">
+  <tr class="govuk-table__row govuk-link">
 <td class="govuk-table__cell "></td>
   <td class="govuk-table__cell" scope="row">LP54312 <p class="govuk-visually-hidden"> A272JSH </p></td>
   <td class="govuk-table__cell">Curtis.15439</td>
@@ -736,7 +766,7 @@
 
   <tbody class="govuk-table__body ">
 
-  <tr class="govuk-table__row govuk-link-black">
+  <tr class="govuk-table__row govuk-link">
 <td class="govuk-table__cell "></td>
   <td class="govuk-table__cell" scope="row">LP980123 <p class="govuk-visually-hidden"> T832JDH </p></td>
   <td class="govuk-table__cell">JT/722/Davis</td>
@@ -789,7 +819,7 @@
 
   <tbody class="govuk-table__body ">
 
-  <tr class="govuk-table__row govuk-link-black">
+  <tr class="govuk-table__row govuk-link">
 <td class="govuk-table__cell "></td>
   <td class="govuk-table__cell" scope="row">LP72912 <p class="govuk-visually-hidden"> P956EKA </p></td>
   <td class="govuk-table__cell">Terry.43123</td>
@@ -834,7 +864,7 @@
 
   <tbody class="govuk-table__body ">
 
-  <tr class="govuk-table__row govuk-link-black">
+  <tr class="govuk-table__row govuk-link">
 <td class="govuk-table__cell "></td>
   <td class="govuk-table__cell" scope="row">LP890543 <p class="govuk-visually-hidden"> K928TDH </p></td>
   <td class="govuk-table__cell">Johnson.12334</td>
@@ -880,7 +910,7 @@
   <!-- 10 --><tbody class="govuk-table__body ">
 
 
-  <tr class="govuk-table__row govuk-link-black">
+  <tr class="govuk-table__row govuk-link">
 <td class="govuk-table__cell "></td>
   <td class="govuk-table__cell" scope="row">LP980123 <p class="govuk-visually-hidden"> A391OLS </p></td>
   <td class="govuk-table__cell">JT/103/Wilson</td>
@@ -940,8 +970,9 @@
 </table>
 
 <div class="govuk-grid-column-one-quarter" style="float: right; text-align: right;">
+
   <div style="margin-left: -1000px;"><p> Displaying 1 - 10 of 20 applications</p></div>
-<div><p> 1 <a href="vma_2">2</a> <a href="vma_2">></a> </p></div>
+<div><p> 1 <a href="vma3_2">2</a> <a href="vma3_2">></a> </p></div>
 </div>
 
 
@@ -970,8 +1001,6 @@
 <br>
 <br>
 <a style="text-color: grey; text-decoration: none;"><i>These links will open in a new window.</i></a>
-<br>
-<br>
 <p></p>
 </div>
 </div>
