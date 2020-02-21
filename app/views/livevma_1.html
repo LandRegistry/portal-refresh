@@ -403,7 +403,7 @@
 <br>
             <div class="govuk-grid-column-one-half" style="margin-top: -90px;">
             <h2 class="govuk-body govuk-!-font-size-14" style="float: right; font-weight: normal; padding-left: 0px; margin-left: -0px; margin-top: -30px; margin-bottom: 0px; margin-right: -870px;"> Search by Customer reference, Title number or HMLR reference</h2>
-            <input type="text" id="search-input" style="width: 320px; margin-left: 7px; height: 36px; font-size: 14px; border-color: black; border-width: 1px; border-radius: 2px;margin-left: 870px; margin-top: -80px;"><button style="float: right; margin-right: -875px; margin-top: -40px; cursor: pointer;" id="search-button"> Search </button>
+            <input type="text" id="search-input" style="width: 320px; margin-left: 7px; height: 36px; font-size: 14px; border-color: black; border-width: 1px; border-radius: 2px;margin-left: 870px; margin-top: -80px;"><button style="float: right; margin-right: -875px; margin-top: -40px; cursor: pointer;" value="submit" id="search-button"> Search </button>
             <a href="#" id="reset" class="govuk-link govuk-link--no-visited-state" style="float: right; font-size: 14px; margin-top: -10px; margin-right: -870px;"><br><u> Reset search</u></a>
             </div>
 
@@ -459,24 +459,64 @@
           </tr>
 
       <!-- 1 Expanded row -->
-            <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1">
+            <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
       <!-- Vertical line -->
-            <td class="govuk-table__cell" colspan="1"></div></td>
+            <td class="govuk-table__cell" colspan="1"></td>
 
 
       <!-- HMLR reference -->
             <div>
-              <td class="govuk-table__cell" colspan="3" rowspan="2">
-                <b> Application progress - details</b><br> Delayed - Prior Pending Applications(s) or Official Search(es)<br><br>
+              <td class="govuk-table__cell" colspan="3">
+                <div class="govuk-grid-row" style="margin-left: 2px;">
+                    <div class="govuk-grid-column">
+                      <b> Application progress - details</b><br> Delayed - Prior Pending Applications(s) or Official Search(es)<br><br>
+                    </div>
+                </div>
+                <div class="govuk-grid-row">
 
+                  <div class="govuk-grid-column-one-half">
+                    <b>Correspondence</b>
+                    <p style="font-size: 14px;"><br>
+                    <a href="#"> Notice(s) issued on 22/12/19</a><br>
+                    <a class="thirdparty"> Notice(s) issued on 24/11/19</a><br>
+                    <a href="#"> Notice(s) issued on 12/11/19</a></p>
+                  </div>
+                  
+                  <div class="govuk-grid-column-one-half">
+                      <b>Files</b>
+                    <p style="font-size: 14px;"></p>
+                    <a href="#"> Official Copy of Title Plan dated 31/10/19</a><br>
+                    <a href="#">Official Copy of Register dated 31/10/19 </a><br>
+                  </div>
+
+                </div>
+
+                <td class="govuk-table__cell"  colspan="1" >
+                  <b> HMLR Reference</b>
+                  <p style="font-size: 14px;">L927GDU</p>
+                  </td>
+    
+                  <td class="govuk-table__cell" colspan="1">
+                  <b> Priority period</b>
+                  <p style="font-size: 14px;">L927GDU</p>
+                  </td>
+    
+                  <td class="govuk-table__cell" colspan="1">
+                  <b> Parent Title(s)</b>
+                  <p style="font-size: 14px;">L927GDU</p>
+                  </td>
+    
+              </td>
+
+              
+
+              <!-- <td class="govuk-table__cell" colspan="2" rowspan="2" style="padding-top: 0px;">
                 <br><b>Correspondence</b>
                 <p style="font-size: 14px;"><br>
                 <a href="#"> Notice(s) issued on 22/12/19</a><br>
                 <a class="thirdparty"> Notice(s) issued on 24/11/19</a><br>
                 <a href="#"> Notice(s) issued on 12/11/19</a></p>
-              </td>
 
-              <td class="govuk-table__cell" colspan="2" rowspan="2" style="padding-top: 0px;">
               <b>Files</b>
 
               <p style="font-size: 14px;"></p>
@@ -484,23 +524,7 @@
 
               <a href="#">Official Copy of Register dated 31/10/19 </a><br>
 
-              </td>
-
-              <td class="govuk-table__cell"  style="margin-top: 50px;" rowspan="1" colspan="1" >
-              <b> HMLR Reference</b>
-              <p style="font-size: 14px;">L927GDU</p>
-              </td>
-
-              <td class="govuk-table__cell" colspan="1">
-              <b> Priority period</b>
-              <p style="font-size: 14px;">L927GDU</p>
-              </td>
-
-              <td class="govuk-table__cell" colspan="1">
-              <b> Parent Title(s)</b>
-              <p style="font-size: 14px;">L927GDU</p>
-              </td>
-
+              </td> -->
       <!-- Correspondence -->
               <!-- <td class="govuk-table__cell" colspan="2">
                 <br>
