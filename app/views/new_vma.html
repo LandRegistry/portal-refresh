@@ -1,4 +1,15 @@
-{% extends "layout_unbranded.html" %} {% block pageTitle %} Index {% endblock %} {% block content %}
+<!DOCTYPE html>
+
+{% extends "layout_unbranded.html" %}
+
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+
+{% block pageTitle %} Index
+
+{% endblock %}
+
+
+{% block content %}
 
 
 <style>
@@ -304,6 +315,122 @@
             <input type="text" id="search-input" style="width: 320px; margin-left: -1px; height: 36px; font-size: 14px; border-color: black; border-width: 1px; border-radius: 0px; margin-top: -80px;"><button style="float: right; margin-right: -15px; margin-top: -40px; cursor: pointer; border-radius: 0px" value="submit" id="search-button"> Search </button>
             <a href="#" id="reset" class="govuk-link govuk-link--no-visited-state" style="float: right; font-size: 14px; margin-top: -10px; padding-bottom: 30px"><br><u> Reset search</u></a>
             </div>
+
+
+            <!--Filters & searches-->
+
+            <div>
+
+                <div class="govuk-grid-row" style="margin-bottom: 0px;">
+                  <form id="search" style="">
+
+                <div class="govuk-grid-column-one-quarter">
+                            <details class="govuk-details" data-module="govuk-details" style="margin-top: 40px;">
+                            <summary class="govuk-details__summary">
+
+                              <a class="details" style="font-size: 16px; float: left; ">Filter by application type</a>
+                            </summary>
+                            <div class="govuk-details__text">
+
+                              {{ govukCheckboxes ({
+                              idPrefix: "application-type2",
+                              name: "application-type2",
+                              classes: "govuk-checkboxes--small checkbox2",
+                              fieldset: {
+                                legend: {
+                                  text: ""
+                                }
+                              },
+                              items: [
+                              {
+                                value: "Preliminary",
+                                text: "Register update",
+                                checked: false,
+                                id: "Preliminary"
+                              },
+
+                              {
+                                value: "Substantive",
+                                text: "Register create"   ,
+                                  checked: false,
+                                id: "Substantive"
+                              },
+
+                              {
+                                value: "Substantive",
+                                text: "Register query"   ,
+                                  checked: false,
+                                id: "Substantive"
+                              }
+                              ]
+                            }) }}
+
+                          </div>
+                        </details>
+                        </div>
+
+                          <div class="govuk-grid-column-one-quarter" style="margin-top: 35px;">
+
+                            <details class="govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+
+                              <a class="details" style="font-size: 16px;">Filter by application progress</a>
+                            </summary>
+                            <div class="govuk-details__text">
+
+                              {{ govukCheckboxes ({
+                              idPrefix: "application-progress2",
+                              name: "application-progress2",
+                              classes: "govuk-checkboxes--small checkbox3",
+                              fieldset: {
+                              legend: {
+                                text: ""
+                              }
+                              },
+                              items: [
+
+                              {
+                              value: "Received",
+                              text: "Received"   ,
+                              checked: false,
+                              id: "Received"
+                              },
+                              {
+                              value: "Cancelled",
+                              text: "Cancelled"   ,
+                                checked: false,
+                              id: "Cancelled"
+                              },
+                              {
+                              value: "Delayed",
+                              text: "Delayed"   ,
+                                checked: false,
+                              id: "Delayed"
+                              },
+                              {
+                              value: "Completed",
+                              text: "Completed"   ,
+                                checked: false,
+                              id: "Completed"
+                              }
+                              ]
+                              }) }}
+                            </div>
+                          </details>
+                        </div>
+
+            <br>
+            <br>
+
+
+                </div>
+
+              </form>
+
+
+
+
+                </div>
 
 
 
