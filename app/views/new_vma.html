@@ -19,7 +19,9 @@
     color: #516715
   }
 
-
+.govuk-details-text {
+  padding-left: 24px;
+}
 
   /* Style the button that is used to open and close the collapsible content */
   .collapsible {
@@ -330,7 +332,7 @@
 
                               <a class="details" style="font-size: 16px; float: left; ">Filter by application type</a>
                             </summary>
-                            <div class="govuk-details__text">
+                            <div class="govuk-details-text">
 
                               {{ govukCheckboxes ({
                               idPrefix: "application-type2",
@@ -376,7 +378,7 @@
 
                               <a class="details" style="font-size: 16px;">Filter by application progress</a>
                             </summary>
-                            <div class="govuk-details__text">
+                            <div class="govuk-details-text">
 
                               {{ govukCheckboxes ({
                               idPrefix: "application-progress2",
@@ -446,7 +448,7 @@
                       <th class="govuk-table__header govuk-!-width-one-sixth " scope="col">Received by HMLR </th>
                       <th class="govuk-table__header govuk-!-width-one-sixth  " scope="col" style="width: 20%;">Application Progress</th>
                       <th class="govuk-table__header govuk-!-width-one-sixth " scope="col">Estimated Completion Date </th>
-                      <th class="govuk-table__header govuk-!-width-one-twelfth" style="cursor: pointer; width: 6%;" scope="col"><a style="font-weight: bold; font-size: 14px;" class="expandyAll">Show/hide details</a></th>
+                      <th class="govuk-table__header govuk-!-width-one-twelfth" style="width: 6%;" scope="col">Show/hide details</th>
                       </tr>
 
                     </thead>
