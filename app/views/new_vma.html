@@ -1,14 +1,8 @@
 <!DOCTYPE html>
-
 {% extends "layout_unbranded.html" %}
-
 {% from "checkboxes/macro.njk" import govukCheckboxes %}
-
-{% block pageTitle %} Index
-
+{% block pageTitle %} View my applications
 {% endblock %}
-
-
 {% block content %}
 
 
@@ -17,6 +11,11 @@
   #submenu {
     cursor: pointer;
     color: #516715
+  }
+
+  .govuk-grid-column-one-quarter {
+    max-width: 200px;
+
   }
 
 .govuk-details-text {
@@ -130,7 +129,8 @@
 
       <!-- Menu -->
         <div class="">
-          <div class="govuk-grid-column-one-quarter" style="margin-left: -8px;" id="submenu">
+          <div class="govuk-grid-column-one-quarter" style="margin-left: -20px;" id="submenu">
+
 
           <!--Portal Home Menu item-->
           <!-- <button class="collapsible"><strong><a href="portalhomepage.html" style="text-decoration: none;">My Portal Homepage</a></strong></button> -->
@@ -307,6 +307,14 @@
 
 
 
+      <style>
+      .govuk-grid-column-three-quarters {
+        margin-left: 0px;
+      }
+
+      </style>
+
+
         <!-- Service title -->
 
         <div class="govuk-grid-column-three-quarters" style="float: right;">
@@ -426,9 +434,10 @@
             <br>
 
 
+                </form>
                 </div>
 
-              </form>
+
 
 
 
@@ -474,7 +483,6 @@
                   <!-- Vertical line -->
                         <td class="govuk-table__cell" colspan="1"></td>
 
-
                   <!-- HMLR reference -->
                         <div>
                           <td class="govuk-table__cell" colspan="3">
@@ -483,6 +491,7 @@
                                   <b> Application progress - details</b><br> Delayed - Prior Pending Applications(s) or Official Search(es)<br><br>
                                 </div>
                             </div>
+
                             <div class="govuk-grid-row">
 
                               <div class="govuk-grid-column-one-half">
@@ -516,55 +525,73 @@
                               <b> Parent Title(s)</b>
                               <p style="font-size: 14px;">L927GDU</p>
                               </td>
+                            </tr>
+                </tbody>
+                </div>
 
-                          </td>
 
+                <!-- 2 -->
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row govuk-link-table">
+                  <td class="govuk-table__cell "></td>
+                  <td class="govuk-table__cell " scope="row">LP980123 <p class="govuk-visually-hidden"> LP980123 </p><!-- THIS IS PAGE {{page}} --></td>
+                  <td class="govuk-table__cell ">JT/391/Williams</td>
+                  <td class="govuk-table__cell Substantive" id="">New Lease<p class="govuk-visually-hidden"> Substantive Received  </p></td>
+                  <td class="govuk-table__cell" scope="row" data-sortable="2019-11-01">01/11/19</td>
+                  <td  class="govuk-table__cell"> <t class="govuk-tag--progress"> Received</t></td>
+                  <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2020-01-02">02/01/20</td>
+                  <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+                </tr>
 
+            <!-- 1 Expanded row -->
+                  <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+            <!-- Vertical line -->
+                  <td class="govuk-table__cell" colspan="1"></td>
 
-                          <!-- <td class="govuk-table__cell" colspan="2" rowspan="2" style="padding-top: 0px;">
-                            <br><b>Correspondence</b>
-                            <p style="font-size: 14px;"><br>
-                            <a href="#"> Notice(s) issued on 22/12/19</a><br>
-                            <a class="thirdparty"> Notice(s) issued on 24/11/19</a><br>
-                            <a href="#"> Notice(s) issued on 12/11/19</a></p>
+            <!-- HMLR reference -->
+                  <div>
+                    <td class="govuk-table__cell" colspan="3">
+                      <div class="govuk-grid-row" style="margin-left: 2px;">
+                          <div class="govuk-grid-column">
+                            <b> Application progress - details</b><br> Received: Priority Protected - Awaiting Processing<br><br>
+                          </div>
+                      </div>
 
-                          <b>Files</b>
+                      <div class="govuk-grid-row">
 
-                          <p style="font-size: 14px;"></p>
-                          <a href="#"> Official Copy of Title Plan dated 31/10/19</a><br>
-
-                          <a href="#">Official Copy of Register dated 31/10/19 </a><br>
-
-                          </td> -->
-                  <!-- Correspondence -->
-                          <!-- <td class="govuk-table__cell" colspan="2">
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br><b>Correspondence</b>
+                        <div class="govuk-grid-column-one-half">
+                          <b>Correspondence</b>
                           <p style="font-size: 14px;"><br>
                           <a href="#"> Notice(s) issued on 22/12/19</a><br>
                           <a class="thirdparty"> Notice(s) issued on 24/11/19</a><br>
                           <a href="#"> Notice(s) issued on 12/11/19</a></p>
-                          </td> -->
-
-                  <!-- Files -->
-                          <!-- <td class="govuk-table__cell" colspan="2" style="padding-top: 0px;">
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                          <b>Files</b>
-                          <br><br><br>
-                          <p style="font-size: 14px;"></p>
-                          </td> -->
-
                         </div>
-                        </tr>
-                </tbody>
+
+                        <div class="govuk-grid-column-one-half">
+                            <b>Files</b>
+                          <p style="font-size: 14px;"></p>
+                          <a href="#"> Official Copy of Title Plan dated 31/10/19</a><br>
+                          <a href="#">Official Copy of Register dated 31/10/19 </a><br>
+                        </div>
+
+                      </div>
+
+                      <td class="govuk-table__cell"  colspan="1" >
+                        <b> HMLR Reference</b>
+                        <p style="font-size: 14px;">S827LKJ</p>
+                        </td>
+
+                        <td class="govuk-table__cell" colspan="1">
+                        <b> Priority period</b>
+                        <p style="font-size: 14px;">S827LKJ</p>
+                        </td>
+
+                        <td class="govuk-table__cell" colspan="1">
+                        <b> Parent Title(s)</b>
+                        <p style="font-size: 14px;">S827LKJ</p>
+                        </td>
+                      </tr>
+          </tbody>
 
                       <!-- 2 -->
                       <tbody class="govuk-table__body">
@@ -631,7 +658,7 @@
 
                   <tr class="govuk-table__row expandy-row hide-row">
                     <!-- Vertical line -->
-                    <td class="govuk-table__cell" colspan="1" ></div>
+                    <td class="govuk-table__cell" colspan="1" >
               </td>
                     <div>
                     <!-- HMLR reference + status -->
@@ -683,7 +710,7 @@
 
               <tr class="govuk-table__row expandy-row hide-row">
                 <!-- Vertical line -->
-                <td class="govuk-table__cell" colspan="1" ></div>
+                <td class="govuk-table__cell" colspan="1" >
               </td>
                 <div>
 
@@ -791,7 +818,7 @@
 
               <tr class="govuk-table__row expandy-row hide-row">
                 <!-- Vertical line -->
-                <td class="govuk-table__cell" colspan="1" ></div>
+                <td class="govuk-table__cell" colspan="1" >
                   </td>
                   <div>
                     <div>
@@ -920,7 +947,7 @@
 
               <tr class="govuk-table__row expandy-row hide-row">
                 <!-- Vertical line -->
-                <td class="govuk-table__cell" colspan="1" ></div>
+                <td class="govuk-table__cell" colspan="1" >
                   </td>
                 <div>
 
@@ -965,7 +992,7 @@
 
               <tr class="govuk-table__row expandy-row hide-row">
                 <!-- Vertical line -->
-                <td class="govuk-table__cell" colspan="1" ></div>
+                <td class="govuk-table__cell" colspan="1" >
                   </td>
                 <div>
                 <!-- HMLR reference -->
@@ -1011,7 +1038,7 @@
 
               <tr class="govuk-table__row expandy-row hide-row">
                 <!-- Vertical line -->
-                <td class="govuk-table__cell" colspan="1" ></div>
+                <td class="govuk-table__cell" colspan="1" >
             </td>
                 <div>
 
@@ -1057,12 +1084,35 @@
 
             </table>
 
+            <div class="govuk-grid-column-one-quarter" style="float: right; text-align: right;">
+
+              <div style="margin-left: -1000px;"><p> Displaying 1 - 10 of 20 applications</p></div>
+            <div><p> 1 <a href="vma3_2">2</a> <a href="vma3_2">></a> </p></div>
+            </div>
+
+                            <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      *Estimated completion date
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    An estimated completion date is provided for applications that create or update the register.
+                It's based on average completion time data and will change if an application is delayed by correspondence.
+                  </div>
+                </details>
+
+              </div>
 
 
+        <style>
 
+        .govuk-details {
+          font-size: 16px;
+          max-width: 600px;
+        }
 
-
-        </div>
+        </style>
 
         <!---CONTENT----------------------------------------------------------------->
 
