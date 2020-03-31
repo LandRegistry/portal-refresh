@@ -40,13 +40,14 @@
 }
 
 .collapsible {
-  color: #516715;
+  color: blue;
   text-decoration: none;
 }
 
 .collapsible:hover {
-  color: #000000;
-  background-color: #D4E039;
+  color: #003078;
+  text-decoration: underline;
+  /* background-color: #D4E039; */
 }
 
 .URL2 {
@@ -123,10 +124,12 @@
 
     <!--Portal Home Menu item-->
     <!-- <button class="collapsible"><strong><a href="portalhomepage.html" style="text-decoration: none;">My Portal Homepage</a></strong></button> -->
-    <button class="collapsible"><strong><a href="portalhomepage.html" style="text-decoration: none;"><font color="#516715">My Portal Homepage</a></strong></button>
+    <a class="collapsible" href="#vma">View My Applications</a>
+    <!-- <button class="collapsible"><strong><style="text-decoration: none; color:#005ea5;">- View My Applications</a></strong></button> -->
 
     <!--VIEW MY APPLICATIONS DROPDOWN-->
-    <button class="collapsible"><strong>NEW: View My Applications</strong></button>
+    <a class="collapsible" href="#filter">Filter</a>
+    <!-- <button class="collapsible"><strong>- Filter</strong></button> -->
     <!-- <div class="content">
     <div class="item"><a class="link" href="RequestOfficialCopies">Request official copies</a><br> </div>
     <div class="item"><a class="link">Official Search of Whole with Priority</a></div>
@@ -148,7 +151,8 @@
     </div> -->
 
     <!--INFORMATION SERVICES DROPDOWN-->
-    <button class="collapsible"><strong>Information Services</strong></button>
+    <a class="collapsible" href="#sort">Sort</a>
+    <!-- <button class="collapsible"><strong>- Sort</strong></button> -->
     <!-- <div class="content">
     <div class="item"><a class="link" href="RequestOfficialCopies">Request official copies</a><br> </div>
     <div class="item"><a class="link">Official Search of Whole with Priority</a></div>
@@ -170,7 +174,8 @@
     </div> -->
 
     <!--LAND CHARGES DROPDOWN-->
-    <button class="collapsible"><strong>Land Charges Services</strong></button>
+    <a class="collapsible" href="#title-number">Title number</a>
+    <!-- <button class="collapsible"><strong>- Title number</strong></button> -->
     <div class="content">
     <!-- <div class="item"><a class="link">Bankruptcy Search</a><br> </div>
     <div class="item"><a class="link">Full Search</a></div>
@@ -179,19 +184,27 @@
     </div>
 
     <!--DOCUMENT REGISTRATION SERVICE-->
-    <div><button class="collapsible" style="height: 50px;"><strong>Document Registration Service</strong></button>
-    </div>
+    <a class="collapsible" href="#app-type">Application type</a>
+    <!-- <div><button class="collapsible"><strong>- Application type</strong></button>
+    </div> -->
 
     <!--REPLY TO REQUISITION-->
-    <div><button class="collapsible"><strong>Reply to Requisition</strong></button>
-    </div>
+    <a class="collapsible" href="#rHMLR">Received by HMLR</a>
+    <!-- <div><button class="collapsible"><strong>- Received by HMLR</strong></button>
+    </div> -->
 
     <!--REPLY TO REQUISITION-->
-    <div><button class="collapsible"><strong>Network Services</strong></button>
-    </div>
+    <a class="collapsible" href="#collapsed-row">Initial Application Information (collapsed row)</a>
+    <!-- <div><button class="collapsible"><strong>- Initial Application Information (collapsed row)</strong></button>
+    </div> -->
+    <br>
 
     <!--GENERAL FACILITIES-->
-    <div><button class="collapsible"><strong>General Facilities</strong></button>
+    <a class="collapsible" href="#expanded-row">Additional Application Information (expanded row)</a>
+    <div>
+      <!-- <button class="collapsible"><strong>- Additional Application Information (expanded row)</strong></button> -->
+      <br>
+
     <!-- <div class="content">
     <div class="item"><a class="link">Message area</a><br> </div>
     <div class="item"><a class="link">Services Requested</a></div>
@@ -200,7 +213,8 @@
     <!-- </div> -->
 
     <!--Admin Services-->
-    <button class="collapsible"><strong>Administrative Services</strong></button>
+    <a class="collapsible" href="#show-hide">Show / hide details</a>
+    <!-- <button class="collapsible"><strong>- Administrative Services</strong></button> -->
     <div class="content">
     <!-- <div class="item"><a class="link">Alternative despatch address</a><br> </div>
     <div class="item"><a class="link">Personal details</a></div>
@@ -212,6 +226,9 @@
 
 <style>
 
+  #menu {
+    color: #000000;
+  }
 
   #submenu {
     cursor: pointer;
@@ -230,6 +247,7 @@
     justify-content: left;
     align-items: left;
     width: 200px;
+    color: #005ea5;
 
   }
 
@@ -369,7 +387,8 @@
     <p class="govuk-body">Wild card searching is available. Wildcards allow you to search all of the information that begin with, end with, or include the characters that you specify. The wildcard character is an asterisk (*). </p>
     <p class="govuk-body">For example, if you were searching for a title number, by putting LP09* it would return all applications that have LP09 as part of their title number.</p>
 
-    <h3 class="govuk-heading-s">Sort</h3>
+    <a id="sort">
+    <h3 class="govuk-heading-s">Sort</h3></a>
     <p class="govuk-body">Use sort to order your list of applications. You can sort by:</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>Title number</li>
