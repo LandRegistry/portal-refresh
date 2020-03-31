@@ -86,20 +86,16 @@
     <a href="index.html" class="govuk-back-link">Back to Index</a>
     <meta charset="utf-8"/>
 
+    <!-- Phase banner ----->
+        <div class="govuk-phase-banner">
+          <p class="govuk-phase-banner__content">
+          <strong class="govuk-tag govuk-phase-banner__content__tag">Prototype</strong>
+          <span class="govuk-phase-banner__text">
+            This is a prototype and not a real service.
+          </span></p>
+        </div>
 <br> <br>
-
-<!-- Phase banner ----->
-    <!-- <div class="govuk-phase-banner">
-      <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">Prototype</strong>
-      <span class="govuk-phase-banner__text">
-        This is a prototype and not a real service.
-      </span></p>
-    </div> -->
-
 </div>
-
-
 
 <!-- Header -->
   <div class="govuk-grid-row">
@@ -295,7 +291,7 @@
 
 <!-- Service title -->
 
-<nav class="gem-c-contents-list  gem-c-contents-list--no-underline " role="navigation" data-module="track-click">
+<!-- <nav class="gem-c-contents-list  gem-c-contents-list--no-underline " role="navigation" data-module="track-click">
       <h2 class="gem-c-contents-list__title">Contents</h2>
 
     <ol class="gem-c-contents-list__list">
@@ -316,15 +312,15 @@
 
         </li>
     </ol>
-</nav>
+</nav> -->
 
 
 <div class="govuk-grid-column-three-quarters" style="margin-top: 5px;">
     <h1 class="govuk-heading-l govuk-!-font-size-27" style="font-weight: normal;"> View My Applications </h1>
     <!-- <img src="public/images/Helpicon.svg" alt="help" style="width: 45px; margin-top: -60px; padding-right: 40px;float: right; cursor: pointer;"><a href="#" style="float: right; padding-right: 47px; margin-top:-10px;" class="govuk-link"> Help </p> -->
 
-    <p class="govuk-body">This page displays all of your applications submitted to HM Land Registry via the portal, in a single location.</p>
-    <h3 class="govuk-heading-s">Filter and Search</h3>
+    <p class="govuk-body">View My Applications displays all of your applications submitted to the HM Land Registry Portal. This guide helps to explain what the features on the page do.</p>
+    <h3 class="govuk-heading-m">Filter</h3>
     <p class="govuk-body">Filter by application type – Use this to select which application types you wish to be displayed. You can filter by: </p>
         <ul class="govuk-list govuk-list--bullet">
           <li>Register update</li>
@@ -341,37 +337,57 @@
           <li>Completed</li>
         </ul>
 
-    <p class="govuk-body">Note: ‘Delayed’ results include applications with a progress status of 'Delayed Prior Pending Application(s) or Official Search(es)', 'Delayed' and 'Delayed - Extension of Time Granted'.</p>
-
-    <p class="govuk-body">‘Received’ results include applications with a progress status of ‘Received: Priority Protected', 'Received: Priority Protected – Awaiting Processing', 'Received: Priority Protected – Set-up activity underway' and 'In progress'. Applications that are displayed without a progress status will also be shown within the results of this filter option.</p>
+        <p><strong>Note:</strong>
+        <br>Received results include applications with a progress status of ‘Received: Priority Protected', 'Received: Priority Protected – Awaiting Processing', 'Received: Priority Protected – Set-up activity underway' and 'In progress'. Applications that are displayed without a progress status will also be shown within the results of this filter option.</p>
+        <p class="govuk-body">Delayed results include applications with a progress status of 'Delayed Prior Pending Application(s) or Official Search(es)', 'Delayed' and 'Delayed - Extension of Time Granted'</p>
 
     <h3 class="govuk-heading-s">Search</h3>
-    <p class="govuk-body">Note1: The search will return results where the character or string of characters entered as the search term, is found to have a match against any part of the information being searched.</p>
-    <p class="govuk-body">Note 2: Wild card searching is available. Wildcards allow you to search all of the information that begin with, end with, or include the characters that you specify. The wildcard character is an asterisk (*).</p>
+    <p class="govuk-body">Use this to select which application you wish to be displayed by their current progress status. You can filter by:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Title number</li>
+          <li>HMLR reference</li>
+          <li>Customer reference</li>
+        </ul>
+
+    <p class="govuk-body">Wild card searching is available. Wildcards allow you to search all of the information that begin with, end with, or include the characters that you specify. The wildcard character is an asterisk (*). </p>
+    <p class="govuk-body">For example, if you were searching for a title number, by putting LP09* it would return all applications that have LP09 as part of their title number.</p>
+
+    <h3 class="govuk-heading-s">Sort</h3>
+    <p class="govuk-body">Use sort to order your list of applications. You can sort by:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Title number</li>
+          <li>Customer reference</li>
+          <li>Received by HMLR</li>
+          <li>Estimated completion date</li>
+        </ul>
 
     <h3 class="govuk-heading-s">Initial Application Information (collapsed row)</h3>
-    <p class="govuk-body">Title number
-    <br>Shows the title number for the application (if available), or for Land Charges Registration View and Land Charges Office Copy applications, shows the Land Charges Registration Number.</p>
+    <p><strong>Title number</strong>
+    <br>Shows the title number for the application (if available). For Land Charges Registration View and Land Charges Office Copy applications it shows the Land Charges Registration Number.</p>
 
-    <p class="govuk-body">Customer reference
-    <br>Shows the reference provided by you when the application was submitted.</p>
+    <p><strong>Customer reference</strong>
+    <br>This is the reference provided by you when the application was submitted.</p>
 
-    <p class="govuk-body">Application type
-    <br>Shows the reference provided by you when the application was submitted.</p>
+    <p><strong>Application type</strong>
+    <br>The type of application you have lodged (for example, Transfer of Part, Official Search of Whole with Priority).</p>
 
-    <p class="govuk-body">Received by HMLR
-    <br>The date your application was received by HM Land Registry.</p>
+    <p><strong>Received by HMLR</strong>
+    <br>This is the date your application was received by HM Land Registry.</p>
 
-    <p class="govuk-body">Application progress
+    <p><strong>Application progres</strong>
     <br>The high-level progress status of the application (e.g. Received, Delayed, Completed or Cancelled).</p>
 
-    <p class="govuk-body">Note: ‘Delayed’ includes applications with a progress status of 'Delayed Prior Pending Application(s) or Official Search(es)', 'Delayed' and 'Delayed - Extension of Time Granted'.</p>
-    <p class="govuk-body">‘Received’ includes applications with a progress status of ‘Received: Priority Protected', 'Received: Priority Protected – Awaiting Processing', 'Received: Priority Protected – Set-up activity underway' and 'In progress'.</p>
+    <p><strong>Note:</strong>
+    <br>Received results include applications with a progress status of ‘Received: Priority Protected', 'Received: Priority Protected – Awaiting Processing', 'Received: Priority Protected – Set-up activity underway' and 'In progress'. Applications that are displayed without a progress status will also be shown within the results of this filter option.</p>
+    <p class="govuk-body">Delayed results include applications with a progress status of 'Delayed Prior Pending Application(s) or Official Search(es)', 'Delayed' and 'Delayed - Extension of Time Granted'</p>
 
-    <h3 class="govuk-heading-s">Estimated completion date</h3>
-    <p class="govuk-body">Shows a projected date for completion of the application, based on average completion time data, on the day the application is received. It will change if an application is delayed by correspondence. This date is only displayed for applications that update or create a Register.</p>
-    <p class="govuk-body">Note: These dates are supplied as estimates only.</p>
-    <p class="govuk-body">Show/Hide Details (+) - Expands the row so more information about your application can be viewed.</p>
+    <p><strong>Estimated completion date</strong>
+    <br>This shows a projected date for completion of the application, based on average completion time data on the day the application is received. It will change if an application is delayed by correspondence. This date is only displayed for applications that update or create a Register.</p>
+    <p><strong>Note:</strong>
+    <br>These dates are supplied as estimates only.</p>
+
+    <p><strong>Show / hide details (+)</strong>
+    <br>Expands the row so more information about your application can be viewed.</p>
 
     <h3 class="govuk-heading-s">Additional Application Information (expanded row)</h3>
     <p class="govuk-body">HMLR Reference
