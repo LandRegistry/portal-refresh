@@ -39,6 +39,16 @@
   visibility: visible;
 }
 
+#menu {
+  position: fixed;
+  width: 100%;
+  top: 50;
+}
+
+.govuk-grid-column-three-quarters {
+  float:right;
+}
+
 .collapsible {
   color: blue;
   text-decoration: none;
@@ -174,7 +184,7 @@
     </div> -->
 
     <!--LAND CHARGES DROPDOWN-->
-    <a class="collapsible" href="#title-number">Title number</a>
+    <!-- <a class="collapsible" href="#title-number">Title number</a> -->
     <!-- <button class="collapsible"><strong>- Title number</strong></button> -->
     <div class="content">
     <!-- <div class="item"><a class="link">Bankruptcy Search</a><br> </div>
@@ -184,12 +194,12 @@
     </div>
 
     <!--DOCUMENT REGISTRATION SERVICE-->
-    <a class="collapsible" href="#app-type">Application type</a>
+    <!-- <a class="collapsible" href="#app-type">Application type</a> -->
     <!-- <div><button class="collapsible"><strong>- Application type</strong></button>
     </div> -->
 
     <!--REPLY TO REQUISITION-->
-    <a class="collapsible" href="#rHMLR">Received by HMLR</a>
+    <!-- <a class="collapsible" href="#rHMLR">Received by HMLR</a> -->
     <!-- <div><button class="collapsible"><strong>- Received by HMLR</strong></button>
     </div> -->
 
@@ -334,10 +344,14 @@
 
 
 <div class="govuk-grid-column-three-quarters" style="margin-top: 5px;">
+
+  <a id="vma">
     <h1 class="govuk-heading-l govuk-!-font-size-27" style="font-weight: normal;"> View My Applications </h1>
     <!-- <img src="public/images/Helpicon.svg" alt="help" style="width: 45px; margin-top: -60px; padding-right: 40px;float: right; cursor: pointer;"><a href="#" style="float: right; padding-right: 47px; margin-top:-10px;" class="govuk-link"> Help </p> -->
+</a>
 
     <p class="govuk-body" "contact-link">View My Applications displays all of your applications submitted to the HM Land Registry Portal. This guide helps to explain what the features on the page do.</p>
+
     <p style="margin-top: -15px; text-decoration: line-through;">If you need any further help then</p>
     <p class="contact-link">contact HM Land Registry.</p>
 
@@ -354,8 +368,9 @@
     }
 
     </style>
-
+<a id="filter">
     <h3 class="govuk-heading-m">Filter</h3>
+  </a>
     <p class="govuk-body">Filter by application type – Use this to select which application types you wish to be displayed. You can filter by: </p>
         <ul class="govuk-list govuk-list--bullet">
           <li>Register update</li>
@@ -363,7 +378,9 @@
           <li>Register query</li>
         </ul>
 
+
     <h3 class="govuk-heading-s">Filter by application progress</h3>
+
     <p class="govuk-body">Use this to select which application you wish to be displayed by their current progress status. You can filter by:</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>Received</li>
@@ -397,7 +414,9 @@
           <li>Estimated completion date</li>
         </ul>
 
+        <a id="collapsed-row">
     <h3 class="govuk-heading-s">Initial Application Information (collapsed row)</h3>
+  </a>
     <p><strong>Title number</strong>
     <br>Shows the title number for the application (if available). For Land Charges Registration View and Land Charges Office Copy applications it shows the Land Charges Registration Number.</p>
 
@@ -425,7 +444,8 @@
     <p><strong>Show / hide details (+)</strong>
     <br>Expands the row so more information about your application can be viewed.</p>
 
-    <h3 class="govuk-heading-s">Additional Application Information (expanded row)</h3>
+<a id="expanded-row">
+    <h3 class="govuk-heading-s">Additional Application Information (expanded row)</h3></a>
     <p><strong>HMLR Reference</strong>
     <br>The unique reference HM Land Registry allocates to an application.</p>
 
@@ -520,7 +540,9 @@
             <p><strong>Files</strong>
             <br>Shows the documentation electronically issued by HM Land Registry to the applicant on completion of the application. These can be viewed and downloaded.</p>
 
+            <a id="show-hide">
             <p><strong>Show / hide details (-)</strong>
+            </a>
             <br>Collapses the row so less information about your application is displayed.</p>
 
 </div>
