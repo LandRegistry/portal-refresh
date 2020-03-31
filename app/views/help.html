@@ -319,7 +319,24 @@
     <h1 class="govuk-heading-l govuk-!-font-size-27" style="font-weight: normal;"> View My Applications </h1>
     <!-- <img src="public/images/Helpicon.svg" alt="help" style="width: 45px; margin-top: -60px; padding-right: 40px;float: right; cursor: pointer;"><a href="#" style="float: right; padding-right: 47px; margin-top:-10px;" class="govuk-link"> Help </p> -->
 
-    <p class="govuk-body">View My Applications displays all of your applications submitted to the HM Land Registry Portal. This guide helps to explain what the features on the page do.</p>
+    <p class="govuk-body" "contact-link">View My Applications displays all of your applications submitted to the HM Land Registry Portal. This guide helps to explain what the features on the page do.</p>
+    <p style="margin-top: -15px; text-decoration: line-through;">If you need any further help then</p>
+    <p class="contact-link">contact HM Land Registry.</p>
+
+    <style>
+
+    .contact-link{
+      text-decoration: underline;
+      cursor: pointer;
+      text-decoration: line-through;
+      color: #005ea5;
+      margin-top: -45px;
+      margin-right: 390px;
+      float: right;
+    }
+
+    </style>
+
     <h3 class="govuk-heading-m">Filter</h3>
     <p class="govuk-body">Filter by application type – Use this to select which application types you wish to be displayed. You can filter by: </p>
         <ul class="govuk-list govuk-list--bullet">
@@ -390,29 +407,102 @@
     <br>Expands the row so more information about your application can be viewed.</p>
 
     <h3 class="govuk-heading-s">Additional Application Information (expanded row)</h3>
-    <p class="govuk-body">HMLR Reference
+    <p><strong>HMLR Reference</strong>
     <br>The unique reference HM Land Registry allocates to an application.</p>
 
-    <p class="govuk-body">Priority Period
-    <br>Shown for Official Search with Priority applications only. The full period during which any application protected by a search retains its priority.</p>
+    <p><strong>Priority Period</strong>
+    <br>Shown for Official Search with Priority applications only. The full period during which any application protected by a search retains its priority.  </p>
 
-    <p class="govuk-body">Parent Title(s)
+    <p><strong>Parent Title(s)</strong>
     <br>This is the existing title or titles out of which a Transfer of Part or New Lease application has been granted.</p>
 
-    <p class="govuk-body">Application Progress - details
+    <p><strong>Application Progress - details</strong>
     <br>This shows the progress of an application by the following stages:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>Received: Priority Protected</li>
+
+            <ul class="govuk-list govuk-list--bullet" style="margin-left: 60px; margin-top:-20px;">
+              <li><strong>Received: Priority Protected</strong></li>
             </ul>
-    <p style="margin-top: -20px;">This is the existing title or titles out of which a Transfer of Part or New Lease application has been granted.</p>
+            <p style="margin-top: -20px; margin-left: 60px;">This is the existing title or titles out of which a Transfer of Part or New Lease application has been granted.</p>
+            <br>
 
-    <ul class="govuk-list govuk-list--bullet">
-      <li>Received: Priority Protected – Awaiting Processing </li>
-    </ul>
-    <p style="margin-top: -20px;">This is shown when an application is being held on an office’s backlog list to await processing. No processing activity has yet taken place. The application will normally be dealt with in accordance with its priority order.</p>
+            <ul class="govuk-list govuk-list--bullet" style="margin-left: 60px; margin-top:-20px;">
+              <li><strong>Received: Priority Protected – Awaiting Processing </strong></li>
+            </ul>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when an application is being held on an office’s backlog list to await processing. No processing activity has yet taken place. The application will normally be dealt with in accordance with its priority order.  </p>
+            <br>
 
+            <ul class="govuk-list govuk-list--bullet" style="margin-left: 60px; margin-top:-20px;">
+              <li><strong>Received: Priority Protected – Set-up activity underway </strong></li>
+            </ul>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when the parent title is a developer title and there are setting up activities that need to be completed before applications can proceed.</p>
+            <br>
 
+            <ul class="govuk-list govuk-list--bullet" style="margin-left: 60px; margin-top:-20px;">
+              <li><strong>In Progress</strong></li>
+            </ul>
+            <p style="margin-top: -20px; margin-left: 60px;">Processing activities are taking place. There are no known events or activities causing the application to be delayed at this time.</p>
+            <br>
 
+            <ul class="govuk-list govuk-list--bullet" style="margin-left: 60px; margin-top:-20px;">
+              <li><strong>Delayed Prior Pending Applications(s) or Official Search(es)</strong></li>
+            </ul>
+            <p style="margin-top: -20px; margin-left: 60px;">The application has prior pending application(s) or official search(es) with priority on our Day List.</p>
+            <br>
+
+            <ul class="govuk-list govuk-list--bullet" style="margin-left: 60px; margin-top:-20px;">
+              <li><strong>Delayed</strong></li>
+            </ul>
+            <p style="margin-top: -20px; margin-left: 60px;">Events or activities are causing progress of the application to be delayed.</p>
+            <br>
+
+            <ul class="govuk-list govuk-list--bullet" style="margin-left: 60px; margin-top:-20px;">
+              <li><strong>Delayed - Extension of Time Granted</strong></li>
+            </ul>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when a request for additional time to reply to one or more requisition points has been approved. The amount of additional time allowed can vary and is at the discretion of the Chief Land Registrar based upon the individual circumstances. Subject to approval, a minimum of 10 working days is normally granted in the first instance, while subsequent requests will be treated on their merits. Requests for extension of time can be submitted via the ‘Still Need To Contact Us’ link located within the Application Enquiry service.</p>
+
+            <p><strong>Correspondence</strong>
+            <br>Shows notices, requisitions and some letters issued by HM Land Registry against an application.</p>
+
+            <p><strong>Note:</strong>
+            <br>You can only view the content and download correspondence that is issued to you personally.</p>
+
+            <ul class="govuk-list govuk-list--bullet" style="margin-left: 60px; margin-top:-20px;">
+              <li><strong>Letters - Letter issued on [date]</strong></li>
+            </ul>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when HM Land Registry issues a letter in respect of the application.</p>
+            <br>
+
+            <ul class="govuk-list govuk-list--bullet" style="margin-left: 60px; margin-top:-20px;">
+              <li><strong>Notice (Objection):</strong></li>
+            </ul>
+            <p style="margin-top: -20px; margin-left: 60px;"><strong>Notice(s) issued on [date] Expires on [date]</strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when HM Land Registry issues a Notice in respect of the application. HM Land Registry serves notices to interested parties to help prevent wrongful registration. A copy notice is not sent to the applicant. Notices inform the recipient that HM Land Registry has received an application, or is otherwise proposing an alteration that may adversely affect their interest. These allow a time period for objection, but also invite the addressee to consent to the application in order to shorten the period of delay.</p>
+            <br>
+
+            <ul class="govuk-list govuk-list--bullet" style="margin-left: 60px; margin-top:-20px;">
+              <li><strong>Notice (Information):</strong></li>
+            </ul>
+            <p style="margin-top: -20px; margin-left: 60px;"><strong>Notice(s) issued on [date] Expires on [None]</strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when HM Land Registry issues a Notice for information purposes only. This type of Notice does have an expiry date and does not require a response.</p>
+            <br>
+
+            <ul class="govuk-list govuk-list--bullet" style="margin-left: 60px; margin-top:-20px;">
+              <li><strong>Requisition(s) issued on [date]</strong></li>
+            </ul>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when HM Land Registry issues a requisition requesting additional information in support of the application. A requisition will not be deemed to have been satisfied until all outstanding points raised have been fully replied to.</p>
+            <br>
+
+            <ul class="govuk-list govuk-list--bullet" style="margin-left: 60px; margin-top:-20px;">
+              <li><strong>Warning of Cancellation issued on [date] </strong></li>
+            </ul>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when HM Land Registry issues a warning that the application will be cancelled unless a full response to a requisition is received.</p>
+            <br>
+
+            <p><strong>Files</strong>
+            <br>Shows the documentation electronically issued by HM Land Registry to the applicant on completion of the application. These can be viewed and downloaded.</p>
+
+            <p><strong>Show / hide details (-)</strong>
+            <br>Collapses the row so less information about your application is displayed.</p>
 
 </div>
 
