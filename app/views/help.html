@@ -62,6 +62,17 @@
   /* background-color: #D4E039; */
 }
 
+.collapsible2 {
+  color: black;
+  text-decoration: none;
+}
+
+.collapsible2:hover {
+  color: black;
+  text-decoration: none;
+  /* background-color: #D4E039; */
+}
+
 .URL2 {
   color: #516715
 }
@@ -135,11 +146,12 @@
     <div class="govuk-grid-column-one-quarter" style="margin-left: -8px;" id="menu">
 
 
-      <a class="collapsible" style="color: black;" href="#">Contents</a>
+      <a class="collapsible2" style="color: black;">Contents</a>
     <!--Portal Home Menu item-->
     <!-- <button class="collapsible"><strong><a href="portalhomepage.html" style="text-decoration: none;">My Portal Homepage</a></strong></button> -->
     <a class="collapsible" href="#vma">View My Applications</a>
     <!-- <button class="collapsible"><strong><style="text-decoration: none; color:#005ea5;">- View My Applications</a></strong></button> -->
+
 
     <!--VIEW MY APPLICATIONS DROPDOWN-->
     <a class="collapsible" href="#filter">Filter</a>
@@ -247,6 +259,22 @@
   #submenu {
     cursor: pointer;
   }
+  /* Style the button that is used to open and close the collapsible content */
+  .collapsible2 {
+    background-color: transparent;
+    /* cursor: pointer; */
+    height: 30px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 200px;
+    color: #005ea5;
+
+  }
 
   /* Style the button that is used to open and close the collapsible content */
   .collapsible {
@@ -350,7 +378,7 @@
 <div class="govuk-grid-column-three-quarters" style="margin-top: 5px;">
 
   <a id="vma">
-    <h1 class="govuk-heading-l govuk-!-font-size-27" style="font-weight: normal;"> View My Applications </h1>
+    <h1 class="govuk-heading-l govuk-!-font-size-27" style=""> View My Applications </h1>
     <!-- <img src="public/images/Helpicon.svg" alt="help" style="width: 45px; margin-top: -60px; padding-right: 40px;float: right; cursor: pointer;"><a href="#" style="float: right; padding-right: 47px; margin-top:-10px;" class="govuk-link"> Help </p> -->
 </a>
 
@@ -358,7 +386,7 @@
 
     <p style="margin-top: -15px; text-decoration: line-through;">If you need any further help then</p>
     <p class="contact-link">contact HM Land Registry.</p>
-
+    <br>
     <style>
 
     .contact-link{
@@ -397,6 +425,7 @@
         <br>Received results include applications with a progress status of ‘Received: Priority Protected', 'Received: Priority Protected – Awaiting Processing', 'Received: Priority Protected – Set-up activity underway' and 'In progress'. Applications that are displayed without a progress status will also be shown within the results of this filter option.</p>
         <p class="govuk-body">Delayed results include applications with a progress status of 'Delayed Prior Pending Application(s) or Official Search(es)', 'Delayed' and 'Delayed - Extension of Time Granted'</p>
 
+
     <h3 class="govuk-heading-s">Search</h3>
     <p class="govuk-body">Use this to select which application you wish to be displayed by their current progress status. You can filter by:</p>
         <ul class="govuk-list govuk-list--bullet">
@@ -407,9 +436,10 @@
 
     <p class="govuk-body">Wild card searching is available. Wildcards allow you to search all of the information that begin with, end with, or include the characters that you specify. The wildcard character is an asterisk (*). </p>
     <p class="govuk-body">For example, if you were searching for a title number, by putting LP09* it would return all applications that have LP09 as part of their title number.</p>
+    <br>
 
     <a id="sort">
-    <h3 class="govuk-heading-s">Sort</h3></a>
+    <h3 class="govuk-heading-m">Sort</h3></a>
     <p class="govuk-body">Use sort to order your list of applications. You can sort by:</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>Title number</li>
@@ -417,9 +447,10 @@
           <li>Received by HMLR</li>
           <li>Estimated completion date</li>
         </ul>
+        <br>
 
         <a id="collapsed-row">
-    <h3 class="govuk-heading-s">Initial Application Information (collapsed row)</h3>
+    <h3 class="govuk-heading-m">Initial Application Information (collapsed row)</h3>
   </a>
     <p><strong>Title number</strong>
     <br>Shows the title number for the application (if available). For Land Charges Registration View and Land Charges Office Copy applications it shows the Land Charges Registration Number.</p>
@@ -448,8 +479,9 @@
     <p><strong>Show / hide details (+)</strong>
     <br>Expands the row so more information about your application can be viewed.</p>
 
+    <br>
 <a id="expanded-row">
-    <h3 class="govuk-heading-s">Additional Application Information (expanded row)</h3></a>
+    <h3 class="govuk-heading-m">Additional Application Information (expanded row)</h3></a>
     <p><strong>HMLR Reference</strong>
     <br>The unique reference HM Land Registry allocates to an application.</p>
 
@@ -461,7 +493,7 @@
 
     <p><strong>Application Progress - details</strong>
     <br>This shows the progress of an application by the following stages:</p>
-
+<br>
             <ul class="govuk-list govuk-list--bullet" style="margin-left: 60px; margin-top:-20px;">
               <li><strong>Received: Priority Protected</strong></li>
             </ul>
@@ -508,7 +540,7 @@
 
             <p><strong>Note:</strong>
             <br>You can only view the content and download correspondence that is issued to you personally.</p>
-
+<br>
             <ul class="govuk-list govuk-list--bullet" style="margin-left: 60px; margin-top:-20px;">
               <li><strong>Letters - Letter issued on [date]</strong></li>
             </ul>
