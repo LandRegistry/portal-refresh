@@ -472,9 +472,23 @@
                 </div>
 
 
+                <style>
+                .govuk-table  {
+                  border-style: solid;
+                  border-width: 1px;
+
+                }
+
+                .expandy-row {
+                  border-right: 1px solid;
+
+                  border-width: 5px;
+                }
+
+                </style>
 
             <!-- My Work Table -->
-                <table frame="box" class="govuk-table my-work" style="margin-top: 0px;">
+                <table  class="govuk-table my-work" style="margin-top: 0px;">
 
                     <thead class="govuk-table__head">
                       <tr class="govuk-table__row" style="font-size:14px;background-color: rgba(199,210,193,0.5);">
@@ -493,7 +507,7 @@
 
             {% macro rows(page) %}
                       <!-- 1 -->
-                  <tbody  class="govuk-table__body">
+                  <tbody class="govuk-table__body">
                       <tr class="govuk-table__row govuk-link-table">
                         <td class="govuk-table__cell "></td>
                         <td class="govuk-table__cell " scope="row">LP123456 <p class="govuk-visually-hidden"> L927GDU </p><!-- THIS IS PAGE {{page}} --></td>
@@ -505,7 +519,7 @@
                         <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
                       </tr>
 
-                      
+
 
                   <!-- 1 Expanded row -->
                         <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
