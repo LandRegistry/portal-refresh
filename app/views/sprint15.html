@@ -5,9 +5,6 @@
 {% endblock %}
 {% block content %}
 
-
-<style>
-
 <style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8",chrome=1">
@@ -23,6 +20,10 @@
   .govuk-grid-column-one-quarter {
     max-width: 200px;
   }
+
+
+
+
 
 .govuk-details-text {
   padding-left: 24px;
@@ -490,6 +491,29 @@
                 }
 
                 </style>
+
+
+                <style>
+                .vl {
+                  border-right: 1px solid black;
+                  height: 600px;
+                  position:absolute;
+                  z-index:1000;
+                }
+                </style>
+
+                <style>
+                .v2 {
+                  border-right: 1px solid black;
+                  margin-left: 899px;
+                  height: 600px;
+                  position:absolute;
+                  z-index:1000;
+                }
+                </style>
+
+                <div class="vl"></div>
+                  <div class="v2"></div>
 
             <!-- My Work Table -->
                 <table  class="govuk-table my-work" style="margin-top: 0px;">
@@ -1033,8 +1057,10 @@
 
             <div class="govuk-grid-column-one-quarter" style="float: right; text-align: right;">
 
+
+
               <div style="margin-left: -1000px;"><p style="font-size: 16px;"> Displaying 1 - 10 of 20 applications</p></div>
-            <div><p style="font-size: 16px;"> 1 <a style="font-size: 16px;" href="">2</a> <a style="font-size: 16px;" href="">></a> </p></div>
+            <div id="pagination"><p style="font-size: 16px;"> 1 <a style="font-size: 16px;" href="">2</a> <a style="font-size: 16px;" href="">></a> </p></div>
             </div>
 
                             <details class="govuk-details" data-module="govuk-details">
