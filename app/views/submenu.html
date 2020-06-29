@@ -42,6 +42,13 @@
   }
 
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .collapsible3:hover {
+    background-color: #000000;
+    background-color: #D4E039;
+    color: black;
+  }
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .collapsible:hover {
     background-color: #000000;
     background-color: #D4E039;
@@ -49,14 +56,15 @@
   }
 
   /* Style the collapsible content. Note: hidden by default */
-  .content {
+  /* .content {
     padding-left: 10px;
     font-size: 12px;
     display: none;
     overflow: hidden;
     font-family: arial;
     cursor: pointer;
-  }
+    border-left: 5px solid #bfc1c3;
+  } */
 
   .item {
     width: 190px;
@@ -64,6 +72,7 @@
     padding-bottom: 1px;
     margin-bottom: 5px;
     margin-top: 5px;
+    
   }
 
   .item:hover {
@@ -71,8 +80,9 @@
   }
 
   .link:hover {
-    background: #E5EC89;
-    text-decoration: underline;
+    background-color: #000000;
+    background-color: #D4E039;
+    color: black;
   }
 
   .footer-link {
@@ -149,10 +159,10 @@
 
           <!--Portal Home Menu item-->
           <!-- <button class="collapsible"><strong><a href="portalhomepage.html" style="text-decoration: none;">My Portal Homepage</a></strong></button> -->
-          <button class="collapsible"><strong>My Portal Homepage</strong></button>
+          <button class="collapsible3"><strong>My Portal Homepage</strong></button>
 
           <!--VIEW MY APPLICATIONS DROPDOWN-->
-          <button class="collapsible"><strong>NEW: View My Applications</strong></button>
+          <button class="collapsible3"><strong>NEW: View My Applications</strong></button>
           <!-- <div class="content">
           <div class="item"><a class="link" href="RequestOfficialCopies">Request official copies</a><br> </div>
           <div class="item"><a class="link">Official Search of Whole with Priority</a></div>
@@ -172,11 +182,13 @@
           <div class="item"><a class="link">Document View</a></div>
           <div class="item"><a class="link">Request Historical Copies</a></div>
           </div> -->
+
+
 
           <!--INFORMATION SERVICES DROPDOWN-->
           <button class="collapsible"><strong>Information Services</strong></button>
-          <!-- <div class="content">
-          <div class="item"><a class="link" href="RequestOfficialCopies">Request official copies</a><br> </div>
+          <div class="content">
+          <div class="item"><a class="link">Request official copies</a><br> </div>
           <div class="item"><a class="link">Official Search of Whole with Priority</a></div>
           <div class="item"><a class="link">Official Search of Part with Priority</a></div>
           <div class="item"><a class="link">Withdraw Official Search with Priority</a></div>
@@ -193,15 +205,26 @@
           <div class="item"><a class="link">Title Plan View</a></div>
           <div class="item"><a class="link">Document View</a></div>
           <div class="item"><a class="link">Request Historical Copies</a></div>
-          </div> -->
+          <br>
+          <!-- <hr class="hr"></hr> -->
+          </div>
+
+          <!-- <style> -->
+          <!-- /* Dotted red border */ -->
+          <!-- /* .hr { -->
+            <!-- border-top: 1px dashed lightgrey;
+          }
+          </style> */ -->
+
 
           <!--LAND CHARGES DROPDOWN-->
           <button class="collapsible"><strong>Land Charges Services</strong></button>
           <div class="content">
-          <!-- <div class="item"><a class="link">Bankruptcy Search</a><br> </div>
+          <div class="item"><a class="link">Bankruptcy Search</a><br> </div>
           <div class="item"><a class="link">Full Search</a></div>
           <div class="item"><a class="link">Office Copy</a></div>
-          <div class="item"><a class="link">Registration View</a></div> -->
+          <div class="item"><a class="link">Registration View</a></div>
+          <br>
           </div>
 
           <!--DOCUMENT REGISTRATION SERVICE-->
@@ -218,19 +241,21 @@
 
           <!--GENERAL FACILITIES-->
           <div><button class="collapsible"><strong>General Facilities</strong></button>
-          <!-- <div class="content">
+          <div class="content">
           <div class="item"><a class="link">Message area</a><br> </div>
           <div class="item"><a class="link">Services Requested</a></div>
           <div class="item"><a class="link">PDF Downloads</a></div>
-          <div class="item"><a class="link">Notifications</a></div> -->
-          <!-- </div> -->
+          <div class="item"><a class="link">Notifications</a></div>
+          <br>
+          </div>
 
           <!--Admin Services-->
           <button class="collapsible"><strong>Administrative Services</strong></button>
           <div class="content">
-          <!-- <div class="item"><a class="link">Alternative despatch address</a><br> </div>
+          <div class="item"><a class="link">Alternative despatch address</a><br> </div>
           <div class="item"><a class="link">Personal details</a></div>
-          <div class="item"><a class="link">Change password</a></div> -->
+          <div class="item"><a class="link">Change password</a></div>
+          <br>
           </div><br>
 
           <!--Additional menu-->
@@ -251,11 +276,28 @@
           text-align: left;
           outline: none;
           font-size: 14px;
-          /* display: flex; */
-          /* justify-content: left; */
+          display: flex; */
+          justify-content: left;
           align-items: left;
           width: 200px;
         }
+
+        .collapsible3 {
+          background-color: transparent;
+          color: #516715;
+          cursor: pointer;
+          height: 30px;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 14px;
+          display: flex; */
+          justify-content: left;
+          align-items: left;
+          width: 200px;
+        }
+
+
 
         /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
         .collapsible:hover {
@@ -264,20 +306,26 @@
 
         /* Style the collapsible content. Note: hidden by default */
         .content {
-          padding-left: 10px;
+          padding-left: 5px;
           font-size: 12px;
           display: none;
           overflow: hidden;
           font-family: arial;
           cursor: pointer;
+          width: 265px;
+          left: 0px;
+          margin-top: -10px;
+
+
         }
 
         .item {
-          width: 190px;
+          width: 1000px;
           padding-top: 1px;
           padding-bottom: 1px;
           margin-bottom: 5px;
           margin-top: 5px;
+
         }
 
         .item:hover {
@@ -292,7 +340,7 @@
       </style>
 
       <!-- Menu dropdowns -->
-          <!-- <script>
+          <script>
           var coll = document.getElementsByClassName("collapsible");
           var i;
 
@@ -307,7 +355,7 @@
               }
             });
           }
-          </script> -->
+          </script>
 
       </div>
       </div>
@@ -570,6 +618,10 @@
                         </div>
                       </div>
 
+                        <div class="govuk-table__cell2">
+                          <p style="font-size: 14px; font-style: italic;">The correspondence and file links will download instantly through your browser.</p>
+                        </div>
+
                       <td class="govuk-table__cell"  colspan="1" >
                         <b> HMLR Reference</b>
                         <p style="font-size: 14px;">S827LKJ</p>
@@ -579,8 +631,17 @@
                         <b> Parent Title(s)</b>
                         <p style="font-size: 14px;">	LP180123</p>
                         </td>
+
                       </tr>
           </tbody>
+
+          <style>
+
+          /* .govuk-table__cell2 {
+            width: 500px;
+          } */
+
+          </style>
 
 
                 <!-- 3 -->
@@ -613,8 +674,8 @@
                             <div class="govuk-grid-column-one-half">
                                 <b>Files</b>
                               <p style="font-size: 14px;"></p>
-                              <a href="#"> Official Copy of Title Plan dated 31/10/19</a><br>
-                              <a href="#">Official Copy of Register dated 31/10/19 </a><br>
+                              <a href="#"> Official Copy of Title Plan dated 31/10/19</a><br><img style="float: right; font-size: 14px; margin-right: -40px; margin-top :-45px;" src="public/images/noun_Download.png" width="30" height="30">
+                              <a href="#">Official Copy of Register dated 31/10/19 </a><br><img style="float: right; font-size: 14px; margin-right: -40px; margin-top :-45px;" src="public/images/noun_Download.png" width="30" height="30">
                             </div>
 
                           </div>
@@ -659,10 +720,20 @@
                           <div class="govuk-grid-column-one-half">
                               <b>Files</b>
                             <p style="font-size: 14px;"></p>
-                            <a href="#"> Search result dated 31/10/19</a><br>
+                            <a href="#"> Search result dated 31/10/19</a><br><img style="float: right; font-size: 14px; margin-right: -40px; margin-top :-45px;" src="public/images/noun_Download.png" width="30" height="30">
                             <!-- <a href="#">Official Copy of Register dated 31/10/19 </a><br> -->
                           </div>
 
+
+
+
+
+                        </div>
+
+                        <br>
+
+                        <div class="govuk-table__cell2">
+                          <p style="font-size: 14px; font-style: italic;">The correspondence and file links will download instantly through your browser.</p>
                         </div>
 
                         <td class="govuk-table__cell"  colspan="1" >
@@ -712,7 +783,7 @@
                           <div class="govuk-grid-column-one-half">
                             <b>Correspondence</b>
                             <p style="font-size: 14px;"><br>
-                            <a href="#"> Requisition(s) issued on 29/11/19</a><br>
+                            <a href="#"> Requisition(s) issued on 29/11/19</a><br><img style="float: right; font-size: 14px; margin-right: -40px; margin-top :-45px;" src="public/images/noun_Download.png" width="30" height="30">
                             <!-- <a class="thirdparty"> Notice(s) issued on 24/11/19</a><br>
                             <a href="#"> Notice(s) issued on 12/11/19</a></p> -->
                           </div>
@@ -812,7 +883,7 @@
                           <div class="govuk-grid-column-one-half">
                             <b>Correspondence</b>
                             <p style="font-size: 14px;"><br>
-                            <a href="#"> Notification of Cancellation on 31/10/19</a><br>
+                            <a href="#"> Notification of Cancellation on 31/10/19</a><br><img style="float: right; font-size: 14px; margin-right: -40px; margin-top :-45px;" src="public/images/noun_Download.png" width="30" height="30">
                             <!-- <a class="thirdparty"> Notice(s) issued on 24/11/19</a><br>
                             <a href="#"> Notice(s) issued on 12/11/19</a></p> -->
                           </div>
@@ -864,7 +935,7 @@
                           <div class="govuk-grid-column-one-half">
                               <b>Files</b>
                             <p style="font-size: 14px;"></p>
-                            <a href="#"> Search result dated 31/11/19</a><br>
+                            <a href="#"> Search result dated 31/11/19</a><br><img style="float: right; font-size: 14px; margin-right: -40px; margin-top :-45px;" src="public/images/noun_Download.png" width="30" height="30">
                             <!-- <a href="#">Official Copy of Register dated 31/10/19 </a><br> -->
                           </div>
 
@@ -909,7 +980,7 @@
                           <div class="govuk-grid-column-one-half">
                             <b>Correspondence</b>
                             <p style="font-size: 14px;"><br>
-                            <a href="#"> Requisition(s) issued on 22/10/19</a><br>
+                            <a href="#"> Requisition(s) issued on 22/10/19</a><br><img style="float: right; font-size: 14px; margin-right: -20px; margin-top :-45px;" src="public/images/noun_Download.png" width="30" height="30">
                             <!-- <a class="thirdparty"> Notice(s) issued on 24/11/19</a><br>
                             <a href="#"> Notice(s) issued on 12/11/19</a></p> -->
                           </div>
@@ -917,7 +988,7 @@
                           <div class="govuk-grid-column-one-half">
                               <b>Files</b>
                             <p style="font-size: 14px;"></p>
-                            <a href="#"> Official Copy of Register dated 31/10/19</a><br>
+                            <a href="#"> Official Copy of Register dated 31/10/19</a><br><img style="float: right; font-size: 14px; margin-right: -20px; margin-top :-45px;" src="public/images/noun_Download.png" width="30" height="30">
                             <!-- <a href="#">Official Copy of Register dated 31/10/19 </a><br> -->
                           </div>
 
@@ -963,9 +1034,9 @@
                           <div class="govuk-grid-column-one-half">
                               <b>Files</b>
                             <p style="font-size: 14px;"></p>
-                            <a href="#"> Registration Completion Sheet dated 31/10/19</a><br>
-                            <a href="#">Official Copy of Register dated 31/10/19 </a><br>
-                            <a href="#">Official Copy of Title Plan dated 31/10/19 </a><br>
+                            <a href="#"> Registration Completion Sheet dated 31/10/19</a><br><img style="float: right; font-size: 14px; margin-right: -40px; margin-top :-45px;" src="public/images/noun_Download.png" width="30" height="30">
+                            <a href="#">Official Copy of Register dated 31/10/19 </a><br><img style="float: right; font-size: 14px; margin-right: -40px; margin-top :-45px;" src="public/images/noun_Download.png" width="30" height="30">
+                            <a href="#">Official Copy of Title Plan dated 31/10/19 </a><br><img style="float: right; font-size: 14px; margin-right: -40px; margin-top :-45px;" src="public/images/noun_Download.png" width="30" height="30">
                           </div>
 
                         </div>
