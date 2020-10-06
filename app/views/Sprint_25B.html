@@ -470,535 +470,536 @@
                 }
                 </style>
 
-            <!-- My Work Table -->
-                <table  class="govuk-table my-work" style="margin-top: 0px; ">
-
-                    <thead class="govuk-table__head">
-                      <tr class="govuk-table__row" style="font-size:14px;background-color: rgba(199,210,193,0.5);">
-                      <th class="govuk-table__header govuk-!-width-one-twelfth " scope="col"></th>
-                      <th class="govuk-table__header govuk-!-width-one-sixth sortable" scope="col" id="Title" style="cursor: pointer;">Title Number</th>
-                      <th class="govuk-table__header govuk-!-width-one-sixth sortable " scope="col" style="cursor: pointer;">Customer Reference</th>
-                      <th class="govuk-table__header govuk-!-width-one-sixth " scope="col">Application Type</th>
-                      <th class="govuk-table__header govuk-!-width-one-sixth sortable" scope="col" style="cursor: pointer;">Received by HMLR </th>
-                      <th class="govuk-table__header govuk-!-width-one-sixth  " scope="col" style="width: 20%;">Application Progress</th>
-                      <th class="govuk-table__header govuk-!-width-one-sixth sortable" scope="col" style="cursor: pointer;">Estimated Completion Date </th>
-                      <th class="govuk-table__header govuk-!-width-one-twelfth" style="width: -4%;" scope="col">Show/hide details</th>
-                      </tr>
-                    </thead>
-
-
-            {% macro rows(page) %}
-                      <!-- 1 -->
-                  <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row govuk-link-table">
-                        <td class="govuk-table__cell "></td>
-                        <td class="govuk-table__cell " scope="row">LP222333 <p class="govuk-visually-hidden"> L927GDU </p><!-- THIS IS PAGE {{page}} --></td>
-                        <td class="govuk-table__cell ">Carr/17/Smith</td>
-                        <td class="govuk-table__cell Substantive" id="">New Lease<p class="govuk-visually-hidden"> Preliminary Delayed </p></td>
-                        <td class="govuk-table__cell " scope="row" data-sortable="2020-10-01">10/01/20</td>
-                        <td class="govuk-table__cell " scope="row">Completed</td>
-                        <td class="govuk-table__cell " style="padding-left: 10px;"  data-sortable="2020-11-02">11/02/20</td>
-                        <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
-                      </tr>
-
-
-
-                  <!-- 1 Expanded row -->
-                        <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
-                  <!-- Vertical line -->
-                        <td class="govuk-table__cell" colspan="1"></td>
-
-                  <!-- HMLR reference -->
-                        <div>
-                          <td class="govuk-table__cell" colspan="3">
-                            <div class="govuk-grid-row" style="margin-left: 2px;">
-                                <div class="govuk-grid-column">
-                                  <b> Application progress - details</b><br> Delayed - Prior Pending Applications(s) or Official Search(es)<br><br>
-                                </div>
-                            </div>
-
-                            <div class="govuk-grid-row">
-                            </div>
-
-                            <td class="govuk-table__cell"  colspan="1" >
-                              <b> HMLR Reference</b>
-                              <p style="font-size: 14px;">L927GDU</p>
-                              </td>
-
-
-                            </tr>
-                </tbody>
-                        </div>
-
-                <!-- 2 -->
-            <tbody class="govuk-table__body">
-                <tr class="govuk-table__row govuk-link-table">
-                  <td class="govuk-table__cell "></td>
-                  <td class="govuk-table__cell " scope="row">LP111456 <p class="govuk-visually-hidden"> LP980123 </p><!-- THIS IS PAGE {{page}} --></td>
-                  <td class="govuk-table__cell ">Thomas/788/James</td>
-                  <td class="govuk-table__cell Substantive" id="">Register Update<p class="govuk-visually-hidden"> Substantive Received  </p></td>
-                  <td class="govuk-table__cell" scope="row" data-sortable="2020-05-01">05/01/20</td>
-                  <td  class="govuk-table__cell"> <t class="govuk-tag--progress"> Delayed</t></td>
-                  <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2020-06-02">06/02/20</td>
-                  <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
-                </tr>
-
-            <!-- 1 Expanded row -->
-                  <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
-            <!-- Vertical line -->
-                  <td class="govuk-table__cell" colspan="1"></td>
-
-            <!-- HMLR reference -->
-                  <div>
-                    <td class="govuk-table__cell" colspan="3">
-                      <div class="govuk-grid-row" style="margin-left: 2px;">
-                          <div class="govuk-grid-column">
-                            <b> Application progress - details</b><br> Received: Priority Protected - Awaiting Processing<br><br>
-                          </div>
-                      </div>
-
-                      <div class="govuk-grid-row">
-
-                        <div class="govuk-grid-column-one-half">
-                          <b>Correspondence</b>
-                          <p style="font-size: 14px;"><br>
-                          <a href="#"> Letter issued on 22/12/19</a><br>
-                          <a class="thirdparty"> Letter issued on 24/11/19</a><br>
-                          <a href="#"> Letter issued on 12/11/19</a></p>
-                        </div>
-                      </div>
-
-                      <td class="govuk-table__cell"  colspan="1" >
-                        <b> HMLR Reference</b>
-                        <p style="font-size: 14px;">S827LKJ</p>
-                        </td>
+<!-- My Work Table -->
+<table  class="govuk-table my-work" style="margin-top: 0px; ">
 
-                        <td class="govuk-table__cell" colspan="1">
-                        <b> Parent Title(s)</b>
-                        <p style="font-size: 14px;">	LP180123</p>
-                        </td>
-                      </tr>
-          </tbody>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row" style="font-size:14px;background-color: rgba(199,210,193,0.5);">
+    <th class="govuk-table__header govuk-!-width-one-twelfth " scope="col"></th>
+    <th class="govuk-table__header govuk-!-width-one-sixth sortable" scope="col" id="Title" style="cursor: pointer;">Title Number</th>
+    <th class="govuk-table__header govuk-!-width-one-sixth sortable " scope="col" style="cursor: pointer;">Customer Reference</th>
+    <th class="govuk-table__header govuk-!-width-one-sixth " scope="col">Application Type</th>
+    <th class="govuk-table__header govuk-!-width-one-sixth sortable" scope="col" style="cursor: pointer;">Received by HMLR </th>
+    <th class="govuk-table__header govuk-!-width-one-sixth  " scope="col" style="width: 20%;">Application Progress</th>
+    <th class="govuk-table__header govuk-!-width-one-sixth sortable" scope="col" style="cursor: pointer;">Estimated Completion Date </th>
+    <th class="govuk-table__header govuk-!-width-one-twelfth" style="width: -4%;" scope="col">Show/hide details</th>
+    </tr>
+  </thead>
 
 
-                <!-- 3 -->
-            <tbody class="govuk-table__body">
-                <tr class="govuk-table__row govuk-link-table">
-                  <td class="govuk-table__cell "></td>
-                  <td class="govuk-table__cell " scope="row">LP987654 <p class="govuk-visually-hidden"> Y917GSY </p><!-- THIS IS PAGE {{page}} --></td>
-                  <td class="govuk-table__cell ">JJ/455/Jones</td>
-                  <td class="govuk-table__cell Substantive" id="">Official Copies<p class="govuk-visually-hidden"> Sobstantive Completed  </p></td>
-                  <td class="govuk-table__cell" scope="row" data-sortable="2019-11-15">15/11/19</td>
-                  <td  class="govuk-table__cell"> <t class="govuk-tag--progress">Completed</t></td>
-                  <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""</td>
-                  <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
-                </tr>
+{% macro rows(page) %}
 
-                <!-- 1 Expanded row -->
-                      <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
-                <!-- Vertical line -->
-                      <td class="govuk-table__cell" colspan="1"></td>
-
-                <!-- HMLR reference -->
-                      <div>
-                        <td class="govuk-table__cell" colspan="3">
-
-
-                          <div class="govuk-grid-row">
-
-
-
-                            <div class="govuk-grid-column-one-half">
-                                <b>Files</b>
-                              <p style="font-size: 14px;"></p>
-                              <a href="#"> Official Copy of Title Plan dated 31/10/19</a><br>
-                              <a href="#">Official Copy of Register dated 31/10/19 </a><br>
-                            </div>
-
-                          </div>
-
-                          <td class="govuk-table__cell"  colspan="1" >
-                            <b> HMLR Reference</b>
-                            <p style="font-size: 14px;">Y917GSY</p>
-                            </td>
-
-
-                          </tr>
-              </tbody>
-
-
-              <!-- 4 -->
-              <tbody class="govuk-table__body">
-              <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
-                <td class="govuk-table__cell " scope="row">LP432432 <p class="govuk-visually-hidden"> E921HSK </p><!-- THIS IS PAGE {{page}} --></td>
-                <td class="govuk-table__cell ">GlenWatkins899	</td>
-                <td class="govuk-table__cell Substantive" id="">Transfer of Part<p class="govuk-visually-hidden"> Sobstantive Completed  </p></td>
-                <td class="govuk-table__cell" scope="row" data-sortable="2019-11-14">14/11/19</td>
-                <td  class="govuk-table__cell"> <t class="govuk-tag--progress">Completed</t></td>
-                <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""</td>
-                <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
-              </tr>
-
-              <!-- 1 Expanded row -->
-                    <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
-              <!-- Vertical line -->
-                    <td class="govuk-table__cell" colspan="1"></td>
-
-              <!-- HMLR reference -->
-                    <div>
-                      <td class="govuk-table__cell" colspan="3">
-
-
-                        <div class="govuk-grid-row">
-
-
-
-                          <div class="govuk-grid-column-one-half">
-                              <b>Files</b>
-                            <p style="font-size: 14px;"></p>
-                            <a href="#"> Search result dated 31/10/19</a><br>
-                            <!-- <a href="#">Official Copy of Register dated 31/10/19 </a><br> -->
-                          </div>
-
-                        </div>
-
-                        <td class="govuk-table__cell"  colspan="1" >
-                          <b> HMLR Reference</b>
-                          <p style="font-size: 14px;">E921HSK</p>
-                          </td>
-
-                          <td class="govuk-table__cell" colspan="1">
-                          <b> Priority period</b>
-                          <p style="font-size: 14px;">13/11/19 - 27/12/19</p>
-                          </td>
-
-
-                        </tr>
-              </tbody>
-
-
-              <!-- 5 -->
-              <tbody class="govuk-table__body">
-              <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
-                <td class="govuk-table__cell " scope="row">LP676767 <p class="govuk-visually-hidden"> M928SAI </p><!-- THIS IS PAGE {{page}} --></td>
-                <td class="govuk-table__cell ">Jane/444/Louise	</td>
-                <td class="govuk-table__cell Substantive" id="">Transfer of Part<p class="govuk-visually-hidden"> Substantive Delayed  </p></td>
-                <td class="govuk-table__cell" scope="row" data-sortable="2019-11-13">13/11/19</td>
-                <td  class="govuk-table__cell"> <t class="govuk-tag--progress">Delayed</t></td>
-                <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2020-01-22">22/01/20</td>
-                <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
-              </tr>
-
-              <!-- 1 Expanded row -->
-                    <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
-              <!-- Vertical line -->
-                    <td class="govuk-table__cell" colspan="1"></td>
-
-              <!-- HMLR reference -->
-                    <div>
-                      <td class="govuk-table__cell" colspan="3">
-                        <div class="govuk-grid-row" style="margin-left: 2px;">
-                            <div class="govuk-grid-column">
-                              <b> Application progress - details</b><br> Delayed - Extension of Time Granted<br><br>
-                            </div>
-                        </div>
-
-                        <div class="govuk-grid-row">
-
-                          <div class="govuk-grid-column-one-half">
-                            <b>Correspondence</b>
-                            <p style="font-size: 14px;"><br>
-                            <a href="#"> Requisition(s) issued on 29/11/19</a><br>
-                            <!-- <a class="thirdparty"> Notice(s) issued on 24/11/19</a><br>
-                            <a href="#"> Notice(s) issued on 12/11/19</a></p> -->
-                          </div>
-
-
-                        </div>
-
-                        <td class="govuk-table__cell"  colspan="1" >
-                          <b> HMLR Reference</b>
-                          <p style="font-size: 14px;">M928SAI</p>
-                          </td>
-
-
-
-                          <td class="govuk-table__cell" colspan="1">
-                          <b> Parent Title(s)</b>
-                          <p style="font-size: 14px;">LP15173</p>
-                          </td>
-                        </tr>
-              </tbody>
-
-
-              <!-- 6 -->
-              <tbody class="govuk-table__body">
-              <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
-                <td class="govuk-table__cell " scope="row">LP768798 <p class="govuk-visually-hidden"> A272JSH </p><!-- THIS IS PAGE {{page}} --></td>
-                <td class="govuk-table__cell ">Jenner/232/Burrows	</td>
-                <td class="govuk-table__cell Substantive" id="">Official copies<p class="govuk-visually-hidden"> Substantive Received  </p></td>
-                <td class="govuk-table__cell" scope="row" data-sortable="2019-11-12">12/11/19</td>
-                <td  class="govuk-table__cell"> <t class="govuk-tag--progress">Received</t></td>
-                <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2020-01-21"> 21/01/20</td>
-                <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
-              </tr>
-
-              <!-- 1 Expanded row -->
-                    <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
-              <!-- Vertical line -->
-                    <td class="govuk-table__cell" colspan="1"></td>
-
-              <!-- HMLR reference -->
-                    <div>
-                      <td class="govuk-table__cell" colspan="3">
-                        <div class="govuk-grid-row" style="margin-left: 2px;">
-                            <div class="govuk-grid-column">
-                              <b> Application progress - details</b><br> In progress<br><br>
-                            </div>
-                        </div>
-
-                        <div class="govuk-grid-row">
-
-
-
-
-
-                        </div>
-
-                        <td class="govuk-table__cell"  colspan="1" >
-                          <b> HMLR Reference</b>
-                          <p style="font-size: 14px;">A272JSH</p>
-                          </td>
-
-
-
-                          <td class="govuk-table__cell" colspan="1">
-                          <b> Parent Title(s)</b>
-                          <p style="font-size: 14px;">LP14312</p>
-                          </td>
-                        </tr>
-              </tbody>
-
-              <!-- 7 -->
-              <tbody class="govuk-table__body">
-              <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
-                <td class="govuk-table__cell " scope="row">LP544344 <p class="govuk-visually-hidden"> T832JDH </p><!-- THIS IS PAGE {{page}} --></td>
-                <td class="govuk-table__cell ">Eva/112/Bingham	</td>
-                <td class="govuk-table__cell Substantive" id="">Priority search<p class="govuk-visually-hidden"> Sobstantive Cancelled  </p></td>
-                <td class="govuk-table__cell" scope="row" data-sortable="2019-11-10">10/11/19</td>
-                <td  class="govuk-table__cell"> <t class="govuk-tag--progress">Cancelled</t></td>
-                <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""</td>
-                <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
-              </tr>
-
-              <!-- 1 Expanded row -->
-                    <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
-              <!-- Vertical line -->
-                    <td class="govuk-table__cell" colspan="1"></td>
-
-              <!-- HMLR reference -->
-                    <div>
-                      <td class="govuk-table__cell" colspan="3">
-
-
-                        <div class="govuk-grid-row">
-
-                          <div class="govuk-grid-column-one-half">
-                            <b>Correspondence</b>
-                            <p style="font-size: 14px;"><br>
-                            <a href="#"> Notification of Cancellation on 31/10/19</a><br>
-                            <!-- <a class="thirdparty"> Notice(s) issued on 24/11/19</a><br>
-                            <a href="#"> Notice(s) issued on 12/11/19</a></p> -->
-                          </div>
-
-                        </div>
-
-                        <td class="govuk-table__cell"  colspan="1" >
-                          <b> HMLR Reference</b>
-                          <p style="font-size: 14px;">T832JDH</p>
-                          </td>
-
-                          <td class="govuk-table__cell" colspan="1">
-                          <b> Priority period</b>
-                          <p style="font-size: 14px;">10/12/19 - 22/01/20</p>
-                          </td>
-
-
-                        </tr>
-              </tbody>
-
-
-              <!-- 8 -->
-              <tbody class="govuk-table__body">
-              <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
-                <td class="govuk-table__cell " scope="row"> LP001002</td>
-                <td class="govuk-table__cell ">Tesla/4242/Musk	</td>
-                <td class="govuk-table__cell Substantive" id="">Carpark Map<p class="govuk-visually-hidden"> Sobstantive Completed  </p></td>
-                <td class="govuk-table__cell" scope="row" data-sortable="2019-11-09">09/11/19</td>
-                <td  class="govuk-table__cell"> <t class="govuk-tag--progress">Completed</t></td>
-                <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""</td>
-                <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
-              </tr>
-
-              <!-- 1 Expanded row -->
-                    <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
-              <!-- Vertical line -->
-                    <td class="govuk-table__cell" colspan="1"></td>
-
-              <!-- HMLR reference -->
-                    <div>
-                      <td class="govuk-table__cell" colspan="3">
-
-
-                        <div class="govuk-grid-row">
-
-
-
-                          <div class="govuk-grid-column-one-half">
-                              <b>Files</b>
-                            <p style="font-size: 14px;"></p>
-                            <a href="#"> Search result dated 31/11/19</a><br>
-                            <!-- <a href="#">Official Copy of Register dated 31/10/19 </a><br> -->
-                          </div>
-
-                        </div>
-
-                        <td class="govuk-table__cell"  colspan="1" >
-                          <b> HMLR Reference</b>
-                          <p style="font-size: 14px;">P956EKA</p>
-                          </td>
-
-
-
-
-                        </tr>
-              </tbody>
-
-              <!-- 9 -->
-              <tbody class="govuk-table__body">
-              <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
-                <td class="govuk-table__cell " scope="row">LP348574 <p class="govuk-visually-hidden"> K928TDH </p><!-- THIS IS PAGE {{page}} --></td>
-                <td class="govuk-table__cell ">Bill/902/Gates	</td>
-                <td class="govuk-table__cell Substantive" id="">	Register Updates<p class="govuk-visually-hidden"> Preliminary Completed  </p></td>
-                <td class="govuk-table__cell" scope="row" data-sortable="2019-11-01">01/11/19</td>
-                <td  class="govuk-table__cell"> <t class="govuk-tag--progress">Completed</t></td>
-                <td class="govuk-table__cell " style="padding-left: 10px;"  data-sortable=""></td>
-                <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
-              </tr>
-
-              <!-- 1 Expanded row -->
-                    <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
-              <!-- Vertical line -->
-                    <td class="govuk-table__cell" colspan="1"></td>
-
-              <!-- HMLR reference -->
-                    <div>
-                      <td class="govuk-table__cell" colspan="3">
-
-
-                        <div class="govuk-grid-row">
-
-                          <div class="govuk-grid-column-one-half">
-                            <b>Correspondence</b>
-                            <p style="font-size: 14px;"><br>
-                            <a href="#"> Requisition(s) issued on 22/10/19</a><br>
-                            <!-- <a class="thirdparty"> Notice(s) issued on 24/11/19</a><br>
-                            <a href="#"> Notice(s) issued on 12/11/19</a></p> -->
-                          </div>
-
-                          <div class="govuk-grid-column-one-half">
-                              <b>Files</b>
-                            <p style="font-size: 14px;"></p>
-                            <a href="#"> Official Copy of Register dated 31/10/19</a><br>
-                            <!-- <a href="#">Official Copy of Register dated 31/10/19 </a><br> -->
-                          </div>
-
-                        </div>
-
-                        <td class="govuk-table__cell"  colspan="1" >
-                          <b> HMLR Reference</b>
-                          <p style="font-size: 14px;">K928TDH</p>
-                          </td>
-
-
-                        </tr>
-              </tbody>
-
-              <!-- 10 -->
-              <tbody class="govuk-table__body">
-              <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
-                <td class="govuk-table__cell " scope="row">LP112878 <p class="govuk-visually-hidden"> A391OLS </p><!-- THIS IS PAGE {{page}} --></td>
-                <td class="govuk-table__cell ">Boris/334/Battery	</td>
-                <td class="govuk-table__cell Substantive" id="">	New Lease<p class="govuk-visually-hidden"> Substantive Completed  </p></td>
-                <td class="govuk-table__cell" scope="row" data-sortable="2019-01-11">01/11/19</td>
-                <td  class="govuk-table__cell"> <t class="govuk-tag--progress">Completed</t></td>
-                <td class="govuk-table__cell " style="padding-left: 10px;"  data-sortable="1"></td>
-                <!-- <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""</td> -->
-                <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
-              </tr>
-
-              <!-- 1 Expanded row -->
-                    <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
-              <!-- Vertical line -->
-                    <td class="govuk-table__cell" colspan="1"></td>
-
-              <!-- HMLR reference -->
-                    <div>
-                      <td class="govuk-table__cell" colspan="3">
-
-
-                        <div class="govuk-grid-row">
-
-
-
-                          <div class="govuk-grid-column-one-half">
-                              <b>Files</b>
-                            <p style="font-size: 14px;"></p>
-                            <a href="#"> Registration Completion Sheet dated 31/10/19</a><br>
-                            <a href="#">Official Copy of Register dated 31/10/19 </a><br>
-                            <a href="#">Official Copy of Title Plan dated 31/10/19 </a><br>
-                          </div>
-
-                        </div>
-
-                        <td class="govuk-table__cell"  colspan="1" >
-                          <b> HMLR Reference</b>
-                          <p style="font-size: 14px;">A391OLS</p>
-                          </td>
-
-                          <td class="govuk-table__cell" colspan="1">
-                          <b> Parent Title(s)</b>
-                          <p style="font-size: 14px;">LP180123</p>
-                          </td>
-
-
-                        </tr>
-              </tbody>
-
-
-                  </div>
-
-
-              </tbody>
-
-
-
-            {% endmacro %}
-
-            {{rows(1)}}
-            {# {{rows(2)}}
-            {{rows(3)}}
-            {{rows(4)}}
-            {{rows(5)}} #}
-
-            </table>
+<!-- 1 -->
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row govuk-link-table">
+<td class="govuk-table__cell "></td>
+<td class="govuk-table__cell " scope="row">LP987654 <p class="govuk-visually-hidden"> LP987654 </p><!-- THIS IS PAGE {{page}} --></td>
+<td class="govuk-table__cell ">JJ/455/Jones</td>
+<td class="govuk-table__cell Substantive" id="">Official Copies<p class="govuk-visually-hidden"> Sobstantive Completed  </p></td>
+<td class="govuk-table__cell" scope="row" data-sortable="2019-11-15">15/12/19</td>
+<td  class="govuk-table__cell"> <t class="govuk-tag--progress">Completed</t></td>
+<td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
+<td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+</tr>
+
+<!-- 1 Expanded row -->
+    <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+<!-- Vertical line -->
+    <td class="govuk-table__cell" colspan="1"></td>
+
+<!-- HMLR reference -->
+    <div>
+      <td class="govuk-table__cell" colspan="3">
+
+
+        <div class="govuk-grid-row">
+
+
+
+          <div class="govuk-grid-column-one-half">
+              <b>Files</b>
+            <p style="font-size: 14px;"></p>
+            <a href="#"> Official Copy of Title Plan dated 31/10/19</a><br>
+            <a href="#">Official Copy of Register dated 31/10/19 </a><br>
+          </div>
+
+        </div>
+
+        <td class="govuk-table__cell"  colspan="1" >
+          <b> HMLR Reference</b>
+          <p style="font-size: 14px;">Y917GSY</p>
+          </td>
+
+
+        </tr>
+</tbody>
+
+
+<!-- 2 -->
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row govuk-link-table">
+<td class="govuk-table__cell "></td>
+<td class="govuk-table__cell " scope="row">LP432432 <p class="govuk-visually-hidden"> LP432432 </p><!-- THIS IS PAGE {{page}} --></td>
+<td class="govuk-table__cell ">GlenWatkins899	</td>
+<td class="govuk-table__cell Substantive" id="">Official Search of Whole with Priority<p class="govuk-visually-hidden"> Sobstantive Completed  </p></td>
+<td class="govuk-table__cell" scope="row" data-sortable="2019-11-14">19/11/19</td>
+<td  class="govuk-table__cell"> <t class="govuk-tag--progress">Completed</t></td>
+<td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
+<td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+</tr>
+
+<!-- 1 Expanded row -->
+  <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+<!-- Vertical line -->
+  <td class="govuk-table__cell" colspan="1"></td>
+
+<!-- HMLR reference -->
+  <div>
+    <td class="govuk-table__cell" colspan="3">
+
+
+      <div class="govuk-grid-row">
+
+
+
+        <div class="govuk-grid-column-one-half">
+            <b>Files</b>
+          <p style="font-size: 14px;"></p>
+          <a href="#"> Search result dated 31/10/19</a><br>
+          <!-- <a href="#">Official Copy of Register dated 31/10/19 </a><br> -->
+        </div>
+
+      </div>
+
+      <td class="govuk-table__cell"  colspan="1" >
+        <b> HMLR Reference</b>
+        <p style="font-size: 14px;">E921HSK</p>
+        </td>
+
+        <td class="govuk-table__cell" colspan="1">
+        <b> Priority period</b>
+        <p style="font-size: 14px;">13/11/19 - 27/12/19</p>
+        </td>
+
+
+      </tr>
+</tbody>
+
+    <!-- 3 -->
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row govuk-link-table">
+        <td class="govuk-table__cell "></td>
+        <td class="govuk-table__cell " scope="row">LP222333 <p class="govuk-visually-hidden"> LP222333 </p><!-- THIS IS PAGE {{page}} --></td>
+        <td class="govuk-table__cell ">Carr/17/Smith</td>
+        <td class="govuk-table__cell Substantive" id="">Register Update<p class="govuk-visually-hidden"> Preliminary Delayed </p></td>
+        <td class="govuk-table__cell " scope="row" data-sortable="2020-10-01">14/01/20</td>
+        <td class="govuk-table__cell " scope="row">Delayed</td>
+        <td class="govuk-table__cell " style="padding-left: 10px;"  data-sortable="2020-11-02">11/02/20</td>
+        <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+      </tr>
+  
+  
+  
+  <!-- 1 Expanded row -->
+        <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+  <!-- Vertical line -->
+        <td class="govuk-table__cell" colspan="1"></td>
+  
+  <!-- HMLR reference -->
+        <div>
+          <td class="govuk-table__cell" colspan="3">
+            <div class="govuk-grid-row" style="margin-left: 2px;">
+                <div class="govuk-grid-column">
+                  <b> Application progress - details</b><br> Delayed - Prior Pending Applications(s) or Official Search(es)<br><br>
+                </div>
+            </div>
+  
+            <div class="govuk-grid-row">
+            </div>
+  
+            <td class="govuk-table__cell"  colspan="1" >
+              <b> HMLR Reference</b>
+              <p style="font-size: 14px;">L927GDU</p>
+              </td>
+  
+  
+            </tr>
+  </tbody>
+        </div>
+  
+  <!-- 4 -->
+  <tbody class="govuk-table__body">
+  <tr class="govuk-table__row govuk-link-table">
+  <td class="govuk-table__cell "></td>
+  <td class="govuk-table__cell " scope="row">LP111456 <p class="govuk-visually-hidden"> LP111456 </p><!-- THIS IS PAGE {{page}} --></td>
+  <td class="govuk-table__cell ">TJ/788/James</td>
+  <td class="govuk-table__cell Substantive" id="">New Lease<p class="govuk-visually-hidden"> Substantive Received  </p></td>
+  <td class="govuk-table__cell" scope="row" data-sortable="2020-05-01">05/02/20</td>
+  <td  class="govuk-table__cell"> <t class="govuk-tag--progress"> Received</t></td>
+  <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2020-06-02">06/03/20</td>
+  <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+  </tr>
+  
+  <!-- 1 Expanded row -->
+  <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+  <!-- Vertical line -->
+  <td class="govuk-table__cell" colspan="1"></td>
+  
+  <!-- HMLR reference -->
+  <div>
+    <td class="govuk-table__cell" colspan="3">
+      <div class="govuk-grid-row" style="margin-left: 2px;">
+          <div class="govuk-grid-column">
+            <b> Application progress - details</b><br> Received: Priority Protected - Awaiting Processing<br><br>
+          </div>
+      </div>
+  
+      <div class="govuk-grid-row">
+  
+        <div class="govuk-grid-column-one-half">
+          <b>Correspondence</b>
+          <p style="font-size: 14px;"><br>
+          <a href="#"> Letter issued on 22/12/19</a><br>
+          <a class="thirdparty"> Letter issued on 24/11/19</a><br>
+          <a href="#"> Letter issued on 12/11/19</a></p>
+        </div>
+      </div>
+  
+      <td class="govuk-table__cell"  colspan="1" >
+        <b> HMLR Reference</b>
+        <p style="font-size: 14px;">S827LKJ</p>
+        </td>
+  
+        <td class="govuk-table__cell" colspan="1">
+        <b> Parent Title(s)</b>
+        <p style="font-size: 14px;">	LP180123</p>
+        </td>
+      </tr>
+  </tbody>
+  
+  
+
+<!-- 5 -->
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row govuk-link-table">
+<td class="govuk-table__cell "></td>
+<td class="govuk-table__cell " scope="row">LP676767 <p class="govuk-visually-hidden"> LP676767 </p><!-- THIS IS PAGE {{page}} --></td>
+<td class="govuk-table__cell ">Jane/444/Louise	</td>
+<td class="govuk-table__cell Substantive" id="">Transfer of Part<p class="govuk-visually-hidden"> Substantive Delayed  </p></td>
+<td class="govuk-table__cell" scope="row" data-sortable="2019-11-13">19/11/19</td>
+<td  class="govuk-table__cell"> <t class="govuk-tag--progress">Delayed</t></td>
+<td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2020-01-22">27/01/20</td>
+<td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+</tr>
+
+<!-- 1 Expanded row -->
+  <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+<!-- Vertical line -->
+  <td class="govuk-table__cell" colspan="1"></td>
+
+<!-- HMLR reference -->
+  <div>
+    <td class="govuk-table__cell" colspan="3">
+      <div class="govuk-grid-row" style="margin-left: 2px;">
+          <div class="govuk-grid-column">
+            <b> Application progress - details</b><br> Delayed - Extension of Time Granted<br><br>
+          </div>
+      </div>
+
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-half">
+          <b>Correspondence</b>
+          <p style="font-size: 14px;"><br>
+          <a href="#"> Requisition(s) issued on 29/11/19</a><br>
+          <!-- <a class="thirdparty"> Notice(s) issued on 24/11/19</a><br>
+          <a href="#"> Notice(s) issued on 12/11/19</a></p> -->
+        </div>
+
+
+      </div>
+
+      <td class="govuk-table__cell"  colspan="1" >
+        <b> HMLR Reference</b>
+        <p style="font-size: 14px;">M928SAI</p>
+        </td>
+
+
+
+        <td class="govuk-table__cell" colspan="1">
+        <b> Parent Title(s)</b>
+        <p style="font-size: 14px;">LP15173</p>
+        </td>
+      </tr>
+</tbody>
+
+
+<!-- 6 -->
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row govuk-link-table">
+<td class="govuk-table__cell "></td>
+<td class="govuk-table__cell " scope="row">LP768798 <p class="govuk-visually-hidden"> LP768798 </p><!-- THIS IS PAGE {{page}} --></td>
+<td class="govuk-table__cell ">JB/232/Burrows	</td>
+<td class="govuk-table__cell Substantive" id="">Transfer of Part<p class="govuk-visually-hidden"> Substantive Received  </p></td>
+<td class="govuk-table__cell" scope="row" data-sortable="2019-11-12">20/11/19</td>
+<td  class="govuk-table__cell"> <t class="govuk-tag--progress">Received</t></td>
+<td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2020-01-21"> 29/01/20</td>
+<td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+</tr>
+
+<!-- 1 Expanded row -->
+  <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+<!-- Vertical line -->
+  <td class="govuk-table__cell" colspan="1"></td>
+
+<!-- HMLR reference -->
+  <div>
+    <td class="govuk-table__cell" colspan="3">
+      <div class="govuk-grid-row" style="margin-left: 2px;">
+          <div class="govuk-grid-column">
+            <b> Application progress - details</b><br> In progress<br><br>
+          </div>
+      </div>
+
+      <div class="govuk-grid-row">
+
+
+
+
+
+      </div>
+
+      <td class="govuk-table__cell"  colspan="1" >
+        <b> HMLR Reference</b>
+        <p style="font-size: 14px;">A272JSH</p>
+        </td>
+
+
+
+        <td class="govuk-table__cell" colspan="1">
+        <b> Parent Title(s)</b>
+        <p style="font-size: 14px;">LP14312</p>
+        </td>
+      </tr>
+</tbody>
+
+<!-- 7 -->
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row govuk-link-table">
+<td class="govuk-table__cell "></td>
+<td class="govuk-table__cell " scope="row">LP544344 <p class="govuk-visually-hidden"> LP544344 </p><!-- THIS IS PAGE {{page}} --></td>
+<td class="govuk-table__cell ">	Eva/112/Bingham	</td>
+<td class="govuk-table__cell Substantive" id="">Official Search of Part with Priority<p class="govuk-visually-hidden"> Sobstantive Cancelled  </p></td>
+<td class="govuk-table__cell" scope="row" data-sortable="2019-11-10">17/11/19</td>
+<td  class="govuk-table__cell"> <t class="govuk-tag--progress">Cancelled</t></td>
+<td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
+<td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+</tr>
+
+<!-- 1 Expanded row -->
+  <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+<!-- Vertical line -->
+  <td class="govuk-table__cell" colspan="1"></td>
+
+<!-- HMLR reference -->
+  <div>
+    <td class="govuk-table__cell" colspan="3">
+
+
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-half">
+          <b>Correspondence</b>
+          <p style="font-size: 14px;"><br>
+          <a href="#"> Notification of Cancellation on 31/10/19</a><br>
+          <!-- <a class="thirdparty"> Notice(s) issued on 24/11/19</a><br>
+          <a href="#"> Notice(s) issued on 12/11/19</a></p> -->
+        </div>
+
+      </div>
+
+      <td class="govuk-table__cell"  colspan="1" >
+        <b> HMLR Reference</b>
+        <p style="font-size: 14px;">T832JDH</p>
+        </td>
+
+        <td class="govuk-table__cell" colspan="1">
+        <b> Priority period</b>
+        <p style="font-size: 14px;">10/12/19 - 22/01/20</p>
+        </td>
+
+
+      </tr>
+</tbody>
+
+
+<!-- 8 -->
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row govuk-link-table">
+<td class="govuk-table__cell "></td>
+<td class="govuk-table__cell " scope="row"> LP001002<p class="govuk-visually-hidden"> LP001002 </p><!-- THIS IS PAGE {{page}} --></td>
+<td class="govuk-table__cell ">Tesla/4242/Musk	</td>
+<td class="govuk-table__cell Substantive" id="">	Search of the Index Map<p class="govuk-visually-hidden"> Sobstantive Completed  </p></td>
+<td class="govuk-table__cell" scope="row" data-sortable="2019-11-09">10/11/19</td>
+<td  class="govuk-table__cell"> <t class="govuk-tag--progress">Completed</t></td>
+<td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
+<td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+</tr>
+
+<!-- 1 Expanded row -->
+  <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+<!-- Vertical line -->
+  <td class="govuk-table__cell" colspan="1"></td>
+
+<!-- HMLR reference -->
+  <div>
+    <td class="govuk-table__cell" colspan="3">
+
+
+      <div class="govuk-grid-row">
+
+
+
+        <div class="govuk-grid-column-one-half">
+            <b>Files</b>
+          <p style="font-size: 14px;"></p>
+          <a href="#"> Search result dated 31/11/19</a><br>
+          <!-- <a href="#">Official Copy of Register dated 31/10/19 </a><br> -->
+        </div>
+
+      </div>
+
+      <td class="govuk-table__cell"  colspan="1" >
+        <b> HMLR Reference</b>
+        <p style="font-size: 14px;">P956EKA</p>
+        </td>
+
+
+
+
+      </tr>
+</tbody>
+
+<!-- 9 -->
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row govuk-link-table">
+<td class="govuk-table__cell "></td>
+<td class="govuk-table__cell " scope="row">LP348574 <p class="govuk-visually-hidden"> LP348574 </p><!-- THIS IS PAGE {{page}} --></td>
+<td class="govuk-table__cell ">Bill/902/Gates	</td>
+<td class="govuk-table__cell Substantive" id="">	Register Update<p class="govuk-visually-hidden"> Preliminary Completed  </p></td>
+<td class="govuk-table__cell" scope="row" data-sortable="2019-11-01">05/11/19</td>
+<td  class="govuk-table__cell"> <t class="govuk-tag--progress">Completed</t></td>
+<td class="govuk-table__cell " style="padding-left: 10px;"  data-sortable=""></td>
+<td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+</tr>
+
+<!-- 1 Expanded row -->
+  <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+<!-- Vertical line -->
+  <td class="govuk-table__cell" colspan="1"></td>
+
+<!-- HMLR reference -->
+  <div>
+    <td class="govuk-table__cell" colspan="3">
+
+
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-half">
+          <b>Correspondence</b>
+          <p style="font-size: 14px;"><br>
+          <a href="#"> Requisition(s) issued on 22/10/19</a><br>
+          <!-- <a class="thirdparty"> Notice(s) issued on 24/11/19</a><br>
+          <a href="#"> Notice(s) issued on 12/11/19</a></p> -->
+        </div>
+
+        <div class="govuk-grid-column-one-half">
+            <b>Files</b>
+          <p style="font-size: 14px;"></p>
+          <a href="#"> Official Copy of Register dated 31/10/19</a><br>
+          <!-- <a href="#">Official Copy of Register dated 31/10/19 </a><br> -->
+        </div>
+
+      </div>
+
+      <td class="govuk-table__cell"  colspan="1" >
+        <b> HMLR Reference</b>
+        <p style="font-size: 14px;">K928TDH</p>
+        </td>
+
+
+      </tr>
+</tbody>
+
+<!-- 10 -->
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row govuk-link-table">
+<td class="govuk-table__cell "></td>
+<td class="govuk-table__cell " scope="row">LP112878 <p class="govuk-visually-hidden"> LP112878 </p><!-- THIS IS PAGE {{page}} --></td>
+<td class="govuk-table__cell ">Boris/334/Battery	</td>
+<td class="govuk-table__cell Substantive" id="">	New Lease<p class="govuk-visually-hidden"> Substantive Completed  </p></td>
+<td class="govuk-table__cell" scope="row" data-sortable="2019-01-11">06/12/19</td>
+<td  class="govuk-table__cell"> <t class="govuk-tag--progress">Completed</t></td>
+<td class="govuk-table__cell " style="padding-left: 10px;"  data-sortable="1"></td>
+<!-- <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""</td> -->
+<td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+</tr>
+
+<!-- 1 Expanded row -->
+  <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+<!-- Vertical line -->
+  <td class="govuk-table__cell" colspan="1"></td>
+
+<!-- HMLR reference -->
+  <div>
+    <td class="govuk-table__cell" colspan="3">
+
+
+      <div class="govuk-grid-row">
+
+
+
+        <div class="govuk-grid-column-one-half">
+            <b>Files</b>
+          <p style="font-size: 14px;"></p>
+          <a href="#"> Registration Completion Sheet dated 31/10/19</a><br>
+          <a href="#">Official Copy of Register dated 31/10/19 </a><br>
+          <a href="#">Official Copy of Title Plan dated 31/10/19 </a><br>
+        </div>
+
+      </div>
+
+      <td class="govuk-table__cell"  colspan="1" >
+        <b> HMLR Reference</b>
+        <p style="font-size: 14px;">A391OLS</p>
+        </td>
+
+        <td class="govuk-table__cell" colspan="1">
+        <b> Parent Title(s)</b>
+        <p style="font-size: 14px;">LP180123</p>
+        </td>
+
+
+      </tr>
+</tbody>
+
+
+</div>
+
+
+</tbody>
+
+
+
+{% endmacro %}
+
+{{rows(1)}}
+{# {{rows(2)}}
+{{rows(3)}}
+{{rows(4)}}
+{{rows(5)}} #}
+
+</table>
 
             <div class="govuk-grid-column-one-quarter" style="float: right; text-align: right;">
 
