@@ -1,6 +1,7 @@
 <!-- Javascript -->
 <script src="/public/javascripts/jquery-1.11.3.js"></script>
 
+
 {% for scriptUrl in extensionConfig.scripts %}
   <script src="{{scriptUrl}}"></script>
 {% endfor %}
@@ -14,7 +15,6 @@
 <script src="/public/javascripts/sortable-table.js"></script>
 <script src="/public/javascripts/fontawesome.js"></script>
 <script src="/public/javascripts/govuk-frontend.js"></script>
-
 
 {% if useAutoStoreData %}
   <script src="/public/javascripts/auto-store-data.js"></script>
