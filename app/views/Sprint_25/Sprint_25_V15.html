@@ -204,10 +204,11 @@ ul.horizontal li a:hover {
 
 .tag {
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 0px;
     font-weight: 700;
     font-size:14px;
     text-transform: uppercase;
+    float:right;
 }
 
 .delayed {
@@ -269,6 +270,26 @@ ul.horizontal li a:hover {
     background: #fff7bf;
 }
 
+.viewmore {
+    color: #005ea5 !important;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border: 1px solid #dedede;
+    font-size: 14px;
+    float: right;
+}
+
+.govuk-table__header {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.my-work tbody td {
+    font-size: 14px;
+}
 
 </style>
 
@@ -276,9 +297,9 @@ ul.horizontal li a:hover {
 
   <div class="govuk-grid-row">
   <div class="govuk-grid-column-full" id="headerdiv">
-    <a href="portalhomepage.html"><img src="public/images/headerlogo.svg" alt="hmlrlogo"></a>
+    <a href="/portalhomepage.html"><img src="/public/images/headerlogo.svg" alt="hmlrlogo"></a>
     <br>
-    <a class="tooltip" href="#" style="float: right; font-size: 14px; font-weight: ; text-decoration: none; margin-top: 0px; margin-top :-15px;"> Customer Support <img style="float: right; font-size: 14px; margin-right: -5px; margin-top :-8px;" src="public/images/popout-modern.png" width="30" height="30">
+    <a class="tooltip" href="#" style="float: right; font-size: 14px; font-weight: ; text-decoration: none; margin-top: 0px; margin-top :-15px;"> Customer Support <img style="float: right; font-size: 14px; margin-right: -5px; margin-top :-8px;" src="/public/images/popout-modern.png" width="30" height="30">
     <!-- <span class="tooltiptext">Opens in a new window</span></a> -->
     <a href="#" style="float: right; font-size: 14px; font-weight: ; text-decoration: none; margin-right: 5px; padding-right: 10px; margin-top: -15px;"> Logout </a>
     <hr style= "height: 5px;background: #005ea5; border: none;margin-block-start: 30px;">
@@ -437,14 +458,15 @@ ul.horizontal li a:hover {
 
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
-    <th class="govuk-table__header " scope="col" style="padding: 10px 0px 10px 0;"></th>
+    <th class="govuk-table__header " scope="col" style="padding: 0;"></th>
     <th class="govuk-table__header " scope="col" id="Title" style="cursor: pointer;">Title Number</th>
-    <th class="govuk-table__header " scope="col" style="cursor: pointer;">Customer Reference</th>
+    <th class="govuk-table__header " scope="col" style="cursor: pointer;">Customer Ref</th>
     <th class="govuk-table__header  " scope="col">Application Type</th>
     <th class="govuk-table__header " scope="col" style="cursor: pointer;">Received by HMLR </th>
-    <th class="govuk-table__header " scope="col" >Status</th>
     <th class="govuk-table__header " scope="col" style="cursor: pointer;">Estimated <br>Completion Date </th>
-    <th class="govuk-table__header "  scope="col">Show/hide details</th>
+    <th class="govuk-table__header " scope="col" style="cursor: pointer;">Last Updated</th>
+    <th class="govuk-table__header "  scope="col"></th>
+    <th class="govuk-table__header " scope="col" ></th>
     </tr>
   </thead>
 
@@ -453,21 +475,22 @@ ul.horizontal li a:hover {
             <!-- 1 -->
         <tbody class="govuk-table__body">
             <tr class="govuk-table__row govuk-link-table">
-            <td class="govuk-table__cell "></td>
+            <td class="govuk-table__cell " style="padding: 0;"></td>
             <td class="govuk-table__cell " scope="row">LP123456 <p class="govuk-visually-hidden"> L927GDU </p><!-- THIS IS PAGE {{page}} --></td>
             <td class="govuk-table__cell ">Jones.20313</td>
             <td class="govuk-table__cell Substantive" id="">Register Update<p class="govuk-visually-hidden"> Preliminary Delayed </p></td>
             <td class="govuk-table__cell " scope="row" data-sortable="2020-10-01">10/01/20</td>
-            <td class="govuk-table__cell " scope="row"><span class="govuk-tag govuk-tag--red">Delayed</span></td>
             <td class="govuk-table__cell " style="padding-left: 10px;"  data-sortable="2020-11-02">11/02/20</td>
-            <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
-            </tr>
+            <td class="govuk-table__cell " >30 Minutes ago</td>
+            <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger3 viewmore" href="#">Details <span class="detailsarrow">&#x25BC;</span></a></td>
+            <td class="govuk-table__cell " scope="row"><span class="tag delayed">Delayed</span></td>
+        </tr>
 
 
 
         <!-- 1 Expanded row -->
             <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1">
-                <td colspan="12" style="background: #ffffff;padding: 20px;">
+                <td colspan="12" style="background: #ffffff;padding: 20px 0px;">
 
                     <div class="govuk-grid-column-full" style="padding-bottom:20px;padding-left:0px;">
                         <b> Application progress</b>
@@ -495,20 +518,22 @@ ul.horizontal li a:hover {
         <!-- 2 -->
         <tbody class="govuk-table__body">
         <tr class="govuk-table__row govuk-link-table">
-        <td class="govuk-table__cell "></td>
+        <td class="govuk-table__cell " style="padding: 0;"></td>
         <td class="govuk-table__cell " scope="row">LP980123 <p class="govuk-visually-hidden"> LP980123 </p><!-- THIS IS PAGE {{page}} --></td>
         <td class="govuk-table__cell ">JT/391/Williams</td>
         <td class="govuk-table__cell Substantive" id="">New Lease<p class="govuk-visually-hidden"> Substantive Received  </p></td>
         <td class="govuk-table__cell" scope="row" data-sortable="2020-05-01">05/01/20</td>
-        <td  class="govuk-table__cell"> <t class="govuk-tag--progress"><span class="govuk-tag govuk-tag--yellow">Received</span></t></td>
         <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2020-06-02">06/02/20</td>
-        <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+        <td class="govuk-table__cell " >2 Days ago</td>
+        <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger3 viewmore" href="#">Details <span class="detailsarrow">&#x25BC;</span></a></td>
+        <td  class="govuk-table__cell"> <t class="govuk-tag--progress"><span class="tag received">Received</span></t></td>
+        
         </tr>
 
         <!-- 1 Expanded row -->
         <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
         <!-- Vertical line -->
-        <td class="govuk-table__cell" colspan="1"></td>
+        <td class="govuk-table__cell" colspan="1"  style="padding: 0;"></td>
 
         <!-- HMLR reference -->
         <div>
@@ -546,20 +571,22 @@ ul.horizontal li a:hover {
         <!-- 3 -->
         <tbody class="govuk-table__body">
         <tr class="govuk-table__row govuk-link-table">
-        <td class="govuk-table__cell "></td>
+        <td class="govuk-table__cell " style="padding: 0;"></td>
         <td class="govuk-table__cell " scope="row">LP09209 <p class="govuk-visually-hidden"> Y917GSY </p><!-- THIS IS PAGE {{page}} --></td>
         <td class="govuk-table__cell ">Bartlett.23124</td>
         <td class="govuk-table__cell Substantive" id="">Official Copies<p class="govuk-visually-hidden"> Sobstantive Completed  </p></td>
         <td class="govuk-table__cell" scope="row" data-sortable="2019-11-15">15/11/19</td>
-        <td  class="govuk-table__cell"> <t class="govuk-tag--progress"><span class="govuk-tag govuk-tag--green">Completed</span></t></td>
         <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
-        <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+        <td class="govuk-table__cell " >1 Week ago</td>
+        <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger3 viewmore" href="#">Details <span class="detailsarrow">&#x25BC;</span></a></td>
+        <td  class="govuk-table__cell"> <t class="govuk-tag--progress"><span class="tag completed">Completed</span></t></td>
+        
         </tr>
 
         <!-- 1 Expanded row -->
             <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
         <!-- Vertical line -->
-            <td class="govuk-table__cell" colspan="1"></td>
+            <td class="govuk-table__cell" colspan="1" style="padding: 0;"></td>
 
         <!-- HMLR reference -->
             <div>
@@ -592,20 +619,22 @@ ul.horizontal li a:hover {
         <!-- 4 -->
         <tbody class="govuk-table__body">
         <tr class="govuk-table__row govuk-link-table">
-        <td class="govuk-table__cell "></td>
+        <td class="govuk-table__cell " style="padding: 0;"></td>
         <td class="govuk-table__cell " scope="row">LP980165 <p class="govuk-visually-hidden"> E921HSK </p><!-- THIS IS PAGE {{page}} --></td>
         <td class="govuk-table__cell ">JT/938/Watkins	</td>
         <td class="govuk-table__cell Substantive" id="">Official Search of Whole with Priority<p class="govuk-visually-hidden"> Sobstantive Completed  </p></td>
         <td class="govuk-table__cell" scope="row" data-sortable="2019-11-14">14/11/19</td>
-        <td  class="govuk-table__cell"> <t class="govuk-tag--progress"><span class="govuk-tag govuk-tag--green">Completed</span></t></td>
         <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
-        <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+        <td class="govuk-table__cell " >2 Hours ago</td>
+        <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger3 viewmore" href="#">Details <span class="detailsarrow">&#x25BC;</span></a></td>
+        <td  class="govuk-table__cell"> <t class="govuk-tag--progress"><span class="tag completed">Completed</span></t></td>
+        
         </tr>
 
         <!-- 1 Expanded row -->
         <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
         <!-- Vertical line -->
-        <td class="govuk-table__cell" colspan="1"></td>
+        <td class="govuk-table__cell" colspan="1" style="padding: 0;"></td>
 
         <!-- HMLR reference -->
         <div>
@@ -643,20 +672,22 @@ ul.horizontal li a:hover {
         <!-- 5 -->
         <tbody class="govuk-table__body">
         <tr class="govuk-table__row govuk-link-table">
-        <td class="govuk-table__cell "></td>
+        <td class="govuk-table__cell " style="padding: 0;"></td>
         <td class="govuk-table__cell " scope="row">LP45173 <p class="govuk-visually-hidden"> M928SAI </p><!-- THIS IS PAGE {{page}} --></td>
         <td class="govuk-table__cell ">Smith.20313	</td>
         <td class="govuk-table__cell Substantive" id="">Transfer of Part<p class="govuk-visually-hidden"> Substantive Delayed  </p></td>
         <td class="govuk-table__cell" scope="row" data-sortable="2019-11-13">13/11/19</td>
-        <td  class="govuk-table__cell"> <t class="govuk-tag--progress"><span class="govuk-tag govuk-tag--red">Delayed</span></t></td>
         <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2020-01-22">22/01/20</td>
-        <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+        <td class="govuk-table__cell " >3 Weeks ago</td>
+        <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger3 viewmore" href="#">Details <span class="detailsarrow">&#x25BC;</span></a></td>
+        <td  class="govuk-table__cell"> <t class="govuk-tag--progress"><span class="tag delayed">Delayed</span></t></td>
+        
         </tr>
 
         <!-- 1 Expanded row -->
         <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
         <!-- Vertical line -->
-        <td class="govuk-table__cell" colspan="1"></td>
+        <td class="govuk-table__cell" colspan="1" style="padding: 0;"></td>
 
         <!-- HMLR reference -->
         <div>
@@ -724,14 +755,15 @@ ul.horizontal li a:hover {
 
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
-      <th class="govuk-table__header " scope="col" style="padding: 10px 0px 10px 0;"></th>
+      <th class="govuk-table__header " scope="col" style="padding: 0;"></th>
       <th class="govuk-table__header " scope="col" id="Title" style="cursor: pointer;">Title Number</th>
-      <th class="govuk-table__header " scope="col" style="cursor: pointer;">Customer Reference</th>
+      <th class="govuk-table__header " scope="col" style="cursor: pointer;">Customer Ref</th>
       <th class="govuk-table__header  " scope="col">Application Type</th>
       <th class="govuk-table__header " scope="col" style="cursor: pointer;">Received by HMLR </th>
-      <th class="govuk-table__header " scope="col" >Status</th>
       <th class="govuk-table__header " scope="col" style="cursor: pointer;">Estimated <br>Completion Date </th>
-      <th class="govuk-table__header "  scope="col">Show/hide details</th>
+      <th class="govuk-table__header " scope="col" style="cursor: pointer;">Last Updated </th>   
+      <th class="govuk-table__header "  scope="col"></th>
+      <th class="govuk-table__header " scope="col" ></th>
       </tr>
     </thead>
   
@@ -740,20 +772,22 @@ ul.horizontal li a:hover {
               <!-- 7 -->
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row govuk-link-table">
-          <td class="govuk-table__cell "></td>
+          <td class="govuk-table__cell " style="padding: 0;"></td>
           <td class="govuk-table__cell " scope="row">LP980123 <p class="govuk-visually-hidden"> T832JDH </p><!-- THIS IS PAGE {{page}} --></td>
           <td class="govuk-table__cell ">JT/722/Davis	</td>
           <td class="govuk-table__cell Substantive" id="">Official Search of Part with Priority<p class="govuk-visually-hidden"> Sobstantive Cancelled  </p></td>
           <td class="govuk-table__cell" scope="row" data-sortable="2019-11-10">10/11/19</td>
-          <td  class="govuk-table__cell"> <t class="govuk-tag--progress"><span class="govuk-tag govuk-tag--grey">Cancelled</span></t></td>
           <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
-          <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+          <td class="govuk-table__cell " >1 Day ago</td>
+          <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger3 viewmore" href="#">Details <span class="detailsarrow">&#x25BC;</span></a></td>
+          <td  class="govuk-table__cell"> <t class="govuk-tag--progress"><span class="tag cancelled">Cancelled</span></t></td>
+          
         </tr>
   
         <!-- 1 Expanded row -->
               <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
         <!-- Vertical line -->
-              <td class="govuk-table__cell" colspan="1"></td>
+              <td class="govuk-table__cell" colspan="1" style="padding: 0;"></td>
   
         <!-- HMLR reference -->
               <div>
@@ -790,20 +824,22 @@ ul.horizontal li a:hover {
         <!-- 8 -->
         <tbody class="govuk-table__body">
         <tr class="govuk-table__row govuk-link-table">
-          <td class="govuk-table__cell "></td>
+          <td class="govuk-table__cell " style="padding: 0;"></td>
           <td class="govuk-table__cell " scope="row"> <p class="govuk-visually-hidden"> P956EKA </p><!-- THIS IS PAGE {{page}} --></td>
           <td class="govuk-table__cell ">Terry.43123	</td>
           <td class="govuk-table__cell Substantive" id="">	Search of the Index Map<p class="govuk-visually-hidden"> Sobstantive Completed  </p></td>
           <td class="govuk-table__cell" scope="row" data-sortable="2019-11-09">09/11/19</td>
-          <td  class="govuk-table__cell"> <t class="govuk-tag--progress"><span class="govuk-tag govuk-tag--green">Completed</span></t></td>
           <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
-          <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+          <td class="govuk-table__cell " >1 Week ago</td>
+          <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger3 viewmore" href="#">Details <span class="detailsarrow">&#x25BC;</span></a></td>
+          <td  class="govuk-table__cell"> <t class="govuk-tag--progress"><span class="tag completed">Completed</span></t></td>
+          
         </tr>
   
         <!-- 1 Expanded row -->
               <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
         <!-- Vertical line -->
-              <td class="govuk-table__cell" colspan="1"></td>
+              <td class="govuk-table__cell" colspan="1" style="padding: 0;"></td>
   
         <!-- HMLR reference -->
               <div>
@@ -837,20 +873,22 @@ ul.horizontal li a:hover {
         <!-- 9 -->
         <tbody class="govuk-table__body">
         <tr class="govuk-table__row govuk-link-table">
-          <td class="govuk-table__cell "></td>
+          <td class="govuk-table__cell " style="padding: 0;"></td>
           <td class="govuk-table__cell " scope="row">LP890543 <p class="govuk-visually-hidden"> K928TDH </p><!-- THIS IS PAGE {{page}} --></td>
           <td class="govuk-table__cell ">Johnson.12334	</td>
           <td class="govuk-table__cell Substantive" id="">	Register Update<p class="govuk-visually-hidden"> Preliminary Completed  </p></td>
           <td class="govuk-table__cell" scope="row" data-sortable="2019-11-01">01/11/19</td>
-          <td  class="govuk-table__cell"> <t class="govuk-tag--progress"><span class="govuk-tag govuk-tag--green">Completed</span></t></td>
           <td class="govuk-table__cell " style="padding-left: 10px;"  data-sortable=""></td>
-          <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+          <td class="govuk-table__cell " >2 Months ago</td>
+          <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger3 viewmore" href="#">Details <span class="detailsarrow">&#x25BC;</span></a></td>
+          <td  class="govuk-table__cell"> <t class="govuk-tag--progress"><span class="tag completed">Completed</span></t></td>
+          
         </tr>
   
         <!-- 1 Expanded row -->
               <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
         <!-- Vertical line -->
-              <td class="govuk-table__cell" colspan="1"></td>
+              <td class="govuk-table__cell" colspan="1" style="padding: 0;"></td>
   
         <!-- HMLR reference -->
               <div>

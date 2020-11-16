@@ -5,7 +5,26 @@
 {% endblock %}
 {% block content %}
 
+<script type="text/javascript">
+    function goFurther(){
+    if (document.getElementById("chkAgree").checked == true)
+    document.getElementById("btnSubmit").disabled = false;
+    else
+    document.getElementById("btnSubmit").disabled = true;
+    }
+    </script>
+
 <style>
+
+input[disabled]
+{
+    color: #B1B4B6;
+    text-decoration: none;
+    background: #F3F2F1;
+    box-shadow: none;
+    opacity:1 !Important;
+}
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8",chrome=1">
 <meta name="HandheldFriendly" content="true">
@@ -96,7 +115,7 @@
 <!-- Back & clear data top -->
 <!-- Back & clear data top -->
 <div class="govuk-width-container">
-    <a href="index.html" class="govuk-back-link">Back to Index</a>
+    <a href="/index.html" class="govuk-back-link">Back to Index</a>
     <meta charset="utf-8"/>
 <!-- <div class="govuk-width-container"> -->
 
@@ -110,11 +129,11 @@
       <div class="govuk-grid-row">
 
         <div class="govuk-grid-column-full" id="headerdiv">
-          <a href="portalhomepage.html">
-        <img src="public/images/headerlogo.svg" alt="hmlrlogo">
+          <a href="/portalhomepage.html">
+        <img src="/public/images/headerlogo.svg" alt="hmlrlogo">
       </a>
         <br>
-        <a class="tooltip" href="#" style="float: right; font-size: 14px; font-weight: ; text-decoration: none; margin-top: 0px; margin-top :-15px;"> Customer Support <img style="float: right; font-size: 14px; margin-right: -5px; margin-top :-8px;" src="public/images/popout-modern.png" width="30" height="30">
+        <a class="tooltip" href="#" style="float: right; font-size: 14px; font-weight: ; text-decoration: none; margin-top: 0px; margin-top :-15px;"> Customer Support <img style="float: right; font-size: 14px; margin-right: -5px; margin-top :-8px;" src="/public/images/popout-modern.png" width="30" height="30">
           <!-- <span class="tooltiptext">Opens in a new window</span></a> -->
         <a href="#" style="float: right; font-size: 14px; font-weight: ; text-decoration: none; margin-right: 5px; padding-right: 10px; margin-top: -15px;"> Logout </a>
         <hr style= "height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
@@ -289,6 +308,67 @@
           text-decoration: underline;
         }
 
+
+
+
+.notification {
+    border: 1px solid #DDDDDD;
+    display:flex;
+    margin-top:70px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.1);
+box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.1);
+}
+
+.notification-image {
+    background: #1D70B8;
+    text-align: center;
+    padding: 30px;
+    background-image: url("/public/images/Hexagons-Small.png");
+}
+
+.notification-text {
+    padding:30px;
+    font-family: "Arial", "Helvetica", sans-serif;
+width: 100%;
+}
+
+.notification-text .title {
+    font-size: 24px;
+    font-weight:600;
+    color:#1D70B8;
+}
+
+.notification-text .bodycopy {
+    font-size: 16px;
+    font-weight:400;
+    color:#0b0c0c;
+    margin-bottom:30px;
+}
+
+.govuk-checkboxes__label {
+    font-size: 14px;
+
+    padding-top: 10px;
+}
+
+.blue-button {
+    background: #1D70B8;
+    padding: 7px 25px;
+    margin-bottom: 0;
+}
+
+.blue-button:hover {
+    background: #1D70B8;
+    opacity:0.8;
+}
+
+.blue-button:focus {
+    background: #1D70B8;
+    opacity:0.8;
+}
+
       </style>
 
       <!-- Menu dropdowns -->
@@ -321,33 +401,64 @@
         <!-- Service title -->
 
         <div class="govuk-grid-column-three-quarters" style="margin-left: 120px; box-sizing: initial; padding: 0px;">
-            <h1 class="govuk-body govuk-!-font-size-27" style="font-family: arial;">View my applications</h1>
+            <h1 class="govuk-heading-l govuk-!-font-size-27" style=""> View My Applications </h1>
 
             <div>
-            <a href="help.html" target="_blank">
-            <img src="public/images/Helpicon.svg" alt="help" style="width: 45px; margin-top: -60px; padding-right: 0px;float: right; cursor: pointer;">
+            <a href="/help.html" target="_blank">
+            <img src="/public/images/Helpicon.svg" alt="help" style="width: 45px; margin-top: -60px; padding-right: 0px;float: right; cursor: pointer;">
             <p style="text-decoration: underline; font-size: 14px; color: #005ea5; float: right; cursor: pointer; padding-right: 8px; margin-top: -10px; padding-bottom: 0px; margin-left: 0px;">Help</p>
             </a>
             </div>
 
-            <!-- <div class="govuk-grid-column-one-half" style="float: right; margin-top: 80px; margin-left: 0px; padding:0px;">
-            <h2 class="govuk-body govuk-!-font-size-14" style="font-weight: normal; margin-top: -40px; margin-left: 16px; padding: 0px; margin-bottom: 0px;">Search by customer reference, title number or HMLR reference</h2>
-            <input type="text" id="search-input" style="width: 367px; margin-left: 16px; height: 36px; font-size: 14px; border-color: black; border-width: 1px; border-radius: 0px; margin-top: 0px;"><button style="float: right; margin-right: -35px; margin-top: 0px; cursor: pointer; border-radius: 0px" value="submit" id="search-button"> Search </button>
-            <a href="#" id="reset" class="govuk-link govuk-link--no-visited-state" style="float: right; font-size: 14px; margin-right: -35px; margin-top: -10px; padding-bottom: 30px"><br><u> Reset search</u></a>
-            </div> -->
-
-            <!--Filters & searches-->
-<!-- <style>
-.govuk-details__summary::before {
-  margin-top: 6px;
+<script>
+    function hideNotification() {
+  var x = document.getElementById("hideNotification");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
-</style> -->
+</script>
+
+                <div class="notification" id="hideNotification">
+                    <div class="notification-image">
+                        <img src="/public/images/Calendar_V2.png" alt="Calendar  Icon">
+                    </div>
+                    <div class="notification-text">
+                        <p class="title">NEW: Estimated Completion Date</p>
+                        <p class="bodycopy"><b>How is the estimation calculated?</b><br>
+                            Where displayed, the estimated completion date is based on completion time data on the day the application is received. It will be updated every 30 days and if an application is delayed by correspondence. For further details, please visit the new section on our <a href="help.html" target="_blank">help page</a>.</p>
+
+                            <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+                                  <div class="govuk-checkboxes">
+                                    
+                                        <div class="govuk-checkboxes__item">
+                                            <input type="checkbox" id="chkAgree" onclick="goFurther()" class="govuk-checkboxes__input" name="chkAgree">
+                                            <label class="govuk-label govuk-checkboxes__label" for="chkAgree" style="font-weight: 700;">
+                                                Please tick to confirm that you understand the date provided is an estimate only
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <input type="button" id="btnSubmit" onclick="hideNotification()" value="Close" class="govuk-button blue-button"  disabled>
+                     </div>
+                </div>
+
+            
+
+
+
             <div>
 
-                <div class="govuk-grid-row" style="padding:30px 0px;">
+                <div class="govuk-grid-row" style="padding:30px 0px 0px 0px;">
                   <form id="search" style="">
 
-                <div class="govuk-grid-column-one-quarter" style="padding-top:16px;">
+                  <div class="govuk-grid-column-one-quarter" style="padding-top:16px;">
                             <details class="govuk-details" data-module="govuk-details">
                             <summary class="govuk-details__summary" style="">
 
@@ -1062,7 +1173,6 @@
     </div>
     </div>
   </div>
-
 
 
 
