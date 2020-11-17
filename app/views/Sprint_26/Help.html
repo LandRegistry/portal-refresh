@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+{% extends "layout_unbranded.html" %}
+  {% from "checkboxes/macro.njk" import govukCheckboxes %}
+  {% block pageTitle %}
+{% endblock %}
+
+{% block content %}
+
+<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8,chrome=1">
+<meta name="HandheldFriendly" content="true">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  color: #516715;
+  background-color: transparent;
+  cursor: pointer;
+  height: 30px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 14px;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  width: 200px;
+
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 0px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+#menu {
+  position: sticky;
+  width: 20%;
+  top: 0;
+
+  padding-top: 15px;
+  padding-left: 23px;
+}
+
+.govuk-grid-column-three-quarters {
+  float:right;
+}
+
+.collapsible {
+  color: blue;
+  text-decoration: none;
+}
+
+.collapsible:hover {
+  color: black;
+  /* text-decoration: underline; */
+  background-color: #D4E039;
+}
+
+.collapsible2 {
+  color: black;
+  text-decoration: none;
+}
+
+.collapsible2:hover {
+  color: black;
+  text-decoration: none;
+  /* background-color: #D4E039; */
+}
+
+.URL2 {
+  color: #516715
+}
+
+.govuk-link {
+  text-decoration: none
+}
+
+.govuk-link-table:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer-link {
+  color: #747576;
+}
+
+.footlink:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.footlink-no:hover {
+  color: grey;
+}
+
+.govuk-table__body:hover {
+  background-color: #E0E0E0;
+}
+
+</style>
+
+<!-- Back & clear data top -->
+<div class="govuk-width-container">
+    <a href="/index.html" class="govuk-back-link">Back to Index</a>
+    <meta charset="utf-8"/>
+
+
+</div>
+<br>
+
+<!-- Header -->
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full" id="headerdiv">
+      <a href="/portalhomepage.html">
+    <img src="/public/images/headerlogo.svg" alt="hmlrlogo">
+  </a>
+    <br>
+    <a class="tooltip" href="#" style="color: #005EA5; float: right; font-size: 14px; font-weight: ; text-decoration: none; margin-top: 0px; margin-top :-15px;"> Customer Support <img style="float: right; font-size: 14px; margin-right: -5px; margin-top :-8px;" src="/public/images/popout-modern.png" width="30" height="30">
+      <!-- <span class="tooltiptext">Opens in a new window</span></a> -->
+    <a href="#" style="color: #005EA5; float: right; font-size: 14px; font-weight: ; text-decoration: none; margin-right: 5px; padding-right: 10px; margin-top: -15px;"> Logout </a>
+    <hr style= "color: blue; height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
+    </div>
+
+  </div>
+
+
+
+  <!-- Phase banner ----->
+  <div class="govuk-phase-banner">
+      <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+          <span class="govuk-phase-banner__text">
+            This is a new feature - give your
+            <a class="feedback" style="text-decoration: underline; color: #005EA5;">feedback</a>
+            to help us improve it (link opens in a new window)
+    </span>
+      </p>
+  </div>
+  <br>
+  <br>
+
+  <style>
+  .feedback {
+    cursor: pointer;
+  }
+  </style>
+
+<!-- Menu -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter" style="margin-left: -8px;" id="menu">
+
+
+      <a class="collapsible2" style="color: black; font-size: 16px; font-weight: bold;">Contents</a>
+    <!--Portal Home Menu item-->
+    <!-- <button class="collapsible"><strong><a href="portalhomepage.html" style="text-decoration: none;">My Portal Homepage</a></strong></button> -->
+    <a class="collapsible" style="font-weight: bold;" href="#vma">View My Applications</a>
+    <!-- <button class="collapsible"><strong><style="text-decoration: none; color:#005ea5;">- View My Applications</a></strong></button> -->
+
+
+    <!--VIEW MY APPLICATIONS DROPDOWN-->
+    <a class="collapsible" style="font-weight: bold;" href="#filter">Filter</a>
+    <!-- <button class="collapsible"><strong>- Filter</strong></button> -->
+    <!-- <div class="content">
+    <div class="item"><a class="link" href="RequestOfficialCopies">Request official copies</a><br> </div>
+    <div class="item"><a class="link">Official Search of Whole with Priority</a></div>
+    <div class="item"><a class="link">Official Search of Part with Priority</a></div>
+    <div class="item"><a class="link">Withdraw Official Search with Priority</a></div>
+    <div class="item"><a class="link">Official Search of Whole without Priority</a></div>
+    <div class="item"><a class="link">Local Land Charges Search</a></div>
+    <div class="item"><a class="link">MapSearch *** FREE ***</a></div>
+    <div class="item"><a class="link">Application Enquiry *** FREE ***</a></div>
+    <div class="item"><a class="link">Search of the Index Map</a></div>
+    <div class="item"><a class="link">Home Rights Search</a></div>
+    <div class="item"><a class="link">Search Index of Relating Franchises and Manors</a></div>
+    <div class="item"><a class="link">Enquiry By Property Description - Title view</a></div>
+    <div class="item"><a class="link">Register View - PDF</a></div>
+    <div class="item"><a class="link">Register View - HTML</a></div>
+    <div class="item"><a class="link">Title Plan View</a></div>
+    <div class="item"><a class="link">Document View</a></div>
+    <div class="item"><a class="link">Request Historical Copies</a></div>
+    </div> -->
+
+
+    <a class="collapsible" style="font-weight: bold;" href="#search">Search</a>
+    <!--INFORMATION SERVICES DROPDOWN-->
+    <a class="collapsible" style="font-weight: bold;" href="#sort">Sort</a>
+    <!-- <button class="collapsible"><strong>- Sort</strong></button> -->
+    <!-- <div class="content">
+    <div class="item"><a class="link" href="RequestOfficialCopies">Request official copies</a><br> </div>
+    <div class="item"><a class="link">Official Search of Whole with Priority</a></div>
+    <div class="item"><a class="link">Official Search of Part with Priority</a></div>
+    <div class="item"><a class="link">Withdraw Official Search with Priority</a></div>
+    <div class="item"><a class="link">Official Search of Whole without Priority</a></div>
+    <div class="item"><a class="link">Local Land Charges Search</a></div>
+    <div class="item"><a class="link">MapSearch *** FREE ***</a></div>
+    <div class="item"><a class="link">Application Enquiry *** FREE ***</a></div>
+    <div class="item"><a class="link">Search of the Index Map</a></div>
+    <div class="item"><a class="link">Home Rights Search</a></div>
+    <div class="item"><a class="link">Search Index of Relating Franchises and Manors</a></div>
+    <div class="item"><a class="link">Enquiry By Property Description - Title view</a></div>
+    <div class="item"><a class="link">Register View - PDF</a></div>
+    <div class="item"><a class="link">Register View - HTML</a></div>
+    <div class="item"><a class="link">Title Plan View</a></div>
+    <div class="item"><a class="link">Document View</a></div>
+    <div class="item"><a class="link">Request Historical Copies</a></div>
+    </div> -->
+
+    <!--LAND CHARGES DROPDOWN-->
+    <!-- <a class="collapsible" href="#title-number">Title number</a> -->
+    <!-- <button class="collapsible"><strong>- Title number</strong></button> -->
+    <div class="content">
+    <!-- <div class="item"><a class="link">Bankruptcy Search</a><br> </div>
+    <div class="item"><a class="link">Full Search</a></div>
+    <div class="item"><a class="link">Office Copy</a></div>
+    <div class="item"><a class="link">Registration View</a></div> -->
+    </div>
+
+    <!--DOCUMENT REGISTRATION SERVICE-->
+    <!-- <a class="collapsible" href="#app-type">Application type</a> -->
+    <!-- <div><button class="collapsible"><strong>- Application type</strong></button>
+    </div> -->
+
+    <!--REPLY TO REQUISITION-->
+    <!-- <a class="collapsible" href="#rHMLR">Received by HMLR</a> -->
+    <!-- <div><button class="collapsible"><strong>- Received by HMLR</strong></button>
+    </div> -->
+
+    <!--REPLY TO REQUISITION-->
+    <a class="collapsible" style="font-weight: bold;" href="#collapsed-row">Initial Application Information (collapsed row)</a>
+    <!-- <div><button class="collapsible"><strong>- Initial Application Information (collapsed row)</strong></button>
+    </div> -->
+    <br>
+
+    <!--GENERAL FACILITIES-->
+    <a class="collapsible" style="font-weight: bold;" href="#expanded-row">Additional Application Information (expanded row)</a>
+    <div>
+      <!-- <button class="collapsible"><strong>- Additional Application Information (expanded row)</strong></button> -->
+      <br>
+
+    <!-- <div class="content">
+    <div class="item"><a class="link">Message area</a><br> </div>
+    <div class="item"><a class="link">Services Requested</a></div>
+    <div class="item"><a class="link">PDF Downloads</a></div>
+    <div class="item"><a class="link">Notifications</a></div> -->
+    <!-- </div> -->
+
+    <!--Admin Services-->
+    <!-- <a class="collapsible" href="#show-hide">Show / hide details</a> -->
+    <!-- <button class="collapsible"><strong>- Administrative Services</strong></button> -->
+    <div class="content">
+    <!-- <div class="item"><a class="link">Alternative despatch address</a><br> </div>
+    <div class="item"><a class="link">Personal details</a></div>
+    <div class="item"><a class="link">Change password</a></div> -->
+    </div><br>
+
+    <!--Additional menu-->
+  </div>
+
+<style>
+
+  #menu {
+    color: #000000;
+  }
+
+  #submenu {
+    cursor: pointer;
+  }
+  /* Style the button that is used to open and close the collapsible content */
+  .collapsible2 {
+    background-color: transparent;
+    /* cursor: pointer; */
+    height: 30px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 200px;
+    color: #516715;
+    margin-top: -10px;
+  }
+
+  a:visited {
+color: #516715;
+
+  }
+
+  a:link {
+    color: #516715;
+  }
+
+  /* Style the button that is used to open and close the collapsible content */
+  .collapsible {
+    background-color: transparent;
+    cursor: pointer;
+    height: 30px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 200px;
+    color: #516715;
+  }
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .collapsible:hover {
+    background-color: #;
+  }
+
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    padding-left: 10px;
+    font-size: 12px;
+    display: none;
+    overflow: hidden;
+    font-family: arial;
+    cursor: pointer;
+  }
+
+  .item {
+    width: 190px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .item:hover {
+      background: #E5EC89;
+  }
+
+  .link:hover {
+    background: #E5EC89;
+    text-decoration: underline;
+  }
+
+
+</style>
+
+<!--Menu dropdowns-->
+    <!-- <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script> -->
+
+</div>
+
+
+<!-- Service title -->
+
+<!-- <nav class="gem-c-contents-list  gem-c-contents-list--no-underline " role="navigation" data-module="track-click">
+      <h2 class="gem-c-contents-list__title">Contents</h2>
+
+    <ol class="gem-c-contents-list__list">
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+          <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 1" data-track-label="#phone-service-unavailable" data-track-options="{&quot;dimension29&quot;:&quot;Phone service unavailable&quot;}" href="#phone-service-unavailable">Phone service unavailable</a>
+
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+          <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 2" data-track-label="#online" data-track-options="{&quot;dimension29&quot;:&quot;Online&quot;}" href="#online">Online</a>
+
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+          <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 3" data-track-label="#phone" data-track-options="{&quot;dimension29&quot;:&quot;Phone&quot;}" href="#phone">Phone</a>
+
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+          <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 4" data-track-label="#post" data-track-options="{&quot;dimension29&quot;:&quot;Post&quot;}" href="#post">Post</a>
+
+        </li>
+    </ol>
+</nav> -->
+
+<div class="govuk-grid-column-three-quarters" style="margin-top: 5px;">
+
+  <a id="vma">
+    <h1 class="govuk-heading-l govuk-!-font-size-27" style=""> View My Applications </h1>
+    <!-- <img src="public/images/Helpicon.svg" alt="help" style="width: 45px; margin-top: -60px; padding-right: 40px;float: right; cursor: pointer;"><a href="#" style="float: right; padding-right: 47px; margin-top:-10px;" class="govuk-link"> Help </p> -->
+</a>
+
+    <p class="govuk-body">View My Applications displays all of your applications submitted to the HM Land Registry Portal. This guide helps to explain what the features on the page do. </p>
+
+    <!-- <p style="margin-top: -15px; text-decoration: line-through;">If you need any further help then</p>
+    <p class="contact-link">contact HM Land Registry.</p> -->
+    <br>
+    <style>
+
+    .contact-link{
+      text-decoration: underline;
+      cursor: pointer;
+      text-decoration: line-through;
+      color: #005ea5;
+      margin-top: -45px;
+      margin-right: 390px;
+      float: right;
+    }
+
+    </style>
+<a id="filter">
+    <h3 class="govuk-heading-m">Filter</h3>
+  </a>
+  <h3 class="govuk-heading-s">Filter by application type</h3>
+    <p class="govuk-body">Use this to display applications by their type. You can filter by:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Register update (an application that changes an existing registered title)</li>
+          <li>Register create (an application to make a new registered title)</li>
+          <li>Register query (an enquiry or search regarding information held at HM Land Registry) </li>
+        </ul>
+
+
+    <h3 class="govuk-heading-s">Filter by application progress</h3>
+
+    <p class="govuk-body">Use this to display applications by their current progress status. You can filter by: </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Received</li>
+          <li>Delayed</li>
+          <li>Cancelled</li>
+          <li>Completed</li>
+        </ul>
+
+        <p><strong>Note:</strong>
+          <p class="govuk-body">Received results include applications with a progress status of:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Received: Priority Protected</li>
+                <li>Received: Priority Protected – Awaiting Processing</li>
+                <li>Received: Priority Protected – Set-up activity underway</li>
+                <li>In progress</li>
+              </ul>
+
+              <p class="govuk-body">Applications that are displayed without a progress status will also be shown within the results of this filter option.   </p>
+
+              <p class="govuk-body">Delayed results include applications with a progress status of:</p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Delayed</li>
+                    <li>Delayed Prior Pending Application(s) or Official Search(es)</li>
+                    <li>Delayed - Extension of Time Granted </li>
+                  </ul>
+
+
+<a id="search">
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Search</h3>
+  </a>
+    <p class="govuk-body">Search can locate applications by:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Title number</li>
+          <li>HMLR reference</li>
+          <li>Customer reference</li>
+        </ul>
+
+    <p class="govuk-body">The result will show applications that contain the character or string of characters entered as the search term.</p>
+    <p class="govuk-body">Wildcard searching is available. Wildcards allow you to search all of the information that begin with, end with, or include the characters that you specify. The wildcard character is an asterisk (*). </p>
+    <p class="govuk-body">For example, if you search for an application, by putting DN1* it will return all results that begin with DN1.</p>
+    <br>
+
+    <a id="sort">
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Sort</h3></a>
+    <p class="govuk-body">Use sort to order your list of applications. You can sort by: </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Title number</li>
+          <li>Customer reference</li>
+          <li>Received by HMLR</li>
+          <li>Estimated completion date</li>
+        </ul>
+        <br>
+
+        <a id="collapsed-row">
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Initial Application Information (collapsed row)</h3>
+  </a>
+    <p><strong>Title number</strong>
+    <br>Shows the title number for the application (if available). For Land Charges Registration View and Land Charges Office Copy applications it shows the Land Charges Registration Number. </p>
+
+    <p><strong>Customer reference</strong>
+    <br>This is the reference provided by you when the application was submitted. </p>
+
+    <p><strong>Application type</strong>
+    <br>The type of application you have lodged (for example, Transfer of Part, Official Search of Whole with Priority). </p>
+
+    <p><strong>Received by HMLR</strong>
+    <br>This is the date your application was received by HM Land Registry. </p>
+
+    <p><strong>Application progress</strong>
+    <br>The high-level progress status of the application (for example, Received, Delayed, Completed or Cancelled). </p>
+
+    <p><strong>Note:</strong>
+    <br>Received results include applications with a progress status of:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Received: Priority Protected</li>
+      <li>Received: Priority Protected – Awaiting Processing</li>
+      <li>Received: Priority Protected – Set-up activity underway</li>
+      <li>In progress</li>
+    </ul>
+
+<p class="govuk-body">Applications that are displayed without a progress status will also be shown within the results of this filter option.   </p>
+
+    <p class="govuk-body">Delayed results include applications with a progress status of:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Delayed</li>
+      <li>Delayed Prior Pending Application(s) or Official Search(es)</li>
+      <li>Delayed - Extension of Time Granted </li>
+    </ul>
+
+
+    <p><strong>Estimated completion date</strong>
+    <br>Once displayed, the Estimated Completion Date (ECD) is the date that 90% of register create and register update application types should be completed by. This information is calculated using our latest available data on the day the application is received. An ECD will then be updated every 30 calendar days until the associated application is either completed or cancelled and if and when the first item of correspondence is issued. </p>
+    <p><strong>Note:</strong>
+    <br>The more complex applications may exceed the ECD. <br>
+    It can take up to an hour for an ECD to be calculated before appearing in the column. 
+    </p>
+
+    <p><strong>Show / hide details (+)</strong>
+    <br>Expands the row so more information about your application can be viewed.  </p>
+
+    <br>
+
+
+
+    
+<a id="expanded-row">
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Additional Application Information (expanded row)</h3></a>
+
+    <p><strong>Application Progress - details</strong>
+    <br>This shows the progress of an application by the following stages:</p>
+<br>
+
+            <p style="margin-left: 60px; margin-top:-20px;"><strong>Received: Priority Protected</strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;">The application has been received and added to our Day List. Its priority has been protected, but no processing activity has taken place. </p>
+            <br>
+
+            <p style="margin-left: 60px; margin-top:-20px;"><strong>Received: Priority Protected – Awaiting Processing </strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when an application is being held on an office’s backlog list to await processing. No processing activity has yet taken place. The application will normally be dealt with in accordance with its priority order.    </p>
+            <br>
+
+
+            <p style="margin-left: 60px; margin-top:-20px;"><strong>Received: Priority Protected – Set-up activity underway </strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when the parent title is a developer title and there are setting up activities that need to be completed before applications can proceed.  </p>
+            <br>
+
+            <p style="margin-left: 60px; margin-top:-20px;"><strong>In Progress</strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;">Processing activities are taking place. There are no known events or activities causing the application to be delayed at this time. </p>
+            <br>
+
+            <p style="margin-left: 60px; margin-top:-20px;"><strong>Delayed Prior Pending Applications(s) or Official Search(es)</strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;">The application has prior pending application(s) or official search(es) with priority on our Day List. </p>
+            <br>
+
+            <p style="margin-left: 60px; margin-top:-20px;"><strong>Delayed</strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;">Events or activities are causing progress of the application to be delayed.</p>
+            <br>
+
+            <p style="margin-left: 60px; margin-top:-20px;"><strong>Delayed - Extension of Time Granted</strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when a request for additional time to reply to one or more requisition points has been approved. The amount of additional time allowed can vary and is at the discretion of the Chief Land Registrar based upon the individual circumstances. Subject
+to approval, a minimum of 10 working days is normally granted in the first instance, while subsequent requests will be treated on their merits. Requests for extension of time can be submitted via the ‘Still Need To Contact Us’ link located within the Application Enquiry service.
+</p>
+
+            <p><strong>HMLR Reference</strong>
+            <br>The unique reference HM Land Registry allocates to an application.</p>
+
+            <p><strong>Priority Period</strong>
+            <br>Shown for Official Search with Priority applications only. The full period during which any application protected by a search retains its priority.  </p>
+
+            <p><strong>Parent Title(s)</strong>
+            <br>This is the existing title or titles out of which a Transfer of Part or New Lease application has been granted.  </p>
+
+            <p><strong>Correspondence</strong>
+            <br>Shows notices, requisitions and some letters issued by HM Land Registry connected with an application. You can only view the content and download correspondence that is issued to you personally. Correspondence can include:</p>
+
+            <!-- <p><strong>Note:</strong>
+            <br>You can only view the content and download correspondence that is issued to you personally.</p> -->
+<br>
+
+            <p style="margin-left: 60px; margin-top:-20px;"><strong>Letters - Letter issued on [date]</strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when HM Land Registry issues a letter in respect of the application. </p>
+            <br>
+
+            <p style="margin-left: 60px; margin-top:-20px;"><strong>Notice (Objection):</strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;"><strong>Notice(s) issued on [date] Expires on [date]</strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when HM Land Registry issues a Notice in respect of the application. HM Land Registry serves notices to interested parties to help prevent wrongful registration. A copy notice is not sent to the applicant. Notices inform the recipient that HM Land Registry has received an application, or is otherwise proposing an alteration that may adversely affect their interest. These allow a time period for objection, but also invite the addressee to consent to the application in order to shorten the period of delay.  </p>
+            <br>
+
+            <p style="margin-left: 60px; margin-top:-20px;"><strong>Notice (Information):</strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;"><strong>Notice(s) issued on [date] Expires on [None]</strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when HM Land Registry issues a Notice for information purposes only. This type of Notice does not have an expiry date and does not require a response. </p>
+            <br>
+
+            <p style="margin-left: 60px; margin-top:-20px;"><strong>Requisition(s) issued on [date]</strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when HM Land Registry issues a requisition asking for additional information in support of the application. A requisition will not be deemed to have been satisfied until all outstanding points raised have been fully replied to. </p>
+            <br>
+
+            <p style="margin-left: 60px; margin-top:-20px;"><strong>Warning of Cancellation issued on [date] </strong></p>
+            <p style="margin-top: -20px; margin-left: 60px;">This is shown when HM Land Registry issues a warning that the application will be cancelled unless a full response to a requisition is received. </p>
+            <br>
+
+            <p><strong>Files</strong>
+            <br>Shows the documentation electronically issued by HM Land Registry to the applicant on completion of the application. These can be viewed and downloaded. </p>
+
+
+            <p><strong>Show / hide details (-)</strong>
+
+            <br>Collapses the row so less information about your application is displayed. </p>
+
+</div>
+</div>
+
+<!-- </footer> -->
+
+<div class="govuk-grid-row footer-link">
+    <div class="govuk-grid-column-full" id="headerdiv">
+<div class="govuk-width-container">
+        <br>
+        <br>
+        <hr style="height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
+
+
+
+<br>
+<a class="footlink" style="text-color: grey; text-decoration: none;"><u>Terms and conditions</u></a>
+<a>|</a>
+<a class="footlink" style="text-color: grey; text-decoration: none;"><u>Accessibility Statement</u></a>
+<a>|</a>
+<a class="footlink" style="text-color: grey; text-decoration: none;"><u>Freedom of information</u></a>
+<a>|</a>
+<a class="footlink" style="text-color: grey; text-decoration: none;"><u>© Crown copyright</u></a>
+
+<a style="float:right; color: #005EA5;" href="/prototype-admin/clear-data"> Clear data </a>
+<br>
+<br>
+<a class="footlink-no" style="text-color: grey; text-decoration: none;"><i>These links will open in a new window.</i></a>
+<p></p>
+</div>
+</div>
+</div>
+
+
+
+{% endblock %}
