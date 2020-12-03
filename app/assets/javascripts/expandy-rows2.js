@@ -35,22 +35,4 @@
       toggleRow(item.parentNode.parentNode)
     })
   })
-
-  var allRowsOpen = false
-  var expandyAllLink = document.querySelector('.expandyAll')
-  expandyAllLink.addEventListener('click', function(e) {
-    e.preventDefault();
-
-    [].forEach.call(document.querySelectorAll('.expandy-row'), function(row) {
-      if (allRowsOpen) {
-          closeRow(row.previousElementSibling)
-          expandyAllLink.textContent = 'View details'
-      } else {
-          openRow(row.previousElementSibling)
-          expandyAllLink.textContent = 'Close all'
-      }
-    })
-
-    allRowsOpen = !allRowsOpen
-  })
-})()
+})
