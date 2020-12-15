@@ -2,27 +2,6 @@
 <script src="/public/javascripts/jquery.js"></script>
 <script src="/public/javascripts/all.js"></script>
 
-<script>
-    $(function() {
-        $("td[colspan=12]").find("p").hide();
-        $("table").click(function(event) {
-            event.stopPropagation();
-            var $target = $(event.target);
-            if ( $target.closest("td").attr("colspan") > 1 ) {
-                $target.slideUp();
-            } else {
-                $target.closest("tr").next().find("p").slideToggle();
-            }                    
-        });
-    });
-
-    $("a[id^=show_]").click(function(event) {
-    $("#extra_" + $(this).attr('id').substr(5)).slideToggle("slow");
-    event.preventDefault();
-})
-
-    </script>
-
 {% for scriptUrl in extensionConfig.scripts %}
   <script src="{{scriptUrl}}"></script>
 {% endfor %}
@@ -30,9 +9,21 @@
 <script src="/public/javascripts/application.js"></script>
 <script src="/public/javascripts/fontawesome.js"></script>
 <script src="/public/javascripts/govuk-frontend.js"></script>
-<script src="/public/javascripts/expandy-rows3.js"></script>
-<script src="/public/javascripts/jquery.tablesorter.collapsible.js"></script>
 
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#attachmentSelection').on('change', function() {
+          if ( this.value == '1')
+          {
+            $("#business").show();
+          }
+          else
+          {
+            $("#business").hide();
+          }
+        });
+    });
+        </script>
 
 {% if useAutoStoreData %}
   <script src="/public/javascripts/auto-store-data.js"></script>
