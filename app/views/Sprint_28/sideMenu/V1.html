@@ -25,6 +25,24 @@
         }
       }
     }
+
+    var mini = true;
+
+function toggleSidebar() {
+  if (mini) {
+    console.log("opening sidebar");
+    document.getElementById("mySidebar").style.width = "335px";
+    document.getElementById("main").style.marginLeft = "335px";
+    this.mini = false;
+  } else {
+    console.log("closing sidebar");
+    document.getElementById("mySidebar").style.width = "65px";
+    document.getElementById("main").style.marginLeft = "65px";
+    this.mini = true;
+  }
+}
+
+
     </script>
 
 <style>
@@ -287,7 +305,6 @@
     line-height: 38px;
   cursor: pointer;
   font-size: 16px;
-  min-width:192px;
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -332,11 +349,52 @@
 .show {display: block;}
 
 
+.tag {
+    padding: 5px 10px;
+    border-radius: 0px;
+    font-weight: 700;
+    font-size:14px;
+    text-transform: uppercase;
+    min-width: 90px;
+    display: inherit;
+    text-align: center;
+}
+
+.delayed {
+    background: #ffb5b5;
+}
+
+.delayed-req {
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #ffb5b5;
+    padding: 3px;
+    height: 20px;
+    margin-top: -5px;
+    margin-left: -51px;
+}
+
+.received {
+    background: #fbefb9;
+}
+
+.completed {
+    background: #c6e7ca;
+}
+
+.cancelled {
+    background: #e4e4e4;
+}
+
 
 tr:hover {
     background: #f2f2f2;
 }
 
+.expandy-row-trigger2 {
+    font-weight: 400;
+    color: #0b0c0c !important;
+}
 
 .rowContentSection {
     float: left;
@@ -344,8 +402,75 @@ tr:hover {
     padding-bottom: 40px;
 }
 
-.expandy-row-trigger2 {
-    margin-left: 0px;
+
+.sidebar {
+  height: 100%;
+  width: 65px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #353535;
+  transition: 0.5s;
+  overflow-x: hidden;
+  padding-top: 20px;
+  white-space: nowrap;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 22px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #ffffff;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #ffffff;
+  background: rgb(255 255 255 / 0.1);
+}
+
+main .sidebar {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 0px;
+}
+
+.material-icons,
+.icon-text {
+  vertical-align: middle;
+}
+
+.material-icons {
+  padding-bottom: 3px;
+  margin-right: 20px;
+}
+
+#main {
+  padding: 16px;
+  margin-left: 85px;
+  transition: margin-left 0.5s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+
+
+}
+
+.menuTitleText {
+    color: #ffffff;
+    font-family: arial;
+    font-size: 18px;
+    padding-left: 18px;
+    font-weight: 600;
 }
 
 </style>
@@ -354,6 +479,33 @@ tr:hover {
 <!-- Back & clear data top -->
 <!-- Back & clear data top -->
 <div>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+    <a href="#"><span><i class="material-icons">dashboard</i><span class="icon-text">My Portal</span></a>
+    <a href="#" style="background: rgb(255 255 255 / 0.1);"><i class="material-icons">text_snippet</i><span class="icon-text"></span>View My Applications</span></a>
+    <a href="#"><i class="material-icons">info</i><span class="icon-text"></span>Information Services</span></a>
+    <a href="#"><i class="material-icons">eco</i><span class="icon-text"></span>Land Charges Services<span></a>
+    <a href="#"><i class="material-icons">attach_email</i><span class="icon-text"></span>Document Registration Service<span></a>
+    <a href="#"><i class="material-icons">cast</i><span class="icon-text"></span>Network Services<span></a>
+    <a href="#"><i class="material-icons">business</i><span class="icon-text"></span>General Facilities<span></a>
+    <a href="#"><i class="material-icons">admin_panel_settings</i><span class="icon-text"></span>Administrative Services<span></a>
+    <a href="#"><i class="material-icons">help_center</i><span class="icon-text"></span>Help<span></a>
+    </div>
+    
+    <div id="main">
+
+    
+
+
+
+
+
+
+
+
 
     <!-- Header -->
       <div class="govuk-grid-row">
@@ -388,59 +540,11 @@ tr:hover {
 
       <!-- Menu -->
         <div class="">
-          <div style="width:20%;margin-top:20px;float:left;" id="submenu">
-
-          <!--Portal Home Menu item-->
-          <!-- <button class="collapsible"><strong><a href="portalhomepage.html" style="text-decoration: none;">My Portal Homepage</a></strong></button> -->
-          <button class="collapsible"><strong>My Portal Homepage</strong></button>
-
-          <!--VIEW MY APPLICATIONS DROPDOWN-->
-          <button class="collapsible"><strong>NEW: View My Applications</strong></button>
-
-          <!--INFORMATION SERVICES DROPDOWN-->
-          <button class="collapsible"><strong>Information Services</strong></button>
-
-          <!--LAND CHARGES DROPDOWN-->
-          <button class="collapsible"><strong>Land Charges Services</strong></button>
-
-          <!--DOCUMENT REGISTRATION SERVICE-->
-          <button class="collapsible"><strong>Document Registration Service</strong></button>
-          
-
-          <!--REPLY TO REQUISITION-->
-          <button class="collapsible"><strong>Reply to Requisition</strong></button>
-          
-
-          <!--REPLY TO REQUISITION-->
-          <button class="collapsible"><strong>Network Services</strong></button>
-          
-
-          <!--GENERAL FACILITIES-->
-          <button class="collapsible"><strong>General Facilities</strong></button>
-
-          <!--Admin Services-->
-          <button class="collapsible"><strong>Administrative Services</strong></button>
-
-          <!--Additional menu-->
-        </div>
-
-
-
-
-
 
         <!-- Service title -->
 
-        <div style="width:80%;margin-top:30px;float:right;">
+        <div style="width:80%;margin-top:30px;margin-left:10%;">
             <h1 class="govuk-heading-l">View My Applications</h1>
-
-            <div>
-            <a href="/help.html" target="_blank">
-            <img src="/public/images/Helpicon.svg" alt="help" style="width: 45px; margin-top: -60px; padding-right: 0px;float: right; cursor: pointer;">
-            <p style="text-decoration: underline; font-size: 14px; color: #005ea5; float: right; cursor: pointer; padding-right: 8px; margin-top: -10px; padding-bottom: 0px; margin-left: 0px;">Help</p>
-            </a>
-            </div>
-
 
             <div id="FiltersAndSearch" style="margin-top:60px;">
 
@@ -544,7 +648,7 @@ tr:hover {
 
 
             <div style="width:40%;float:left;">
-            <h2 class="govuk-body " style="padding: 0px; margin-bottom: 0px;">Search by customer reference, title number or HMLR reference</h2>
+            <h2 class="govuk-body " style="padding: 0px; margin-bottom: 0px;font-size: 16px;">Search by customer reference, title number or HMLR reference</h2>
             <input type="text" id="search-input" style="width: 275px;
             height: 35px;
             font-size: 14px;
@@ -576,6 +680,24 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 </div>
 
 
+<div>
+  <a class="exportButton" href="#">Export Applications (CSV)</a>
+
+
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Accessibility</button>
+        <div id="myDropdown" class="dropdown-content">
+        <p style="color: black;padding: 8px 16px 0px 16px; text-decoration: none; display: block; margin-bottom: 0px; font-weight: 600;font-size:16px;">Colour scheme:</p>
+        <a href="V1.html" style="text-decoration: underline;background: #f2f2f2;">Default</a>
+        <a href="V1B.html">Protanopia</a>
+        <a href="V1C.html">Deuteranopia</a>
+        <a href="V1D.html">Tritanopia</a>
+        </div>
+    </div>
+</div>
+
+
+
             <!-- My Work Table -->
                 <table  class="govuk-table my-work" style="margin-top: 0px; ">
 
@@ -589,7 +711,6 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                       <th class="govuk-table__header" scope="col"><div>Estimated Completion Date</div></th>
                       
                       <th class="govuk-table__header" scope="col">Application Progress</th>
-                      <th class="govuk-table__header" scope="col">Show/hide details</th>
                       </tr>
                     </thead>
 
@@ -598,7 +719,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                       <!-- 1 -->
                   <tbody class="govuk-table__body">
                       <tr class="govuk-table__row govuk-link-table">
-                        <td class="govuk-table__cell " style="width: 26px;padding: 0px;"></td>
+                        <td class="govuk-table__cell" scope="row" style="text-align: center;width:68px;"><a class="expandy-row-trigger2" href="#">+</a></td>
                         <td class="govuk-table__cell " scope="row">LP123456 <p class="govuk-visually-hidden"> L927GDU </p><!-- THIS IS PAGE {{page}} --></td>
                         <td class="govuk-table__cell ">Jones.20313</td>
                         <td class="govuk-table__cell Substantive" id="">Register Update<p class="govuk-visually-hidden"> Preliminary Delayed </p></td>
@@ -607,7 +728,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                         <td class="govuk-table__cell " style="padding-left: 10px;"  data-sortable="2020-11-02">11/04/20</td>
                         
                         <td class="govuk-table__cell " scope="row" style="width:160px;"><span class="tag delayed">Delayed</span></td>
-                        <td class="govuk-table__cell" scope="row" style="text-align: center;width: 150px;"><a class="expandy-row-trigger2" href="#">+</a></td></tr>
+                      </tr>
 
 
 
@@ -616,7 +737,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                     <!-- Vertical line -->
                     <td class="govuk-table__cell" colspan="1"></td>
     
-                    <td class="govuk-table__cell" colspan="6" style="padding-top: 30px;">
+                    <td class="govuk-table__cell" colspan="5" style="padding-top: 30px;">
                         <div>
                             <div class="rowContentSection">
                                 <div class="expandedTitles">
@@ -647,7 +768,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 <!-- 2 -->
             <tbody class="govuk-table__body">
                 <tr class="govuk-table__row govuk-link-table">
-                  <td class="govuk-table__cell "></td>
+                    <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                   <td class="govuk-table__cell " scope="row">LP980123 <p class="govuk-visually-hidden"> LP980123 </p><!-- THIS IS PAGE {{page}} --></td>
                   <td class="govuk-table__cell ">JT/391/Williams</td>
                   <td class="govuk-table__cell Substantive" id="">New Lease<p class="govuk-visually-hidden"> Substantive Received  </p></td>
@@ -655,8 +776,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                   
                   <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2020-06-04">06/11/20</td>
                   
-                  <td  class="govuk-table__cell"><span class="tag delayed">Delayed</span></td>
-                  <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
+                  <td  class="govuk-table__cell"><span class="tag delayed"><img class="delayed-req" title="Open requisition" src="/public/images/icon-warning.png">Delayed</span></td>
                 </tr>
 
             <!-- 1 Expanded row -->
@@ -664,7 +784,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
 
                         <td class="govuk-table__cell" colspan="1"></td>
 
-                        <td class="govuk-table__cell" colspan="6" style="padding-top: 30px;">
+                        <td class="govuk-table__cell" colspan="5" style="padding-top: 30px;">
                             <div>
                                 <div class="rowContentSection">
                                     <div class="expandedTitles">
@@ -749,7 +869,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 <!-- 3 -->
             <tbody class="govuk-table__body">
                 <tr class="govuk-table__row govuk-link-table">
-                  <td class="govuk-table__cell "></td>
+                    <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                   <td class="govuk-table__cell " scope="row">LP54312 <p class="govuk-visually-hidden"> LP54312 </p><!-- THIS IS PAGE {{page}} --></td>
                   <td class="govuk-table__cell ">Potter/09/09</td>
                   <td class="govuk-table__cell Substantive" id="">New Lease<p class="govuk-visually-hidden"> New Lease</p></td>
@@ -758,7 +878,6 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                   <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
                   
                   <td  class="govuk-table__cell"><span class="tag received">Received</span></td>
-                  <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                 </tr>
 
                 <!-- 1 Expanded row -->
@@ -766,7 +885,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 <!-- Vertical line -->
                 <td class="govuk-table__cell" colspan="1"></td>
 
-                <td class="govuk-table__cell" colspan="6" style="padding-top: 30px;">
+                <td class="govuk-table__cell" colspan="5" style="padding-top: 30px;">
                     <div>
                         <div class="rowContentSection">
                             <div class="expandedTitles">
@@ -842,7 +961,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
               <!-- 4 -->
               <tbody class="govuk-table__body">
               <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
+                <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                 <td class="govuk-table__cell " scope="row">NN980165 <p class="govuk-visually-hidden"> NN980165 </p><!-- THIS IS PAGE {{page}} --></td>
                 <td class="govuk-table__cell ">JT/938/Watkins	</td>
                 <td class="govuk-table__cell Substantive" id="">Official Search of Whole with Priority<p class="govuk-visually-hidden"> Sobstantive Completed  </p></td>
@@ -851,7 +970,6 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
                 
                 <td  class="govuk-table__cell"><span class="tag completed">Completed</span></td>
-                <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
               </tr>
 
               <!-- 1 Expanded row -->
@@ -859,7 +977,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 <!-- Vertical line -->
                 <td class="govuk-table__cell" colspan="1"></td>
 
-                <td class="govuk-table__cell" colspan="6" style="padding-top: 30px;">
+                <td class="govuk-table__cell" colspan="5" style="padding-top: 30px;">
                     <div>
                         <div class="rowContentSection">
                             <div class="expandedTitles">
@@ -911,7 +1029,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
               <!-- 5 -->
               <tbody class="govuk-table__body">
               <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
+                <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                 <td class="govuk-table__cell " scope="row">LP45173 <p class="govuk-visually-hidden"> M928SAI </p><!-- THIS IS PAGE {{page}} --></td>
                 <td class="govuk-table__cell ">Smith.20313	</td>
                 <td class="govuk-table__cell Substantive" id="">Transfer of Part<p class="govuk-visually-hidden"> Substantive Delayed  </p></td>
@@ -920,7 +1038,6 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2020-01-22">22/07/20</td>
                 
                 <td  class="govuk-table__cell"><span class="tag delayed">Delayed</span></td>
-                <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
               </tr>
 
               <!-- 1 Expanded row -->
@@ -928,7 +1045,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 <!-- Vertical line -->
                 <td class="govuk-table__cell" colspan="1"></td>
 
-                <td class="govuk-table__cell" colspan="6" style="padding-top: 30px;">
+                <td class="govuk-table__cell" colspan="5" style="padding-top: 30px;">
                     <div>
                         <div class="rowContentSection">
                             <div class="expandedTitles">
@@ -995,7 +1112,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
               <!-- 6 -->
               <tbody class="govuk-table__body">
               <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
+                <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                 <td class="govuk-table__cell " scope="row">LP54312 <p class="govuk-visually-hidden"> A272JSH </p><!-- THIS IS PAGE {{page}} --></td>
                 <td class="govuk-table__cell ">Curtis.15439	</td>
                 <td class="govuk-table__cell Substantive" id="">Transfer of Part<p class="govuk-visually-hidden"> Substantive Received  </p></td>
@@ -1004,7 +1121,6 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2020-01-21"> 21/07/20</td>
                 
                 <td  class="govuk-table__cell"><span class="tag received">Received</span></td>
-                <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
               </tr>
 
               <!-- 1 Expanded row -->
@@ -1012,7 +1128,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 <!-- Vertical line -->
                 <td class="govuk-table__cell" colspan="1"></td>
 
-                <td class="govuk-table__cell" colspan="6" style="padding-top: 30px;">
+                <td class="govuk-table__cell" colspan="5" style="padding-top: 30px;">
                     <div>
                         <div class="rowContentSection">
                             <div class="expandedTitles">
@@ -1078,7 +1194,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
               <!-- 7 -->
               <tbody class="govuk-table__body">
               <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
+                <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                 <td class="govuk-table__cell " scope="row">CB980123 <p class="govuk-visually-hidden"> T832JDH </p><!-- THIS IS PAGE {{page}} --></td>
                 <td class="govuk-table__cell ">JT/722/Davis	</td>
                 <td class="govuk-table__cell Substantive" id="">Official Search of Part with Priority<p class="govuk-visually-hidden"> Sobstantive Cancelled  </p></td>
@@ -1087,7 +1203,6 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
                 
                 <td  class="govuk-table__cell"><span class="tag cancelled">Cancelled</span></td>
-                <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
               </tr>
 
               <!-- 1 Expanded row -->
@@ -1095,7 +1210,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 <!-- Vertical line -->
                 <td class="govuk-table__cell" colspan="1"></td>
 
-                <td class="govuk-table__cell" colspan="6" style="padding-top: 30px;">
+                <td class="govuk-table__cell" colspan="5" style="padding-top: 30px;">
                     <div>
                         <div class="rowContentSection">
                             <div class="expandedTitles">
@@ -1147,7 +1262,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
               <!-- 8 -->
               <tbody class="govuk-table__body">
               <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
+                <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                 <td class="govuk-table__cell " scope="row"> <p class="govuk-visually-hidden"> P956EKA </p><!-- THIS IS PAGE {{page}} --></td>
                 <td class="govuk-table__cell ">Terry.43123	</td>
                 <td class="govuk-table__cell Substantive" id="">	Search of the Index Map<p class="govuk-visually-hidden"> Sobstantive Completed  </p></td>
@@ -1156,7 +1271,6 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
                 
                 <td  class="govuk-table__cell"><span class="tag completed">Completed</span></td>
-                <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
               </tr>
 
               <!-- 1 Expanded row -->
@@ -1164,7 +1278,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 <!-- Vertical line -->
                 <td class="govuk-table__cell" colspan="1"></td>
 
-                <td class="govuk-table__cell" colspan="6" style="padding-top: 30px;">
+                <td class="govuk-table__cell" colspan="5" style="padding-top: 30px;">
                     <div>
                         <div class="rowContentSection">
                             <div class="expandedTitles">
@@ -1208,7 +1322,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
               <!-- 9 -->
               <tbody class="govuk-table__body">
               <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
+                <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                 <td class="govuk-table__cell " scope="row">NN890543 <p class="govuk-visually-hidden"> NN890543 </p><!-- THIS IS PAGE {{page}} --></td>
                 <td class="govuk-table__cell ">Johnson.12334	</td>
                 <td class="govuk-table__cell Substantive" id="">	Register Update<p class="govuk-visually-hidden"> Preliminary Completed  </p></td>
@@ -1217,7 +1331,6 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 <td class="govuk-table__cell " style="padding-left: 10px;"  data-sortable=""></td>
                 
                 <td  class="govuk-table__cell"><span class="tag completed">Completed</span></td>
-                <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
               </tr>
 
               <!-- 1 Expanded row -->
@@ -1225,7 +1338,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                 <!-- Vertical line -->
                 <td class="govuk-table__cell" colspan="1"></td>
 
-                <td class="govuk-table__cell" colspan="6" style="padding-top: 30px;">
+                <td class="govuk-table__cell" colspan="5" style="padding-top: 30px;">
                     <div>
                         <div class="rowContentSection">
                             <div class="expandedTitles">
@@ -1371,7 +1484,7 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
   </div>
 
 
-
+</div>
 
 
 {% endblock %}
