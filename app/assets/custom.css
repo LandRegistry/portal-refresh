@@ -908,3 +908,129 @@ padding: 10px 20px 10px 20px;
 .expandy-row-trigger2 {
 margin-left: 0px;
 }
+
+
+/* Side Menu Styling */
+.collapsed-nav {
+  width: 65px;
+}
+
+.expanded-nav {
+  width: 325px;
+}
+
+.collapsed-main {
+  width: calc(100% - 125px);
+  margin-left: 65px;
+  transition:0.3s;
+  padding: 30px;
+}
+
+.expanded-main {
+  width: calc(100% - 385px);
+  margin-left: 325px;
+  transition:0.3s;
+  padding: 30px;
+}
+
+.sidebar {
+height: 100%;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #F8F6F6;
+transition: 0.3s;
+overflow-x: hidden;
+padding-top: 0px;
+white-space: nowrap;
+}
+
+.sidebar a {
+padding: 8px 8px 8px 22px;
+text-decoration: none;
+font-size: 16px;
+color:#545454;
+display: block;
+}
+
+.sidebar a:hover {
+color: #ffffff;
+background: #175892;
+}
+
+main .sidebar {
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 0px;
+border-right: 1px solid #dedede;
+}
+
+.material-icons,
+.icon-text {
+vertical-align: middle;
+}
+
+.material-icons {
+padding-bottom: 3px;
+margin-right: 20px;
+}
+
+#main {
+
+}
+
+@media screen and (max-height: 450px) {
+.sidebar {
+  padding-top: 15px;
+}
+.sidebar a {
+  font-size: 18px;
+}
+
+
+}
+
+.menuTitleText {
+  color: #ffffff;
+  font-family: arial;
+  font-size: 18px;
+  padding-left: 18px;
+  font-weight: 600;
+}
+
+#toggleButton:focus {
+background-color:#4a4a4a;
+}
+
+.collapsed-logo {
+  background:#ffffff;
+  height:100px;
+  width:65px;
+  display:block;
+  background-image: url(/public/images/Logo-HMLR-Collapsed.png);
+  background-repeat: no-repeat;
+  background-position-x: 15px;
+  background-size: 40px;
+  background-position-y: center;
+  border-bottom:3px solid #175892;
+  transition:0.3s;
+}
+
+.expanded-logo {
+  background: #ffffff;
+  height: 100px;
+  width: 325px;
+  display: block;
+  background-image: url(/public/images/Logo-HMLR-Expanded.png);
+  background-repeat: no-repeat;
+  background-position-x: 70px;
+  background-size: 179px;
+  background-position-y: center;
+  border-bottom: 3px solid #175892;
+  transition:0.3s;
+}
+
+
+/* Everything Else */

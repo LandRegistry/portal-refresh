@@ -25,6 +25,16 @@
     });
         </script>
 
+
+<script>
+  $("#toggleButton").click(function()
+  {
+       $("#mySidebar").toggleClass("collapsed-nav expanded-nav");
+       $("#main").toggleClass("collapsed-main expanded-main");
+       $("#hmlrLogo").toggleClass("collapsed-logo expanded-logo");
+  });
+</script>
+
 {% if useAutoStoreData %}
   <script src="/public/javascripts/auto-store-data.js"></script>
 {% endif %}

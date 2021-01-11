@@ -30,7 +30,37 @@
 
     </script>
 
+
+
 <style>
+
+/* Side Menu Styling */
+
+.sidebar {
+
+  background-color: #2c2c2c;
+}
+
+main .sidebar {
+    border-right: 1px solid #2c2c2c;
+}
+
+.collapsed-logo {
+    background-color: #2c2c2c;
+    border-bottom: 3px solid #3e3e3e;
+}
+
+.expanded-logo {
+    background-color: #2c2c2c;
+    border-bottom: 3px solid #3e3e3e;
+}
+
+.sidebar a:hover {
+    color: #ffffff;
+    background: #3e3e3e;
+}
+
+/* Everything Else */
 
 .dropdown .dropdown-label {
     width: 409px !important;
@@ -50,90 +80,225 @@
     width: 387px;
 }
 
+/* Darkmode Edits */
+
+.govuk-template {
+    background: #121212;
+}
+
+.govuk-width-container {
+    max-width: 100%;
+    padding: 15px !Important;
+    background: #121212;
+}
+
+.searchBox {
+    background-color: #2c2c2c;
+    color: #979599;
+}
+
+.dropdown .dropdown-label {
+    background-color: #2c2c2c;
+    color: #979599;
+}
+
+.darkModeButtonDark {
+    border: 0px solid #dedede;
+    background-color: #2c2c2c;
+    color: #979599 !important;
+}
+
+.darkModeButtonDark:hover {
+    background-color: #686869;
+    border: 0px solid #005ea5;
+    background-image: url(/public/images/icon-lightmode-white.png);
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.dropbtn {
+    border: 0px solid #dedede;
+    background-image: url(/public/images/icon-accessibility.png);
+    background-color: #2c2c2c;
+    color: #979599 !important;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #686869;
+    border: 0px solid #005ea5;
+    background-image: url(/public/images/icon-accessibility-white.png);
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 0px;
+    outline: none;
+}
+
+.exportButton {
+    border: 0px solid #dedede;
+    background-image: url(/public/images/icon-export.png);
+    background-color: #2c2c2c;
+    color: #979599 !important;
+}
+
+.exportButton:hover {
+    background-color: #686869;
+    border: 0px solid #005ea5;
+    background-image: url(/public/images/icon-export-white.png);
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.replyButton {
+    border: 0px solid #dedede;
+    background-color: #2c2c2c;
+    color: #979599 !important;
+}
+
+.replyButton:hover {
+    background-color: #686869;
+    border: 0px solid #005ea5;
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.VCAactive {
+    background-color: #121212;
+    padding: 30px;
+    width: 365px;
+    color: #979599;
+    background-image: url(/public/images/hexagons-background.png);
+    background-repeat: no-repeat;
+    background-position-x: 185px;
+    background-size: 364px;
+    background-position-y: -172px;
+    border: 2px solid #89cd92;
+    cursor: pointer;
+    float: left;
+}
+
+.VCAinactive {
+    background-color: #121212;
+    padding: 30px;
+    width: 365px;
+    color: #979599;
+    background-image: url(/public/images/hexagons-background.png);
+    background-repeat: no-repeat;
+    background-position-x: 185px;
+    background-size: 364px;
+    background-position-y: -172px;
+    border: 2px solid #121212;
+    cursor: pointer;
+    float: left;
+}
+
+.VCAinactive:hover {
+    border: 2px solid #89cd92;
+    background-color:#121212;
+}
+
+.govuk-label {
+    color: #979599;
+}
+
+.govuk-heading-xl {
+    color: #979599;
+}
+
+.govuk-phase-banner__content {
+    color: #979599;
+}
+
+.govuk-link:link, a:link {
+    color: #979599;
+}
+
+a:visited {
+    color: #979599;
+}
+
+.govuk-table {
+    color: #979599;
+    border: 1px solid #2c2c2c;
+}
+
+tr:hover {
+    background: rgb(255 255 255 / 0.05);
+}
+
+.my-work tbody td {
+    border-bottom: 1px solid #2c2c2c;
+    border-top: 0px solid #ddd;
+}
+
+.govuk-table__header, .govuk-table__cell {
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.expandy-row-trigger2 {
+    font-weight: 400;
+    color: #89cd92 !important;
+}
+
+.collapsible {
+    color: #979599;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: left;
+    margin: 15px 0px 0px 0px !important;
+}
+
+.govuk-phase-banner {
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.my-work {
+    font-size: 16px;
+    letter-spacing: 0.2px;
+}
+
 </style>
 
 
-<!-- Back &
-     clear data top -->
+<!-- Back & clear data top -->
 <!-- Back & clear data top -->
 <div>
 
-    <!-- Header -->
-      <div class="govuk-grid-row">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-        <div class="govuk-grid-column-full" id="headerdiv">
-          <a href="/index.html" style="display: inline-block;">
-        <img src="/public/images/headerlogo.svg" alt="hmlrlogo">
-      </a>
+    <div id="mySidebar" class="collapsed-nav sidebar">
 
-        <a class="tooltip" href="#" style="float: right; font-size: 14px; text-decoration: none; margin-top:20px;"> Customer Support <img style="float: right; font-size: 14px; margin-right: -5px; margin-top:-8px;" src="/public/images/popout-modern.png" width="30" height="30">
-
-        <a href="#" style="float: right; font-size: 14px; text-decoration: none; margin-right: 5px; padding-right: 10px; margin-top:20px;"> Logout </a>
-
-        <hr style= "height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
+        <div id="hmlrLogo" class="collapsed-logo">          
         </div>
 
-      </div>
+        <a href="#" title="Portal Home"><span><i class="material-icons">house</i><span class="icon-text">Portal Home</span></a>
+        <a href="#" title="Applications" style="background:#3e3e3e;color:#ffffff;"><i class="material-icons">text_snippet</i><span class="icon-text"></span>Applications</span></a>
+        <a href="#" title="Information Services"><i class="material-icons">info</i><span class="icon-text"></span>Information Services</span></a>
+        <a href="#" title="Land Charges Services"><i class="material-icons">eco</i><span class="icon-text"></span>Land Charges Services<span></a>
+        <a href="#" title="Document Registration Service (DRS)"><i class="material-icons">attach_email</i><span class="icon-text"></span>Document Registration Service<span></a>
+        <a href="#" title="Network Services"><i class="material-icons">cast</i><span class="icon-text"></span>Network Services<span></a>
+        <a href="#" title="General Facilities"><i class="material-icons">business</i><span class="icon-text"></span>General Facilities<span></a>
+        <a href="#" title="Administrative Services"><i class="material-icons">admin_panel_settings</i><span class="icon-text"></span>Administrative Services<span></a>
+        <a href="#" title="Help"><i class="material-icons">help_center</i><span class="icon-text"></span>Help<span></a>
+        <a id="toggleButton" href="#" title="Expand/Collapse" style="position: absolute;bottom: 0px;width: inherit;outline:none !Important;color:#ffffff;background-color:#3e3e3e;"><i class="material-icons">chevron_right</i><span class="icon-text"></span>Expand/Collapse<span></a>
+    </div>
+    
+    <div id="main" class="collapsed-main">
 
-      <!-- Phase banner ----->
-      <div class="govuk-phase-banner">
-          <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag">
-          BETA
-        </strong>
-              <span class="govuk-phase-banner__text">
-                This is a new feature - give your
-                <a class="feedback" style="text-decoration: underline; color: #005EA5;">feedback</a>
-                to help us improve it (link opens in a new window)
-        </span>
-          </p>
-      </div>
+    <!-- Header -->
 
 
       <!-- Menu -->
         <div class="">
-          <div style="width:20%;margin-top:20px;float:left;" id="submenu">
 
-          <!--Portal Home Menu item-->
-          <!-- <button class="collapsible"><strong><a href="portalhomepage.html" style="text-decoration: none;">My Portal Homepage</a></strong></button> -->
-          <button class="collapsible"><strong>My Portal Homepage</strong></button>
+        <!-- Service title -->
 
-          <!--VIEW MY APPLICATIONS DROPDOWN-->
-          <button class="collapsible"><strong>NEW: View My Applications</strong></button>
-
-          <!--INFORMATION SERVICES DROPDOWN-->
-          <button class="collapsible"><strong>Information Services</strong></button>
-
-          <!--LAND CHARGES DROPDOWN-->
-          <button class="collapsible"><strong>Land Charges Services</strong></button>
-
-          <!--DOCUMENT REGISTRATION SERVICE-->
-          <button class="collapsible"><strong>Document Registration Service</strong></button>
-          
-
-          <!--REPLY TO REQUISITION-->
-          <button class="collapsible"><strong>Reply to Requisition</strong></button>
-          
-
-          <!--REPLY TO REQUISITION-->
-          <button class="collapsible"><strong>Network Services</strong></button>
-          
-
-          <!--GENERAL FACILITIES-->
-          <button class="collapsible"><strong>General Facilities</strong></button>
-
-          <!--Admin Services-->
-          <button class="collapsible"><strong>Administrative Services</strong></button>
-
-          <!--Additional menu-->
-        </div>
-
-
-
-        
-                <!-- Service title -->
-                <div style="width:80%;margin-top:50px;float:left;">    
-                <div style="width:100%;max-width:1400px;">
-                    <h1 class="govuk-heading-xl">View My Applications</h1>
+        <div style="width:80%;margin:auto;margin-top:50px;max-width:1400px;">
+                    <h1 class="govuk-heading-xl">Applications</h1>
 
             <div class="govuk-grid-row" style="margin:0px;padding-bottom: 20px;">
 
@@ -167,14 +332,14 @@
 
                               <label class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" name="application-type2" value="Preliminary" id="Preliminary" type="checkbox">
-                                <label class="govuk-label govuk-checkboxes__label" for="Preliminary">
+                                <label class="govuk-label govuk-checkboxes__label" for="Preliminary" style="color:#333333">
                                     Register update
                                 </label>
                               </label>
 
                               <label class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" name="application-type2" value="Substantive" id="Substantive" type="checkbox">
-                                <label class="govuk-label govuk-checkboxes__label" for="Substantive">
+                                <label class="govuk-label govuk-checkboxes__label" for="Substantive" style="color:#333333">
                                     Register create
                                 </label>
                               </label>
@@ -182,7 +347,7 @@
 
                               <label class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" name="application-type2" value="Sobstantive" id="Sobstantive" type="checkbox">
-                                <label class="govuk-label govuk-checkboxes__label" for="Sobstantive">
+                                <label class="govuk-label govuk-checkboxes__label" for="Sobstantive" style="color:#333333">
                                     Register query
                                 </label>
                               </label>
@@ -192,14 +357,14 @@
 
                               <label class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" name="application-type2" value="Received" id="Received" type="checkbox">
-                                <label class="govuk-label govuk-checkboxes__label" for="Received">
+                                <label class="govuk-label govuk-checkboxes__label" for="Received" style="color:#333333">
                                     Received
                                 </label>
                               </label>
 
                               <label class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" name="application-type2" value="Cancelled" id="Cancelled" type="checkbox">
-                                <label class="govuk-label govuk-checkboxes__label" for="Cancelled">
+                                <label class="govuk-label govuk-checkboxes__label" for="Cancelled" style="color:#333333">
                                     Cancelled
                                 </label>
                               </label>
@@ -207,14 +372,14 @@
 
                               <label class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" name="application-type2" value="Delayed" id="Delayed" type="checkbox">
-                                <label class="govuk-label govuk-checkboxes__label" for="Delayed">
+                                <label class="govuk-label govuk-checkboxes__label" for="Delayed" style="color:#333333">
                                     Delayed
                                 </label>
                               </label>
 
                               <label class="govuk-checkboxes__item">
                                 <input class="govuk-checkboxes__input" name="application-type2" value="Completed" id="Completed" type="checkbox">
-                                <label class="govuk-label govuk-checkboxes__label" for="Completed">
+                                <label class="govuk-label govuk-checkboxes__label" for="Completed" style="color:#333333">
                                     Completed
                                 </label>
                               </label>
@@ -267,7 +432,7 @@
         </div>
     </div>
 
-    <a class="darkModeButtonLight" href="V1-VMA-Dark.html">Dark Mode</a>
+    <a class="darkModeButtonDark" href="V1-VMA.html">Light Mode</a>
 
 </div>
 
@@ -277,13 +442,13 @@
                 <table  class="govuk-table my-work" style="margin-top: 0px; ">
 
                     <thead class="govuk-table__head">
-                      <tr class="govuk-table__row" style="font-size:15px;background-color: rgba(199,210,193,0.5);">
-                      <th class="govuk-table__header" scope="col" style="padding:0px !important; width:1px;"></th>
+                        <tr class="govuk-table__row" style="font-size:15px;background-color: #2c2c2c;">
+                            <th class="govuk-table__header" scope="col" style="padding:0px !important; width:1px;"></th>
                       <th class="govuk-table__header sortable" scope="col" id="Title"><div>Title Number</div></th>
                       <th class="govuk-table__header sortable" scope="col"><div>Customer Reference</div></th>
                       <th class="govuk-table__header" scope="col">Application Type</th>
                       <th class="govuk-table__header sortable" scope="col"><div>Received by HMLR</div></th>
-                      <th class="govuk-table__header sortable" scope="col"><div>Estimated Completion Date</div></th>
+                      <th class="govuk-table__header" scope="col"><div>Estimated Completion Date</div></th>
                       
                       <th class="govuk-table__header" scope="col" style="width: 160px;">Application Progress</th>
                       <th class="govuk-table__header" scope="col" style="width: 68px;"></th>
@@ -297,7 +462,7 @@
    <!-- 2 -->
    <tbody class="govuk-table__body">
     <tr class="govuk-table__row govuk-link-table">
-      <td class="govuk-table__cell" style="padding:0px !important; width:1px;"></td>
+        <td class="govuk-table__cell" style="padding:0px !important; width:1px;"></td>
       <td class="govuk-table__cell " scope="row">NN4PQ1 <p class="govuk-visually-hidden"> NN4PQ1 </p><!-- THIS IS PAGE {{page}} --></td>
       <td class="govuk-table__cell ">Whitter88</td>
       <td class="govuk-table__cell Substantive" id="">New Lease<p class="govuk-visually-hidden">  Preliminary Delayed   </p></td>
@@ -305,14 +470,14 @@
       
       <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2021-08-06">06/08/21</td>
       
-      <td  class="govuk-table__cell"><span class="tag delayed"><img class="delayed-req" title="Open requisition" src="/public/images/icon-warning.png">Delayed</span></td>
+      <td  class="govuk-table__cell"><span class="tag-dark delayed-dark"><img class="delayed-req-dark" title="Open requisition" src="/public/images/icon-warning.png">Delayed</span></td>
       <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
     </tr>
 
 <!-- 1 Expanded row -->
         <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
 
-            <td class="govuk-table__cell" colspan="8" style="padding-top: 30px;">
+            <td class="govuk-table__cell" colspan="8" style="padding-top: 30px; padding-bottom:30px;">
                 
 
 
@@ -345,7 +510,7 @@
                             Open Requisitions
                         </div>
                         <div class="expandedText">
-                            <a href="#">Requisition Letter #2</a> <b style="padding-left:30px;">Issued: </b>13/04/20 <b style="padding-left:30px;">Expires: </b>13/07/20 <a class="replyButton" style="margin-left:67px;" href="V1-VMA-replytoreq-A.html">Reply</a>
+                            <a href="#">Requisition Letter #2</a> <b style="padding-left:30px;">Issued: </b>13/04/20 <b style="padding-left:30px;">Expires: </b>13/07/20 <a class="reply-dark"  style="margin-left:57px;color: #ffb5b5;text-decoration: none;"  href="V1B.html">Reply To Requisition</a>
                         </div>     
                     </div>
                 </div>
@@ -380,7 +545,7 @@
                               Export Application
                           </div>
                           <div class="expandedText">
-                              <a class="exportButton" target="_blank" href="/public/files/example-application.pdf">PDF</a>
+                              <a class="export-dark" target="_blank" href="/public/files/example-application.pdf">Export PDF</a>
                           </div>    
 
                       </div>
@@ -405,14 +570,14 @@
                   
                   <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
                   
-                  <td  class="govuk-table__cell"><span class="tag received">Received</span></td>
+                  <td  class="govuk-table__cell"><span class="tag-dark received-dark">Received</span></td>
                   <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                 </tr>
 
                 <!-- 1 Expanded row -->
                       <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
                 <!-- Vertical line -->
-                <td class="govuk-table__cell" colspan="8" style="padding-top: 30px;">
+                <td class="govuk-table__cell" colspan="8" style="padding-top: 30px; padding-bottom:30px;">
                     <div>
                         <div class="rowContentSection">
                             <div class="expandedTitles">
@@ -468,7 +633,7 @@
                                 Export Application
                             </div>
                             <div class="expandedText">
-                                <a class="exportButton" target="_blank" href="/public/files/example-application.pdf">PDF</a>
+                                <a class="export-dark" target="_blank" href="/public/files/example-application.pdf">Export Export PDF</a>
                             </div>    
 
                         </div>
@@ -495,14 +660,14 @@
                 
                 <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
                 
-                <td  class="govuk-table__cell"><span class="tag completed">Completed</span></td>
+                <td  class="govuk-table__cell"><span class="tag-dark completed-dark">Completed</span></td>
                 <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
               </tr>
 
               <!-- 1 Expanded row -->
               <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
                 <!-- Vertical line -->
-                <td class="govuk-table__cell" colspan="8" style="padding-top: 30px;">
+                <td class="govuk-table__cell" colspan="8" style="padding-top: 30px; padding-bottom:30px;">
                     <div>
                         <div class="rowContentSection">
                             <div class="expandedTitles">
@@ -562,7 +727,7 @@
                 
                 <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2020-01-21"> 21/07/20</td>
                 
-                <td  class="govuk-table__cell"><span class="tag received">Received</span></td>
+                <td  class="govuk-table__cell"><span class="tag-dark received-dark">Received</span></td>
                 <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
               </tr>
 
@@ -570,7 +735,7 @@
               <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
                 <!-- Vertical line -->
 
-                <td class="govuk-table__cell" colspan="8" style="padding-top: 30px;">
+                <td class="govuk-table__cell" colspan="8" style="padding-top: 30px; padding-bottom:30px;">
                     <div>
                         <div class="rowContentSection">
                             <div class="expandedTitles">
@@ -617,7 +782,7 @@
                                 Export Application
                             </div>
                             <div class="expandedText">
-                                <a class="exportButton" target="_blank" href="/public/files/example-application.pdf">PDF</a>
+                                <a class="export-dark" target="_blank" href="/public/files/example-application.pdf">Export Export PDF</a>
                             </div>    
 
                         </div>
@@ -635,7 +800,7 @@
               <!-- 7 -->
               <tbody class="govuk-table__body">
               <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell" style="padding:0px !important; width:1px;"></td>
+                <td class="govuk-table__cell" style="padding:0px !important; width:1px;"></td> 
                 <td class="govuk-table__cell " scope="row">CB980123 <p class="govuk-visually-hidden"> T832JDH </p><!-- THIS IS PAGE {{page}} --></td>
                 <td class="govuk-table__cell ">JT/722/Davis	</td>
                 <td class="govuk-table__cell Substantive" id="">Official Search of Part with Priority<p class="govuk-visually-hidden"> Sobstantive Cancelled  </p></td>
@@ -643,7 +808,7 @@
                 
                 <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
                 
-                <td  class="govuk-table__cell"><span class="tag cancelled">Cancelled</span></td>
+                <td  class="govuk-table__cell"><span class="tag-dark cancelled-dark">Cancelled</span></td>
                 <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
               </tr>
 
@@ -651,7 +816,7 @@
               <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
                 <!-- Vertical line -->
 
-                <td class="govuk-table__cell" colspan="8" style="padding-top: 30px;">
+                <td class="govuk-table__cell" colspan="8" style="padding-top: 30px; padding-bottom:30px;">
                     <div>
                         <div class="rowContentSection">
                             <div class="expandedTitles">
@@ -711,7 +876,7 @@
                 
                 <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable=""></td>
                 
-                <td  class="govuk-table__cell"><span class="tag completed">Completed</span></td>
+                <td  class="govuk-table__cell"><span class="tag-dark completed-dark">Completed</span></td>
                 <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
               </tr>
 
@@ -720,7 +885,7 @@
                 <!-- Vertical line -->
 
 
-                <td class="govuk-table__cell" colspan="8" style="padding-top: 30px;">
+                <td class="govuk-table__cell" colspan="8" style="padding-top: 30px; padding-bottom:30px;">
                     <div>
                         <div class="rowContentSection">
                             <div class="expandedTitles">
@@ -772,7 +937,7 @@
                 
                 <td class="govuk-table__cell " style="padding-left: 10px;"  data-sortable=""></td>
                 
-                <td  class="govuk-table__cell"><span class="tag completed">Completed</span></td>
+                <td  class="govuk-table__cell"><span class="tag-dark completed-dark">Completed</span></td>
                 <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
               </tr>
 
@@ -781,7 +946,7 @@
                 <!-- Vertical line -->
 
 
-                <td class="govuk-table__cell" colspan="8" style="padding-top: 30px;">
+                <td class="govuk-table__cell" colspan="8" style="padding-top: 30px; padding-bottom:30px;">
                     <div>
                         <div class="rowContentSection">
                             <div class="expandedTitles">
@@ -829,7 +994,7 @@
                                 Export Application
                             </div>
                             <div class="expandedText">
-                                <a class="exportButton" target="_blank" href="/public/files/example-application.pdf">PDF</a>
+                                <a class="export-dark" target="_blank" href="/public/files/example-application.pdf">Export Export PDF</a>
                             </div>    
 
                         </div>
@@ -895,7 +1060,8 @@
 
     <!-- </footer> -->
 
-</div></div>
+</div>
+
 
     <!-- </footer> -->
     <div class="govuk-grid-row" style="margin:0px;">
@@ -904,7 +1070,7 @@
         <div class="govuk-width-container">
                 <br>
                 <br>
-                <hr style="height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
+                <hr style="height: 4px;  background-color: #2c2c2c; border: none;">
     
     
     
@@ -926,5 +1092,9 @@
         </div>
         </div>
       </div>
+
+</div>
+
+
 
 {% endblock %}

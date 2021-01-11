@@ -30,7 +30,10 @@
 
     </script>
 
+
+
 <style>
+
 
 .dropdown .dropdown-label {
     width: 409px !important;
@@ -50,90 +53,84 @@
     width: 387px;
 }
 
+.tag {
+    padding: 5px 10px;
+    border-radius: 0px;
+    font-weight: 700;
+    font-size:14px;
+    text-transform: uppercase;
+    min-width: 90px;
+    display: inherit;
+    text-align: center;
+    color:#ffffff;
+}
+
+.delayed {
+    background: #886700;
+}
+
+.delayed-req {
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #886700;
+    padding: 3px;
+    height: 20px;
+    margin-top: -5px;
+    margin-left: -51px;
+}
+
+.received {
+    background: #FFD79C;
+    color:#0b0c0c;
+}
+
+.completed {
+    background: #2F7BFC;
+}
+
+.cancelled {
+    background: #e4e4e4;
+    color:#0b0c0c;
+}
+
 </style>
 
 
-<!-- Back &
-     clear data top -->
+<!-- Back & clear data top -->
 <!-- Back & clear data top -->
 <div>
 
-    <!-- Header -->
-      <div class="govuk-grid-row">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-        <div class="govuk-grid-column-full" id="headerdiv">
-          <a href="/index.html" style="display: inline-block;">
-        <img src="/public/images/headerlogo.svg" alt="hmlrlogo">
-      </a>
+    <div id="mySidebar" class="collapsed-nav sidebar">
 
-        <a class="tooltip" href="#" style="float: right; font-size: 14px; text-decoration: none; margin-top:20px;"> Customer Support <img style="float: right; font-size: 14px; margin-right: -5px; margin-top:-8px;" src="/public/images/popout-modern.png" width="30" height="30">
-
-        <a href="#" style="float: right; font-size: 14px; text-decoration: none; margin-right: 5px; padding-right: 10px; margin-top:20px;"> Logout </a>
-
-        <hr style= "height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
+        <div id="hmlrLogo" class="collapsed-logo">          
         </div>
 
-      </div>
+        <a href="#" title="Portal Home"><span><i class="material-icons">house</i><span class="icon-text">Portal Home</span></a>
+        <a href="#" title="Applications" style="background:#175892;color:#ffffff;"><i class="material-icons">text_snippet</i><span class="icon-text"></span>Applications</span></a>
+        <a href="#" title="Information Services"><i class="material-icons">info</i><span class="icon-text"></span>Information Services</span></a>
+        <a href="#" title="Land Charges Services"><i class="material-icons">eco</i><span class="icon-text"></span>Land Charges Services<span></a>
+        <a href="#" title="Document Registration Service (DRS)"><i class="material-icons">attach_email</i><span class="icon-text"></span>Document Registration Service<span></a>
+        <a href="#" title="Network Services"><i class="material-icons">cast</i><span class="icon-text"></span>Network Services<span></a>
+        <a href="#" title="General Facilities"><i class="material-icons">business</i><span class="icon-text"></span>General Facilities<span></a>
+        <a href="#" title="Administrative Services"><i class="material-icons">admin_panel_settings</i><span class="icon-text"></span>Administrative Services<span></a>
+        <a href="#" title="Help"><i class="material-icons">help_center</i><span class="icon-text"></span>Help<span></a>
+        <a id="toggleButton" href="#" title="Expand/Collapse" style="position: absolute;bottom: 0px;width: inherit;outline:none !Important;color:#ffffff;background-color:#175892;"><i class="material-icons">chevron_right</i><span class="icon-text"></span>Expand/Collapse<span></a>
+    </div>
+    
+    <div id="main" class="collapsed-main">
 
-      <!-- Phase banner ----->
-      <div class="govuk-phase-banner">
-          <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag">
-          BETA
-        </strong>
-              <span class="govuk-phase-banner__text">
-                This is a new feature - give your
-                <a class="feedback" style="text-decoration: underline; color: #005EA5;">feedback</a>
-                to help us improve it (link opens in a new window)
-        </span>
-          </p>
-      </div>
+    <!-- Header -->
 
 
       <!-- Menu -->
         <div class="">
-          <div style="width:20%;margin-top:20px;float:left;" id="submenu">
 
-          <!--Portal Home Menu item-->
-          <!-- <button class="collapsible"><strong><a href="portalhomepage.html" style="text-decoration: none;">My Portal Homepage</a></strong></button> -->
-          <button class="collapsible"><strong>My Portal Homepage</strong></button>
+        <!-- Service title -->
 
-          <!--VIEW MY APPLICATIONS DROPDOWN-->
-          <button class="collapsible"><strong>NEW: View My Applications</strong></button>
-
-          <!--INFORMATION SERVICES DROPDOWN-->
-          <button class="collapsible"><strong>Information Services</strong></button>
-
-          <!--LAND CHARGES DROPDOWN-->
-          <button class="collapsible"><strong>Land Charges Services</strong></button>
-
-          <!--DOCUMENT REGISTRATION SERVICE-->
-          <button class="collapsible"><strong>Document Registration Service</strong></button>
-          
-
-          <!--REPLY TO REQUISITION-->
-          <button class="collapsible"><strong>Reply to Requisition</strong></button>
-          
-
-          <!--REPLY TO REQUISITION-->
-          <button class="collapsible"><strong>Network Services</strong></button>
-          
-
-          <!--GENERAL FACILITIES-->
-          <button class="collapsible"><strong>General Facilities</strong></button>
-
-          <!--Admin Services-->
-          <button class="collapsible"><strong>Administrative Services</strong></button>
-
-          <!--Additional menu-->
-        </div>
-
-
-
-        
-                <!-- Service title -->
-                <div style="width:80%;margin-top:50px;float:left;">    
-                <div style="width:100%;max-width:1400px;">
-                    <h1 class="govuk-heading-xl">View My Applications</h1>
+        <div style="width:80%;margin:auto;margin-top:50px;max-width:1400px;">
+                    <h1 class="govuk-heading-xl">Applications</h1>
 
             <div class="govuk-grid-row" style="margin:0px;padding-bottom: 20px;">
 
@@ -260,9 +257,9 @@
         <button onclick="myFunction()" class="dropbtn">Accessibility</button>
         <div id="myDropdown" class="dropdown-content">
         <p style="color: black;padding: 8px 16px 0px 16px; text-decoration: none; display: block; margin-bottom: 0px; font-weight: 600;font-size:16px;">Colour scheme:</p>
-        <a href="V1-VMA.html" style="text-decoration: underline;background: #f2f2f2;">Default</a>
+        <a href="V1-VMA.html">Default</a>
         <a href="V1-VMA-Colour2.html">Protanopia</a>
-        <a href="V1-VMA-Colour3.html">Deuteranopia</a>
+        <a href="V1-VMA-Colour3.html" style="text-decoration: underline;background: #f2f2f2;">Deuteranopia</a>
         <a href="V1-VMA-Colour4.html">Tritanopia</a>
         </div>
     </div>
@@ -278,12 +275,12 @@
 
                     <thead class="govuk-table__head">
                       <tr class="govuk-table__row" style="font-size:15px;background-color: rgba(199,210,193,0.5);">
-                      <th class="govuk-table__header" scope="col" style="padding:0px !important; width:1px;"></th>
+                        <th class="govuk-table__header" scope="col" style="padding:0px !important; width:1px;"></th>
                       <th class="govuk-table__header sortable" scope="col" id="Title"><div>Title Number</div></th>
                       <th class="govuk-table__header sortable" scope="col"><div>Customer Reference</div></th>
                       <th class="govuk-table__header" scope="col">Application Type</th>
                       <th class="govuk-table__header sortable" scope="col"><div>Received by HMLR</div></th>
-                      <th class="govuk-table__header sortable" scope="col"><div>Estimated Completion Date</div></th>
+                      <th class="govuk-table__header" scope="col"><div>Estimated Completion Date</div></th>
                       
                       <th class="govuk-table__header" scope="col" style="width: 160px;">Application Progress</th>
                       <th class="govuk-table__header" scope="col" style="width: 68px;"></th>
@@ -297,7 +294,7 @@
    <!-- 2 -->
    <tbody class="govuk-table__body">
     <tr class="govuk-table__row govuk-link-table">
-      <td class="govuk-table__cell" style="padding:0px !important; width:1px;"></td>
+        <td class="govuk-table__cell" style="padding:0px !important; width:1px;"></td>
       <td class="govuk-table__cell " scope="row">NN4PQ1 <p class="govuk-visually-hidden"> NN4PQ1 </p><!-- THIS IS PAGE {{page}} --></td>
       <td class="govuk-table__cell ">Whitter88</td>
       <td class="govuk-table__cell Substantive" id="">New Lease<p class="govuk-visually-hidden">  Preliminary Delayed   </p></td>
@@ -345,7 +342,7 @@
                             Open Requisitions
                         </div>
                         <div class="expandedText">
-                            <a href="#">Requisition Letter #2</a> <b style="padding-left:30px;">Issued: </b>13/04/20 <b style="padding-left:30px;">Expires: </b>13/07/20 <a class="replyButton" style="margin-left:67px;" href="V1-VMA-replytoreq-A.html">Reply</a>
+                            <a href="#">Requisition Letter #2</a> <b style="padding-left:30px;">Issued: </b>13/04/20 <b style="padding-left:30px;">Expires: </b>13/07/20 <a class="replyButton" style="margin-left:67px;" href="V1B.html">Reply</a>
                         </div>     
                     </div>
                 </div>
@@ -895,36 +892,41 @@
 
     <!-- </footer> -->
 
-</div></div>
+</div>
+
+<!-- </footer> -->
+<div class="govuk-grid-row" style="margin:0px;">
+    <div class="footer-link">
+        <div class="govuk-grid-column-full" id="headerdiv">
+    <div class="govuk-width-container">
+            <br>
+            <br>
+            <hr style="height: 4px;  background-color:#175892; border: none;">
+
+
+    <br>
+    <a class="footlink" style="text-color: grey; text-decoration: none;"><u>Terms and conditions</u></a>
+    <a>|</a>
+    <a class="footlink" style="text-color: grey; text-decoration: none;"><u>Accessibility Statement</u></a>
+    <a>|</a>
+    <a class="footlink" style="text-color: grey; text-decoration: none;"><u>Freedom of information</u></a>
+    <a>|</a>
+    <a class="footlink" style="text-color: grey; text-decoration: none;"><u>© Crown copyright</u></a>
+
+    <a style="float:right;" href="/prototype-admin/clear-data"> Clear data </a>
+    <br>
+    <br>
+    <a class="footlink-no" style="text-color: grey; text-decoration: none;"><i>These links will open in a new window.</i></a>
+    <p></p>
+    </div>
+    </div>
+    </div>
+  </div>
 
     <!-- </footer> -->
-    <div class="govuk-grid-row" style="margin:0px;">
-        <div class="footer-link">
-            <div class="govuk-grid-column-full" id="headerdiv">
-        <div class="govuk-width-container">
-                <br>
-                <br>
-                <hr style="height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
-    
-    
-    
-        <br>
-        <a class="footlink" style="text-color: grey; text-decoration: none;"><u>Terms and conditions</u></a>
-        <a>|</a>
-        <a class="footlink" style="text-color: grey; text-decoration: none;"><u>Accessibility Statement</u></a>
-        <a>|</a>
-        <a class="footlink" style="text-color: grey; text-decoration: none;"><u>Freedom of information</u></a>
-        <a>|</a>
-        <a class="footlink" style="text-color: grey; text-decoration: none;"><u>© Crown copyright</u></a>
-    
-        <a style="float:right;" href="/prototype-admin/clear-data"> Clear data </a>
-        <br>
-        <br>
-        <a class="footlink-no" style="text-color: grey; text-decoration: none;"><i>These links will open in a new window.</i></a>
-        <p></p>
-        </div>
-        </div>
-        </div>
-      </div>
+
+</div>
+
+
 
 {% endblock %}
