@@ -1043,10 +1043,10 @@ background-color:#4a4a4a;
     margin-bottom: 20px;
     margin-right: 0px;
     cursor: pointer;
-    background-image: url(/public/images/icon-darkmode.png);
+    background-image: url(/public/images/icon-help.png);
     background-repeat: no-repeat;
     background-position-x: 15px;
-    background-size: 18px;
+    background-size: 20px;
     background-position-y: center;
     color: #0b0c0c !important;
     text-decoration: none;
@@ -1057,7 +1057,7 @@ background-color:#4a4a4a;
   .helpButton:hover {
     background-color: #005ea5;
     border: 1px solid #005ea5;
-    background-image: url(/public/images/icon-darkmode-white.png);
+    background-image: url(/public/images/icon-help-white.png);
     color:#ffffff !important;
     text-decoration: none;
   }
