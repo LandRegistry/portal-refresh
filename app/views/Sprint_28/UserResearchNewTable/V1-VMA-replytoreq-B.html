@@ -7,6 +7,61 @@
 
 <style>
 
+/* New Menu Styling */
+
+.govuk-width-container {
+    padding: 30px !Important;
+}
+
+ul.horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+
+ul.horizontal li {
+    float: left;
+}
+
+.rightli {
+    float: right!Important;
+}
+
+ul.horizontal li a {
+    display: inline-block;
+    color: #005ea5;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    height: 50px;
+    padding: 0 15px;
+    line-height: 50px;
+}
+
+ul.horizontal li a.active {
+    background-color: #005ea5;
+    color: #ffffff;
+}
+
+.govuk-table {
+    border: unset;
+    margin-top:40px;
+}
+
+tr {
+    font-size:17px !important;
+}
+
+.newLayout {
+    width: 100%;
+    max-width: 1500px;
+    margin: 50px auto;
+}
+
+/* Original styling */
 .govuk-width-container {
     max-width: 100%;
     padding: 8px !Important;
@@ -206,91 +261,69 @@ font-weight:600;
 <!-- Back & clear data top -->
 <!-- Back & clear data top -->
 <div>
+  <!-- Header -->
+      
 
-    <!-- Header -->
-      <div class="govuk-grid-row">
-
-        <div class="govuk-grid-column-full" id="headerdiv">
-          <a href="/index.html" style="display: inline-block;">
-        <img src="/public/images/headerlogo.svg" alt="hmlrlogo">
-      </a>
-
-        <a class="tooltip" href="#" style="float: right; font-size: 14px; text-decoration: none; margin-top:20px;"> Customer Support <img style="float: right; font-size: 14px; margin-right: -5px; margin-top:-8px;" src="/public/images/popout-modern.png" width="30" height="30">
-
-        <a href="#" style="float: right; font-size: 14px; text-decoration: none; margin-right: 5px; padding-right: 10px; margin-top:20px;"> Logout </a>
-
-        <hr style= "height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
-        </div>
-
-      </div>
-
-      <!-- Phase banner ----->
-      <div class="govuk-phase-banner">
-          <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag">
-          BETA
-        </strong>
-              <span class="govuk-phase-banner__text">
-                This is a new feature - give your
-                <a class="feedback" style="text-decoration: underline; color: #005EA5;">feedback</a>
-                to help us improve it (link opens in a new window)
-        </span>
-          </p>
-      </div>
-
-
-      <!-- Menu -->
-        <div class="">
-          <div style="width:20%;margin-top:20px;float:left;" id="submenu">
-
-          <!--Portal Home Menu item-->
-          <!-- <button class="collapsible"><strong><a href="portalhomepage.html" style="text-decoration: none;">My Portal Homepage</a></strong></button> -->
-          <button class="collapsible"><strong>My Portal Homepage</strong></button>
-
-          <!--VIEW MY APPLICATIONS DROPDOWN-->
-          <button class="collapsible"><strong>NEW: View My Applications</strong></button>
-
-          <!--INFORMATION SERVICES DROPDOWN-->
-          <button class="collapsible"><strong>Information Services</strong></button>
-
-          <!--LAND CHARGES DROPDOWN-->
-          <button class="collapsible"><strong>Land Charges Services</strong></button>
-
-          <!--DOCUMENT REGISTRATION SERVICE-->
-          <button class="collapsible"><strong>Document Registration Service</strong></button>
-          
-
-          <!--REPLY TO REQUISITION-->
-          <button class="collapsible"><strong>Reply to Requisition</strong></button>
-          
-
-          <!--REPLY TO REQUISITION-->
-          <button class="collapsible"><strong>Network Services</strong></button>
-          
-
-          <!--GENERAL FACILITIES-->
-          <button class="collapsible"><strong>General Facilities</strong></button>
-
-          <!--Admin Services-->
-          <button class="collapsible"><strong>Administrative Services</strong></button>
-
-          <!--Additional menu-->
-        </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full" id="headerdiv">
+      <a href="/portalhomepage.html"><img src="/public/images/headerlogo.svg" alt="hmlrlogo"></a>
+      <br>
+      <a class="tooltip" href="#" style="float: right; font-size: 14px; font-weight: ; text-decoration: none; margin-top: 0px; margin-top :-15px;"> Customer Support <img style="float: right; font-size: 14px; margin-right: -5px; margin-top :-8px;" src="/public/images/popout-modern.png" width="30" height="30">
+      <!-- <span class="tooltiptext">Opens in a new window</span></a> -->
+      <a href="#" style="float: right; font-size: 14px; font-weight: ; text-decoration: none; margin-right: 5px; padding-right: 10px; margin-top: -15px;"> Logout </a>
+      <hr style= "height: 5px;background: #005ea5; border: none;margin-block-start: 30px;">
+    </div>
+    </div>
+  
+  
+  <div> 
+    <nav class="">
+      <ul class="horizontal">
+        
+        <li>
+          <a href="#" data-topnav="Styles">My Portal</a>
+        </li>
+  
+        <li>
+          <a href="#" data-topnav="Styles">Documents</a>
+        </li>
+  
+        <li>
+          <a class="active" href="#" data-topnav="Get started">Applications</a>
+        </li>
+  
+        <li>
+          <a href="#" data-topnav="Get started">Search for information</a>
+        </li>
+       
+        <li>
+          <a href="#" data-topnav="Styles">Pre-completion</a>
+        </li>
+        
+        <li>
+          <a href="#" data-topnav="Components">E-services</a>
+        </li>
+        
+        <li class="rightli">
+          <a href="V1-help.html" data-topnav="Community">Help</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </div>
 
 
 
-
-
-
-        <!-- Service title -->
-
-        <div style="width:80%;margin-top:30px;float: left;max-width: 960px;">
-
-            <h1 class="govuk-heading-l">Reply submitted</h1>
+        
+                <!-- Service title -->
+                <div style="">    
+                <div class="newLayout">
+                    <h1 class="govuk-heading-xl">Reply submitted</h1>
             
             <p style="margin-bottom:50px;">Thank you for replying to the requisition. We will review your submission and continue to process your application.</p>
 
 
-            <button class="govuk-button" data-module="govuk-button" data-module="govuk-button" onclick="window.location.href='/Sprint_28/UserResearch/V1-VMA-replytoreq-C.html'">Return to Application</button>
+            <button class="govuk-button" data-module="govuk-button" data-module="govuk-button" onclick="window.location.href='/Sprint_28/UserResearchNewTable/V1-VMA-replytoreq-C.html'">Return to Application</button>
 
         </div>
 
@@ -309,8 +342,7 @@ font-weight:600;
     <div class="govuk-width-container" style="padding:0px !Important;">
             <br>
             <br>
-            <hr style="height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
-
+            <hr style="height: 5px;background: #005ea5; border: none;margin-block-start: 30px;">
 
 
     <br>
