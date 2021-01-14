@@ -322,18 +322,28 @@ display: block;
   text-align: center;
 }
 
+.alert-icon {
+  animation: blink 2s;
+  animation-iteration-count: 3;
+}
+
+@keyframes blink {
+0% { opacity: 0;}
+50% { opacity: 1;}
+100% { opacity: 0; }
+}
+
 .delayed {
   background: #ffb5b5;
 }
 
 .delayed-req {
   position: absolute;
-  background: #ffffff;
-  border: 1px solid #ffb5b5;
+  border: 0px solid #ffb5b5;
   padding: 3px;
-  height: 20px;
-  margin-top: -5px;
-  margin-left: -51px;
+  height: 22px;
+  margin-top: -4px;
+  margin-left: -56px;
 }
 
 .received {
