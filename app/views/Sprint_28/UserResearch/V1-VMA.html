@@ -50,6 +50,17 @@
     width: 387px;
 }
 
+.alert-icon {
+    animation: blink 2s;
+    animation-iteration-count: 3;
+}
+
+@keyframes blink {
+  0% { opacity: 0;}
+  50% { opacity: 1;}
+  100% { opacity: 0; }
+}
+
 </style>
 
 
@@ -253,7 +264,7 @@
 
 
 <div>
-    <a class="exportButton" target="_blank" href="/public/files/example.csv">Export Applications (CSV)</a>
+    <a class="exportButton" target="_blank" href="/public/files/example.csv">Export Applications</a>
 
 
     <div class="dropdown">
@@ -307,7 +318,7 @@
       
       <td class="govuk-table__cell"style="padding-left: 10px;" data-sortable="2021-08-06">06/08/21</td>
       
-      <td  class="govuk-table__cell"><span class="tag delayed"><img class="delayed-req" title="Open requisition" src="/public/images/icon-warning.png">Delayed</span></td>
+      <td  class="govuk-table__cell"><span class="tag delayed"><img class="delayed-req alert-icon" title="Open requisition" src="/public/images/icon-warning.png">Delayed</span></td>
       <td class="govuk-table__cell" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
     </tr>
 
@@ -347,7 +358,7 @@
                             Open Requisitions
                         </div>
                         <div class="expandedText">
-                            <a href="#">Requisition Letter #2</a> <b style="padding-left:30px;">Issued: </b>13/04/20 <b style="padding-left:30px;">Expires: </b>13/07/20 <a class="replyButton" style="margin-left:67px;" href="V1-VMA-replytoreq-A.html">Reply</a>
+                            <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #2</a> <b style="padding-left:30px;">Issued: </b>13/04/20 <b style="padding-left:30px;">Expires: </b>13/07/20 <a class="replyButton" style="margin-left:67px;" href="V1-VMA-replytoreq-A.html">Reply</a>
                         </div>     
                     </div>
                 </div>
@@ -359,7 +370,7 @@
                             Correspondence
                         </div>
                         <div class="expandedText">
-                            <a href="#" target="_blank">Requisition Letter #1</a> <b style="padding-left:30px;">Date: </b>09/03/20
+                            <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #1</a> <b style="padding-left:30px;">Date: </b>09/03/20
                         </div>
                     </div>
                     <div class="rowContentSection">
@@ -367,11 +378,9 @@
                             Files
                         </div>
                         <div class="expandedText">
-                            <a href="#">Registration Completion Sheet dated </a>
+                           N/A
                         </div>    
-                        <div class="expandedText">
-                            <a href="#">Official Copy of Register</a> 
-                        </div>   
+
 
                     </div>
                 </div>
@@ -441,13 +450,13 @@
                                 Correspondence
                             </div>
                             <div class="expandedText">
-                                <a href="#">Letter #1</a> <b style="padding-left:30px;">Issued: </b>22/11/19 
+                                <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter #1</a> <b style="padding-left:30px;">Issued: </b>22/11/19 
                             </div>    
                             <div class="expandedText">
-                                <a href="#">Letter #2</a> <b style="padding-left:30px;">Issued: </b>24/11/19 
+                                <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter #2</a> <b style="padding-left:30px;">Issued: </b>24/11/19 
                             </div>   
                             <div class="expandedText">
-                              <a href="#">Letter #3</a> <b style="padding-left:30px;">Issued: </b>29/11/19 
+                              <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter #3</a> <b style="padding-left:30px;">Issued: </b>29/11/19 
                           </div> 
                         </div>
                         <div class="rowContentSection">
@@ -810,7 +819,7 @@
                                 Correspondence
                             </div>
                             <div class="expandedText">
-                                <a href="#">Requisition(s)</a> <b style="padding-left:30px;">Issued: </b>22/10/19
+                                <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition(s)</a> <b style="padding-left:30px;">Issued: </b>22/10/19
                             </div>    
                             
                         </div>
