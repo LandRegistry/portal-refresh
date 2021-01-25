@@ -1,0 +1,44 @@
+[
+    {
+       "title_number":"NN4PQ1",
+       "lodge_by":"Andy Carr",
+       "customer_ref":"Whitter88",
+       "application_type":"New Lease",
+       "received_by":"05/01/21",
+       "ecd":"06/08/21",
+       "application_progress":"Delayed",
+       "application_progress_details":"Received: Priority Protected - Awaiting Processing",
+       "hmlr_ref":"WH88827P",
+       "section_parentTitles":"no",
+
+       "section_openCorres":"no",
+       "text_openCorres":null,
+
+       "section_closedCorres":"no",
+       "text_closedCorres":null,
+
+       "section_priorityPeriod":"no",
+       "text_priorityPeriod":null
+    },
+    {
+        "title_number":"LP123456",
+        "lodge_by":"Andy Carr",
+        "customer_ref":"Jones.20313",
+        "application_type":"Register Update",
+        "received_by":"10/01/20",
+        "ecd":"11/02/20",
+        "application_progress":"Delayed",
+        "application_progress_details":"Delayed - Prior Pending Applications(s) or Official Search(es)",
+        "hmlr_ref":"L927GDU",
+        "section_parentTitles":"no",
+ 
+        "section_openCorres":"no",
+        "text_openCorres":null,
+ 
+        "section_closedCorres":"no",
+        "text_closedCorres":null,
+ 
+        "section_priorityPeriod":"no",
+        "text_priorityPeriod":null
+    }
+]
