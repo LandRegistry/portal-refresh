@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% extends "layout_unbranded.html" %}
+  {% from "checkboxes/macro.njk" import govukCheckboxes %}
+  {% block pageTitle %}
+{% endblock %}
+
+{% block content %}
+
+<style>
+
+li {
+    padding-bottom: 20px;
+}
+
+</style>
+
+<div class="govuk-grid-column-full govuk-body" style="margin:0 auto; max-width:1000px;float:unset;">
+        <img src="/public/images/headerlogo.svg" alt="hmlrlogo" style=" padding:15px 0px">
+        <hr style="height: 4px;  background-image: linear-gradient(-60deg,#b4d307,#b4d307 50%,#d7e900 0,#d7e900); border: none;">
+  </div>
+
+  
+
+<div class="govuk-grid-column-full govuk-body" style="margin:0 auto; max-width:1000px;float:unset;">
+
+  <h1 style="margin: 40px 0px;">Homepage ideas</h1>
+
+  <ul style="padding-inline-start: 22px;max-width: 860px;">
+      <li style="padding-bottom:20px;">A dynamic layout - allowing the most relevant information to be presented to each user, depending on their needs. Layouts will be:</li>
+        <ul>
+            <li style="padding-bottom:5px;">Affected by user roles</li>
+            <li style="padding-bottom:35px;">Or customised through the use of widgets</li>
+        </ul>
+      <li>The ability to download the latest available PDFs</li>
+      <li>A preview of outstanding requisitions</li>
+      <li>The content on the homepage will be reorganised in to simplified categories, depending on the action being performed e.g. Create, Share, Request</li>
+      <li>A new HM Land Registry design could be implemented, then rolled out across other services to improve consistency across the portal platform</li>
+      <li>Video guides designed to teach new and existing Users how to use different services</li>
+      <li>A section that informs the user who their BUA is, along with an easy way to contact them</li>
+      <li>Services that link out/away from the portal will be clearly signposted in a new section</li>
+      <li>A live twitter feed to inform users of service status, disruptions or maintenance</li>
+  </ul>
+
+</div>
+
+
+{% endblock %}
