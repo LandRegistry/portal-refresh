@@ -474,6 +474,14 @@ a {
     display:none;
 }
 
+.expand_col {
+    display:none;
+}
+
+#expand_col_head {
+    display:none;
+}
+
 .govuk-table {
     box-sizing: border-box;
     border: unset;
@@ -488,6 +496,7 @@ a {
 .my-work tbody td {
     border-bottom: 0px solid #ddd;
     border-top: 0px solid #ddd;
+    padding: 8px 5px 8px 0px;
 }
 
 tr {
@@ -495,15 +504,29 @@ tr {
 }
 
  th {
-    font-size: 16px;
-    padding: 10px 30px;
+    font-size: 17px;
 }
 .govuk-table__header {
     border-bottom: 0px solid #bfc1c3;
 }
 
 .govuk-table__header, .govuk-table__cell {
-    padding: 10px;
+    padding: 5px 5px 10px 0px;
+}
+
+.my-work {
+    font-size: 16px;
+}
+
+.sortable:after {
+    margin-left: 10px;
+    font-size:10px;
+    color:#00703C;
+}
+
+.tag {
+    border-radius: 5px;
+    min-width: 90px;
 }
 
 </style>
@@ -573,17 +596,8 @@ tr {
 <!-- Navigation Menu - End -->
 
 <!-- Content Area - Start -->
-<div style="padding:50px;">
+<div style="padding:50px;max-width: 2000px;margin: auto;">
 
-
-
-
-
-
-
-
-
-    
       <!-- Filters and Search Section - Start -->
 
 
@@ -762,7 +776,7 @@ tr {
                     
                         <label class="govuk-checkboxes__item" style="padding-right:20px;"><input type="checkbox" value="hide" id="appProgress_col" onchange="hide_show_table(this.id);" class="govuk-checkboxes__input" checked=""><label for="appProgress_col" class="govuk-label govuk-checkboxes__label">Application Status</label></label>
 
-                        <label class="govuk-checkboxes__item" style="padding-right:20px;"><input type="checkbox" value="hide" id="expand_col" onchange="hide_show_table(this.id);" class="govuk-checkboxes__input" checked=""><label for="expand_col" class="govuk-label govuk-checkboxes__label">Expand Column</label></label>
+                        <label class="govuk-checkboxes__item" style="padding-right:20px;"><input type="checkbox" value="show" id="expand_col" onchange="hide_show_table(this.id);" class="govuk-checkboxes__input"><label for="expand_col" class="govuk-label govuk-checkboxes__label">Expand Column</label></label>
 
                 </div>
 
@@ -802,7 +816,7 @@ tr {
 
         
     <!-- Table Area - Start -->
-    <div style="width:calc(100% - 352px);float:left; border: 1px solid #dedede;">   
+    <div style="width:calc(100% - 352px);float:left;">   
 
         
         
@@ -810,13 +824,13 @@ tr {
                         <table  class="govuk-table govuk-body my-work" style="margin-top: 0px;margin-bottom:0px;" cellpadding="10">
         
                             <thead class="govuk-table__head">
-                                <tr class="govuk-table__row" style="font-size:14px;background-color:#f3f2f1;">
-                                    <th id="title_col_head" class="govuk-table__header sortable" scope="col" id="Title"><div>Title Number</div></th>
-                                    <th id="customerref_col_head" class="govuk-table__header sortable" scope="col"><div>Customer Ref</div></th>
-                                    <th id="hmlrRef_col_head" class="govuk-table__header sortable" scope="col"><div>HMLR Ref</div></th>
+                                <tr class="govuk-table__row" style="font-size:14px;background-color:#ffffff;">
+                                    <th id="title_col_head" class="govuk-table__header sortable" scope="col" id="Title">Title number</th>
+                                    <th id="customerref_col_head" class="govuk-table__header sortable" scope="col">Customer Ref</th>
+                                    <th id="hmlrRef_col_head" class="govuk-table__header sortable" scope="col">HMLR Ref</th>
                                     <th id="apptype_col_head" class="govuk-table__header" scope="col" style="min-width: 256px;">Application Type</th>
-                                    <th id="receivedby_col_head" class="govuk-table__header sortable" scope="col"><div>Received by HMLR</div></th>
-                                    <th id="ecd_col_head" class="govuk-table__header" scope="col"><div>Estimated Completion Date</div></th>
+                                    <th id="receivedby_col_head" class="govuk-table__header sortable" scope="col">Received by HMLR</th>
+                                    <th id="ecd_col_head" class="govuk-table__header" scope="col">Estimated Completion Date</th>
                                     <th id="appProgress_col_head" class="govuk-table__header" scope="col">Status</th>
                                     <th id="expand_col_head" class="govuk-table__header" scope="col" style="width: 68px;"></th>
                                     </tr>
@@ -834,7 +848,7 @@ tr {
                               <td class="hmlrRef_col">J444555</td>
                               <td class="apptype_col Substantive" id="">New Lease<p class="govuk-visually-hidden">  Preliminary Delayed   </p></td>
                               <td class="receivedby_col" scope="row" data-sortable="2020-05-01">05/01/20</td>
-                              <td class="ecd_col" style="padding-left: 10px;" data-sortable="2020-06-04">06/11/20</td>
+                              <td class="ecd_col" data-sortable="2020-06-04">06/11/20</td>
                               <td class="appProgress_col"><span class="tag delayed"><img class="delayed-req alert-icon" title="Open requisition" src="/public/images/icon-alert-triangle.svg">Delayed</span></td>
                               <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                             </tr>
@@ -939,7 +953,7 @@ tr {
                                 <td class="hmlrRef_col">L927GDU</td>
                                 <td class="apptype_col Substantive" id="">Register Update<p class="govuk-visually-hidden"> Preliminary Delayed </p></td>
                                 <td class="receivedby_col" scope="row" data-sortable="2020-10-01">10/01/20</td> 
-                                <td class="ecd_col" style="padding-left: 10px;"  data-sortable="2020-11-02">11/04/20</td>
+                                <td class="ecd_col" data-sortable="2020-11-02">11/04/20</td>
                                 <td class="appProgress_col" scope="row"><span class="tag delayed">Delayed</span></td>
                                 <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                               </tr>
@@ -985,7 +999,7 @@ tr {
                           <td class="hmlrRef_col">S827777</td>
                           <td class="apptype_col Substantive" id="">New Lease<p class="govuk-visually-hidden"> Substantive Received</p></td>
                           <td class="receivedby_col" scope="row" data-sortable="2019-11-15">15/11/19</td>
-                          <td class="ecd_col"style="padding-left: 10px;" data-sortable=""></td>
+                          <td class="ecd_col" data-sortable=""></td>
                           <td class="appProgress_col"><span class="tag received">Received</span></td>
                           <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                         </tr>
@@ -1081,7 +1095,7 @@ tr {
                         <td class="hmlrRef_col">E921HSK</td>
                         <td class="apptype_col Substantive" id="">Official Search of Whole with Priority<p class="govuk-visually-hidden"> Sobstantive Completed  </p></td>
                         <td class="receivedby_col" scope="row" data-sortable="2019-11-14">14/11/19</td>
-                        <td class="ecd_col"style="padding-left: 10px;" data-sortable=""></td>
+                        <td class="ecd_col" data-sortable=""></td>
                         <td class="appProgress_col"><span class="tag completed">Completed</span></td>
                         <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                       </tr>
@@ -1148,7 +1162,7 @@ tr {
                         <td class="hmlrRef_col">M928SAI</td>
                         <td class="apptype_col Substantive" id="">Transfer of Part<p class="govuk-visually-hidden"> Substantive Delayed  </p></td>
                         <td class="receivedby_col" scope="row" data-sortable="2019-11-13">13/11/19</td> 
-                        <td class="ecd_col"style="padding-left: 10px;" data-sortable="2020-01-22">22/07/20</td> 
+                        <td class="ecd_col" data-sortable="2020-01-22">22/07/20</td> 
                         <td class="appProgress_col"><span class="tag delayed">Delayed</span></td>
                         <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                       </tr>
@@ -1230,7 +1244,7 @@ tr {
                         <td class="hmlrRef_col">A272JSH</td>
                         <td class="apptype_col Substantive" id="">Transfer of Part<p class="govuk-visually-hidden"> Substantive Received  </p></td>
                         <td class="receivedby_col" scope="row" data-sortable="2019-11-12">12/11/19</td>
-                        <td class="ecd_col"style="padding-left: 10px;" data-sortable="2020-01-21"> 21/07/20</td>
+                        <td class="ecd_col" data-sortable="2020-01-21"> 21/07/20</td>
                         <td class="appProgress_col"><span class="tag received">Received</span></td>
                         <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                       </tr>
@@ -1310,7 +1324,7 @@ tr {
                         <td class="hmlrRef_col">A272JSH</td>
                         <td class="apptype_col Substantive" id="">Official Search of Part with Priority<p class="govuk-visually-hidden"> Sobstantive Cancelled  </p></td>
                         <td class="receivedby_col" scope="row" data-sortable="2019-11-10">10/11/19</td>
-                        <td class="ecd_col"style="padding-left: 10px;" data-sortable=""></td>
+                        <td class="ecd_col" data-sortable=""></td>
                         <td class="appProgress_col"><span class="tag cancelled">Cancelled</span></td>
                         <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                       </tr>
@@ -1377,7 +1391,7 @@ tr {
                         <td class="hmlrRef_col">T832JDH</td>
                         <td class="apptype_col Substantive" id="">Search of the Index Map<p class="govuk-visually-hidden"> Sobstantive Completed  </p></td>
                         <td class="receivedby_col" scope="row" data-sortable="2019-11-09">09/11/19</td>
-                        <td class="ecd_col"style="padding-left: 10px;" data-sortable=""></td>
+                        <td class="ecd_col" data-sortable=""></td>
                         <td class="appProgress_col"><span class="tag completed">Completed</span></td>
                         <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                       </tr>
@@ -1436,7 +1450,7 @@ tr {
                         <td class="hmlrRef_col">T832JDH</td>
                         <td class="apptype_col Substantive" id="">	Register Update<p class="govuk-visually-hidden"> Preliminary Completed  </p></td>
                         <td class="receivedby_col" scope="row" data-sortable="2019-11-01">01/11/19</td>
-                        <td class="ecd_col" style="padding-left: 10px;"  data-sortable=""></td>
+                        <td class="ecd_col" data-sortable=""></td>
                         <td class="appProgress_col"><span class="tag completed">Completed</span></td>
                         <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                       </tr>
