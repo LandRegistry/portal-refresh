@@ -97,7 +97,7 @@
 
 
     if(searchBox.value.length > 0) {
-      filterTable(searchBox.value, [2, 3])
+      filterTable(searchBox.value, [1, 2, 3])
     }
 
 // //     // paginate
