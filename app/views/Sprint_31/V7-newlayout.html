@@ -82,7 +82,7 @@
 .navbar-container {
     background-color: #00703C;
     display:flow-root;
-    padding-right: 34px;
+    padding-right: 15px;
     -webkit-box-shadow: inset 0px 2px 4px 0px rgb(0 0 0 / 15%);
     -moz-box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.15);
     box-shadow: inset 0px 2px 4px 0px rgb(0 0 0 / 15%);
@@ -101,8 +101,9 @@
   font-size: 16px;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 0px 16px;
   text-decoration: none;
+  line-height:59px;
 }
 
 /* The dropdown container */
@@ -111,16 +112,17 @@
   overflow: hidden;
 }
 
-/* Dropdown button */
+
 .dropdown2 .dropbtn2 {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    line-height: 59px;
 }
 
 .dropdown2 .dropbtn2:hover {
@@ -148,10 +150,11 @@
 .dropdown-content2 a {
   float: none;
   color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+  padding: 0px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    line-height: 50px;
 }
 
 /* Add a grey background color to dropdown links on hover */
@@ -517,7 +520,7 @@ tr {
 }
 
 .govuk-table__header, .govuk-table__cell {
-    padding: 15px 16px 15px 16px;
+    padding: 17px 16px 13px 16px;
 }
 
 .my-work {
@@ -541,6 +544,10 @@ tr {
     margin-left: 85px;
 }
 
+tr:hover {
+    background: #f4f4f4;
+}
+
 .expandedTitles {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -554,29 +561,14 @@ tr {
 <!-- Back & clear data top -->
 <div>
 
-    <!-- Header -->
-      <div class="govuk-grid-row" style="margin:0;">
-
-        <div class="govuk-grid-column-one-half" style="padding: 30px 50px;">
-            <a href="/index.html" style="display: inline-block;">
-                <img src="/public/images/headerlogo.svg" alt="hmlrlogo">
-            </a>
-        </div>
-
-        <div class="govuk-grid-column-one-half" style="padding: 30px 50px;">
-            <div style="float:right;padding-top: 10px;">
-                <form>
-                    <input type="text" class="searchBox" placeholder="Search">
-                    <button class="search-button" value="" id=""><i class="fas fa-search"></i></button>
-
-                </form>
-            </div>
-        </div>
-
-    </div>
-
 <!-- Navigation Menu - Start -->
 <div class="navbar-container">
+
+    <img src="/public/images/Logo-White-Colour.png" alt="hmlrlogo" style="height: 40px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 5px;">
+
 <div class="navbar">
     <a>Home</a>
 
@@ -602,7 +594,7 @@ tr {
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content2">
-          <a href="#">Edit Profile</a>
+          <a href="#">Edit profile</a>
           <a href="#">Preferences</a>
         </div>
       </div>
@@ -614,12 +606,12 @@ tr {
 <!-- Navigation Menu - End -->
 
 <!-- Content Area - Start -->
-<div style="padding:50px;max-width: 2000px;margin: auto;">
+<div style="max-width: 2000px;margin: auto;background: #ececec;display: flex;">
 
       <!-- Filters and Search Section - Start -->
 
 
-    <div id="FiltersAndSearch" style="width: 300px;float: left;padding-right: 100px;">
+    <div id="FiltersAndSearch" style="width: 300px;float: left;padding: 30px;background: #fff;padding-top:50px;">
 
         <div class="" style="">
           <form id="search" style="">
@@ -794,7 +786,7 @@ tr {
                     
                         <label class="govuk-checkboxes__item" style="padding-right:20px;"><input type="checkbox" value="hide" id="appProgress_col" onchange="hide_show_table(this.id);" class="govuk-checkboxes__input" checked=""><label for="appProgress_col" class="govuk-label govuk-checkboxes__label">Application status</label></label>
 
-                        <label class="govuk-checkboxes__item" style="padding-right:20px;"><input type="checkbox" value="show" id="expand_col" onchange="hide_show_table(this.id);" class="govuk-checkboxes__input"><label for="expand_col" class="govuk-label govuk-checkboxes__label">Expand column icon</label></label>
+                        <label class="govuk-checkboxes__item" style="padding-right:20px;"><input type="checkbox" value="show" id="expand_col" onchange="hide_show_table(this.id);" class="govuk-checkboxes__input"><label for="expand_col" class="govuk-label govuk-checkboxes__label">Expand column</label></label>
 
                 </div>
 
@@ -834,12 +826,12 @@ tr {
 
         
     <!-- Table Area - Start -->
-    <div style="width:calc(100% - 402px);float:left;border: 1px solid #dedede;border-radius: 5px; overflow-x: auto;">   
+    <div style="width:calc(100% - 352px);float:left;; overflow-x: auto;padding:30px;">   
 
         
         
                     <!-- My Work Table -->
-                        <table  class="govuk-table govuk-body my-work" style="margin-top: 0px;margin-bottom:0px;" cellpadding="10">
+                        <table  class="govuk-table govuk-body my-work" style="margin-top: 0px;background: #ffffff;margin-bottom:0px;box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 15%);" cellpadding="10">
         
                             <thead class="govuk-table__head">
                                 <tr class="govuk-table__row" style="background-color:#ffffff;">
@@ -849,7 +841,7 @@ tr {
                                     <th id="apptype_col_head" class="govuk-table__header" scope="col" style="min-width: 256px;">Application type</th>
                                     <th id="receivedby_col_head" class="govuk-table__header sortable" scope="col">Received by HMLR</th>
                                     <th id="ecd_col_head" class="govuk-table__header" scope="col">Estimated completion date</th>
-                                    <th id="appProgress_col_head" class="govuk-table__header" scope="col" style="width:140px;"></th>
+                                    <th id="appProgress_col_head" class="govuk-table__header" scope="col" style="width: 140px;"></th>
                                     <th id="expand_col_head" class="govuk-table__header" scope="col" style="width: 68px;"></th>
                                     </tr>
                             </thead>
@@ -872,95 +864,95 @@ tr {
                             </tr>
             
                         <!-- 1 Expanded row -->
-                        <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+                                <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
             
            
-                            <td class="govuk-table__cell" colspan="8" style="padding-top: 30px;">
-                                <div style="float: left;width: 100%;">
-                                    <div class="rowContentSection">
-                                        <div class="expandedTitles">
-                                            Application Progress - Details
-                                        </div> 
-                                        <div class="expandedText">
-                                            Delayed
-                                        </div>   
-                                    </div>
-                                    <div class="rowContentSection">
-                                        <div class="expandedTitles">
-                                            HMLR Reference
+                                    <td class="govuk-table__cell" colspan="8" style="padding-top: 30px;">
+                                        <div style="float: left;width: 100%;">
+                                            <div class="rowContentSection">
+                                                <div class="expandedTitles">
+                                                    Application Progress - Details
+                                                </div> 
+                                                <div class="expandedText">
+                                                    Delayed
+                                                </div>   
+                                            </div>
+                                            <div class="rowContentSection">
+                                                <div class="expandedTitles">
+                                                    HMLR Reference
+                                                </div>
+                                                <div class="expandedText">
+                                                  J444555
+                                                </div>
+                                            </div>
+                                            <div class="rowContentSection">
+                                                <div class="expandedTitles">
+                                                    Parent Title(s)
+                                                </div>
+                                                <div class="expandedText">
+                                                  LP980000
+                                                </div>
+                                            </div>
+            
+            
+            
+                                            
                                         </div>
-                                        <div class="expandedText">
-                                          J444555
-                                        </div>
-                                    </div>
-                                    <div class="rowContentSection">
-                                        <div class="expandedTitles">
-                                            Parent Title(s)
-                                        </div>
-                                        <div class="expandedText">
-                                          LP980000
-                                        </div>
-                                    </div>
     
+                                        <div>
+                                            <div style="float: left;width: 50%;padding: 0px 0px 30px 0px;">
+                                                <div class="expandedTitles">
+                                                    Open Correspondence
+                                                </div>
+                                                <div class="expandedText">
+                                                    <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #3</a> <b style="padding-left:30px;">Issued: </b>13/04/20 <b style="padding-left:30px;">Expires: </b>13/07/20 <a class="replyButton" style="margin-left:67px;" href="V1-VCA-replytoreq-A.html">Reply</a>
+                                                </div>    
+                                                <div class="expandedText">
+                                                    <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #4</a> <b style="padding-left:30px;">Issued: </b>14/04/20 <b style="padding-left:30px;">Expires: </b>14/07/20 <a class="replyButton" style="margin-left:67px;" href="V1-VCA-replytoreq-A.html">Reply</a>
+                                                </div>   
+                                            </div>
+                                        </div>
     
+                                        <div style="float: left;width: 50%;padding: 0px 0px 30px 0px;">
+                                            <div class="rowContentSection">
+                                                <div class="expandedTitles">
+                                                    Closed Correspondence
+                                                </div>
+                                                <div class="expandedText">
+                                                    <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #1</a> <b style="padding-left:30px;">Date: </b>09/03/20
+                                                </div>
+                                                <div class="expandedText">
+                                                    <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #2</a> <b style="padding-left:30px;">Date: </b>10/03/20
+                                                </div>
+                                            </div>
+                                            <div class="rowContentSection">
+                                                <div class="expandedTitles">
+                                                    Files
+                                                </div>
+                                                <div class="expandedText">
+                                                   N/A
+                                                </div>     
+                      
+                                            </div>
+                                        </div>
     
-                                    
-                                </div>
-
-                                <div>
-                                    <div style="float: left;width: 50%;padding: 0px 0px 30px 0px;">
-                                        <div class="expandedTitles">
-                                            Open Correspondence
-                                        </div>
-                                        <div class="expandedText">
-                                            <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #3</a> <b style="padding-left:30px;">Issued: </b>13/04/20 <b style="padding-left:30px;">Expires: </b>13/07/20 <a class="replyButton" style="margin-left:67px;" href="V1-VCA-replytoreq-A.html">Reply</a>
-                                        </div>    
-                                        <div class="expandedText">
-                                            <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #4</a> <b style="padding-left:30px;">Issued: </b>14/04/20 <b style="padding-left:30px;">Expires: </b>14/07/20 <a class="replyButton" style="margin-left:67px;" href="V1-VCA-replytoreq-A.html">Reply</a>
-                                        </div>   
-                                    </div>
-                                </div>
-
-                                <div style="float: left;width: 50%;padding: 0px 0px 30px 0px;">
-                                    <div class="rowContentSection">
-                                        <div class="expandedTitles">
-                                            Closed Correspondence
-                                        </div>
-                                        <div class="expandedText">
-                                            <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #1</a> <b style="padding-left:30px;">Date: </b>09/03/20
-                                        </div>
-                                        <div class="expandedText">
-                                            <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #2</a> <b style="padding-left:30px;">Date: </b>10/03/20
-                                        </div>
-                                    </div>
-                                    <div class="rowContentSection">
-                                        <div class="expandedTitles">
-                                            Files
-                                        </div>
-                                        <div class="expandedText">
-                                           N/A
-                                        </div>     
-              
-                                    </div>
-                                </div>
-
-    
-                                <div style="float: left;width: 100%;padding: 0px;">
-                                    <div style="float: left; padding-right: 100px;padding-bottom: 0px;">
-                                          <div class="expandedTitles" style="padding-bottom: 15px;">
-                                              Export Application
+            
+                                        <div style="float: left;width: 100%;padding: 0px;">
+                                            <div style="float: left; padding-right: 100px;padding-bottom: 0px;">
+                                                  <div class="expandedTitles" style="padding-bottom: 15px;">
+                                                      Export Application
+                                                  </div>
+                                                  <div class="expandedText">
+                                                      <a class="exportButton" target="_blank" href="/public/files/example-application.pdf">PDF</a>
+                                                  </div>    
+                      
+                                              </div>
                                           </div>
-                                          <div class="expandedText">
-                                              <a class="exportButton" target="_blank" href="/public/files/example-application.pdf">PDF</a>
-                                          </div>    
-              
-                                      </div>
-                                  </div>
-    
-                            </td>
-    
-    
-                        </tr>
+            
+                                    </td>
+            
+            
+                                </tr>
                       </tbody>
 
                               <!-- 2 -->
@@ -1216,10 +1208,10 @@ tr {
                                         LP15173
                                     </div>
                                 </div>
+        
                             </div>
                             
                             <div style="float: left;width: 100%;padding: 0px;">
-
                               <div class="rowContentSection">
                                     <div class="expandedTitles">
                                         Closed Correspondence
@@ -1300,7 +1292,7 @@ tr {
                             </div>
                             
                             <div style="float: left;width: 100%;padding: 0px;">
-  
+
                               <div class="rowContentSection">
                                     <div class="expandedTitles">
                                         Closed Correspondence
@@ -1466,7 +1458,7 @@ tr {
                         <td class="title_col" scope="row">NN890543<p class="govuk-visually-hidden"> NN890543 </p><!-- THIS IS PAGE {{page}} --></td>
                         <td class="customerref_col">Johnson.12334</td>
                         <td class="hmlrRef_col">T832JDH</td>
-                        <td class="apptype_col Substantive" id="">Register update<p class="govuk-visually-hidden"> Preliminary Completed  </p></td>
+                        <td class="apptype_col Substantive" id="">	Register update<p class="govuk-visually-hidden"> Preliminary Completed  </p></td>
                         <td class="receivedby_col" scope="row" data-sortable="2019-11-01">01/11/19</td>
                         <td class="ecd_col" data-sortable=""></td>
                         <td class="appProgress_col"><span class="tag completed">Completed</span></td>
@@ -1569,12 +1561,12 @@ tr {
 
         <!-- footer -->
 
-            <div class="govuk-grid-column-full" style="padding:0px;border-top:5px solid #00703C;margin-top: 30px;">
+            <div class="govuk-grid-column-full" style="padding:0px;border-top:5px solid #00703C;">
 
         
         
         
-<div style="padding:20px 50px;">
+<div style="padding:20px 30px;">
             <a class="footlink" style="text-color: grey; text-decoration: none;"><u>Terms and conditions</u></a>
             <a>|</a>
             <a class="footlink" style="text-color: grey; text-decoration: none;"><u>Accessibility statement</u></a>
@@ -1582,11 +1574,9 @@ tr {
             <a class="footlink" style="text-color: grey; text-decoration: none;"><u>Freedom of information</u></a>
             <a>|</a>
             <a class="footlink" style="text-color: grey; text-decoration: none;"><u>© Crown copyright</u></a>
-        
-            <a style="float:right;" href="/prototype-admin/clear-data"> Clear data </a>
             <br>
             <br>
-            <a class="footlink-no" style="text-color: grey; text-decoration: none;"><i>These links will open in a new window.</i></a>
+            <p style="color: grey; text-decoration: none;"><i>These links will open in a new window.</i></p>
         </div>
             </div>
 
