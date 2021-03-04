@@ -1,10 +1,10 @@
-HMLR Reference,Title Number,Customer Reference,Application Type,Received by HMLR,Estimated Completion Date,Application Progress
-L927GDU,LP123456,Jones.20313,Register Update,10/01/20,11/04/20,Delayed
-LP980123,LP980123,JT/391/Williams,New Lease,05/01/20,06/11/20,Delayed
-P54312,LP54312L,Potter/09/09,New Lease,15/11/19,,Received
-NN980165,NN980165,JT/938/Watkins,Official Search of Whole with Priority,14/11/19,,Completed
-M928SAI,LP45173,Smith.20313,Transfer of Part,13/11/19,22/07/20,Delayed
-A272JSH,LP54312,Curtis.15439,Transfer of Part,12/11/19,21/07/20,Received
-T832JDH,CB980123,JT/722/Davis,Official Search of Part with Priority,10/11/19,,Cancelled
-P956EKA,,Terry.43123,Search of the Index Map,09/11/19,,Completed
-NN890543,NN890543,Johnson.12334,Register Update,01/11/19,,Completed
+HMLR Reference,Title Number,Customer Reference,Application Type,Received by HMLR,Application Progress,Estimated Completion Date
+L927GDU,LP123456,Jones.20313,Register Update,10/01/20,Delayed,11/04/20
+LP980123,LP980123,JT/391/Williams,New Lease,05/01/20,Delayed,06/11/20
+P54312,LP54312L,Potter/09/09,New Lease,15/11/19,Received,
+NN980165,NN980165,JT/938/Watkins,Official Search of Whole with Priority,14/11/19,Completed,
+M928SAI,LP45173,Smith.20313,Transfer of Part,13/11/19,Delayed,22/07/20
+A272JSH,LP54312,Curtis.15439,Transfer of Part,12/11/19,Received,21/07/20
+T832JDH,CB980123,JT/722/Davis,Official Search of Part with Priority,10/11/19,Cancelled,
+P956EKA,,Terry.43123,Search of the Index Map,09/11/19,Completed,
+NN890543,NN890543,Johnson.12334,Register Update,01/11/19,Completed,
