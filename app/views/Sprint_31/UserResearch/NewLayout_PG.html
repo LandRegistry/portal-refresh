@@ -498,8 +498,13 @@ a {
 }
 
 .open {
-    border-bottom: 0px solid #dedede;
-    background: #f4f4f4;
+    border-bottom: 1px solid #005ea5 !important;
+    background: #005ea5 !important;
+    color: #fff !important;
+}
+
+.expandy-row {
+    border-bottom: 0px;
 }
 
 .my-work tbody td {
@@ -585,17 +590,20 @@ tr:hover {
 
 .left-column {
     padding: 30px 30px 0px 30px;
-    border-left: 5px solid #005ea5;
+    border: 5px solid #005ea5;
     display: block;
-    width: 350px;
+    width: 345px;
     float: left;
-    min-height: 275px;
+    min-height: 283px;
 }
 
 .right-column {
-    padding: 30px 30px 30px 30px;
-    width: calc(100% - 475px);
+    padding: 30px 30px 0px 30px;
+    width: calc(100% - 480px);
     float: left;
+    border: 5px solid #005ea5;
+    border-left: 0px;
+    min-height: 283px;
 }
 
 .govuk-checkboxes--small .govuk-checkboxes__label {
