@@ -642,6 +642,13 @@ margin-bottom:15px;
     margin-bottom: 30px;
     max-width: 960px;
 }
+
+#menu {
+    position: sticky;
+    top: 0;
+    padding-top: 15px;
+}
+
 </style>
 
 
@@ -703,7 +710,7 @@ margin-bottom:15px;
 
     <div id="FiltersAndSearch" style="width: 300px;float: left;padding: 30px;background: #fff;padding-top:50px;">
 
-        <div class="" style="position:fixed;">
+        <div id="menu">
           <form id="search" style="">
 
             <div>
@@ -717,6 +724,7 @@ margin-bottom:15px;
                     <li><a href="#filter">Filter</a></li>
                     <li><a href="#searchsection">Search</a></li>
                     <li><a href="#sort">Sort</a></li>
+                    <li><a href="#export">Export applications</a></li>
                     <li><a href="#collapsedrow">Collapsed application row</a></li>
                     <li><a href="#expandedrow">Expanded application row</a></li>
                     <li><a href="#ecd">Estimated Completion Date (ECD)</a></li>
@@ -808,7 +816,25 @@ margin-bottom:15px;
                 <li>Estimated completion date</li>
                 </ul>
             </div>
-                    
+
+            <div class="rowContentSection" id="export">
+                <h1 class="govuk-heading-l govuk-!-font-size-27">Export applications</h1>
+                <p class="govuk-body">The information contained in the table is exported in a comma separated values (CSV) file that you can open using Microsoft Excel.
+                    The exported data will reflect the applications currently in View my applications, taking into account any search or filters that have been applied.
+                    <br><br>
+                    The column headers that will be exported to the CSV file are:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>HMLR reference</li>
+                    <li>Title number</li>
+                    <li>Customer reference</li>
+                    <li>Application type</li>
+                    <li>Received by HMLR</li>
+                    <li>Application progress</li>
+                    <li>Estimated completion date or information</li>
+                </ul>
+            </div>
+
+
             <div class="rowContentSection" id="collapsedrow">
                 <h1 class="govuk-heading-l govuk-!-font-size-27">Initial Application Information (collapsed row)</h1>
                 <h3 class="govuk-heading-s">Title number</h3>
