@@ -588,22 +588,30 @@ tr:hover {
     width: 100%;
 }
 
+.combinedColumns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 .left-column {
     padding: 30px 30px 0px 30px;
     border: 5px solid #005ea5;
-    display: block;
-    width: 345px;
-    float: left;
-    min-height: 283px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
 }
 
 .right-column {
     padding: 30px 30px 0px 30px;
-    width: calc(100% - 480px);
-    float: left;
     border: 5px solid #005ea5;
     border-left: 0px;
-    min-height: 283px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 2;
 }
 
 .govuk-checkboxes--small .govuk-checkboxes__label {
@@ -705,9 +713,12 @@ tr:hover {
                         <option value="NewLayout_JT.html">John Taylor</option>
                         </optgroup>
                         <optgroup label="Groups">
-                            <option value="#">Birmingham Office</option>
-                            <option value="#">London Office</option>
-                            <option value="#">Manchester Office</option>
+                            <option value="#">London</option>
+                            <option value="#">London - Admin</option>
+                            <option value="#">London - Solicitors</option>
+                            <option value="#">London - Conveyancers</option>
+                            <option value="#">Manchester</option>
+                            <option value="NewLayout_MyTeam.html">My Team</option>
                         </optgroup>
                         <optgroup label="All colleagues">
                         <option value="#">Aaron Flynn</option>
@@ -851,8 +862,9 @@ tr:hover {
 
           <button class="accordionNEW accordionBorder">Export</button>
           <div class="panelNEW">
-                <a class="exportButton" style="margin-top:10px;" target="_blank" href="/public/files/example.csv">CSV File</a>
-          </div>
+            <a class="greyButton" style="margin-bottom:10px;" target="_blank" href="/public/files/example.csv"><i style="padding-right: 5px;
+                font-size: 17px;" class="fas fa-file-download"></i> CSV</a>
+      </div>
 
           <button class="accordionNEW accordionBorder">Customise table</button>
           <div class="panelNEW">
@@ -956,11 +968,12 @@ tr:hover {
                                     
                     
                                     <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
+                                        <div class="combinedColumns">
                                         <div class="left-column" style="">
             
                                             <div class="rowContentSection">
                                                 <div class="expandedTitles">
-                                                    Application Progress
+                                                    Application status
                                                 </div> 
                                                 <div class="expandedText">
                                                     Received: Priority Protected - Awaiting Processing
@@ -968,7 +981,7 @@ tr:hover {
                                             </div>
                                             <div class="rowContentSection">
                                                 <div class="expandedTitles">
-                                                    HMLR Reference
+                                                    HMLR reference
                                                 </div>
                                                 <div class="expandedText">
                                                     S827777
@@ -976,7 +989,7 @@ tr:hover {
                                             </div>
                                             <div class="rowContentSection">
                                                 <div class="expandedTitles">
-                                                    Parent Title(s)
+                                                    Parent title(s)
                                                 </div>
                                                 <div class="expandedText">
                                                   
@@ -988,7 +1001,8 @@ tr:hover {
                                                     Export application
                                                 </div>
                                                 <div class="expandedText">
-                                                    <a target="_blank" href="/public/files/requisition-example-document.pdf">Download PDF</a>
+                                                    <a class="greyButton" target="_blank" href="/public/files/requisition-example-document.pdf"><i style="padding-right: 5px;
+                                                        font-size: 17px;" class="fas fa-file-download"></i> PDF</a>
                                                 </div>
                                             </div>
             
@@ -998,7 +1012,7 @@ tr:hover {
             
                                         <div class="rowContentSection">
                                             <div class="expandedTitles">
-                                                Open Correspondence
+                                                Open correspondence
                                             </div>
                                             <div>
                                                 <div class="expandedText">
@@ -1009,7 +1023,7 @@ tr:hover {
             
                                         <div class="rowContentSection">
                                             <div class="expandedTitles">
-                                                Closed Correspondence
+                                                Closed correspondence
                                             </div>
                                             <div>
                                                 <div class="expandedText">
@@ -1041,6 +1055,7 @@ tr:hover {
             
             
                                     </div>
+                                    </div>
                                     </td>
                                     </tr>
                                   </tbody>
@@ -1064,11 +1079,12 @@ tr:hover {
                         
         
                         <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
+                            <div class="combinedColumns">
                             <div class="left-column" style="">
 
                                 <div class="rowContentSection">
                                     <div class="expandedTitles">
-                                        Application Progress
+                                        Application status
                                     </div> 
                                     <div class="expandedText">
                                         Received: Priority Protected - Awaiting Processing
@@ -1076,7 +1092,7 @@ tr:hover {
                                 </div>
                                 <div class="rowContentSection">
                                     <div class="expandedTitles">
-                                        HMLR Reference
+                                        HMLR reference
                                     </div>
                                     <div class="expandedText">
                                         S827777
@@ -1084,7 +1100,7 @@ tr:hover {
                                 </div>
                                 <div class="rowContentSection">
                                     <div class="expandedTitles">
-                                        Parent Title(s)
+                                        Parent title(s)
                                     </div>
                                     <div class="expandedText">
                                       
@@ -1096,7 +1112,8 @@ tr:hover {
                                         Export application
                                     </div>
                                     <div class="expandedText">
-                                        <a target="_blank" href="/public/files/requisition-example-document.pdf">Download PDF</a>
+                                        <a class="greyButton" target="_blank" href="/public/files/requisition-example-document.pdf"><i style="padding-right: 5px;
+                                            font-size: 17px;" class="fas fa-file-download"></i> PDF</a>
                                     </div>
                                 </div>
 
@@ -1106,7 +1123,7 @@ tr:hover {
 
                             <div class="rowContentSection">
                                 <div class="expandedTitles">
-                                    Open Correspondence
+                                    Open correspondence
                                 </div>
                                 <div>
                                     <div class="expandedText">
@@ -1117,7 +1134,7 @@ tr:hover {
 
                             <div class="rowContentSection">
                                 <div class="expandedTitles">
-                                    Closed Correspondence
+                                    Closed correspondence
                                 </div>
                                 <div>
                                     <div class="expandedText">
@@ -1149,6 +1166,7 @@ tr:hover {
 
 
                         </div>
+                        </div>
                         </td>
                         </tr>
                       </tbody>
@@ -1171,11 +1189,12 @@ tr:hover {
                           <!-- Vertical line -->
           
                           <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
+                            <div class="combinedColumns">
                               <div class="left-column" style="">
   
                                   <div class="rowContentSection">
                                       <div class="expandedTitles">
-                                          Application Progress
+                                          Application status
                                       </div> 
                                       <div class="expandedText">
                                           In progress
@@ -1183,7 +1202,7 @@ tr:hover {
                                   </div>
                                   <div class="rowContentSection">
                                       <div class="expandedTitles">
-                                          HMLR Reference
+                                          HMLR reference
                                       </div>
                                       <div class="expandedText">
                                           A272JSH
@@ -1191,7 +1210,7 @@ tr:hover {
                                   </div>
                                   <div class="rowContentSection">
                                       <div class="expandedTitles">
-                                          Parent Title(s)
+                                          Parent title(s)
                                       </div>
                                       <div class="expandedText">
                                           LP14312
@@ -1202,8 +1221,9 @@ tr:hover {
                                           Export application
                                       </div>
                                       <div class="expandedText">
-                                          <a target="_blank" href="/public/files/requisition-example-document.pdf">Download PDF</a>
-                                      </div>
+                                        <a class="greyButton" target="_blank" href="/public/files/requisition-example-document.pdf"><i style="padding-right: 5px;
+                                            font-size: 17px;" class="fas fa-file-download"></i> PDF</a>
+                                    </div>
                                   </div>
   
                           </div>
@@ -1212,7 +1232,7 @@ tr:hover {
   
                               <div class="rowContentSection">
                                   <div class="expandedTitles">
-                                      Open Correspondence
+                                      Open correspondence
                                   </div>
                                   <div>
                                       <div class="expandedText">
@@ -1223,7 +1243,7 @@ tr:hover {
   
                               <div class="rowContentSection">
                                   <div class="expandedTitles">
-                                      Closed Correspondence
+                                      Closed correspondence
                                   </div>
                                   <div>
                                       <div class="expandedText">
@@ -1245,7 +1265,7 @@ tr:hover {
   
   
                           </div>
-          
+          </div>
                           </td>
           
                          
@@ -1274,11 +1294,12 @@ tr:hover {
                     
           
                           <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
+                            <div class="combinedColumns">
                               <div class="left-column" style="">
   
                                   <div class="rowContentSection">
                                       <div class="expandedTitles">
-                                          Application Progress
+                                          Application status
                                       </div> 
                                       <div class="expandedText">
                                           Cancelled
@@ -1286,7 +1307,7 @@ tr:hover {
                                   </div>
                                   <div class="rowContentSection">
                                       <div class="expandedTitles">
-                                          HMLR Reference
+                                          HMLR reference
                                       </div>
                                       <div class="expandedText">
                                           T832JDH
@@ -1305,8 +1326,9 @@ tr:hover {
                                           Export application
                                       </div>
                                       <div class="expandedText">
-                                          <a target="_blank" href="/public/files/requisition-example-document.pdf">Download PDF</a>
-                                      </div>
+                                        <a class="greyButton" target="_blank" href="/public/files/requisition-example-document.pdf"><i style="padding-right: 5px;
+                                            font-size: 17px;" class="fas fa-file-download"></i> PDF</a>
+                                    </div>
                                   </div>
   
                           </div>
@@ -1315,7 +1337,7 @@ tr:hover {
   
                               <div class="rowContentSection">
                                   <div class="expandedTitles">
-                                      Open Correspondence
+                                      Open correspondence
                                   </div>
                                   <div>
                                       <div class="expandedText">
@@ -1326,7 +1348,7 @@ tr:hover {
   
                               <div class="rowContentSection">
                                   <div class="expandedTitles">
-                                      Closed Correspondence
+                                      Closed correspondence
                                   </div>
                                   <div>
                                       <div class="expandedText">
@@ -1348,6 +1370,7 @@ tr:hover {
                               </div>
   
   
+                          </div>
                           </div>
                           </td>
           
@@ -1376,11 +1399,12 @@ tr:hover {
                     
           
                           <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
+                            <div class="combinedColumns">
                               <div class="left-column" style="">
   
                                   <div class="rowContentSection">
                                       <div class="expandedTitles">
-                                          Application Progress
+                                          Application status
                                       </div> 
                                       <div class="expandedText">
                                           Cancelled
@@ -1388,7 +1412,7 @@ tr:hover {
                                   </div>
                                   <div class="rowContentSection">
                                       <div class="expandedTitles">
-                                          HMLR Reference
+                                          HMLR reference
                                       </div>
                                       <div class="expandedText">
                                           T832JDH
@@ -1407,8 +1431,9 @@ tr:hover {
                                           Export application
                                       </div>
                                       <div class="expandedText">
-                                          <a target="_blank" href="/public/files/requisition-example-document.pdf">Download PDF</a>
-                                      </div>
+                                        <a class="greyButton" target="_blank" href="/public/files/requisition-example-document.pdf"><i style="padding-right: 5px;
+                                            font-size: 17px;" class="fas fa-file-download"></i> PDF</a>
+                                    </div>
                                   </div>
   
                           </div>
@@ -1417,7 +1442,7 @@ tr:hover {
   
                               <div class="rowContentSection">
                                   <div class="expandedTitles">
-                                      Open Correspondence
+                                      Open correspondence
                                   </div>
                                   <div>
                                       <div class="expandedText">
@@ -1428,7 +1453,7 @@ tr:hover {
   
                               <div class="rowContentSection">
                                   <div class="expandedTitles">
-                                      Closed Correspondence
+                                      Closed correspondence
                                   </div>
                                   <div>
                                       <div class="expandedText">
@@ -1450,6 +1475,7 @@ tr:hover {
                               </div>
   
   
+                          </div>
                           </div>
                           </td>
           

@@ -91,12 +91,12 @@
   
       const applicationTypeChoices = getSelectedCheckboxValues(applicationTypeCheckboxes)
       if (applicationTypeChoices.length >=1) {
-          filterTable(applicationTypeChoices, [3])}
+          filterTable(applicationTypeChoices, [4])}
   
   
       const applicationProgressChoices = getSelectedCheckboxValues(applicationProgressCheckboxes)
       if (applicationProgressChoices.length >=1) {
-          filterTable(applicationProgressChoices, [3])}
+          filterTable(applicationProgressChoices, [9])}
   
   
   
