@@ -6,7 +6,7 @@
 {% block content %}
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <script>
     /* When the user clicks on the button, 
     toggle between hiding and showing the dropdown content */
@@ -631,8 +631,6 @@ tr:hover {
     color: #0b0c0c;
 }
 
-
-
 .my-work-2 tbody td {
     border-bottom: 0px solid #ddd;
     border-top: 0px solid #ddd;
@@ -649,7 +647,6 @@ tr:hover {
     overflow:hidden;
     margin-bottom: 30px;
 }
-
 
 </style>
 
@@ -738,11 +735,11 @@ tr:hover {
                 </label>
                 <select id="cat" class="form-control" onchange="location = this.value;">
                     <optgroup label="Recent searches">
-                        <option value="NewLayout_JP.html">Jon Parker</option>
-                        <option value="NewLayout_NA.html">Nicola Andrews</option>
-                        <option value="NewLayout_PG.html">Pat Gannon</option>
                         <option value="NewLayout_Default.html">Andy Carr (you)</option>
                         <option value="NewLayout_JT.html">John Taylor</option>
+                        <option value="NewLayout_PG.html">Pat Gannon</option>
+                        <option value="NewLayout_NA.html">Nicola Andrews</option>
+                        <option value="NewLayout_JP.html">Jon Parker</option>
                         </optgroup>
                         <optgroup label="Groups">
                             <option value="#">London</option>
@@ -784,113 +781,113 @@ tr:hover {
             <div class="panelNEW">
 
       
-                {{ govukCheckboxes ({
-                    idPrefix: "application-type2",
-                    name: "application-type2",
-                    classes: "govuk-checkboxes govuk-checkboxes--small checkbox2",
-                    fieldset: {
-                      legend: {
-                        text: ""
-                      }
-                    },
-                    items: [
-                    {
-                      value: "NewLease",
-                      text: "New lease (4)",
-                      checked: false,
-                      id: "NewLease"
-                    },
+                        {{ govukCheckboxes ({
+                            idPrefix: "application-type2",
+                            name: "application-type2",
+                            classes: "govuk-checkboxes govuk-checkboxes--small checkbox2",
+                            fieldset: {
+                              legend: {
+                                text: ""
+                              }
+                            },
+                            items: [
+                            {
+                              value: "NewLease",
+                              text: "New lease (2)",
+                              checked: false,
+                              id: "NewLease"
+                            },
 
 
-                      {
-                        value: "OfficialSearchPart",
-                        text: "Official search of part with priority (1)"   ,
+                              {
+                                value: "OfficialSearchPart",
+                                text: "Official search of part with priority (1)"   ,
+                                  checked: false,
+                                id: "OfficialSearchPart"
+                              },
+
+                            {
+                                value: "OfficialSearchWhole",
+                                text: "Official search of whole with priority (1)"   ,
+                                  checked: false,
+                                id: "OfficialSearchWhole"
+                              },
+
+                              {
+                                value: "RegisterUpdate",
+                                text: "Register update (2)"   ,
+                                  checked: false,
+                                id: "RegisterUpdate"
+                              },
+
+                                                            {
+                                value: "SearchIndexMap",
+                                text: "Search of the index map (1)"   ,
+                                  checked: false,
+                                id: "SearchIndexMap"
+                              },
+
+                              {
+                                value: "TransferOfPart",
+                                text: "Transfer of part (2)"   ,
+                                  checked: false,
+                                id: "TransferOfPart"
+                              }
+                            ]
+                          }) }}     
+      
+ 
+            </div>
+
+
+          <button class="accordionNEW accordionBorder">Application status</button>
+          <div class="panelNEW">
+                      {{ govukCheckboxes ({
+                        idPrefix: "application-progress2",
+                        name: "application-progress2",
+                        classes: "govuk-checkboxes govuk-checkboxes--small checkbox3",
+                        fieldset: {
+                        legend: {
+                          text: ""
+                        }
+                        },
+                        items: [
+
+                        {
+                        value: "Received",
+                        text: "Received (2)"   ,
+                        checked: false,
+                        id: "Received"
+                        },
+                        {
+                        value: "Cancelled",
+                        text: "Cancelled (1)"   ,
                           checked: false,
-                        id: "OfficialSearchPart"
-                      },
-
-                    {
-                        value: "OfficialSearchWhole",
-                        text: "Official search of whole with priority (1)"   ,
+                        id: "Cancelled"
+                        },
+                        {
+                        value: "Delayed",
+                        text: "Delayed (3)"   ,
                           checked: false,
-                        id: "OfficialSearchWhole"
-                      },
-
-                      {
-                        value: "RegisterUpdate",
-                        text: "Register update (2)"   ,
+                        id: "Delayed"
+                        },
+                        {
+                        value: "Completed",
+                        text: "Completed (3)"   ,
                           checked: false,
-                        id: "RegisterUpdate"
-                      },
+                        id: "Completed"
+                        }
+                        ]
+                        }) }}
 
-                                                    {
-                        value: "SearchIndexMap",
-                        text: "Search of the index map (1)"   ,
-                          checked: false,
-                        id: "SearchIndexMap"
-                      },
-
-                      {
-                        value: "TransferOfPart",
-                        text: "Transfer of part (2)"   ,
-                          checked: false,
-                        id: "TransferOfPart"
-                      }
-                    ]
-                  }) }}     
-
-
-    </div>
-
-
-  <button class="accordionNEW accordionBorder">Application status</button>
-  <div class="panelNEW">
-              {{ govukCheckboxes ({
-                idPrefix: "application-progress2",
-                name: "application-progress2",
-                classes: "govuk-checkboxes govuk-checkboxes--small checkbox3",
-                fieldset: {
-                legend: {
-                  text: ""
-                }
-                },
-                items: [
-
-                {
-                value: "Received",
-                text: "Received (2)"   ,
-                checked: false,
-                id: "Received"
-                },
-                {
-                value: "Cancelled",
-                text: "Cancelled (1)"   ,
-                  checked: false,
-                id: "Cancelled"
-                },
-                {
-                value: "Delayed",
-                text: "Delayed (5)"   ,
-                  checked: false,
-                id: "Delayed"
-                },
-                {
-                value: "Completed",
-                text: "Completed (3)"   ,
-                  checked: false,
-                id: "Completed"
-                }
-                ]
-                }) }}
-
-  </div>
+          </div>
 
 
           <button class="accordionNEW accordionBorder">Export</button>
           <div class="panelNEW">
-            <a class="greyButton" style="margin-bottom:10px;" target="_blank" href="/public/files/example.csv"><i style="padding-right: 5px;
-                font-size: 17px;" class="fas fa-file-download"></i> CSV</a>
-      </div>
+                <a class="greyButton" style="margin-bottom:10px;" target="_blank" href="/public/files/example.csv"><i style="padding-right: 5px;
+                    font-size: 17px;" class="fas fa-file-download"></i> CSV</a>
+          </div>
 
           <button class="accordionNEW accordionBorder">Customise table</button>
           <div class="panelNEW">
@@ -2154,7 +2151,11 @@ N/A
         
 
                 </div>
-            </div>
+
+        <!---CONTENT----------------------------------------------------------------->
+    </div>
+
+
 
 </div>
 <!-- Content Area - End -->

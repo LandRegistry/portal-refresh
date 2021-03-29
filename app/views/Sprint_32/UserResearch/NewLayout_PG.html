@@ -718,9 +718,9 @@ tr:hover {
                 </label>
                 <select id="cat" class="form-control" onchange="location = this.value;">
                     <optgroup label="Recent searches">
-                        <option value="NewLayout_JT.html">John Taylor</option>
-                        <option value="NewLayout_Default.html">Andy Carr (you)</option>
                         <option value="NewLayout_PG.html">Pat Gannon</option>
+                        <option value="NewLayout_Default.html">Andy Carr (you)</option>
+                        <option value="NewLayout_JT.html">John Taylor</option>
                         <option value="NewLayout_NA.html">Nicola Andrews</option>
                         <option value="NewLayout_JP.html">Jon Parker</option>
                         </optgroup>
@@ -776,11 +776,17 @@ tr:hover {
                             items: [
                             {
                               value: "NewLease",
-                              text: "New lease (2)",
+                              text: "New lease (1)",
                               checked: false,
                               id: "NewLease"
                             },
 
+                            {
+                                value: "OfficialCopies",
+                                text: "Official copies (1)"   ,
+                                  checked: false,
+                                id: "OfficialCopies"
+                              },
 
                               {
                                 value: "OfficialSearchPart",
@@ -796,17 +802,16 @@ tr:hover {
                                 id: "OfficialSearchWhole"
                               },
 
-
-                                                            {
-                                value: "SearchIndexMap",
-                                text: "Search of the index map (1)"   ,
+                              {
+                                value: "RegisterUpdate",
+                                text: "Register update (1)"   ,
                                   checked: false,
-                                id: "SearchIndexMap"
+                                id: "RegisterUpdate"
                               },
 
                               {
                                 value: "TransferOfPart",
-                                text: "Transfer of part (2)"   ,
+                                text: "Transfer of part (1)"   ,
                                   checked: false,
                                 id: "TransferOfPart"
                               }
@@ -843,14 +848,8 @@ tr:hover {
                         id: "Cancelled"
                         },
                         {
-                        value: "Delayed",
-                        text: "Delayed (2)"   ,
-                          checked: false,
-                        id: "Delayed"
-                        },
-                        {
                         value: "Completed",
-                        text: "Completed (2)"   ,
+                        text: "Completed (6)"   ,
                           checked: false,
                         id: "Completed"
                         }
@@ -949,120 +948,229 @@ tr:hover {
                     {% macro rows(page) %}
 
 
-                        <!-- 1 -->
+                      <!-- 1 -->
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row govuk-link-table">
+                          <td class="title_col" scope="row">CB987654 <p class="govuk-visually-hidden"> CB987654 </p></td>
+                          <td class="customerref_col">JJ/455/Jones</td>
+                          <td class="hmlrRef_col">Y917GSY</td>
+                          <td class="apptype_col Substantive" id="">Official copies<p class="govuk-visually-hidden"> OfficialCopies Completed  </p></td>
+                          <td class="receivedby_col" scope="row" data-sortable="2019-12-15">15/12/19</td>
+                          <td class="ecd_col" data-sortable=""></td>
+                          <td class="appProgress_col"><span class="tag completed">Completed</span></td>
+                          <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
+                        </tr>
+          
+                        <!-- 4 Expanded row -->
+                        <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+                          <!-- Vertical line -->
+                          
+          
+                          <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
+                            <div class="combinedColumns">
+                              <div class="left-column" style="">
+  
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          Application status
+                                      </div> 
+                                      <div class="expandedText">
+                                          Completed
+                                      </div>   
+                                  </div>
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          HMLR reference
+                                      </div>
+                                      <div class="expandedText">
+                                        Y917GSY
+                                      </div>
+                                  </div>
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          Priority period
+                                      </div>
+                                      <div class="expandedText">
+                                          N/A
+                                      </div>
+                                  </div>
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          Export application
+                                      </div>
+                                      <div class="expandedText">
+                                        <a class="greyButton" target="_blank" href="/public/files/requisition-example-document.pdf"><i style="padding-right: 5px;
+                                            font-size: 17px;" class="fas fa-file-download"></i> PDF</a>
+                                    </div>
+                                  </div>
+  
+                          </div>
+  
+                          <div class="right-column" style="">
+  
+                              <div class="rowContentSection">
+                                  <div class="expandedTitles">
+                                      Open correspondence
+                                  </div>
+                                  <div>
+                                      <div class="expandedText">
+                                          N/A
+                                      </div>
+                                  </div>
+                              </div>
+  
+                              <div class="rowContentSection">
+                                  <div class="expandedTitles">
+                                      Closed correspondence
+                                  </div>
+                                  <div>
+                                      <div class="expandedText">
+                                          N/A
+                                      </div>
+                                  </div>
+                              </div>
+  
+                              <div class="rowContentSection">
+                                  <div class="expandedTitles">
+                                      Files
+                                  </div>
+                                  <div>
+                                      <div class="expandedText">
+                                          <a target="_blank" href="#">Official Copy of Title Plan dated 31/10/19</a> 
+                                      </div>
+                                      <div class="expandedText">
+                                        <a target="_blank" href="#">Official Copy of Register dated 31/10/19</a> 
+                                    </div>
+                                  </div>
+                              </div>
+  
+  
+                          </div>
+                          </div>
+                          </td>
+          
+                         
+          
+                                    </tr>
+                        </tbody>
+
+                        <!-- 2 -->
                         <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row govuk-link-table">  
-                              <td class="title_col" scope="row">NN6789 <p class="govuk-visually-hidden"> NN6789 </p><!-- THIS IS PAGE {{page}} --></td>
-                              <td class="customerref_col">Whitter88</td>
-                              <td class="hmlrRef_col">W888827</td>
-                              <td class="apptype_col Substantive" id="">New lease<p class="govuk-visually-hidden">  NewLease Delayed  </p></td>
-                              <td class="receivedby_col" scope="row" data-sortable="2020-02-09">09/02/20</td>
-                              <td class="ecd_col" data-sortable="2020-06-13">13/11/20</td>
-                              <td class="appProgress_col"><span class="tag delayed"><img class="delayed-req alert-icon" title="Open requisition" src="/public/images/icon-alert-triangle.svg">Delayed</span></td>
+                            <tr class="govuk-table__row govuk-link-table"> 
+                              <td class="title_col" scope="row">LP54312 <p class="govuk-visually-hidden"> LP54312 </p><!-- THIS IS PAGE {{page}} --></td>
+                              <td class="customerref_col">Potter/09/09</td>
+                              <td class="hmlrRef_col">S827777</td>
+                              <td class="apptype_col Substantive" id="">New lease<p class="govuk-visually-hidden"> NewLease Received</p></td>
+                              <td class="receivedby_col" scope="row" data-sortable="2019-11-15">15/11/19</td>
+                              <td class="ecd_col" data-sortable=""></td>
+                              <td class="appProgress_col"><span class="tag received">Received</span></td>
                               <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                             </tr>
             
-                        <!-- 1 Expanded row -->
-                                <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+                            <!-- 3 Expanded row -->
+                                  <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+                            <!-- Vertical line -->
+                            
             
-                                    
-           
-                                    <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
-                                        <div class="combinedColumns">
-                                        <div class="left-column" style="">
-
-                                            <div class="rowContentSection">
-                                                <div class="expandedTitles">
-                                                    Application status
-                                                </div> 
-                                                <div class="expandedText">
-                                                    Delayed
-                                                </div>   
-                                            </div>
-                                            <div class="rowContentSection">
-                                                <div class="expandedTitles">
-                                                    HMLR reference
-                                                </div>
-                                                <div class="expandedText">
-                                                  J444555
-                                                </div>
-                                            </div>
-                                            <div class="rowContentSection">
-                                                <div class="expandedTitles">
-                                                    Parent title(s)
-                                                </div>
-                                                <div class="expandedText">
-                                                    NN1234
-                                                </div>
-                                            </div>
-                                            <div class="rowContentSection">
-                                                <div class="expandedTitles">
-                                                    Export application
-                                                </div>
-                                                <div class="expandedText">
-                                                    <a class="greyButton" target="_blank" href="/public/files/requisition-example-document.pdf"><i style="padding-right: 5px;
-                                                        font-size: 17px;" class="fas fa-file-download"></i> PDF</a>
-                                                </div>
-                                            </div>
-
+                            <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
+                                <div class="combinedColumns">
+                                <div class="left-column" style="">
+    
+                                    <div class="rowContentSection">
+                                        <div class="expandedTitles">
+                                            Application status
+                                        </div> 
+                                        <div class="expandedText">
+                                            Received: Priority Protected - Awaiting Processing
+                                        </div>   
                                     </div>
-
-                                    <div class="right-column" style="">
-                                        <div class="rowContentSection">
-                                            <div class="expandedTitles">
-                                                Open correspondence
-                                            </div>
-                                            <div>
-                                                <div class="expandedText">
-                                                    <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #3</a> <b style="padding-left:30px;">Issued: </b>13/04/20 <b style="padding-left:30px;">Expires: </b>13/07/20<a class="greyButton" target="_self" href="NewLayout_Default_RR1.html" style="margin: 0px 0px 5px 15px;
-                                                "><i style="padding-right: 5px;font-size: 17px;" class="fas fa-reply"></i> Reply</a>
-                                                </div>    
-                                            </div> 
+                                    <div class="rowContentSection">
+                                        <div class="expandedTitles">
+                                            HMLR reference
                                         </div>
-
-
-                                        <div class="rowContentSection">
-                                            <div class="expandedTitles">
-                                                Closed correspondence
-                                            </div>
-                                            <div>
-                                                <div class="expandedText">
-                                                    <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #1</a> <b style="padding-left:30px;">Date: </b>09/03/20
-                                                </div>
-                                                <div class="expandedText">
-                                                    <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #2</a> <b style="padding-left:30px;">Date: </b>10/03/20
-                                                </div>
-                                            </div>
+                                        <div class="expandedText">
+                                            S827777
                                         </div>
-
-                                        <div class="rowContentSection">
-                                            <div class="expandedTitles">
-                                                Files
-                                            </div>
-                                            <div>
-                                                <div class="expandedText">
-                                                    N/A 
-                                                </div>
-                                            </div>
-                                        </div>
-
-
                                     </div>
-            
-</div>
-            
-                                    </td>
-            
-            
-                                </tr>
-                      </tbody>
-       
-                      <!-- 2 -->
+                                    <div class="rowContentSection">
+                                        <div class="expandedTitles">
+                                            Parent title(s)
+                                        </div>
+                                        <div class="expandedText">
+                                            LP54000
+                                        </div>
+                                    </div>
+                                    <div class="rowContentSection">
+                                        <div class="expandedTitles">
+                                            Export application
+                                        </div>
+                                        <div class="expandedText">
+                                            <a class="greyButton" target="_blank" href="/public/files/requisition-example-document.pdf"><i style="padding-right: 5px;
+                                                font-size: 17px;" class="fas fa-file-download"></i> PDF</a>
+                                        </div>
+                                    </div>
+    
+                            </div>
+    
+                            <div class="right-column" style="">
+    
+                                <div class="rowContentSection">
+                                    <div class="expandedTitles">
+                                        Open correspondence
+                                    </div>
+                                    <div>
+                                        <div class="expandedText">
+                                            N/A
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="rowContentSection">
+                                    <div class="expandedTitles">
+                                        Closed correspondence
+                                    </div>
+                                    <div>
+                                        <div class="expandedText">
+                                            <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter #1</a> <b style="padding-left:30px;">Date: </b>22/11/19
+                                        </div>
+                                        <div class="expandedText">
+                                            <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter #2</a> <b style="padding-left:30px;">Date: </b>24/11/19
+                                        </div>
+                                        <div class="expandedText">
+                                            <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter #3</a> <b style="padding-left:30px;">Date: </b>29/11/19
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="rowContentSection" style="padding-bottom: 0px;;">
+                                    <div class="expandedTitles">
+                                        Files
+                                    </div>
+                                    <div>
+                                        <div class="expandedText">
+                                            <a target="_blank" href="#">Registration completion sheet dated </a> 
+                                        </div>
+                                        <div class="expandedText" style="padding-bottom:0px;">
+                                            <a target="_blank" href="#">Official copy of register</a> 
+                                        </div>
+    
+                                    </div>
+                                </div>
+    
+    
+                            </div>
+                            </div>
+                            </td>
+                            </tr>
+                          </tbody>
+
+
+                      <!-- 3 -->
                       <tbody class="govuk-table__body">
                         <tr class="govuk-table__row govuk-link-table">
-                          <td class="title_col" scope="row">LP565656 <p class="govuk-visually-hidden"> LP565656 </p><!-- THIS IS PAGE {{page}} --></td>
-                          <td class="customerref_col">Trey.Trades12</td>
-                          <td class="hmlrRef_col">L331HPP</td>
+                          <td class="title_col" scope="row">NN980165 <p class="govuk-visually-hidden"> NN980165 </p><!-- THIS IS PAGE {{page}} --></td>
+                          <td class="customerref_col">JT/938/Watkins</td>
+                          <td class="hmlrRef_col">E921HSK</td>
                           <td class="apptype_col Substantive" id="">Official search of whole with priority<p class="govuk-visually-hidden"> OfficialSearchWhole Completed  </p></td>
                           <td class="receivedby_col" scope="row" data-sortable="2019-11-14">14/11/19</td>
                           <td class="ecd_col" data-sortable=""></td>
@@ -1092,7 +1200,7 @@ tr:hover {
                                           HMLR reference
                                       </div>
                                       <div class="expandedText">
-                                        L331HPP
+                                          E921HSK
                                       </div>
                                   </div>
                                   <div class="rowContentSection">
@@ -1153,7 +1261,6 @@ tr:hover {
   
   
                           </div>
-
                           </div>
                           </td>
           
@@ -1161,25 +1268,24 @@ tr:hover {
           
                                     </tr>
                         </tbody>
-          
-          
-                        <!-- 5 -->
-                        <tbody class="govuk-table__body">
+
+
+                      <!-- 4 -->
+                      <tbody class="govuk-table__body">
                         <tr class="govuk-table__row govuk-link-table">
-                          <td class="title_col" scope="row">LP20022 <p class="govuk-visually-hidden"> LP20022 </p><!-- THIS IS PAGE {{page}} --></td>
-                          <td class="customerref_col">Muggins.242</td>
-                          <td class="hmlrRef_col">NN23332</td>
-                          <td class="apptype_col Substantive" id="">Transfer of part<p class="govuk-visually-hidden"> TransferOfPart Delayed  </p></td>
-                          <td class="receivedby_col" scope="row" data-sortable="2019-11-13">13/11/19</td> 
-                          <td class="ecd_col" data-sortable="2020-01-22">22/07/20</td> 
-                          <td class="appProgress_col"><span class="tag delayed">Delayed</span></td>
+                          <td class="title_col" scope="row">LP54312 <p class="govuk-visually-hidden"> A272JSH </p><!-- THIS IS PAGE {{page}} --></td>
+                          <td class="customerref_col">Curtis.15439	</td>
+                          <td class="hmlrRef_col">A272JSH</td>
+                          <td class="apptype_col Substantive" id="">Transfer of part<p class="govuk-visually-hidden"> TransferOfPart Received  </p></td>
+                          <td class="receivedby_col" scope="row" data-sortable="2019-11-12">12/11/19</td>
+                          <td class="ecd_col" data-sortable="2020-01-21"> 21/07/20</td>
+                          <td class="appProgress_col"><span class="tag received">Received</span></td>
                           <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                         </tr>
           
-                        <!-- 5 Expanded row -->
+                        <!-- 6 Expanded row -->
                         <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
                           <!-- Vertical line -->
-                         
           
                           <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
                             <div class="combinedColumns">
@@ -1190,7 +1296,7 @@ tr:hover {
                                           Application status
                                       </div> 
                                       <div class="expandedText">
-                                          Delayed - Extension of Time Granted
+                                          In progress
                                       </div>   
                                   </div>
                                   <div class="rowContentSection">
@@ -1198,7 +1304,7 @@ tr:hover {
                                           HMLR reference
                                       </div>
                                       <div class="expandedText">
-                                        NN23332
+                                          A272JSH
                                       </div>
                                   </div>
                                   <div class="rowContentSection">
@@ -1206,8 +1312,7 @@ tr:hover {
                                           Parent title(s)
                                       </div>
                                       <div class="expandedText">
-                                        
-                                        LP20001
+                                          LP14312
                                       </div>
                                   </div>
                                   <div class="rowContentSection">
@@ -1240,9 +1345,9 @@ tr:hover {
                                       Closed correspondence
                                   </div>
                                   <div>
-                                    <div class="expandedText">
-                                        <a target="_blank" href="#">Extension Letter #1</a> <b style="padding-left:30px;">Date: </b>13/12/19
-                                    </div>
+                                      <div class="expandedText">
+                                          N/A
+                                      </div>
                                   </div>
                               </div>
   
@@ -1259,7 +1364,8 @@ tr:hover {
   
   
                           </div>
-          </div>
+                          </div>
+          
                           </td>
           
                          
@@ -1267,135 +1373,23 @@ tr:hover {
                                     </tr>
                         </tbody>
 
-                        <!-- 3 -->
-                    <tbody class="govuk-table__body">
-                        <tr class="govuk-table__row govuk-link-table"> 
-                          <td class="title_col" scope="row">NN45645 <p class="govuk-visually-hidden"> NN45645 </p><!-- THIS IS PAGE {{page}} --></td>
-                          <td class="customerref_col">AMC/454</td>
-                          <td class="hmlrRef_col">S827777</td>
-                          <td class="apptype_col Substantive" id="">New lease<p class="govuk-visually-hidden"> NewLease Received</p></td>
-                          <td class="receivedby_col" scope="row" data-sortable="2019-11-15">15/11/19</td>
-                          <td class="ecd_col" data-sortable=""></td>
-                          <td class="appProgress_col"><span class="tag received">Received</span></td>
-                          <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
-                        </tr>
-        
-                        <!-- 3 Expanded row -->
-                              <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
-                        <!-- Vertical line -->
-                        
-        
-                        <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
-                            <div class="combinedColumns">
-                            <div class="left-column" style="">
-
-                                <div class="rowContentSection">
-                                    <div class="expandedTitles">
-                                        Application status
-                                    </div> 
-                                    <div class="expandedText">
-                                        Received: Priority Protected - Awaiting Processing
-                                    </div>   
-                                </div>
-                                <div class="rowContentSection">
-                                    <div class="expandedTitles">
-                                        HMLR reference
-                                    </div>
-                                    <div class="expandedText">
-                                        S827777
-                                    </div>
-                                </div>
-                                <div class="rowContentSection">
-                                    <div class="expandedTitles">
-                                        Parent title(s)
-                                    </div>
-                                    <div class="expandedText">
-                                      
-                                        NN45640
-                                    </div>
-                                </div>
-                                <div class="rowContentSection">
-                                    <div class="expandedTitles">
-                                        Export application
-                                    </div>
-                                    <div class="expandedText">
-                                        <a class="greyButton" target="_blank" href="/public/files/requisition-example-document.pdf"><i style="padding-right: 5px;
-                                            font-size: 17px;" class="fas fa-file-download"></i> PDF</a>
-                                    </div>
-                                </div>
-
-                        </div>
-
-                        <div class="right-column" style="">
-
-                            <div class="rowContentSection">
-                                <div class="expandedTitles">
-                                    Open correspondence
-                                </div>
-                                <div>
-                                    <div class="expandedText">
-                                        N/A
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rowContentSection">
-                                <div class="expandedTitles">
-                                    Closed correspondence
-                                </div>
-                                <div>
-                                    <div class="expandedText">
-                                        <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter #1</a> <b style="padding-left:30px;">Date: </b>22/11/19
-                                    </div>
-                                    <div class="expandedText">
-                                        <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter #2</a> <b style="padding-left:30px;">Date: </b>24/11/19
-                                    </div>
-                                    <div class="expandedText">
-                                        <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter #3</a> <b style="padding-left:30px;">Date: </b>29/11/19
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rowContentSection" style="padding-bottom: 0px;;">
-                                <div class="expandedTitles">
-                                    Files
-                                </div>
-                                <div>
-                                    <div class="expandedText">
-                                        <a target="_blank" href="#">Registration completion sheet dated </a> 
-                                    </div>
-                                    <div class="expandedText" style="padding-bottom:0px;">
-                                        <a target="_blank" href="#">Official copy of register</a> 
-                                    </div>
-
-                                </div>
-                            </div>
-
-
-                        </div>
-                        </div>
-                        </td>
-                        </tr>
-                      </tbody>
-        
-         
-                      <!-- 8 -->
+                      <!-- 5 -->
                       <tbody class="govuk-table__body">
                         <tr class="govuk-table__row govuk-link-table">
-                          <td class="title_col" scope="row"> <p class="govuk-visually-hidden"> P956EKA </p><!-- THIS IS PAGE {{page}} --></td>
-                          <td class="customerref_col">Chris/Co/90</td>
-                          <td class="hmlrRef_col">T832JDH</td>
-                          <td class="apptype_col Substantive" id="">Search of the index map<p class="govuk-visually-hidden"> SearchIndexMap Completed  </p></td>
-                          <td class="receivedby_col" scope="row" data-sortable="2019-11-09">09/11/19</td>
+                          <td class="title_col" scope="row">CB980123 <p class="govuk-visually-hidden"> T832JDH </p><!-- THIS IS PAGE {{page}} --></td>
+                          <td class="customerref_col">JT/722/Davis	</td>
+                          <td class="hmlrRef_col">A272JSH</td>
+                          <td class="apptype_col Substantive" id="">Official search of part with priority<p class="govuk-visually-hidden"> OfficialSearchPart Cancelled  </p></td>
+                          <td class="receivedby_col" scope="row" data-sortable="2019-11-10">10/11/19</td>
                           <td class="ecd_col" data-sortable=""></td>
-                          <td class="appProgress_col"><span class="tag completed">Completed</span></td>
+                          <td class="appProgress_col"><span class="tag cancelled">Cancelled</span></td>
                           <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                         </tr>
           
-                        <!-- 8 Expanded row -->
+                        <!-- 7 Expanded row -->
                         <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
                           <!-- Vertical line -->
-                        
+                    
           
                           <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
                             <div class="combinedColumns">
@@ -1406,7 +1400,7 @@ tr:hover {
                                           Application status
                                       </div> 
                                       <div class="expandedText">
-                                          Completed
+                                          Cancelled
                                       </div>   
                                   </div>
                                   <div class="rowContentSection">
@@ -1414,7 +1408,15 @@ tr:hover {
                                           HMLR reference
                                       </div>
                                       <div class="expandedText">
-                                          P956EKA
+                                          T832JDH
+                                      </div>
+                                  </div>
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          Priority period
+                                      </div>
+                                      <div class="expandedText">
+                                          10/12/19 - 22/01/20
                                       </div>
                                   </div>
                                   <div class="rowContentSection">
@@ -1459,8 +1461,7 @@ tr:hover {
                                   </div>
                                   <div>
                                       <div class="expandedText">
-                                          <a target="_blank" href="#">
-                                              Search result dated 31/11/19</a> 
+                                          <a target="_blank" href="#">Notification of Cancellation on 31/10/19</a> 
                                       </div>
   
                                   </div>
@@ -1471,141 +1472,40 @@ tr:hover {
                           </div>
                           </td>
           
+                          
+          
                                     </tr>
-                        </tbody>       
+                        </tbody>
 
-        
-        
-                      <!-- 6 -->
+
+
+                      <!-- 9 -->
                       <tbody class="govuk-table__body">
                       <tr class="govuk-table__row govuk-link-table">
-                        <td class="title_col" scope="row">MM12124 <p class="govuk-visually-hidden"> MM12124 </p><!-- THIS IS PAGE {{page}} --></td>
-                        <td class="customerref_col">AshShaw85	</td>
-                        <td class="hmlrRef_col">A272JSH</td>
-                        <td class="apptype_col Substantive" id="">Transfer of part<p class="govuk-visually-hidden"> TransferOfPart Received  </p></td>
-                        <td class="receivedby_col" scope="row" data-sortable="2019-11-12">12/11/19</td>
-                        <td class="ecd_col" data-sortable="2020-01-21"> 21/07/20</td>
-                        <td class="appProgress_col"><span class="tag received">Received</span></td>
-                        <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
-                      </tr>
-        
-                      <!-- 6 Expanded row -->
-                      <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
-                        <!-- Vertical line -->
-        
-                        <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
-                            <div class="combinedColumns">
-                            <div class="left-column" style="">
-
-                                <div class="rowContentSection">
-                                    <div class="expandedTitles">
-                                        Application status
-                                    </div> 
-                                    <div class="expandedText">
-                                        In progress
-                                    </div>   
-                                </div>
-                                <div class="rowContentSection">
-                                    <div class="expandedTitles">
-                                        HMLR reference
-                                    </div>
-                                    <div class="expandedText">
-                                        A272JSH
-                                    </div>
-                                </div>
-                                <div class="rowContentSection">
-                                    <div class="expandedTitles">
-                                        Parent title(s)
-                                    </div>
-                                    <div class="expandedText">
-                                        LP14312
-                                    </div>
-                                </div>
-                                <div class="rowContentSection">
-                                    <div class="expandedTitles">
-                                        Export application
-                                    </div>
-                                    <div class="expandedText">
-                                        <a class="greyButton" target="_blank" href="/public/files/requisition-example-document.pdf"><i style="padding-right: 5px;
-                                            font-size: 17px;" class="fas fa-file-download"></i> PDF</a>
-                                    </div>
-                                </div>
-
-                        </div>
-
-                        <div class="right-column" style="">
-
-                            <div class="rowContentSection">
-                                <div class="expandedTitles">
-                                    Open correspondence
-                                </div>
-                                <div>
-                                    <div class="expandedText">
-                                        N/A
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rowContentSection">
-                                <div class="expandedTitles">
-                                    Closed correspondence
-                                </div>
-                                <div>
-                                    <div class="expandedText">
-                                        N/A
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rowContentSection">
-                                <div class="expandedTitles">
-                                    Files
-                                </div>
-                                <div>
-                                    <div class="expandedText">
-                                        N/A 
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-        </div>
-                        </td>
-        
-                       
-        
-                                  </tr>
-                      </tbody>
-        
-                      <!-- 7 -->
-                      <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row govuk-link-table">
-                        <td class="title_col" scope="row">CD89843 <p class="govuk-visually-hidden"> CD89843 </p><!-- THIS IS PAGE {{page}} --></td>
-                        <td class="customerref_col">CDProject</td>
-                        <td class="hmlrRef_col">A272JSH</td>
-                        <td class="apptype_col Substantive" id="">Official search of part with priority<p class="govuk-visually-hidden"> OfficialSearchPart Cancelled  </p></td>
-                        <td class="receivedby_col" scope="row" data-sortable="2019-11-10">10/11/19</td>
+                        <td class="title_col" scope="row">LP777443<p class="govuk-visually-hidden"> LP777443 </p><!-- THIS IS PAGE {{page}} --></td>
+                        <td class="customerref_col">Holmes.221B</td>
+                        <td class="hmlrRef_col">T832JDH</td>
+                        <td class="apptype_col Substantive" id="">	Register update<p class="govuk-visually-hidden"> RegisterUpdate Completed  </p></td>
+                        <td class="receivedby_col" scope="row" data-sortable="2020-12-03">03/12/20</td>
                         <td class="ecd_col" data-sortable=""></td>
-                        <td class="appProgress_col"><span class="tag cancelled">Cancelled</span></td>
+                        <td class="appProgress_col"><span class="tag completed">Completed</span></td>
                         <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
                       </tr>
         
-                      <!-- 7 Expanded row -->
+                      <!-- 9 Expanded row -->
                       <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
                         <!-- Vertical line -->
-                  
+                        
         
                         <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
                             <div class="combinedColumns">
                             <div class="left-column" style="">
-
                                 <div class="rowContentSection">
                                     <div class="expandedTitles">
-                                        Application status
+                                        Application status 
                                     </div> 
                                     <div class="expandedText">
-                                        Cancelled
+                                        Completed
                                     </div>   
                                 </div>
                                 <div class="rowContentSection">
@@ -1613,15 +1513,7 @@ tr:hover {
                                         HMLR reference
                                     </div>
                                     <div class="expandedText">
-                                        T832JDH
-                                    </div>
-                                </div>
-                                <div class="rowContentSection">
-                                    <div class="expandedTitles">
-                                        Priority period
-                                    </div>
-                                    <div class="expandedText">
-                                        10/12/19 - 22/01/20
+                                        K928TDH
                                     </div>
                                 </div>
                                 <div class="rowContentSection">
@@ -1633,55 +1525,343 @@ tr:hover {
                                             font-size: 17px;" class="fas fa-file-download"></i> PDF</a>
                                     </div>
                                 </div>
+                            </div>
+        
 
-                        </div>
+                            <div class="right-column" style="">
 
-                        <div class="right-column" style="">
-
-                            <div class="rowContentSection">
-                                <div class="expandedTitles">
-                                    Open correspondence
-                                </div>
-                                <div>
-                                    <div class="expandedText">
-                                        N/A
+                                <div class="rowContentSection">
+                                    <div class="expandedTitles">
+                                        Open correspondence
+                                    </div>
+                                    <div>
+                                        <div class="expandedText">
+                                            N/A
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="rowContentSection">
-                                <div class="expandedTitles">
-                                    Closed correspondence
-                                </div>
-                                <div>
-                                    <div class="expandedText">
-                                        N/A
+    
+                                <div class="rowContentSection">
+                                    <div class="expandedTitles">
+                                        Closed correspondence
+                                    </div>
+                                    <div>
+                                        <div class="expandedText">
+                                            N/A
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="rowContentSection">
-                                <div class="expandedTitles">
-                                    Files
-                                </div>
-                                <div>
-                                    <div class="expandedText">
-                                        <a target="_blank" href="#">Notification of Cancellation on 31/10/19</a> 
+    
+                                <div class="rowContentSection">
+                                    <div class="expandedTitles">
+                                        Files
                                     </div>
-
+                                    <div>
+                                        <div class="expandedText">
+                                            <a target="_blank" href="#">
+                                                Official Copy of Register dated 31/10/19</a> 
+                                        </div>
+                                    </div>
                                 </div>
+    
+    
+                            </div>
                             </div>
 
-
-                        </div>
-                        </div>
                         </td>
         
                         
         
                                   </tr>
                       </tbody>
-        
+
+                                            <!-- 9 -->
+                                            <tbody class="govuk-table__body">
+                                                <tr class="govuk-table__row govuk-link-table">
+                                                  <td class="title_col" scope="row">NN4567<p class="govuk-visually-hidden"> NN4567 </p><!-- THIS IS PAGE {{page}} --></td>
+                                                  <td class="customerref_col">Watson990</td>
+                                                  <td class="hmlrRef_col">L454JHG</td>
+                                                  <td class="apptype_col Substantive" id="">	Register update<p class="govuk-visually-hidden"> RegisterUpdate Completed  </p></td>
+                                                  <td class="receivedby_col" scope="row" data-sortable="2020-12-04">04/12/20</td>
+                                                  <td class="ecd_col" data-sortable=""></td>
+                                                  <td class="appProgress_col"><span class="tag completed">Completed</span></td>
+                                                  <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
+                                                </tr>
+                                  
+                                                <!-- 9 Expanded row -->
+                                                <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+                                                  <!-- Vertical line -->
+                                                  
+                                  
+                                                  <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
+                                                      <div class="combinedColumns">
+                                                      <div class="left-column" style="">
+                                                          <div class="rowContentSection">
+                                                              <div class="expandedTitles">
+                                                                  Application status 
+                                                              </div> 
+                                                              <div class="expandedText">
+                                                                  Completed
+                                                              </div>   
+                                                          </div>
+                                                          <div class="rowContentSection">
+                                                              <div class="expandedTitles">
+                                                                  HMLR reference
+                                                              </div>
+                                                              <div class="expandedText">
+                                                                  K928TDH
+                                                              </div>
+                                                          </div>
+                                                          <div class="rowContentSection">
+                                                              <div class="expandedTitles">
+                                                                  Export application
+                                                              </div>
+                                                              <div class="expandedText">
+                                                                  <a class="greyButton" target="_blank" href="/public/files/requisition-example-document.pdf"><i style="padding-right: 5px;
+                                                                      font-size: 17px;" class="fas fa-file-download"></i> PDF</a>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                  
+                          
+                                                      <div class="right-column" style="">
+                          
+                                                          <div class="rowContentSection">
+                                                              <div class="expandedTitles">
+                                                                  Open correspondence
+                                                              </div>
+                                                              <div>
+                                                                  <div class="expandedText">
+                                                                      N/A
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                              
+                                                          <div class="rowContentSection">
+                                                              <div class="expandedTitles">
+                                                                  Closed correspondence
+                                                              </div>
+                                                              <div>
+                                                                  <div class="expandedText">
+                                                                      N/A
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                              
+                                                          <div class="rowContentSection">
+                                                              <div class="expandedTitles">
+                                                                  Files
+                                                              </div>
+                                                              <div>
+                                                                  <div class="expandedText">
+                                                                      <a target="_blank" href="#">
+                                                                          Official Copy of Register dated 31/10/19</a> 
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                              
+                              
+                                                      </div>
+                                                      </div>
+                          
+                                                  </td>
+                                  
+                                                  
+                                  
+                                                            </tr>
+                                                </tbody>
+
+                                                                      <!-- 9 -->
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row govuk-link-table">
+                          <td class="title_col" scope="row">LP33434<p class="govuk-visually-hidden"> LP33434 </p><!-- THIS IS PAGE {{page}} --></td>
+                          <td class="customerref_col">JMuggins/898</td>
+                          <td class="hmlrRef_col">LLL38787</td>
+                          <td class="apptype_col Substantive" id="">	Register update<p class="govuk-visually-hidden"> RegisterUpdate Completed  </p></td>
+                          <td class="receivedby_col" scope="row" data-sortable="202101-10">10/01/21</td>
+                          <td class="ecd_col" data-sortable=""></td>
+                          <td class="appProgress_col"><span class="tag completed">Completed</span></td>
+                          <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
+                        </tr>
+          
+                        <!-- 9 Expanded row -->
+                        <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+                          <!-- Vertical line -->
+                          
+          
+                          <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
+                              <div class="combinedColumns">
+                              <div class="left-column" style="">
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          Application status 
+                                      </div> 
+                                      <div class="expandedText">
+                                          Completed
+                                      </div>   
+                                  </div>
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          HMLR reference
+                                      </div>
+                                      <div class="expandedText">
+                                          K928TDH
+                                      </div>
+                                  </div>
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          Export application
+                                      </div>
+                                      <div class="expandedText">
+                                          <a class="greyButton" target="_blank" href="/public/files/requisition-example-document.pdf"><i style="padding-right: 5px;
+                                              font-size: 17px;" class="fas fa-file-download"></i> PDF</a>
+                                      </div>
+                                  </div>
+                              </div>
+          
+  
+                              <div class="right-column" style="">
+  
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          Open correspondence
+                                      </div>
+                                      <div>
+                                          <div class="expandedText">
+                                              N/A
+                                          </div>
+                                      </div>
+                                  </div>
+      
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          Closed correspondence
+                                      </div>
+                                      <div>
+                                          <div class="expandedText">
+                                              N/A
+                                          </div>
+                                      </div>
+                                  </div>
+      
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          Files
+                                      </div>
+                                      <div>
+                                          <div class="expandedText">
+                                              <a target="_blank" href="#">
+                                                  Official Copy of Register dated 31/10/19</a> 
+                                          </div>
+                                      </div>
+                                  </div>
+      
+      
+                              </div>
+                              </div>
+  
+                          </td>
+          
+                          
+          
+                                    </tr>
+                        </tbody>
+
+                                              <!-- 9 -->
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row govuk-link-table" style="border-bottom:0px;">
+                          <td class="title_col" scope="row">LCB33434<p class="govuk-visually-hidden"> LCB33434 </p><!-- THIS IS PAGE {{page}} --></td>
+                          <td class="customerref_col">CaroGlyn67</td>
+                          <td class="hmlrRef_col">YY565656</td>
+                          <td class="apptype_col Substantive" id="">	Register update<p class="govuk-visually-hidden"> RegisterUpdate Completed  </p></td>
+                          <td class="receivedby_col" scope="row" data-sortable="2021-01-12">15/01/21</td>
+                          <td class="ecd_col" data-sortable=""></td>
+                          <td class="appProgress_col"><span class="tag completed">Completed</span></td>
+                          <td class="expand_col" scope="row" style="text-align: center;"><a class="expandy-row-trigger2" href="#">+</a></td>
+                        </tr>
+          
+                        <!-- 9 Expanded row -->
+                        <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+                          <!-- Vertical line -->
+                          
+          
+                          <td class="govuk-table__cell" colspan="8" style="padding: 0px;">
+                              <div class="combinedColumns">
+                              <div class="left-column" style="">
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          Application status 
+                                      </div> 
+                                      <div class="expandedText">
+                                          Completed
+                                      </div>   
+                                  </div>
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          HMLR reference
+                                      </div>
+                                      <div class="expandedText">
+                                          K928TDH
+                                      </div>
+                                  </div>
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          Export application
+                                      </div>
+                                      <div class="expandedText">
+                                          <a class="greyButton" target="_blank" href="/public/files/requisition-example-document.pdf"><i style="padding-right: 5px;
+                                              font-size: 17px;" class="fas fa-file-download"></i> PDF</a>
+                                      </div>
+                                  </div>
+                              </div>
+          
+  
+                              <div class="right-column" style="">
+  
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          Open correspondence
+                                      </div>
+                                      <div>
+                                          <div class="expandedText">
+                                              N/A
+                                          </div>
+                                      </div>
+                                  </div>
+      
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          Closed correspondence
+                                      </div>
+                                      <div>
+                                          <div class="expandedText">
+                                              N/A
+                                          </div>
+                                      </div>
+                                  </div>
+      
+                                  <div class="rowContentSection">
+                                      <div class="expandedTitles">
+                                          Files
+                                      </div>
+                                      <div>
+                                          <div class="expandedText">
+                                              <a target="_blank" href="#">
+                                                  Official Copy of Register dated 31/10/19</a> 
+                                          </div>
+                                      </div>
+                                  </div>
+      
+      
+                              </div>
+                              </div>
+  
+                          </td>
+          
+                          
+          
+                                    </tr>
+                        </tbody>
 
                       </tbody>
         

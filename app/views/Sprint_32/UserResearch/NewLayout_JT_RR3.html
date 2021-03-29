@@ -764,100 +764,100 @@ tr:hover {
             <div class="panelNEW">
 
       
-                        {{ govukCheckboxes ({
-                            idPrefix: "application-type2",
-                            name: "application-type2",
-                            classes: "govuk-checkboxes govuk-checkboxes--small checkbox2",
-                            fieldset: {
-                              legend: {
-                                text: ""
-                              }
-                            },
-                            items: [
-                            {
-                              value: "NewLease",
-                              text: "New lease (2)",
-                              checked: false,
-                              id: "NewLease"
-                            },
+                {{ govukCheckboxes ({
+                    idPrefix: "application-type2",
+                    name: "application-type2",
+                    classes: "govuk-checkboxes govuk-checkboxes--small checkbox2",
+                    fieldset: {
+                      legend: {
+                        text: ""
+                      }
+                    },
+                    items: [
+                    {
+                      value: "NewLease",
+                      text: "New lease (2)",
+                      checked: false,
+                      id: "NewLease"
+                    },
 
 
-                              {
-                                value: "OfficialSearchPart",
-                                text: "Official search of part with priority (1)"   ,
-                                  checked: false,
-                                id: "OfficialSearchPart"
-                              },
-
-                            {
-                                value: "OfficialSearchWhole",
-                                text: "Official search of whole with priority (1)"   ,
-                                  checked: false,
-                                id: "OfficialSearchWhole"
-                              },
-
-
-                                                            {
-                                value: "SearchIndexMap",
-                                text: "Search of the index map (1)"   ,
-                                  checked: false,
-                                id: "SearchIndexMap"
-                              },
-
-                              {
-                                value: "TransferOfPart",
-                                text: "Transfer of part (2)"   ,
-                                  checked: false,
-                                id: "TransferOfPart"
-                              }
-                            ]
-                          }) }}     
-      
- 
-            </div>
-
-
-          <button class="accordionNEW accordionBorder">Application status</button>
-          <div class="panelNEW">
-                      {{ govukCheckboxes ({
-                        idPrefix: "application-progress2",
-                        name: "application-progress2",
-                        classes: "govuk-checkboxes govuk-checkboxes--small checkbox3",
-                        fieldset: {
-                        legend: {
-                          text: ""
-                        }
-                        },
-                        items: [
-
-                        {
-                        value: "Received",
-                        text: "Received (2)"   ,
-                        checked: false,
-                        id: "Received"
-                        },
-                        {
-                        value: "Cancelled",
-                        text: "Cancelled (1)"   ,
+                      {
+                        value: "OfficialSearchPart",
+                        text: "Official search of part with priority (1)"   ,
                           checked: false,
-                        id: "Cancelled"
-                        },
-                        {
-                        value: "Delayed",
-                        text: "Delayed (2)"   ,
-                          checked: false,
-                        id: "Delayed"
-                        },
-                        {
-                        value: "Completed",
-                        text: "Completed (2)"   ,
-                          checked: false,
-                        id: "Completed"
-                        }
-                        ]
-                        }) }}
+                        id: "OfficialSearchPart"
+                      },
 
-          </div>
+                    {
+                        value: "OfficialSearchWhole",
+                        text: "Official search of whole with priority (1)"   ,
+                          checked: false,
+                        id: "OfficialSearchWhole"
+                      },
+
+
+                                                    {
+                        value: "SearchIndexMap",
+                        text: "Search of the index map (1)"   ,
+                          checked: false,
+                        id: "SearchIndexMap"
+                      },
+
+                      {
+                        value: "TransferOfPart",
+                        text: "Transfer of part (2)"   ,
+                          checked: false,
+                        id: "TransferOfPart"
+                      }
+                    ]
+                  }) }}     
+
+
+    </div>
+
+
+  <button class="accordionNEW accordionBorder">Application status</button>
+  <div class="panelNEW">
+              {{ govukCheckboxes ({
+                idPrefix: "application-progress2",
+                name: "application-progress2",
+                classes: "govuk-checkboxes govuk-checkboxes--small checkbox3",
+                fieldset: {
+                legend: {
+                  text: ""
+                }
+                },
+                items: [
+
+                {
+                value: "Received",
+                text: "Received (2)"   ,
+                checked: false,
+                id: "Received"
+                },
+                {
+                value: "Cancelled",
+                text: "Cancelled (1)"   ,
+                  checked: false,
+                id: "Cancelled"
+                },
+                {
+                value: "Delayed",
+                text: "Delayed (2)"   ,
+                  checked: false,
+                id: "Delayed"
+                },
+                {
+                value: "Completed",
+                text: "Completed (2)"   ,
+                  checked: false,
+                id: "Completed"
+                }
+                ]
+                }) }}
+
+  </div>
 
 
           <button class="accordionNEW accordionBorder">Export</button>
@@ -951,7 +951,7 @@ tr:hover {
 
                         <!-- 1 -->
                         <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row govuk-link-table">  
+                            <tr class="govuk-table__row govuk-link-table open">  
                               <td class="title_col" scope="row">NN6789 <p class="govuk-visually-hidden"> NN6789 </p><!-- THIS IS PAGE {{page}} --></td>
                               <td class="customerref_col">Whitter88</td>
                               <td class="hmlrRef_col">W888827</td>
@@ -963,7 +963,7 @@ tr:hover {
                             </tr>
             
                         <!-- 1 Expanded row -->
-                                <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+                                <tr class="govuk-table__row expandy-row accordion-default-content-1" style="vertical-align: top;">
             
                                     
            
@@ -1014,8 +1014,7 @@ tr:hover {
                                             </div>
                                             <div>
                                                 <div class="expandedText">
-                                                    <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #3</a> <b style="padding-left:30px;">Issued: </b>13/04/20 <b style="padding-left:30px;">Expires: </b>13/07/20<a class="greyButton" target="_self" href="NewLayout_Default_RR1.html" style="margin: 0px 0px 5px 15px;
-                                                "><i style="padding-right: 5px;font-size: 17px;" class="fas fa-reply"></i> Reply</a>
+                                                   N/A
                                                 </div>    
                                             </div> 
                                         </div>
@@ -1031,6 +1030,9 @@ tr:hover {
                                                 </div>
                                                 <div class="expandedText">
                                                     <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #2</a> <b style="padding-left:30px;">Date: </b>10/03/20
+                                                </div>
+                                                <div class="expandedText">
+                                                    <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition Letter #3</a> <b style="padding-left:30px;">Date: </b>17/04/20
                                                 </div>
                                             </div>
                                         </div>
@@ -1153,7 +1155,6 @@ tr:hover {
   
   
                           </div>
-
                           </div>
                           </td>
           
@@ -1240,9 +1241,9 @@ tr:hover {
                                       Closed correspondence
                                   </div>
                                   <div>
-                                    <div class="expandedText">
-                                        <a target="_blank" href="#">Extension Letter #1</a> <b style="padding-left:30px;">Date: </b>13/12/19
-                                    </div>
+                                      <div class="expandedText">
+                                          N/A
+                                      </div>
                                   </div>
                               </div>
   
