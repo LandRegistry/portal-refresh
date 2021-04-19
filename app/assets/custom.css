@@ -193,6 +193,25 @@ padding: 20px;
   text-decoration: none;
 }
 
+.applicationButton {
+  background-color: #F3F2F1;
+  border: 1px solid #dedede;
+  padding: 5px 15px 5px 15px;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  color:#0b0c0c !important;
+  text-decoration: none;
+}
+
+
+.applicationButton:hover {
+  background-color: #005ea5;
+  border: 1px solid #005ea5;
+  color:#ffffff !important;
+  text-decoration: none;
+}
 
 .exportButton {
 background-color: #F3F2F1;
