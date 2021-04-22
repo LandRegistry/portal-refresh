@@ -261,10 +261,10 @@ input[disabled]
 .applicationButton {
     background-color: #005ea5;
     border: 1px solid #005ea5;
-    padding: 0px 15px;
+    padding: 0px 0px 0px 15px;
     display: inline-block;
     margin-bottom: 10px;
-    margin-right: 5px;
+    margin-right: 10px;
     cursor: pointer;
     color: #ffffff !important;
     text-decoration: none;
@@ -272,12 +272,14 @@ input[disabled]
     margin-left: 0px;
     font-size: 16px;
     border-radius: 4px;
+    overflow: auto;
 }
 
 .applicationButton:hover {
-  background-color: #057ad1;
-    border: 1px solid #057ad1;
+    background-color: #005ea5;
+    border: 1px solid #005ea5;
     font-size: 16px;
+    opacity: 0.8;
 }
 
 </style>
@@ -511,8 +513,8 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
 <!-- Export -->
 
 <div>
-  <a class="applicationButton" sty;le="margin-bottom:15px;" target="_blank" href="/public/files/example-export.csv">Export Applications</a>
 
+  <a class="applicationButton" href="/public/files/example-export.csv">Export Applications<i class="fas fa-file-export" style="padding:0px 8px 0px 12px;background: #ffffff;line-height: 37px;margin-left: 15px;color: #005ea5;"></i></a>
 </div>
 
             <!-- My Work Table -->
@@ -619,16 +621,19 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
               
                                   <div style="float: left;width: 100%;padding: 0px;">
                                     <div class="rowContentSection">
-                                      <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
-            
-                                        <div class="expandedText">
-                                            <a class="applicationButton" href="#">Respond<i class="fas fa-reply" style="padding-left: 10px;"></i></a> <a class="applicationButton" style="margin-left:0px;" href="#">Enquire<i class="fas fa-user-friends" style="
-    padding-left: 8px;
-"></i></a> <a class="applicationButton" style="margin-left:0px;" href="#">Save<i class="fas fa-file-download" style="padding-left:10px;"></i></a>
-                                         </div>
+                                        <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
               
-            
-                                      </div>
+                                          <div class="expandedText">
+                                              <a class="applicationButton" href="#" style="
+    background-color: #28a197;
+    border: 1px solid #28a197;
+">Respond<i class="fas fa-reply" style="padding: 0px 10px;background: #ffffff;line-height: 37px;margin-left: 15px;color: #28a197;"></i></a> 
+                                              <a class="applicationButton" style="margin-left:0px;background-color: #6f72af;border: 1px solid #6f72af;" href="#">Application Enquiry<i class="fas fa-user-friends" style="padding: 0px 8px;background: #ffffff;line-height: 37px;margin-left: 15px;color: #6f72af;"></i></a> 
+                                              <a class="applicationButton" style="margin-left:0px;background-color: #d53880;border: 1px solid  #d53880;" href="#">Save<i class="fas fa-file-download" style="padding: 0px 12px;background: #ffffff;line-height: 37px;margin-left: 15px;color: #d53880;"></i></a>
+                                           </div>
+                
+              
+                                        </div>
                                   </div>
               
               
@@ -720,13 +725,16 @@ margin-left: 10px;" value="submit" id="search-button"> Search </button>
                                                   <a href="#">Official Copy of Register</a> 
                                               </div>   
                       
-                                          </div><div class="rowContentSection" style="padding-right:0px;">
+                                          </div>                                    <div class="rowContentSection" style="padding-right:0px;">
                                             <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
                   
                                               <div class="expandedText">
-                                                  <a class="applicationButton" href="#">Respond<i class="fas fa-reply" style="padding-left: 10px;"></i></a> <a class="applicationButton" style="margin-left:0px;" href="#">Application Enquiry<i class="fas fa-user-friends" style="
-          padding-left: 8px;
-      "></i></a> <a class="applicationButton" style="margin-left:0px;" href="#">Save<i class="fas fa-file-download" style="padding-left:10px;"></i></a>
+                                                  <a class="applicationButton" href="#" style="
+        background-color: #28a197;
+        border: 1px solid #28a197;
+    ">Respond<i class="fas fa-reply" style="padding: 0px 10px;background: #ffffff;line-height: 37px;margin-left: 15px;color: #28a197;"></i></a> 
+                                                  <a class="applicationButton" style="margin-left:0px;background-color: #6f72af;border: 1px solid #6f72af;" href="#">Application Enquiry<i class="fas fa-user-friends" style="padding: 0px 8px;background: #ffffff;line-height: 37px;margin-left: 15px;color: #6f72af;"></i></a> 
+                                                  <a class="applicationButton" style="margin-left:0px;background-color: #d53880;border: 1px solid  #d53880;" href="#">Save<i class="fas fa-file-download" style="padding: 0px 12px;background: #ffffff;line-height: 37px;margin-left: 15px;color: #d53880;"></i></a>
                                                </div>
                     
                   
