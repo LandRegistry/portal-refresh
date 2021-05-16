@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+{% extends "layout_unbranded5.html" %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% block pageTitle %} View my applications
+{% endblock %}
+{% block content %}
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+
+    </script>
+
+<script type="text/javascript">
+    function hide_show_table(col_name)
+    {
+     var checkbox_val=document.getElementById(col_name).value;
+     if(checkbox_val=="hide")
+     {
+      var all_col=document.getElementsByClassName(col_name);
+      for(var i=0;i<all_col.length;i++)
+      {
+       all_col[i].style.display="none";
+      }
+      document.getElementById(col_name+"_head").style.display="none";
+      document.getElementById(col_name).value="show";
+     }
+        
+     else
+     {
+      var all_col=document.getElementsByClassName(col_name);
+      for(var i=0;i<all_col.length;i++)
+      {
+       all_col[i].style.display="table-cell";
+      }
+      document.getElementById(col_name+"_head").style.display="table-cell";
+      document.getElementById(col_name).value="hide";
+     }
+    }
+    </script>
+
+<style>
+.alert-icon {
+    animation: blink 2s;
+    animation-iteration-count: 3;
+}
+
+@keyframes blink {
+  0% { opacity: 0;}
+  50% { opacity: 1;}
+  100% { opacity: 0; }
+}
+
+.govuk-grid-column-one-half {
+    max-width: unset;
+}
+
+.govuk-width-container {
+    max-width: 100%;
+    padding: 0px !Important;
+}
+
+.navbar-container {
+    background-color: #00703C;
+    display: flow-root;
+    padding-right: 15px;
+    -webkit-box-shadow: inset 0px 2px 4px 0px rgb(0 0 0 / 15%);
+    -moz-box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.15);
+    box-shadow: inset 0px 2px 4px 0px rgb(0 0 0 / 15%);
+    border-bottom: 0px solid #005ea5;
+}
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+
+  font-family: Arial;
+  float: right;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+  line-height:70px;
+  font-weight: 700;
+}
+
+/* The dropdown container */
+.dropdown2 {
+  float: left;
+  overflow: hidden;
+}
+
+
+.dropdown2 .dropbtn2 {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    line-height: 70px;
+    font-weight: 700;
+}
+
+
+.dropdown2 .dropbtn2:hover {
+    background-color: #1F8153;
+  cursor: pointer;
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn2 {
+  background-color: #1F8153;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    z-index: 1;
+    border-top: 0px solid #005ea5;
+}
+
+/* Links inside the dropdown */
+.dropdown-content2 a {
+    float: none;
+    color: black;
+    padding: 0px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    line-height: 50px;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content2 a:hover {
+    background-color: #1F8153;
+    color: #fff;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown2:hover .dropdown-content2 {
+  display: block;
+}
+
+
+.searchBox {
+    border-width: 1px;
+    background-image:unset;
+    padding-left:10px;
+}
+
+.search-button {
+    margin-top: 0px; 
+    cursor: pointer; 
+    border-radius: 0px;
+    border-style: none;
+    height:39px;
+    width:39px;
+    background-color:#005ea5;
+    color: white;
+    border-color: #005ea5;
+    font-size: 17px;
+}
+
+.search-button:hover {
+    margin-top: 0px; 
+    cursor: pointer; 
+    border-radius: 0px;
+    border-style: none;
+    height:39px;
+    width:39px;
+    background:#005ea5;
+}
+
+.search-button:focus {
+    margin-top: 0px; 
+    cursor: pointer; 
+    border-radius: 0px;
+    border-style: none;
+    height:39px;
+    width:39px;
+    background:#0876ca;
+    outline:unset;
+}
+
+#search-button {
+    margin-top: 0px; 
+    cursor: pointer; 
+    border-radius: 0px;
+    border-style: none;
+    height:39px;
+    width:39px;
+}
+
+#search-button:hover {
+    margin-top: 0px; 
+    cursor: pointer; 
+    border-radius: 0px;
+    border-style: none;
+    height:39px;
+    width:39px;
+    background:##0876ca;
+}
+
+#search-button:focus {
+    margin-top: 0px; 
+    cursor: pointer; 
+    border-radius: 0px;
+    border-style: none;
+    height:39px;
+    width:39px;
+    background:#0876ca;
+    outline:unset;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fas {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.far {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.helpButton {
+    float:unset;
+}
+.govuk-details__summary {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    color: #005ea5;
+    cursor: pointer;
+}
+
+.govuk-details__summary:hover {
+    color: #005ea5;
+}
+
+.govuk-details__summary:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    -webkit-clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    border-width: 7px 0 7px 12.124px;
+    border-left-color: inherit;
+    background-image: url(/public/images/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center left -2px;
+    background-size: 40px 40px;
+}
+
+.govuk-details[open] > .govuk-details__summary:before {
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    border-width: 12.124px 7px 0 7px;
+    border-top-color: inherit;
+    background-image: url(/public/images/up-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center left -2px;
+    background-size: 40px 40px;
+}
+
+.govuk-details__text {
+    padding: unset;
+    padding-left: unset;
+    border-left: unset;
+}
+
+a {
+    color:#00703C;
+}
+
+.govuk-link:link, a:link {
+    color: #00703C;
+}
+
+.govuk-link:active, a:active {
+    color: #00703C;
+}
+
+.govuk-link:active, a:visited {
+    color: #00703C;
+}
+
+.govuk-link--no-visited-state {
+    color: #00703C !important;
+}
+
+/* New accordion expandable */
+
+.accordionNEW {
+  background-color: #ffffff;
+  padding: 18px 8px 0px 0px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 19px;
+  transition: 0.4s;
+  color: #005ea5;
+  cursor: pointer;
+  margin-top: 9px;
+}
+
+.active, .accordionNEW:hover {
+  background-color: #ffffff;
+}
+
+.accordionNEW:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: white url(/public/images/down-arrow.svg);
+    background-size: 30px 30px;
+    top: -4px;
+    right: 5px;
+    position: relative;
+    float: left;
+}
+
+.active:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: white url(/public/images/up-arrow.svg);
+    background-size: 30px 30px;
+    top: -4px;
+    right: 5px;
+    position: relative;
+    float: left;
+}
+
+.panelNEW {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+.panelNEW.active {
+  overflow: unset;
+  max-height:unset;
+}
+
+.panelNEW.active:before {
+    content: unset;
+    width: unset;
+    height: unset;
+    background: unset;
+    background-size: unset;
+    top: unset;
+    right: unset;
+    position: unset;
+    float: unset;
+}
+
+.accordionBorder {
+    border-top:1px solid #b1b4b6;
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-container--open .select2-dropdown--below {
+    width: 300px !important;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+}
+
+.dropbtn {
+    background-image: unset;
+    padding: 0px 15px;
+}
+
+.dropbtn:hover {
+    background-image: unset;
+    padding: 0px 15px;
+}
+
+
+
+.dropdown .dropdown-label {
+    width: 280px !important;
+    padding-left: 8px;
+    padding-right: 10px;
+    background-position-x: 273px;
+}
+
+.dropdown.on .dropdown-list {
+    width: 274px !important;
+}
+
+
+.dropbtn:hover, .dropbtn:focus {
+    background-image: unset;
+}
+
+.govuk-fieldset {
+    padding: 0px;
+}
+
+.checkbox2 .govuk-checkboxes__item {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.checkbox3 .govuk-checkboxes__item {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.govuk-form-group {
+    margin-bottom: 9px;
+}
+
+.govuk-checkboxes--small .govuk-checkboxes__item {
+    float: unset;
+}
+
+.hmlrRef_col {
+    display:none;
+}
+
+#hmlrRef_col_head {
+    display:none;
+}
+
+.expand_col {
+    display:none;
+}
+
+#expand_col_head {
+    display:none;
+}
+
+.govuk-table {
+    box-sizing: border-box;
+    border: unset;
+    position: relative;
+    border-width: unset;
+}
+
+.open {
+    border-bottom: 0px solid #dedede;
+    background: #f4f4f4;
+}
+
+.my-work tbody td {
+    border-bottom: 0px solid #ddd;
+    border-top: 0px solid #ddd;
+    padding: 10px 16px 10px 16px;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    letter-spacing: .0178571429em;
+}
+
+tr {
+    border-bottom: 1px solid #dedede;
+}
+
+ th {
+    -webkit-font-smoothing: antialiased;
+    font-size: 1rem;
+    line-height: 1.375rem;
+}
+.govuk-table__header {
+    border-bottom: 0px solid #bfc1c3;
+}
+
+.govuk-table__header, .govuk-table__cell {
+    padding: 17px 16px 13px 16px;
+}
+
+.my-work {
+    -webkit-font-smoothing: antialiased;
+    font-size: .875rem;
+    line-height: 1.375rem;;
+}
+
+.sortable:after {
+    margin-left: 10px;
+    font-size:10px;
+    color:#005ea5;
+}
+
+
+.tag {
+    border-radius: 0px;
+    min-width: unset;
+    color: #0b0c0c;
+}
+
+.delayed-req {
+    margin-left: 85px;
+}
+
+tr:hover {
+    background: #f4f4f4;
+}
+
+.expandedTitles {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    padding-bottom: 0px;
+    float: left;
+    width: 100%;
+}
+
+.expandedText {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    padding-bottom: 5px;
+    float: left;
+    width: 100%;
+}
+
+#search-button {
+    background-color: #005ea5;
+    border-color: #005ea5;
+}
+
+.rowContentSection {
+    padding-bottom: 20px;
+    padding-right: unset;
+    width: 100%;
+}
+
+.left-column {
+    padding: 30px 30px 0px 30px;
+    border-left: 5px solid #005ea5;
+    display: block;
+    width: 350px;
+    float: left;
+    min-height: 275px;
+}
+
+.right-column {
+    padding: 30px 30px 30px 30px;
+    width: calc(100% - 475px);
+    float: left;
+}
+
+.govuk-checkboxes--small .govuk-checkboxes__label {
+    padding: 11px 0px 10px 0px;
+    width: 100%;
+}
+
+li {
+    padding-bottom: 5px;
+}
+
+.contentPageBox {
+    box-sizing: border-box;
+    border: unset;
+    position: relative;
+    border-width: unset;
+    margin-top: 0px;
+    background: #ffffff;
+    margin-bottom: 0px;
+    box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 15%);
+    padding:50px;
+    display: inline-block;
+}
+
+
+.govuk-\!-font-size-27 {
+margin-bottom:15px;
+}
+
+.govuk-list--bullet > li, .govuk-list--number > li {
+    margin-bottom: 0px;
+}
+
+.govuk-heading-s {
+    margin-bottom: 5px;
+    padding-top:25px !Important;
+}
+
+.rowContentSection {
+    padding-bottom: 15px;
+    padding-right: unset;
+    width: 100%;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 30px;
+    max-width: 960px;
+}
+
+#menu {
+    position: sticky;
+    top: 0;
+    padding-top: 15px;
+}
+
+</style>
+
+
+<!-- Back & clear data top -->
+<!-- Back & clear data top -->
+<div>
+
+<!-- Navigation Menu - Start -->
+<div class="navbar-container">
+
+    <img src="/public/images/Logo-Mono.png" alt="hmlrlogo" style="height: 50px;
+    padding-left: 30px;
+    padding-top: 11px;
+    padding-bottom: 5px;">
+
+<div class="navbar">
+    <a>Home</a>
+
+    <div class="dropdown2">
+      <button class="dropbtn2">Services
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content2">
+        <a href="#">Applications</a>
+        <a href="#">Information services</a>
+        <a href="#">Land charge services</a>
+        <a href="#">Document registration service</a>
+        <a href="#">Reply to requisition</a>
+        <a href="#">Network services</a>
+        <a href="#">General facilities</a>
+        <a href="#">Administrative services</a>
+      </div>
+    </div>
+
+    <a>News</a>
+    <a>Contact us</a>
+
+    <div class="dropdown2">
+        <button class="dropbtn2">My account
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content2">
+          <a href="#">Edit Profile</a>
+          <a href="#">Preferences</a>
+        </div>
+      </div>
+
+    <a>Log Out</a>
+
+  </div>
+</div>
+<!-- Navigation Menu - End -->
+
+<!-- Content Area - Start -->
+<div style="max-width: 2000px;margin: auto;background: #ececec;display: flex;">
+
+      <!-- Filters and Search Section - Start -->
+
+
+    <div id="FiltersAndSearch" style="width: 300px;float: left;padding: 30px;background: #fff;padding-top:50px;">
+
+        <div id="menu">
+          <form id="search" style="">
+
+            <div>
+                <h1 class="govuk-heading-l" style="font-size:40px;margin-bottom: 40px;">Guidance</h1>
+            </div>
+    
+            <div class="govuk-body" style="margin-bottom: 30px;">
+
+                <ol style="padding-inline-start: 20px; font-size:16px;">
+                    <li><a href="#vma">View My Applications</a></li>
+                    <li><a href="#filter">Filter</a></li>
+                    <li><a href="#searchsection">Search</a></li>
+                    <li><a href="#sort">Sort</a></li>
+                    <li><a href="#export">Export applications</a></li>
+                    <li><a href="#collapsedrow">Collapsed application row</a></li>
+                    <li><a href="#expandedrow">Expanded application row</a></li>
+                    <li><a href="#ecd">Estimated Completion Date (ECD)</a></li>
+                </ol>
+
+            </div>
+
+
+
+        </div>
+    <!-- Filters and Search Section - End -->
+</div>
+
+        
+    <!-- Text Content - Start -->
+    <div style="width:calc(100% - 352px);float:left;; overflow-x: auto;padding:30px;">   
+
+        <div class="contentPageBox">
+
+            <div class="rowContentSection" id="vma">
+                <h1 class="govuk-heading-l govuk-!-font-size-27">View My Applications </h1>
+                <p class="govuk-body" "contact-link">View My Applications displays all of your applications submitted to the HM Land Registry Portal. <br>This guide helps to explain what the features on the page do. </p>
+
+            </div>
+
+            <div class="rowContentSection" id="filter">
+                <h1 class="govuk-heading-l govuk-!-font-size-27">Filter</h1>
+                <h3 class="govuk-heading-s" style="padding-top:5px !important;">Filter by application type</h3>
+                <p class="govuk-body">Use this to display applications by their type. You can filter by:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                    <li>Register update (an application that changes an existing registered title)</li>
+                    <li>Register create (an application to make a new registered title)</li>
+                    <li>Register query (an enquiry or search regarding information held at HM Land Registry) </li>
+                    </ul>
+
+                <h3 class="govuk-heading-s">Filter by application status</h3>
+                <p class="govuk-body">Use this to display applications by their current status. You can filter by: </p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>Received</li>
+                        <li>Delayed</li>
+                        <li>Cancelled</li>
+                        <li>Completed</li>
+                    </ul>
+                
+                <h3 class="govuk-heading-s">Note:</h3>
+                <p class="govuk-body">Received results include applications with a status of:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>Received: Priority Protected</li>
+                        <li>Received: Priority Protected – Awaiting Processing</li>
+                        <li>Received: Priority Protected – Set-up activity underway</li>
+                        <li>In progress</li>
+                    </ul>
+
+                <p class="govuk-body">Applications that are displayed without a status will also be shown within the results of this filter option.</p>
+
+                <p class="govuk-body">Delayed results include applications with a status of:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                <li>Delayed</li>
+                <li>Delayed Prior Pending Application(s) or Official Search(es)</li>
+                <li>Delayed - Extension of Time Granted </li>
+                </ul>
+
+
+
+            </div>
+
+            <div class="rowContentSection" id="searchsection">
+                <h1 class="govuk-heading-l govuk-!-font-size-27">Search</h1>
+                <p class="govuk-body">Search can locate applications by:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                <li>Title number</li>
+                <li>HMLR reference</li>
+                <li>Customer reference</li>
+                </ul>
+                <p class="govuk-body">The result will show applications that contain the character or string of characters entered as the search term.</p>
+                <p class="govuk-body">Wildcard searching is available. Wildcards allow you to search all of the information that begin with, end with, or include the characters that you specify. The wildcard character is an asterisk (*). </p>
+                <p class="govuk-body">For example, if you search for an application, by putting DN1* it will return all results that begin with DN1.</p>
+
+
+            </div>
+                
+            <div class="rowContentSection" id="sort">
+                <h1 class="govuk-heading-l govuk-!-font-size-27">Sort</h1>
+                <p class="govuk-body">Use sort to order your list of applications. You can sort by: </p>
+                <ul class="govuk-list govuk-list--bullet">
+                <li>Title number</li>
+                <li>Customer reference</li>
+                <li>Received by HMLR</li>
+                <li>Estimated completion date</li>
+                </ul>
+            </div>
+
+            <div class="rowContentSection" id="export">
+                <h1 class="govuk-heading-l govuk-!-font-size-27">Export applications</h1>
+                <p class="govuk-body">The information contained in the table is exported in a comma separated values (CSV) file that you can open using Microsoft Excel.
+                    The exported data will reflect the applications currently in View my applications, taking into account any search or filters that have been applied.
+                    <br><br>
+                    The column headers that will be exported to the CSV file are:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>HMLR reference</li>
+                    <li>Title number</li>
+                    <li>Customer reference</li>
+                    <li>Application type</li>
+                    <li>Received by HMLR</li>
+                    <li>Application progress</li>
+                    <li>Estimated completion date or information</li>
+                </ul>
+            </div>
+
+
+            <div class="rowContentSection" id="collapsedrow">
+                <h1 class="govuk-heading-l govuk-!-font-size-27">Initial Application Information (collapsed row)</h1>
+                <h3 class="govuk-heading-s">Title number</h3>
+                <p>Shows the title number for the application (if available). For Land Charges Registration View and Land Charges Office Copy applications it shows the Land Charges Registration Number. </p>
+
+                <h3 class="govuk-heading-s">Customer reference</h3>
+                <p>This is the reference provided by you when the application was submitted.</p>
+
+                <h3 class="govuk-heading-s">Application type</h3>
+                <p>The type of application you have lodged (for example, Transfer of Part, Official Search of Whole with Priority)</p>
+
+                <h3 class="govuk-heading-s">Received by HMLR</h3>
+                <p>This is the date your application was received by HM Land Registry.</p>
+
+                <h3 class="govuk-heading-s">Application status</h3>
+                <p>The high-level status of the application (for example, Received, Delayed, Completed or Cancelled).</p>
+
+                <h3 class="govuk-heading-s">Note:</h3>
+                <p>Received results include applications with a status of:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>Received: Priority Protected</li>
+                    <li>Received: Priority Protected – Awaiting Processing</li>
+                    <li>Received: Priority Protected – Set-up activity underway</li>
+                    <li>In progress</li>
+                </ul>
+
+                <p class="govuk-body">Applications that are displayed without a status will also be shown within the results of this filter option.   </p>
+
+                <p class="govuk-body">Delayed results include applications with a status of:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>Delayed</li>
+                    <li>Delayed Prior Pending Application(s) or Official Search(es)</li>
+                    <li>Delayed - Extension of Time Granted </li>
+                </ul>
+
+
+                <h3 class="govuk-heading-s">Estimated completion date (ECD)</h3>
+                <a href="#ecd">View section</a>
+
+                <h3 class="govuk-heading-s">Show / hide details (+)</h3>
+                <p>Expands the row so more information about your application can be viewed.</p>
+
+            </div>
+
+
+
+
+            <div class="rowContentSection" id="expandedrow">
+                <h1 class="govuk-heading-l govuk-!-font-size-27">Additional Application Information (expanded row)</h1>
+                <p>This shows the progress of an application by the following stages:</p>
+
+                <h3 class="govuk-heading-s">Received: Priority Protected</h3>
+                <p class="govuk-body">The application has been received and added to our Day List. Its priority has been protected, but no processing activity has taken place.</p>
+
+                <h3 class="govuk-heading-s">Received: Priority Protected – Awaiting Processing</h3>
+                <p class="govuk-body">This is shown when an application is being held on an office’s backlog list to await processing. No processing activity has yet taken place. The application will normally be dealt with in accordance with its priority order.</p>
+
+                <h3 class="govuk-heading-s">Received: Priority Protected – Set-up activity underway</h3>
+                <p class="govuk-body">This is shown when the parent title is a developer title and there are setting up activities that need to be completed before applications can proceed.</p>
+
+                <h3 class="govuk-heading-s">In Progress</h3>
+                <p class="govuk-body">Processing activities are taking place. There are no known events or activities causing the application to be delayed at this time.</p>
+
+                <h3 class="govuk-heading-s">Delayed Prior Pending Applications(s) or Official Search(es)</h3>
+                <p class="govuk-body">The application has prior pending application(s) or official search(es) with priority on our Day List.</p>
+
+                <h3 class="govuk-heading-s">Delayed</h3>
+                <p class="govuk-body">Events or activities are causing progress of the application to be delayed.</p>
+
+                <h3 class="govuk-heading-s">Delayed - Extension of Time Granted</h3>
+                <p class="govuk-body">This is shown when a request for additional time to reply to one or more requisition points has been approved. The amount of additional time allowed can vary and is at the discretion of the Chief Land Registrar based upon the individual circumstances. Subject
+                    to approval, a minimum of 10 working days is normally granted in the first instance, while subsequent requests will be treated on their merits. Requests for extension of time can be submitted via the ‘Still Need To Contact Us’ link located within the Application Enquiry service.</p>
+
+                <h3 class="govuk-heading-s">HMLR Reference</h3>
+                <p class="govuk-body">The unique reference HM Land Registry allocates to an application.</p>   
+
+                <h3 class="govuk-heading-s">Priority Period</h3>
+                <p class="govuk-body">Shown for Official Search with Priority applications only. The full period during which any application protected by a search retains its priority.</p>
+
+                <h3 class="govuk-heading-s">Parent Title(s)</h3>
+                <p class="govuk-body">This is the existing title or titles out of which a Transfer of Part or New Lease application has been granted.</p>
+
+                <h3 class="govuk-heading-s">Correspondence</h3>
+                <p class="govuk-body">Shows notices, requisitions and some letters issued by HM Land Registry connected with an application. You can only view the content and download correspondence that is issued to you personally. Correspondence can include:</p>
+
+                <h3 class="govuk-heading-s">Letters - Letter issued on [date]</h3>
+                <p class="govuk-body">This is shown when HM Land Registry issues a letter in respect of the application.</p>
+
+                <h3 class="govuk-heading-s">Notice (Objection):</h3>
+                <p class="govuk-body"><strong>Notice(s) issued on [date] Expires on [date]</strong></p>
+                <p class="govuk-body">This is shown when HM Land Registry issues a Notice in respect of the application. HM Land Registry serves notices to interested parties to help prevent wrongful registration. A copy notice is not sent to the applicant. Notices inform the recipient that HM Land Registry has received an application, or is otherwise proposing an alteration that may adversely affect their interest. These allow a time period for objection, but also invite the addressee to consent to the application in order to shorten the period of delay.</p>
+
+                <h3 class="govuk-heading-s">Notice (Information):</h3>
+                <p class="govuk-body"><strong>Notice(s) issued on [date] Expires on [None]</strong></p>
+                <p class="govuk-body">This is shown when HM Land Registry issues a Notice for information purposes only. This type of Notice does not have an expiry date and does not require a response.</p>
+
+                <h3 class="govuk-heading-s">Requisition(s) issued on [date]</h3>
+                <p class="govuk-body">This is shown when HM Land Registry issues a requisition asking for additional information in support of the application. A requisition will not be deemed to have been satisfied until all outstanding points raised have been fully replied to.</p>
+
+                <h3 class="govuk-heading-s">Files</h3>
+                <p class="govuk-body">Shows the documentation electronically issued by HM Land Registry to the applicant on completion of the application. These can be viewed and downloaded.</p>
+
+                <h3 class="govuk-heading-s">Show / hide details (-)</h3>
+                <p class="govuk-body">Collapses the row so less information about your application is displayed.</p>
+
+            </div>
+
+                            
+            <div class="rowContentSection" id="ecd">
+                <h1 class="govuk-heading-l govuk-!-font-size-27">Estimated Completion Date (ECD)</h1>
+                <p class="govuk-body">Is a date by which the application  is likely to be completed. It is not based on the individual application, but is an estimate of when  the majority (90%) of that application type will be completed.</p>
+
+                <h3 class="govuk-heading-s">ECD Key Points:</h3>
+                <ul class="govuk-body" style="padding-bottom:0px;">
+                    <li>displayed for Register Create (e.g. Transfers of Part and New Leases) and Register Update applications</li>
+                    <li>distinguishes between developer and non-developer Register Create application types</li>
+                    <li>calculated for the application type and not the individual application</li>
+                    <li>calculated using the time in which 90% of that application type was completed over the previous 30 calendar days</li>
+                    <li>may take up to an hour to be displayed</li>
+                    <li>calculated on and from the day an application is received by HMLR</li>
+                    <li>updated every 30 calendar days until the application is completed or cancelled</li>
+                    <li>updated if HMLR correspondence is issued (first item of correspondence only)</li>
+                    <li>expedited applications will be prioritised but the ECD displayed will not be updated to reflect this'</li>
+                </ul>
+
+                <h3 class="govuk-heading-s">Where there is no date, one of the following will be displayed:</h3>
+
+                <h3 class="govuk-heading-s">Calculating</h3>
+                <p class="govuk-body">This is shown when the ECD for the application is being calculated for the first time.</p>
+
+                <h3 class="govuk-heading-s">Exceeded</h3>
+                <p class="govuk-body">This is shown when the ECD for the application has elapsed - 10% of applications fall in to this category.</p>
+
+                <h3 class="govuk-heading-s">Unavailable</h3>
+                <p class="govuk-body">This is shown when an error has occured, preventing an ECD from being displayed. When available, the date will then appear.</p>
+
+                <h3 class="govuk-heading-s">Not Applicable</h3>
+                <p class="govuk-body">This is shown for all Register Query applications. HMLR does not provide an ECD for this type of application.</p>
+
+            </div>
+
+                <!---Text Content - End--->
+        </div>
+
+    </div>  
+
+</div>
+<!-- Content Area - End -->
+
+        <!-- footer -->
+
+            <div class="govuk-grid-column-full" style="padding:0px;border-top:5px solid #00703C;">
+
+        
+        
+        
+<div style="padding:20px 30px;">
+            <a class="footlink" style="text-color: grey; text-decoration: none;"><u>Terms and conditions</u></a>
+            <a>|</a>
+            <a class="footlink" style="text-color: grey; text-decoration: none;"><u>Accessibility statement</u></a>
+            <a>|</a>
+            <a class="footlink" style="text-color: grey; text-decoration: none;"><u>Freedom of information</u></a>
+            <a>|</a>
+            <a class="footlink" style="text-color: grey; text-decoration: none;"><u>© Crown copyright</u></a>
+            <br>
+            <br>
+            <p style="color: grey; text-decoration: none;    font-size: 16px;"><i>These links will open in a new window.</i></p>
+        </div>
+            </div>
+
+
+
+    
+    
+        <!-- </footer> -->
+
+
+{% endblock %}
