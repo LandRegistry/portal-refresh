@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% extends "layout_unbranded5.html" %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% block pageTitle %} View my applications
+{% endblock %}
+{% block content %}
+
+<style>
+
+
+
+.marginauto {
+    margin: 0px auto -720px;
+    display: block;
+    z-index: 99;
+    position: relative;
+}
+
+.marginauto2 {
+    margin: 0px auto 0px;
+    display: block;
+
+    position: relative;
+}
+
+.marginauto3 {
+    max-width: 1550px;
+}
+
+.govuk-width-container {
+    max-width: 100%;
+    padding: 0px !Important;
+    background:#000000;
+    margin:0px !important;
+}
+
+.contentframe {
+max-width:1550px;
+margin:0 auto;
+
+}
+
+.contentframe2 {
+    height: 110px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+
+}
+
+</style>
+
+
+
+
+<!-- Back & clear data top -->
+<!-- Back & clear data top -->
+
+<div style="padding:10px; color:#ffffff;">
+
+    <a style="color:#ffffff;text-decoration: none;" href="/Homepage/Layout1">Layout 1</a> | <a style="color:#ffffff;text-decoration: none;" href="/Homepage/Layout2">Layout 2</a> | <a style="color:#ffffff;text-decoration: none;" href="/Homepage/Layout3">Layout 3</a> | 
+
+
+    <a style="color:#ffffff;text-decoration: none;" href="/Homepage/Design1_Desktop">Desktop 1</a> | <a style="color:#ffffff;text-decoration: none;" href="/Homepage/Design1_Mobile">Mobile 1</a> | 
+
+    <a style="color:#ffffff;text-decoration: none;" href="/Homepage/Design2_Desktop">Desktop 2</a> | <a style="color:#ffffff;text-decoration: none;" href="/Homepage/Design2_Mobile">Mobile 2</a> | 
+
+
+   <a style="color:#ffffff;text-decoration: none;" href="/Homepage/Design3_Desktop">Desktop 3</a> | <a style="color:#ffffff;text-decoration: none;" href="/Homepage/Design3_Mobile">Mobile 3</a>
+</div>
+
+     <div class="contentframe">
+        <img class="marginauto2" src="/public/images/Design3_Desktop.png" width="100%">
+    </div>
+
+    <div class="contentframe2">
+        <img class="marginauto3" src="/public/images/Design3_DesktopFooter.png" width="100%">
+    </div>
+
+
+
+
+
+    <!-- <div class="contentframe">
+        <img class="marginauto" src="/public/images/Design_3b_Mobiled.png">
+    </div> -->
+
+
+    
+
+
+
+{% endblock %}
