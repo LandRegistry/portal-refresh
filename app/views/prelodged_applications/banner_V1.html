@@ -5,7 +5,25 @@
 {% endblock %}
 {% block content %}
 
+<script type="text/javascript">
+  function goFurther(){
+  if (document.getElementById("chkAgree").checked == true)
+  document.getElementById("btnSubmit").disabled = false;
+  else
+  document.getElementById("btnSubmit").disabled = true;
+  }
+  </script>
 
+<script>
+  function hideNotification() {
+var x = document.getElementById("hideNotification2");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "none";
+}
+}
+</script>
 
 <style>
 
@@ -351,24 +369,33 @@ input[disabled]
 
 
 
-
-
             <div class="notification" id="hideNotification2">
               <div class="notification-image">
-                  <img src="/public/images/documents4.png" alt="Calendar  Icon">
+                <img src="/public/images/documents4.png" alt="Calendar  Icon">
               </div>
               <div class="notification-text">
-                  <p class="title"><b>NEW:</b> Saved applications</p>
-                  <p class="bodycopy"><b>What is the saved application feature?</b><br>
-                    You can now resume your saved Digital Registration Service applications from within View my applications. To find out more, visit the <a href="V1-help" target="_blank">help page</a>.</p>
+                <p class="title"><b>NEW:</b> Saved applications</p>
+                <p class="bodycopy"><b>What is the saved application feature?</b><br>
+                  You can now view and open your pre-submitted Digital Registration Service applications from within View my applications. These have a displayed ‘Application progress’ status of ‘Saved’.' To find out more, visit the <a href="help_V1.html" target="_blank">help page</a>.</p>
 
+                      <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset" aria-describedby="waste-hint" style="padding:0px;">
 
+                            <div class="govuk-checkboxes">
+                              
+                                  <div class="govuk-checkboxes__item">
+                                      <input type="checkbox" id="chkAgree" onclick="goFurther()" class="govuk-checkboxes__input" name="chkAgree">
+                                      <label class="govuk-label govuk-checkboxes__label" for="chkAgree" style="font-weight: 700;">
+                                        I do not want to see this message again
+                                      </label>
+                                  </div>
+                              </div>
+                          </fieldset>
+                      </div>
 
-                      <input type="button"  onclick="window.location.href='prelodged_V1.html'" value="Close" class="govuk-button blue-button">
+                      <input type="button" id="btnSubmit" onclick="window.location.href='prelodged_V1.html'" value="Close" class="govuk-button blue-button"  disabled>
                </div>
           </div>
-
-
 
 
 
