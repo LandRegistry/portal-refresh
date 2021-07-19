@@ -27,45 +27,66 @@
     }
 
     </script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+$("select").change(function(){
+    $(this).find("option:selected").each(function(){
+        if($(this).attr("value")=="red"){
+            $(".box").not(".red").hide();
+            $(".red").show();
+        }else if($(this).attr("value")=="green"){
+            $(".box").not(".green").hide();
+            $(".green").show();
+        }else if($(this).attr("value")=="blue"){
+            $(".box").not(".blue").hide();
+            $(".blue").show();
+        }else if($(this).attr("value")=="maroon"){
+            $(".box").not(".maroon").hide();
+            $(".maroon").show();
+        }else if($(this).attr("value")=="magenta"){
+            $(".box").not(".magenta").hide();
+            $(".magenta").show();
+        }else{
+            $(".box").hide();
+        }
+    });
+}).change();
+});
+</script>
 
+<script>
+  $(document).ready(function(){
+  $("select").change(function(){
+      $(this).find("option:selected").each(function(){
+          if($(this).attr("value")=="red2"){
+              $(".box2").not(".red2").hide();
+              $(".red2").show();
+          }else if($(this).attr("value")=="green2"){
+              $(".box2").not(".green2").hide();
+              $(".green2").show();
+          }else if($(this).attr("value")=="blue2"){
+              $(".box2").not(".blue2").hide();
+              $(".blue2").show();
+          }else if($(this).attr("value")=="maroon2"){
+              $(".box2").not(".maroon2").hide();
+              $(".maroon2").show();
+          }else if($(this).attr("value")=="magenta2"){
+              $(".box2").not(".magenta2").hide();
+              $(".magenta2").show();
+          }else{
+              $(".box2").hide();
+          }
+      });
+  }).change();
+  });
+  </script>
 
 
 
 <script src="/public/javascripts/gridstack-h5b.js"></script>
 <script src="/public/javascripts/events.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("select").change(function(){
-        $(this).find("option:selected").each(function(){
-            var optionValue = $(this).attr("value");
-            if(optionValue){
-                $(".box").not("." + optionValue).hide();
-                $("." + optionValue).show();
-            } else{
-                $(".box").hide();
-            }
-        });
-    }).change();
-});
-</script>
-
-<script>
-  $(document).ready(function(){
-      $("select").change(function(){
-          $(this).find("option:selected").each(function(){
-              var optionValue = $(this).attr("value");
-              if(optionValue){
-                  $(".box2").not("." + optionValue).hide();
-                  $("." + optionValue).show();
-              } else{
-                  $(".box2").hide();
-              }
-          });
-      }).change();
-  });
-  </script>
 
 <style>
 
@@ -406,24 +427,6 @@ text-decoration: underline;
     border-color: #dedede !Important;
 }
 
-.box{
-        color: #fff;
-        padding: 20px;
-        margin-top: 20px;
-    }
-
-    .box2{
-        color: #fff;
-        padding: 20px;
-        margin-top: 20px;
-    }
-    .red{ background: #ff0000; }
-    .green{ background: #228B22; }
-    .blue{ background: #0000ff; }
-
-    .red2{ background: #ff0000; }
-    .green2{ background: #228B22; }
-    .blue2{ background: #0000ff; }
 
 </style>
 
@@ -563,47 +566,55 @@ text-decoration: underline;
 
 
       <div style="margin-bottom:50px;">
-        <div style="margin-bottom:50px;">
 
           <div class="govuk-form-group">
             <label class="govuk-label form-label-bold form-label-bold" for="sort">
               Position 1
             </label>
             <select class="govuk-select" id="sort" name="sort" style="width: 23ex;">
-              <option value="red" >Red</option>
-              <option value="green" selected>Green</option>
+              <option value="red" selected>Red</option>
+              <option value="green">Green</option>
               <option value="blue">Blue</option>
+              <option value="maroon">maroon</option>
+              <option value="magenta">magenta</option>
             </select>
           </div>
     
-    
-    
+
           <div class="red box">You have selected <strong>red option</strong> so i am here</div>
           <div class="green box">You have selected <strong>green option</strong> so i am here</div>
           <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
+          <div class="maroon box">You have selected <strong>maroon option</strong> so i am here</div>
+          <div class="magenta box">You have selected <strong>magenta option</strong> so i am here</div>
         </div>
+
+      
+
 
       <div style="margin-bottom:50px;">
 
-      <div class="govuk-form-group">
-        <label class="govuk-label form-label-bold form-label-bold" for="sort2">
-          Position 2
-        </label>
-        <select class="govuk-select" id="sort2" name="sort2" style="width: 23ex;">
-          <option value="red2">Red</option>
-          <option value="green2" selected>Green</option>
-          <option value="blue2">Blue</option>
-        </select>
+        <div class="govuk-form-group">
+          <label class="govuk-label form-label-bold form-label-bold" for="sort2">
+            Position 2
+          </label>
+          <select class="govuk-select" id="sort2" name="sort2" style="width: 23ex;">
+            <option value="red2" selected>Red</option>
+            <option value="green2">Green</option>
+            <option value="blue2">Blue</option>
+            <option value="maroon2">maroon</option>
+            <option value="magenta2">magenta</option>
+          </select>
+        </div>
+  
+
+        <div class="red2 box2">You have selected <strong>red option</strong> so i am here</div>
+        <div class="green2 box2">You have selected <strong>green option</strong> so i am here</div>
+        <div class="blue2 box2">You have selected <strong>blue option</strong> so i am here</div>
+        <div class="maroon2 box2">You have selected <strong>maroon option</strong> so i am here</div>
+        <div class="magenta2 box2">You have selected <strong>magenta option</strong> so i am here</div>
       </div>
 
-
-
-      <div class="red2 box2">You have selected <strong>red option</strong> so i am here</div>
-      <div class="green2 box2">You have selected <strong>green option</strong> so i am here</div>
-      <div class="blue2 box2">You have selected <strong>blue option</strong> so i am here</div>
     </div>
-
-</div>
 
 
 
