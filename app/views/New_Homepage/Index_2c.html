@@ -26,66 +26,10 @@
       }
     }
 
-    </script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script>
-$(document).ready(function(){
-$("select").change(function(){
-    $(this).find("option:selected").each(function(){
-        if($(this).attr("value")=="red"){
-            $(".box").not(".red").hide();
-            $(".red").show();
-        }else if($(this).attr("value")=="green"){
-            $(".box").not(".green").hide();
-            $(".green").show();
-        }else if($(this).attr("value")=="blue"){
-            $(".box").not(".blue").hide();
-            $(".blue").show();
-        }else if($(this).attr("value")=="maroon"){
-            $(".box").not(".maroon").hide();
-            $(".maroon").show();
-        }else if($(this).attr("value")=="magenta"){
-            $(".box").not(".magenta").hide();
-            $(".magenta").show();
-        }else{
-            $(".box").hide();
-        }
-    });
-}).change();
-});
 </script>
 
-<script>
-  $(document).ready(function(){
-  $("select").change(function(){
-      $(this).find("option:selected").each(function(){
-          if($(this).attr("value")=="red2"){
-              $(".box2").not(".red2").hide();
-              $(".red2").show();
-          }else if($(this).attr("value")=="green2"){
-              $(".box2").not(".green2").hide();
-              $(".green2").show();
-          }else if($(this).attr("value")=="blue2"){
-              $(".box2").not(".blue2").hide();
-              $(".blue2").show();
-          }else if($(this).attr("value")=="maroon2"){
-              $(".box2").not(".maroon2").hide();
-              $(".maroon2").show();
-          }else if($(this).attr("value")=="magenta2"){
-              $(".box2").not(".magenta2").hide();
-              $(".magenta2").show();
-          }else{
-              $(".box2").hide();
-          }
-      });
-  }).change();
-  });
-  </script>
 
 
-
-<script src="/public/javascripts/gridstack-h5b.js"></script>
-<script src="/public/javascripts/events.js"></script>
 
 
 <style>
@@ -376,57 +320,16 @@ text-decoration: underline;
 .linkSection {
   padding-top:10px;
 }
-
-.grid-stack>.grid-stack-item>.grid-stack-item-content {
-    padding:10px 20px;
-
+.govuk-form-group {
+    margin-bottom: 30px;
+    width: 30%;
+    float: left;
+    margin-right:3%;
 }
 
-.grid-stack>.grid-stack-item>.grid-stack-item-content:hover {
-    background: #F3F2F1;
-    padding:10px 20px;
+.govuk-select {
+    width: 100%;
 }
-
-.grid-stack>.grid-stack-item.ui-draggable-dragging>.grid-stack-item-content {
-  background: #F3F2F1;
-  padding:10px 20px;
-}
-.ui-resizable-handle {
-  display:none !Important;
-}
-/* 
-
-.grid-stack-item {
-    min-height: 130px !Important;
-}
-
-.grid-stack-item[gs-h="1"] {
-    height: 130px !Important;
-}
-
-.grid-stack-item[gs-h="2"] {
-    height: 260px !Important;
-}
-
-.grid-stack-item[gs-y="1"] {
-    top: 130px !Important;
-} */
-
-.extraLinksSection {
-  border-style: dashed;
-    border-color: #dedede;
-}
-
-#grid1 {
-  border-style: dashed;
-    border-color: #ffffff;
-}
-
-.editMode {
-  border-style: dashed;
-    border-color: #dedede !Important;
-}
-
 
 </style>
 
@@ -557,32 +460,211 @@ text-decoration: underline;
   </div>
 </div>
 
-
-<div id="linksPanel" style="background: #ffffff;">
+<button id="edit" class="govuk-button" style="float: right;right: 30px;" onclick="">Edit Links</button>
+<div id="linksPanel" class="govuk-body" style="background: #ffffff;">
 
       <!-- Filters and Search Section - Start -->
-      <p class="sectionTitle" style="margin-bottom: 20px;">My Services</p>
+      <p class="sectionTitle" style="margin-bottom: 20px;">My Services</p> 
+
+      
+<!-- 
+          <div class="linkSection">
+            <div class="linkIcon">
+              <img src="/public/images/Icon_VMA.png">
+            </div>
+            <div class="linkTextSection">
+              <div class="linkTextTitle">
+                View My Applications
+              </div>
+              <div class="linkTextDescription">
+                View the progress of your applications
+              </div>
+              <div class="linkTextLink">
+                View applications
+              </div>
+            </div>
+          </div> -->
+
+<div id="linksDisplay">
+
+        <div class="govuk-form-group">
+              <p class="values" id="value1">Some Data<p>
+        </div>  
+          
+        <div class="govuk-form-group">
+            <p class="values" id="value2">Some Data<p>
+        </div>  
+
+        <div class="govuk-form-group">
+          <p class="values" id="value3">Some Data<p>
+        </div> 
+
+        <div class="govuk-form-group">
+          <p class="values" id="value4">Some Data<p>
+        </div>  
+      
+        <div class="govuk-form-group">
+            <p class="values" id="value5">Some Data<p>
+        </div>  
+
+        <div class="govuk-form-group">
+          <p class="values" id="value6">Some Data<p>
+        </div> 
+
+        <div class="govuk-form-group">
+          <p class="values" id="value7">Some Data<p>
+        </div>  
+      
+        <div class="govuk-form-group">
+            <p class="values" id="value8">Some Data<p>
+        </div>  
+
+        <div class="govuk-form-group">
+          <p class="values" id="value9">Some Data<p>
+        </div> 
+
+</div>   
+  
+<div id="inputs">
 
 
-      <p class="values" id="value1">Some Data<p>
-        <p class="values" id="value2">Some Data<p>
-        
-        <div id="inputs">
-          <select class="selects" name="input0" id="input0">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
-          </select>
-          <select class="selects" name="input1" id="input1">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
-          </select>
-        </div>
-        
-        <button id="edit">Edit</button>  
+          <div class="govuk-form-group">
+            <label class="govuk-label form-label-bold form-label-bold" for="input0">
+              Position 1
+            </label>
+            <select class="govuk-select selects" name="input0" id="input0">
+              <option value="Volvo" selected>Volvo</option>
+              <option value="Saab">Saab</option>
+              <option value="Mercedes">Mercedes</option>
+              <option value="Audi">Audi</option>
+              <option value="Ferrari">Ferrari</option>
+              <option value="BMW">BMW</option>
+            </select>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label form-label-bold form-label-bold" for="input1">
+              Position 2
+            </label>
+            <select class="govuk-select selects" name="input1" id="input1">
+              <option value="Volvo">Volvo</option>
+              <option value="Saab" selected>Saab</option>
+              <option value="Mercedes">Mercedes</option>
+              <option value="Audi">Audi</option>
+              <option value="Ferrari">Ferrari</option>
+              <option value="BMW">BMW</option>
+            </select>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label form-label-bold form-label-bold" for="input2">
+              Position 3
+            </label>
+            <select class="govuk-select selects" name="input2" id="input2">
+              <option value="Volvo">Volvo</option>
+              <option value="Saab">Saab</option>
+              <option value="Mercedes" selected>Mercedes</option>
+              <option value="Audi">Audi</option>
+              <option value="Ferrari">Ferrari</option>
+              <option value="BMW">BMW</option>
+            </select>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label form-label-bold form-label-bold" for="input3">
+              Position 4
+            </label>
+            <select class="govuk-select selects" name="input3" id="input3">
+              <option value="Volvo">Volvo</option>
+              <option value="Saab">Saab</option>
+              <option value="Mercedes">Mercedes</option>
+              <option value="Audi" selected>Audi</option>
+              <option value="Ferrari">Ferrari</option>
+              <option value="BMW">BMW</option>
+            </select>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label form-label-bold form-label-bold" for="input4">
+              Position 5
+            </label>
+            <select class="govuk-select selects" name="input4" id="input4">
+              <option value="Volvo">Volvo</option>
+              <option value="Saab">Saab</option>
+              <option value="Mercedes">Mercedes</option>
+              <option value="Audi">Audi</option>
+              <option value="Ferrari" selected>Ferrari</option>
+              <option value="BMW">BMW</option>
+            </select>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label form-label-bold form-label-bold" for="input5">
+              Position 6
+            </label>
+            <select class="govuk-select selects" name="input5" id="input5">
+              <option value="Volvo">Volvo</option>
+              <option value="Saab">Saab</option>
+              <option value="Mercedes">Mercedes</option>
+              <option value="Audi">Audi</option>
+              <option value="Ferrari">Ferrari</option>
+              <option value="BMW" selected>BMW</option>
+            </select>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label form-label-bold form-label-bold" for="input6">
+              Position 7
+            </label>
+            <select class="govuk-select selects" name="input6" id="input6">
+              <option value="Volvo" selected>Volvo</option>
+              <option value="Saab">Saab</option>
+              <option value="Mercedes">Mercedes</option>
+              <option value="Audi">Audi</option>
+              <option value="Ferrari">Ferrari</option>
+              <option value="BMW">BMW</option>
+            </select>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label form-label-bold form-label-bold" for="input7">
+              Position 8
+            </label>
+            <select class="govuk-select selects" name="input7" id="input7">
+              <option value="Volvo">Volvo</option>
+              <option value="Saab" selected>Saab</option>
+              <option value="Mercedes">Mercedes</option>
+              <option value="Audi">Audi</option>
+              <option value="Ferrari">Ferrari</option>
+              <option value="BMW">BMW</option>
+            </select>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label form-label-bold form-label-bold" for="input8">
+              Position 9
+            </label>
+            <select class="govuk-select selects" name="input8" id="input8">
+              <option value="Volvo">Volvo</option>
+              <option value="Saab">Saab</option>
+              <option value="Mercedes" selected>Mercedes</option>
+              <option value="Audi">Audi</option>
+              <option value="Ferrari">Ferrari</option>
+              <option value="BMW">BMW</option>
+            </select>
+          </div>
+
+
+
+
+</div>
+
+
 
 
 
@@ -702,11 +784,11 @@ text-decoration: underline;
             inEditMode = !inEditMode
           
             if (inEditMode) {
-              button.innerHTML = 'Update'
+              button.innerHTML = 'Update Links'
               inputSection.style.display = 'block'
             } else {
               inputSection.style.display = 'none'
-              button.innerHTML = 'Edit'
+              button.innerHTML = 'Edit Links'
             }
           
             updateValues()
