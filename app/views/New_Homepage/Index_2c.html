@@ -331,6 +331,115 @@ text-decoration: underline;
     width: 100%;
 }
 
+
+.notificationContent {
+  padding: 20px;
+  width:316px;
+  margin-bottom: 0px;
+}
+
+.notificationTopRow {
+  width:100%;
+display:flex;
+padding-bottom: 3px;
+}
+
+.notificationTitle {
+  font-size:16px;
+  font-weight:700;
+width:50%;
+}
+
+.myAccountTitle {
+  font-size:16px;
+  font-weight:700;
+padding-bottom: 3px;
+}
+
+.notificationTime {
+  font-size:12px;
+  font-weight:400;
+  text-align: right;
+  width:50%;
+}
+
+.notification2ndLine {
+  font-size:14px;
+  font-weight:400;
+  width: 100%;
+  padding-bottom:15px;
+}
+
+.myAccount2ndLine {
+  font-size:14px;
+  font-weight:400;
+  width: 100%;
+  padding-bottom:0px;
+}
+
+.notificationLink a {
+  font-size: 15px;
+    width: 100%;
+    float: left;
+    line-height: unset;
+    background-color: unset !important;
+    color: #00703C !important;
+    font-weight: 700;
+    padding: unset;
+}
+
+.myAccountLinks a {
+  font-size: 15px;
+    width: 100%;
+    line-height: unset;
+    background-color: unset !important;
+    color: #00703C !important;
+    font-weight: 700;
+    padding: unset;
+}
+
+
+.NotificationSingle {
+    display: grid;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 20px;
+}
+
+.NotificationSingleLast {
+    display: grid;
+}
+
+.notificationNavNumber {
+  color: #1F8153;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 500px;
+    font-weight: 700;
+}
+
+.myAccountContent {
+  width:177px;
+  padding: 25px;
+}
+
+.myAccountContent a {
+  padding: 0px;
+}
+
+hr {
+  background: #dedede;
+    height: 1px;
+    border-style: none;
+    margin: 15px 0px;
+}
+
+#logOut {
+  margin-bottom: 0px;
+    margin-top: 25px;
+    width: 100%;
+}
+
 #inputs {
   float: left;
 }
@@ -352,45 +461,116 @@ text-decoration: underline;
 <!-- Navigation Menu - Start -->
 <div class="navbar-container">
 
-    <img src="/public/images/Logo-Mono.png" alt="hmlrlogo" style="height: 50px;
-    padding-left: 30px;
-    padding-top: 11px;
-    padding-bottom: 5px;">
+  <img src="/public/images/Logo-Mono.png" alt="hmlrlogo" style="height: 50px;
+  padding-left: 30px;
+  padding-top: 11px;
+  padding-bottom: 5px;">
 
 <div class="navbar">
-    <a>Home</a>
+  <a>Home</a>
 
-    <div class="dropdown2">
-      <button class="dropbtn2">Services
-        <i class="fa fa-caret-down"></i>
+  <div class="dropdown2">
+    <button class="dropbtn2">Services
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content2">
+      <a href="#">Applications</a>
+      <a href="#">Information services</a>
+      <a href="#">Land charge services</a>
+      <a href="#">Document registration service</a>
+      <a href="#">Respond to requisition</a>
+      <a href="#">Network services</a>
+      <a href="#">General facilities</a>
+      <a href="#">Administrative services</a>
+    </div>
+  </div>
+
+  <a>News</a>
+
+  <div class="dropdown2">
+    <button class="dropbtn2">Notifications <span class="notificationNavNumber">2</span>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content2">
+
+        <div class="notificationContent govuk-body">
+
+
+          <div class="NotificationSingle">
+              <div class="notificationTopRow">
+                  <div class="notificationTitle">
+                    New Requisition
+                  </div>
+                  <div class="notificationTime">
+                    6 minutes ago
+                  </div>
+            </div>
+              <div class="notification2ndLine">
+                <b>Title number:</b> CC78908
+              </div>
+              <div class="notificationLink">
+                <a href="#">Respond to requisition</a>
+              </div>
+          </div>
+
+
+          <div class="NotificationSingleLast">
+            <div class="notificationTopRow">
+                <div class="notificationTitle">
+                  New PDF Available
+                </div>
+                <div class="notificationTime">
+                  12 minutes ago
+                </div>
+          </div>
+            <div class="notification2ndLine">
+              <b>Official Copy</b>
+            </div>
+            <div class="notificationLink">
+              <a href="#">Download</a>
+            </div>
+        </div>
+
+
+        </div>
+
+
+    </div>
+  </div>
+
+
+  <div class="dropdown2">
+      <button class="dropbtn2"> <img src="/public/images/Andy_Small.png" alt="Profile Picture" style="vertical-align: middle;padding-right: 10px;">Andy Carr
+        <i class="fa fa-caret-down" style="margin-left:20px;"></i>
       </button>
       <div class="dropdown-content2">
-        <a href="#">Applications</a>
-        <a href="#">Information services</a>
-        <a href="#">Land charge services</a>
-        <a href="#">Document registration service</a>
-        <a href="#">Respond to requisition</a>
-        <a href="#">Network services</a>
-        <a href="#">General facilities</a>
-        <a href="#">Administrative services</a>
+
+        <div class="myAccountContent">
+
+          <div>
+            <div class="myAccountTitle" style="padding-bottom:3px;">
+              Logged in as
+            </div>
+            <div class="myAccount2ndLine">
+               Adminiistrator
+            </div>
+          </div>
+          <hr>
+          <div class="myAccountLinks">
+            <a href="#">My profile</a>
+            <hr>
+            <a href="#" style="margin-bottom: 5px;">Contact Us</a>
+
+            <a href="#">Contact your BUA</a>
+
+            <button id="logOut" class="govuk-button" >Log out</button>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <a>News</a>
-    <a>Contact us</a>
-
-    <div class="dropdown2">
-        <button class="dropbtn2">My account
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content2">
-          <a href="#">Edit profile</a>
-          <a href="#">Preferences</a>
-          <a href="#">Log out</a>
-        </div>
-      </div>
-
-  </div>
+</div>
 </div>
 <!-- Navigation Menu - End -->
 
