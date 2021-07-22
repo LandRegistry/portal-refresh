@@ -508,6 +508,70 @@ hr {
     margin-top: 25px;
     width: 100%;
 }
+
+.commsChannel {
+  background-color: rgb(0 0 0 / 50%);
+  height: 288px;
+  right:0;
+  width: 555px;
+  position:absolute;
+}
+
+.commsChannelContentBox {
+  padding:30px;
+  color:#ffffff;
+}
+
+.commsChannelTitle {
+  font-size:26px;
+  font-weight:700;
+  padding-bottom: 15px;
+  padding-top: 35px;
+}
+
+.commsChannelText {
+  font-size:15px;
+}
+
+.commsChannelLink {
+  text-decoration: underline;
+  font-weight:700;
+}
+
+.commsChannelBack {
+  width:50px;
+  height:50px;
+  background: #00703C;
+  color:#ffffff;
+  position: absolute;
+  left:0px;
+  bottom:0px;
+  line-height: 50px;
+}
+
+.commsChannelForward {
+  width:50px;
+  height:50px;
+  background: #00703C;
+  color:#ffffff;
+  position: absolute;
+  right:0px;
+  bottom:0px;
+  line-height: 50px;
+}
+
+.commsDots {
+  position: absolute;
+    bottom: 12px;
+    left: 240px;
+}
+
+#serviceInformationPanel {
+  max-width: 1200px;
+  margin:auto;
+  padding: 60px 0px;
+}
+
 </style>
 
 
@@ -634,6 +698,33 @@ hr {
 <!-- Content Area - Start -->
 
 <div id="SectionHeroImage">
+
+  <div class="commsChannel">
+      <div class="commsChannelContentBox govuk-body">
+            <div class="commsChannelTitle">
+              Sign up for HM Land Registry webinars
+            </div>
+            <div class=" commsChannelText">
+              Join our free webinars to learn about a range of land registration topics and how to prepare quality applications.<br><br>
+              <span class="commsChannelLink">Find out more</span>
+            </div>
+      </div>
+
+      <div class="commsChannelBack">
+        <img style="padding:12px 0px 0px 15px;" src="/public/images/icon_BackArrow.png">
+      </div>
+
+      <div class="commsDots">
+        <img src="/public/images/icon_Dots.png">
+      </div>
+
+      <div class="commsChannelForward">
+        <img style="padding:12px 0px 0px 9px;" src="/public/images/icon_ForwardArrow.png">
+      </div>
+
+
+  </div>
+
 
   <div id="SectionHeroContent">
   <div class="govuk-body heroTextBackground" style="font-size:50px; color:#ffffff;margin-bottom: 0;">
@@ -1068,6 +1159,43 @@ hr {
 
   </div>
 </div>
+
+
+<div id="serviceInformationPanel" class="govuk-body"">
+
+
+  
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-third">
+          <h2 class="sectionTitle" style="margin-top: 0;">Service<br>Information</h2>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-m" style="margin-bottom: 5px;">Scheduled maintenance</h1>
+          <p class="govuk-body">Wednesday 17th February, 2021</p>
+          <p class="govuk-body"><b>Between 8pm and 11:59pm, intermittent interruptions are expected to affect:</b><br>
+            Local Land Charges Search (Business e-services)<br>
+            Local Land Charges Search (Business Gateway)<br>
+            Local Land Charges Search (GOV.UK)<br>
+            Local Land Charges Maintain<br>
+            <br>
+            <a href="#" style="color: #00703C !Important;">Maintenance schedule</a>
+          
+          
+          
+          
+          </p>
+        </div>
+  
+      </div>
+
+</div>
+
+
+
+
+
 <!-- Content Area - End -->
 
         <!-- footer -->
