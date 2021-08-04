@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+{% extends "layout_unbranded5.html" %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% block pageTitle %} View my applications
+{% endblock %}
+{% block content %}
+
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+
+</script>
+
+
+
+
+
+<style>
+
+
+
+/* Optional styles for demos */
+
+
+
+
+.govuk-width-container {
+    max-width: 100%;
+    padding: 0px !Important;
+}
+
+.navbar-container {
+    background-color: #008548;
+    display:flow-root;
+    padding-right: 15px;
+    -webkit-box-shadow: inset 0px 2px 4px 0px rgb(0 0 0 / 15%);
+    -moz-box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.15);
+    box-shadow: inset 0px 2px 4px 0px rgb(0 0 0 / 15%);
+    border-bottom: 0px solid #005ea5;
+}
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+
+  font-family: Arial;
+  float: right;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    padding: 0px 25px;
+    text-decoration: none;
+    line-height: 70px;
+    font-weight: 400;
+}
+
+/* The dropdown container */
+.dropdown2 {
+  float: left;
+  overflow: hidden;
+}
+
+
+.dropdown2 .dropbtn2 {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0px 25px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    line-height: 70px;
+    font-weight: 400;
+}
+
+.dropdown2 .dropbtn2:hover {
+    background-color: #1F8153;
+  cursor: pointer;
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn2 {
+  background-color: #1F8153;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-top: 0px solid #005ea5;
+}
+
+/* Links inside the dropdown */
+.dropdown-content2 a {
+  float: none;
+  color: #00703C;
+  padding: 0px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    line-height: 50px;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content2 a:hover {
+    background-color: #1F8153;
+    color: #fff;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown2:hover .dropdown-content2 {
+  display: block;
+}
+
+.govuk-link:link, a:link {
+    color: #00703C;
+}
+
+.container-fluid {
+  max-width: 1280px;
+    margin: auto;
+}
+
+#SectionHeroImage {
+  background-image: url("/public/images/ForestBG.png");
+  height:288px;
+  width:100%;
+}
+
+#SectionHeroContent {
+  max-width: 1200px;
+    margin: auto;
+    padding-top: 140px;
+}
+
+.heroTextBackground {
+  background-color: rgb(0 0 0 / 50%);
+    width: fit-content;
+    padding: 5px 20px;
+}
+
+
+#NewsPanel {
+  background-color:#F3F2F1;
+  width:100%;
+  margin-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+}
+
+#NewsPanelContent {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+#NotificationsPanel {
+  background-color:#F3F2F1;
+  height:110px;
+  width:100%;
+}
+
+#EditableLinksPanel {
+    padding:60px 0px;
+    display: flow-root;
+}
+
+#NotificationsPanelContent {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#NotificationsPanelItem {
+  width: 25%;
+    margin: 0%;
+    float: left;
+}
+
+#ExtraConetentPanel {
+  background-color:#ffffff;
+  width:100%;
+}
+
+#ExtraConetentPanelContent {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#linksPanel {
+ max-width: calc(1200px + 2%);
+ margin: auto;
+}
+
+.notificationTextSection {
+  padding-top: 30px;
+    margin-left: 10px;
+}
+
+.notificationNumber {
+  font-weight: 700;
+    font-size: 66px;
+    float: left;
+    line-height: 110px;
+    min-width: 85px;
+}
+
+.notificationLink {
+font-weight:700;
+font-size: 20px;
+color:#00703C;
+text-decoration: underline;
+}
+
+.notificationText {
+font-size: 17px;
+}
+
+.linkTextTitle {
+  font-size:20px;
+}
+
+.linkTextDescription {
+  font-size:14px;
+  padding-bottom: 10px;
+  max-width: 246px;
+}
+
+.linkTextLink {
+  font-weight:700;
+font-size: 15px;
+color:#00703C;
+text-decoration: underline;
+}
+
+.linkIcon {
+  width: 75px;
+    float: left;
+}
+
+.linkTextSection {
+  float: left;
+    width: calc(100% - 80px);
+    text-align: left;
+}
+
+.sectionTitle {
+  font-weight:700;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.newsImage {
+  border:2px solid #00703C;
+  width:100%;
+  margin-bottom: 20px;
+    max-height: 170px;
+    overflow: hidden;
+}
+
+#newsArticle {
+  width: 28%;
+    margin-right: 5%;
+    float: left;
+}
+
+.newsTextSection {
+  height:90px;
+}
+
+.newsTextTitle {
+  font-size:23px;
+  margin-bottom: 5px;
+}
+
+.newsTextContent {
+  font-size:16px;
+}
+
+.newsTextLink {
+  color:#00703C;
+  border-bottom: 1px solid #00703C;
+  line-height: 40px;
+}
+
+.newsTextLink a {
+  color:#00703C !Important;
+}
+
+.newsChevron {
+  vertical-align: middle;
+    padding-bottom: 5px;
+    padding-right: 8px;
+}
+
+.linkSection {
+  padding-top:10px;
+}
+.govuk-form-group {
+    margin-bottom: 30px;
+    width: 30%;
+    float: left;
+    margin-right:3%;
+}
+
+.govuk-select {
+    width: 100%;
+}
+
+
+.notificationContent {
+  padding: 20px;
+  width:316px;
+  margin-bottom: 0px;
+}
+
+.notificationTopRow {
+  width:100%;
+display:flex;
+padding-bottom: 3px;
+}
+
+.notificationTitle {
+  font-size:16px;
+  font-weight:700;
+width:50%;
+}
+
+.myAccountTitle {
+  font-size:16px;
+  font-weight:700;
+padding-bottom: 3px;
+}
+
+.notificationTime {
+  font-size:12px;
+  font-weight:400;
+  text-align: right;
+  width:50%;
+}
+
+.notification2ndLine {
+  font-size:14px;
+  font-weight:400;
+  width: 100%;
+  padding-bottom:15px;
+}
+
+.myAccount2ndLine {
+  font-size:14px;
+  font-weight:400;
+  width: 100%;
+  padding-bottom:0px;
+}
+
+.notificationLink a {
+  font-size: 15px;
+    width: 100%;
+    float: left;
+    line-height: unset;
+    background-color: unset !important;
+    color: #00703C !important;
+    font-weight: 700;
+    padding: unset;
+}
+
+.myAccountLinks a {
+  font-size: 15px;
+    width: 100%;
+    line-height: unset;
+    background-color: unset !important;
+    color: #00703C !important;
+    font-weight: 700;
+    padding: unset;
+}
+
+
+.NotificationSingle {
+    display: grid;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 20px;
+}
+
+.NotificationSingleLast {
+    display: grid;
+}
+
+.notificationNavNumber {
+  color: #1F8153;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 500px;
+    font-weight: 700;
+}
+
+.myAccountContent {
+  width:177px;
+  padding: 25px;
+}
+
+.myAccountContent a {
+  padding: 0px;
+}
+
+hr {
+  background: #dedede;
+    height: 1px;
+    border-style: none;
+    margin: 15px 0px;
+}
+
+#logOut {
+  margin-bottom: 0px;
+    margin-top: 25px;
+    width: 100%;
+}
+
+#inputs {
+    margin: 0% 2%;
+    float:left;
+}
+
+.govuk-form-group-links {
+    width: 26%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 1%;
+    padding: 2%;
+}
+
+.govuk-form-group-links:hover {
+background-color: #F3F2F1;
+}
+
+.unselected {
+display:none;
+}
+
+
+.commsChannel {
+  background-color: rgb(0 0 0 / 50%);
+  height: 288px;
+  right:0;
+  width: 555px;
+  position:absolute;
+}
+
+.commsChannelContentBox {
+  padding:30px;
+  color:#ffffff;
+}
+
+.commsChannelTitle {
+  font-size:26px;
+  font-weight:700;
+  padding-bottom: 15px;
+  padding-top: 35px;
+}
+
+.commsChannelText {
+  font-size:15px;
+}
+
+.commsChannelLink {
+  text-decoration: underline;
+  font-weight:700;
+}
+
+.commsChannelBack {
+  width:50px;
+  height:50px;
+  background: #00703C;
+  color:#ffffff;
+  position: absolute;
+  left:0px;
+  bottom:0px;
+  line-height: 50px;
+}
+
+.commsChannelForward {
+  width:50px;
+  height:50px;
+  background: #00703C;
+  color:#ffffff;
+  position: absolute;
+  right:0px;
+  bottom:0px;
+  line-height: 50px;
+}
+
+.commsDots {
+  position: absolute;
+    bottom: 12px;
+    left: 240px;
+}
+
+#serviceInformationPanel {
+  max-width: 1200px;
+  margin:auto;
+  padding: 60px 0px;
+}
+
+</style>
+
+
+<!-- Back & clear data top -->
+<!-- Back & clear data top -->
+<div>
+
+<!-- Navigation Menu - Start -->
+<div class="navbar-container">
+
+  <img src="/public/images/Logo-Mono.png" alt="hmlrlogo" style="height: 50px;
+  padding-left: 30px;
+  padding-top: 11px;
+  padding-bottom: 5px;">
+
+<a href="javascript: history.go(-1)" class="govuk-back-link" style="position: absolute;left: 184px;top: 23px;margin-top:0px;">Back</a>
+
+<div class="navbar">
+  <a>Home</a>
+
+  <div class="dropdown2">
+    <button class="dropbtn2">Services
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content2">
+      <a href="#">Applications</a>
+      <a href="#">Information services</a>
+      <a href="#">Land charge services</a>
+      <a href="#">Document registration service</a>
+      <a href="#">Respond to requisition</a>
+      <a href="#">Network services</a>
+      <a href="#">General facilities</a>
+      <a href="#">Administrative services</a>
+    </div>
+  </div>
+
+  <a>News</a>
+
+  <div class="dropdown2">
+    <button class="dropbtn2">Notifications <span class="notificationNavNumber">2</span>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content2">
+
+        <div class="notificationContent govuk-body">
+
+
+          <div class="NotificationSingle">
+              <div class="notificationTopRow">
+                  <div class="notificationTitle">
+                    New Requisition
+                  </div>
+                  <div class="notificationTime">
+                    6 minutes ago
+                  </div>
+            </div>
+              <div class="notification2ndLine">
+                <b>Title number:</b> CC78908
+              </div>
+              <div class="notificationLink">
+                <a href="#">Respond to requisition</a>
+              </div>
+          </div>
+
+
+          <div class="NotificationSingleLast">
+            <div class="notificationTopRow">
+                <div class="notificationTitle">
+                  New PDF Available
+                </div>
+                <div class="notificationTime">
+                  12 minutes ago
+                </div>
+          </div>
+            <div class="notification2ndLine">
+              <b>Official Copy</b>
+            </div>
+            <div class="notificationLink">
+              <a href="#">Download</a>
+            </div>
+        </div>
+
+
+        </div>
+
+
+    </div>
+  </div>
+
+
+  <div class="dropdown2">
+      <button class="dropbtn2"> <img src="/public/images/Andy_Small.png" alt="Profile Picture" style="vertical-align: middle;padding-right: 10px;">Andy Carr
+        <i class="fa fa-caret-down" style="margin-left:20px;"></i>
+      </button>
+      <div class="dropdown-content2">
+
+        <div class="myAccountContent">
+
+          <div>
+            <div class="myAccountTitle" style="padding-bottom:3px;">
+              Logged in as
+            </div>
+            <div class="myAccount2ndLine">
+               Administrator
+            </div>
+          </div>
+          <hr>
+          <div class="myAccountLinks">
+            <a href="#">My profile</a>
+            <hr>
+            <a href="#" style="margin-bottom: 5px;">Contact Us</a>
+
+            <a href="#">Contact your BUA</a>
+
+            <button id="logOut" class="govuk-button" >Log out</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+</div>
+</div>
+<!-- Navigation Menu - End -->
+
+<!-- Content Area - Start -->
+
+<div id="SectionHeroImage">
+
+
+
+  <div id="SectionHeroContent">
+  <div class="govuk-body heroTextBackground" style="font-size:50px; color:#ffffff;margin-bottom: 0;">
+    HM Land Registry Portal
+  </div>
+  <div class="govuk-body heroTextBackground" style="font-size:25px; color:#ffffff;">
+    Where property professionals can access their online services
+  </div>
+</div>
+</div>
+
+
+
+<div id="EditableLinksPanel">
+
+<button id="edit" class="govuk-button" style="float: right;right: 30px;" onclick="myFunction()">Edit Links</button>
+<div id="linksPanel" class="govuk-body" style="background: #ffffff;">
+
+      <!-- Filters and Search Section - Start -->
+      <p class="sectionTitle" style="margin-bottom: 20px;margin-left: 2%;">My Services</p> 
+      
+
+<div id="linksDisplay">
+    <div class="service-values">
+
+<!-- value 0 is actually the first one in the sequence, so value 2 is actually the third -->
+
+        <div class="govuk-form-group-links" id="value0">
+            <div class="linkIcon" id="value-icon0">No Data</div>
+            <div class="linkTextSection">
+                <div class="linkTextTitle" id="value-heading0">No Data</div>
+                <div class="linkTextDescription" id="value-subheading0">No Data</div>
+                <div class="linkTextLink"><a id="value-label0" href='#'>No Data</a></div>
+            </div>
+        </div>
+
+        <div class="govuk-form-group-links" id="value1">
+            <div class="linkIcon" id="value-icon1">No Data</div>
+            <div class="linkTextSection">
+                <div class="linkTextTitle" id="value-heading1">No Data</div>
+                <div class="linkTextDescription" id="value-subheading1">No Data</div>
+                <div class="linkTextLink"><a id="value-label1" href='#'>No Data</a></div>
+            </div>
+        </div>
+
+        <div class="govuk-form-group-links" id="value2">
+            <div class="linkIcon" id="value-icon2">No Data</div>
+            <div class="linkTextSection">
+                <div class="linkTextTitle" id="value-heading2">No Data</div>
+                <div class="linkTextDescription" id="value-subheading2">No Data</div>
+                <div class="linkTextLink"><a id="value-label2" href='#'>No Data</a></div>
+            </div>
+        </div>
+
+        <div class="govuk-form-group-links" id="value3">
+            <div class="linkIcon" id="value-icon3">No Data</div>
+            <div class="linkTextSection">
+                <div class="linkTextTitle" id="value-heading3">No Data</div>
+                <div class="linkTextDescription" id="value-subheading3">No Data</div>
+                <div class="linkTextLink"><a id="value-label3" href='#'>No Data</a></div>
+            </div>
+        </div>
+
+        <div class="govuk-form-group-links" id="value4">
+            <div class="linkIcon" id="value-icon4">No Data</div>
+            <div class="linkTextSection">
+                <div class="linkTextTitle" id="value-heading4">No Data</div>
+                <div class="linkTextDescription" id="value-subheading4">No Data</div>
+                <div class="linkTextLink"><a id="value-label4" href='#'>No Data</a></div>
+            </div>
+        </div>
+
+        <div class="govuk-form-group-links" id="value5">
+            <div class="linkIcon" id="value-icon5">No Data</div>
+            <div class="linkTextSection">
+                <div class="linkTextTitle" id="value-heading5">No Data</div>
+                <div class="linkTextDescription" id="value-subheading5">No Data</div>
+                <div class="linkTextLink"><a id="value-label5" href='#'>No Data</a></div>
+            </div>
+        </div>
+
+
+
+
+    </div> 
+</div>   
+  
+<div id="inputs">
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label form-label-bold form-label-bold" for="input0">
+              Position 1
+            </label>
+            <select class="govuk-select selects" name="input0" id="input0">
+                <option value="placeholder">Select a link...</option>
+              <option value="appenquiry">Application Enquiry</option>
+              <option value="drs">Digital Registration Service</option>
+              <option value="lcs">Land Charge Services</option>
+              <option value="mapsearch">Map Search</option>
+              <option value="officialcopies">Official Copies</option>
+              <option value="officialsearches">Official Searches</option>
+              <option value="pdf">PDF Downloads</option>
+              <option value="requesthistorical">Request Historical Copies</option>
+              <option value="vma">View My Applications</option>
+            </select>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label form-label-bold form-label-bold" for="input1">
+              Position 2
+            </label>
+            <select class="govuk-select selects" name="input1" id="input1">
+                <option value="placeholder">Select a link...</option>
+                <option value="appenquiry">Application Enquiry</option>
+                <option value="drs">Digital Registration Service</option>
+                <option value="lcs">Land Charge Services</option>
+                <option value="mapsearch">Map Search</option>
+                <option value="officialcopies">Official Copies</option>
+                <option value="officialsearches">Official Searches</option>
+                <option value="pdf">PDF Downloads</option>
+                <option value="requesthistorical">Request Historical Copies</option>
+                <option value="vma">View My Applications</option>
+            </select>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label form-label-bold form-label-bold" for="input2">
+              Position 3
+            </label>
+            <select class="govuk-select selects" name="input2" id="input2">
+                <option value="placeholder">Select a link...</option>
+                <option value="appenquiry">Application Enquiry</option>
+                <option value="drs">Digital Registration Service</option>
+                <option value="lcs">Land Charge Services</option>
+                <option value="mapsearch">Map Search</option>
+                <option value="officialcopies">Official Copies</option>
+                <option value="officialsearches">Official Searches</option>
+                <option value="pdf">PDF Downloads</option>
+                <option value="requesthistorical">Request Historical Copies</option>
+                <option value="vma">View My Applications</option>
+            </select>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label form-label-bold form-label-bold" for="input3">
+              Position 4
+            </label>
+            <select class="govuk-select selects" name="input3" id="input3">
+                <option value="placeholder">Select a link...</option>
+                <option value="appenquiry">Application Enquiry</option>
+                <option value="drs">Digital Registration Service</option>
+                <option value="lcs">Land Charge Services</option>
+                <option value="mapsearch">Map Search</option>
+                <option value="officialcopies">Official Copies</option>
+                <option value="officialsearches">Official Searches</option>
+                <option value="pdf">PDF Downloads</option>
+                <option value="requesthistorical">Request Historical Copies</option>
+                <option value="vma">View My Applications</option>
+            </select>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label form-label-bold form-label-bold" for="input4">
+              Position 5
+            </label>
+            <select class="govuk-select selects" name="input4" id="input4">
+                <option value="placeholder">Select a link...</option>
+                <option value="appenquiry">Application Enquiry</option>
+                <option value="drs">Digital Registration Service</option>
+                <option value="lcs">Land Charge Services</option>
+                <option value="mapsearch">Map Search</option>
+                <option value="officialcopies">Official Copies</option>
+                <option value="officialsearches">Official Searches</option>
+                <option value="pdf">PDF Downloads</option>
+                <option value="requesthistorical">Request Historical Copies</option>
+                <option value="vma">View My Applications</option>
+            </select>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label form-label-bold form-label-bold" for="input5">
+              Position 6
+            </label>
+            <select class="govuk-select selects" name="input5" id="input5">
+                <option value="placeholder">Select a link...</option>
+                <option value="appenquiry">Application Enquiry</option>
+                <option value="drs">Digital Registration Service</option>
+                <option value="lcs">Land Charge Services</option>
+                <option value="mapsearch">Map Search</option>
+                <option value="officialcopies">Official Copies</option>
+                <option value="officialsearches">Official Searches</option>
+                <option value="pdf">PDF Downloads</option>
+                <option value="requesthistorical">Request Historical Copies</option>
+                <option value="vma">View My Applications</option>
+            </select>
+          </div>
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="NewsPanel">
+  <div id="NewsPanelContent" class="govuk-body">
+
+<p class="sectionTitle">News</p>
+
+    <div id="newsArticle">
+      <div class="newsImage">
+        <img src="/public/images/News_4.png" style="width:100%;">
+      </div>
+
+      <div class="newsTextSection">
+          <div class="newsTextTitle">
+            View My Applications Update
+          </div>
+            <div class="newsTextContent">
+            This is a short video designed to showcase the new functionality recently added.
+          </div>
+      </div>
+      <div class="newsTextLink">
+        <a href="#"><img src="/public/images/Green_Chevron.png" class="newsChevron">Watch tour video</a>
+      </div>
+
+    </div>
+
+
+    <div id="newsArticle">
+      <div class="newsImage">
+        <img src="/public/images/News_2.png" style="width:100%;">
+      </div>
+
+      <div class="newsTextSection">
+          <div class="newsTextTitle">
+            View our response to Covid-19
+          </div>
+            <div class="newsTextContent">
+              How we are delivering our services during the coronavirus outbreak.
+          </div>
+      </div>
+      <div class="newsTextLink">
+        <a href="#"><img src="/public/images/Green_Chevron.png" class="newsChevron">Read article</a>
+      </div>
+
+    </div>
+
+
+    <div id="newsArticle">
+      <div class="newsImage">
+        <img src="/public/images/News_3.png" style="width:100%;">
+      </div>
+
+      <div class="newsTextSection">
+          <div class="newsTextTitle">
+            Portal roadmap for 2021
+          </div>
+            <div class="newsTextContent">
+              See what features are planned for 2021 and have your say in shaping the future of portal.
+          </div>
+      </div>
+      <div class="newsTextLink">
+        <a href="#"><img src="/public/images/Green_Chevron.png" class="newsChevron">View the roadmap</a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div id="serviceInformationPanel" class="govuk-body"">
+
+
+  
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="sectionTitle" style="margin-top: 0;">Service<br>Information</h2>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-m" style="margin-bottom: 5px;">Scheduled maintenance</h1>
+      <p class="govuk-body">Wednesday 17th February, 2021</p>
+      <p class="govuk-body"><b>Between 8pm and 11:59pm, intermittent interruptions are expected to affect:</b><br>
+        Local Land Charges Search (Business e-services)<br>
+        Local Land Charges Search (Business Gateway)<br>
+        Local Land Charges Search (GOV.UK)<br>
+        Local Land Charges Maintain<br>
+        <br>
+        <a href="#" style="color: #00703C !Important;">Maintenance schedule</a>
+      
+      
+      
+      
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<!-- Content Area - End -->
+
+        <script>
+
+const data = [
+{ 
+    id: 'blank', 
+    icon:'',
+    heading:'', 
+    subheading: '', 
+    label: '', 
+    href: ''
+  },
+{ 
+    id: 'appenquiry', 
+    icon:'<img src="/public/images/Icon_link.png">',
+    heading: 'Application Enquiry', 
+    subheading: 'Request information regarding your applications', 
+    label: 'Make Enquiry', 
+    href: '#'
+  },
+  { 
+    id: 'drs', 
+    icon:'<img src="/public/images/Icon_DRS.png">',
+    heading: 'Digital Registration Service', 
+    subheading: 'Submit applications to HM Land Registry online', 
+    label: 'Submit Applications', 
+    href: '#'
+  },
+
+  { 
+    id: 'lcs', 
+    icon:'<img src="/public/images/Icon_LandCharge.png">',
+    heading: 'Land Charge Services', 
+    subheading: 'Access information from the Land Register or apply for searches', 
+    label: 'Start new search', 
+    href: '#'
+  },
+  { 
+    id: 'mapsearch',
+    icon:'<img src="/public/images/Icon_MapSearch.png">', 
+    heading: 'Map Search', 
+    subheading: 'Find out if a property is registered, its location, title number & tenure details', 
+    label: 'Start search', 
+    href: '#'
+  },
+  { 
+    id: 'officialcopies',
+    icon:'<img src="/public/images/Icon_OfficialCopies.png">', 
+    heading: 'Official Copies', 
+    subheading: 'Request official copies of a register, title plan and/or documents', 
+    label: 'Request a document', 
+    href: '#'
+  },
+  { 
+    id: 'officialsearches',
+    icon:'<img src="/public/images/Icon_link.png">', 
+    heading: 'Official Searches', 
+    subheading: 'Request official copies of a register, title plan and/or documents', 
+    label: 'Request a document', 
+    href: '#'
+  },
+  { 
+    id: 'pdf',
+    icon:'<img src="/public/images/Icon_PDF.png">', 
+    heading: 'PDF Downloads', 
+    subheading: 'Access your PDF downloads from the download centre', 
+    label: 'Download centre', 
+    href: '#'
+  },
+  { 
+    id: 'requesthistorical',
+    icon:'<img src="/public/images/Icon_link.png">', 
+    heading: 'Request Historical Copies', 
+    subheading: 'Request historical copies that will be delivered by post', 
+    label: 'Make Request', 
+    href: '#'
+  },
+  { 
+    id: 'vma',
+    icon:'<img src="/public/images/Icon_VMA.png">', 
+    heading: 'View My Applications', 
+    subheading: 'View the progress of your applications', 
+    label: 'View Applications', 
+    href: '#'
+  },
+]
+
+let inEditMode = false
+
+const button = document.getElementById('edit')
+const currentInputs = document.getElementsByClassName('selects')
+const inputSection = document.getElementById('inputs')
+const valuesSection = document.getElementById('service-values')
+
+const htmlCollectionToArray = (array) => Array.prototype.slice.call(array)
+const selects = htmlCollectionToArray(currentInputs);
+
+const initialiseApp = () => {
+  updateValues()
+  inputSection.style.display = 'none'
+}
+
+const updateValues = () => {
+  for (const [index, select] of selects.entries()) {
+    // Find the associated data from our array of mock data
+    const service = data.find(element => element.id === select.value)
+
+    if(service) {
+      // Update the text of the relevant fields
+      document.getElementById(`value${index}`).classList.remove('unselected')
+    document.getElementById(`value-icon${index}`).innerHTML = service.icon
+      document.getElementById(`value-heading${index}`).innerHTML = service.heading
+      document.getElementById(`value-subheading${index}`).innerHTML = service.subheading
+      document.getElementById(`value-label${index}`).innerHTML = service.label
+    } else {
+      document.getElementById(`value${index}`).classList.add('unselected')
+    }
+  }
+}
+
+const handleEdit = (event) => {
+  event.preventDefault()
+  inEditMode = !inEditMode
+
+  if (inEditMode) {
+    button.innerHTML = 'Update Links'
+    inputSection.style.display = 'block'
+  } else {
+    inputSection.style.display = 'none'
+    button.innerHTML = 'Edit Links'
+  }
+
+  updateValues()
+}
+
+// load data from some database... 
+initialiseApp()
+button.addEventListener('click', handleEdit)
+          
+          </script>
+
+
+<script>
+    function myFunction() {
+    var x = document.getElementById("linksDisplay");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  
+  </script>
+
+{% endblock %}
