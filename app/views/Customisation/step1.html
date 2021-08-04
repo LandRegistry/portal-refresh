@@ -1,32 +1,11 @@
 <!DOCTYPE html>
-{% extends "layout_unbranded5.html" %}
+{% extends "layout_unbranded7.html" %}
 {% from "checkboxes/macro.njk" import govukCheckboxes %}
 {% block pageTitle %} View my applications
 {% endblock %}
 {% block content %}
 
-<script>
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-    
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }
 
-</script>
 
 
 
@@ -34,6 +13,10 @@
 
 <style>
 
+.govuk-footer {
+    padding: 25px;
+    margin-top: 100px;
+}
 
 
 /* Optional styles for demos */
@@ -326,36 +309,48 @@ display:none;
               </span>
           <h1 class="govuk-heading-xl">Tell us about your organisation </h1>
           
+
+
+
           <form method="post" class="form">
+
+
+
+
 
           <div class="govuk-form-group">
             <label class="govuk-label" for="primaryFocus">
                 What is the primary conveyancing focus?
               </label> 
-            <select class="govuk-select govuk-!-width-one-third">
-              <option value="">Select an option</option>
+            <select class="govuk-select govuk-!-width-one-third"  id="primaryFocus" name="primaryFocus" type="text">
+              <option value="" hidden></option>
               <option value="primaryResidential">Residential</option>
               <option value="primaryCommercial">Commercial (Commercial Clients)</option>
             </select>
          </div>
 
+
+
+
          <div class="govuk-form-group">
             <label class="govuk-label" for="secondaryFocus">
                 What is the secondary conveyancing focus? (If applicable)
               </label> 
-            <select class="govuk-select govuk-!-width-one-third">
-              <option value="">Select an option</option>
+            <select class="govuk-select govuk-!-width-one-third"  id="secondaryFocus" name="secondaryFocus" type="text">
+              <option value="" hidden></option>
               <option value="secondaryResidential">Residential</option>
               <option value="secondaryCommercial">Commercial (Commercial Clients)</option>
             </select>
          </div>
 
+
+
          <div class="govuk-form-group">
-            <label class="govuk-label" for="secondaryFocus">
+            <label class="govuk-label" for="transactions">
                 Which of these best describes your organisation's focus for conveyancing transactions?
               </label> 
-            <select class="govuk-select govuk-!-width-one-third">
-              <option value="">Select an option</option>
+            <select class="govuk-select govuk-!-width-one-third"  id="transactions" name="transactions" type="text">
+              <option value="" hidden></option>
               <option value="national">National</option>
               <option value="regional">Regional</option>
               <option value="local">Local</option>
@@ -379,14 +374,34 @@ display:none;
 
 
 
+{% endblock %}
 
 
+{% block pageScripts %}
+  <!-- load accessible autocomplete code (used in both examples) -->
 
 
+  <script type="text/javascript">
 
-<!-- Content Area - End -->
+    var savedLocation = {{ data['primaryFocus'] | dump | safe }}
+    document.getElementById('primaryFocus').value = savedLocation
+    // note the other way to do this would be to save (or look up) the option text from the value (eg make the option text the value), and then set the defaultValue = savedLocation below
+    // *************************************************************************************
+</script>
 
-   
+<script type="text/javascript">
 
+var savedLocation = {{ data['secondaryFocus'] | dump | safe }}
+document.getElementById('secondaryFocus').value = savedLocation
+// note the other way to do this would be to save (or look up) the option text from the value (eg make the option text the value), and then set the defaultValue = savedLocation below
+// *************************************************************************************
+</script>
 
+<script type="text/javascript">
+
+var savedLocation = {{ data['transactions'] | dump | safe }}
+document.getElementById('transactions').value = savedLocation
+// note the other way to do this would be to save (or look up) the option text from the value (eg make the option text the value), and then set the defaultValue = savedLocation below
+// *************************************************************************************
+</script>
 {% endblock %}

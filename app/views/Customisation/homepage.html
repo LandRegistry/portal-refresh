@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% extends "layout_unbranded5.html" %}
+{% extends "layout_unbranded7.html" %}
 {% from "checkboxes/macro.njk" import govukCheckboxes %}
 {% block pageTitle %} View my applications
 {% endblock %}
@@ -34,7 +34,10 @@
 
 <style>
 
-
+.govuk-footer {
+    padding: 25px;
+    margin-top: 100px;
+}
 
 /* Optional styles for demos */
 
@@ -749,11 +752,11 @@ display:none;
 
 
           <div class="govuk-form-group">
-            <label class="govuk-label form-label-bold form-label-bold" for="input0">
+            <label class="govuk-label form-label-bold" for="input0">
               Position 1
             </label>
             <select class="govuk-select selects" name="input0" id="input0">
-                <option value="placeholder">Select a link...</option>
+              <option value="placeholder">Select a link...</option>
               <option value="appenquiry">Application Enquiry</option>
               <option value="drs">Digital Registration Service</option>
               <option value="lcs">Land Charge Services</option>
@@ -768,7 +771,7 @@ display:none;
 
 
           <div class="govuk-form-group">
-            <label class="govuk-label form-label-bold form-label-bold" for="input1">
+            <label class="govuk-label form-label-bold" for="input1">
               Position 2
             </label>
             <select class="govuk-select selects" name="input1" id="input1">
@@ -787,7 +790,7 @@ display:none;
 
 
           <div class="govuk-form-group">
-            <label class="govuk-label form-label-bold form-label-bold" for="input2">
+            <label class="govuk-label form-label-bold" for="input2">
               Position 3
             </label>
             <select class="govuk-select selects" name="input2" id="input2">
@@ -806,7 +809,7 @@ display:none;
 
 
           <div class="govuk-form-group">
-            <label class="govuk-label form-label-bold form-label-bold" for="input3">
+            <label class="govuk-label form-label-bold" for="input3">
               Position 4
             </label>
             <select class="govuk-select selects" name="input3" id="input3">
@@ -825,7 +828,7 @@ display:none;
 
 
           <div class="govuk-form-group">
-            <label class="govuk-label form-label-bold form-label-bold" for="input4">
+            <label class="govuk-label form-label-bold" for="input4">
               Position 5
             </label>
             <select class="govuk-select selects" name="input4" id="input4">
@@ -844,7 +847,7 @@ display:none;
 
 
           <div class="govuk-form-group">
-            <label class="govuk-label form-label-bold form-label-bold" for="input5">
+            <label class="govuk-label form-label-bold" for="input5">
               Position 6
             </label>
             <select class="govuk-select selects" name="input5" id="input5">
@@ -1126,5 +1129,41 @@ button.addEventListener('click', handleEdit)
   }
   
   </script>
+
+{% endblock %}
+
+{% block pageScripts %}
+  <!-- load accessible autocomplete code (used in both examples) -->
+
+
+<script type="text/javascript">
+var savedLocation = {{ data['input0'] | dump | safe }}
+document.getElementById('input0').value = savedLocation
+</script>
+
+<script type="text/javascript">
+var savedLocation = {{ data['input1'] | dump | safe }}
+document.getElementById('input1').value = savedLocation
+</script>
+
+<script type="text/javascript">
+var savedLocation = {{ data['input2'] | dump | safe }}
+document.getElementById('input2').value = savedLocation
+</script>
+
+<script type="text/javascript">
+var savedLocation = {{ data['input3'] | dump | safe }}
+document.getElementById('input3').value = savedLocation
+</script>
+
+<script type="text/javascript">
+var savedLocation = {{ data['input4'] | dump | safe }}
+document.getElementById('input4').value = savedLocation
+</script>
+
+<script type="text/javascript">
+var savedLocation = {{ data['input5'] | dump | safe }}
+document.getElementById('input5').value = savedLocation
+</script>
 
 {% endblock %}
