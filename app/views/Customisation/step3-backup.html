@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+{% extends "layout_unbranded5.html" %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% block pageTitle %} View my applications
+{% endblock %}
+{% block content %}
+
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+
+</script>
+
+
+
+
+
+<style>
+
+
+
+/* Optional styles for demos */
+
+
+
+
+.govuk-width-container {
+    max-width: 100%;
+    padding: 0px !Important;
+}
+
+.navbar-container {
+    background-color: #008548;
+    display:flow-root;
+    padding-right: 15px;
+    -webkit-box-shadow: inset 0px 2px 4px 0px rgb(0 0 0 / 15%);
+    -moz-box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.15);
+    box-shadow: inset 0px 2px 4px 0px rgb(0 0 0 / 15%);
+    border-bottom: 0px solid #005ea5;
+}
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+
+  font-family: Arial;
+  float: right;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    padding: 0px 25px;
+    text-decoration: none;
+    line-height: 70px;
+    font-weight: 400;
+}
+
+/* The dropdown container */
+.dropdown2 {
+  float: left;
+  overflow: hidden;
+}
+
+
+.dropdown2 .dropbtn2 {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0px 25px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    line-height: 70px;
+    font-weight: 400;
+}
+
+.dropdown2 .dropbtn2:hover {
+    background-color: #1F8153;
+  cursor: pointer;
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn2 {
+  background-color: #1F8153;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-top: 0px solid #005ea5;
+}
+
+/* Links inside the dropdown */
+.dropdown-content2 a {
+  float: none;
+  color: #00703C;
+  padding: 0px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    line-height: 50px;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content2 a:hover {
+    background-color: #1F8153;
+    color: #fff;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown2:hover .dropdown-content2 {
+  display: block;
+}
+
+.govuk-link:link, a:link {
+    color: #00703C;
+}
+
+.govuk-select {
+    width: 100%;
+}
+
+
+.notificationContent {
+  padding: 20px;
+  width:316px;
+  margin-bottom: 0px;
+}
+
+.notificationTopRow {
+  width:100%;
+display:flex;
+padding-bottom: 3px;
+}
+
+.notificationTitle {
+  font-size:16px;
+  font-weight:700;
+width:50%;
+}
+
+.myAccountTitle {
+  font-size:16px;
+  font-weight:700;
+padding-bottom: 3px;
+}
+
+.notificationTime {
+  font-size:12px;
+  font-weight:400;
+  text-align: right;
+  width:50%;
+}
+
+.notification2ndLine {
+  font-size:14px;
+  font-weight:400;
+  width: 100%;
+  padding-bottom:15px;
+}
+
+.myAccount2ndLine {
+  font-size:14px;
+  font-weight:400;
+  width: 100%;
+  padding-bottom:0px;
+}
+
+.notificationLink a {
+  font-size: 15px;
+    width: 100%;
+    float: left;
+    line-height: unset;
+    background-color: unset !important;
+    color: #00703C !important;
+    font-weight: 700;
+    padding: unset;
+}
+
+.myAccountLinks a {
+  font-size: 15px;
+    width: 100%;
+    line-height: unset;
+    background-color: unset !important;
+    color: #00703C !important;
+    font-weight: 700;
+    padding: unset;
+}
+
+
+.NotificationSingle {
+    display: grid;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 20px;
+}
+
+.NotificationSingleLast {
+    display: grid;
+}
+
+.notificationNavNumber {
+  color: #1F8153;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 500px;
+    font-weight: 700;
+}
+
+.myAccountContent {
+  width:177px;
+  padding: 25px;
+}
+
+.myAccountContent a {
+  padding: 0px;
+}
+
+
+.unselected {
+display:none;
+}
+
+
+
+.govuk-width-container-fixed {
+    max-width:1080px;
+    margin:auto;
+    padding-top: 25px;
+}
+
+.govuk-back-link {
+    margin-bottom:39px;
+}
+
+.govuk-label {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.govuk-form-group {
+    margin-bottom: 50px;
+}
+
+.govuk-form-group-links {
+  width: 28%;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 4%;
+    padding: 0%;
+}
+
+
+</style>
+
+
+<!-- Back & clear data top -->
+<!-- Back & clear data top -->
+<div>
+
+<!-- Navigation Menu - Start -->
+<div class="navbar-container">
+
+  <img src="/public/images/Logo-Mono.png" alt="hmlrlogo" style="height: 50px;
+  padding-left: 30px;
+  padding-top: 11px;
+  padding-bottom: 5px;">
+
+<div class="navbar">
+  <a>Home</a>
+
+  <div class="dropdown2">
+    <button class="dropbtn2">Services
+      <i class="fa fa-caret-down"></i>
+    </button>
+   
+  </div>
+
+  <a>News</a>
+
+  <div class="dropdown2">
+    <button class="dropbtn2">Notifications <span class="notificationNavNumber">2</span>
+      <i class="fa fa-caret-down"></i>
+    </button>
+
+  </div>
+
+
+  <div class="dropdown2">
+      <button class="dropbtn2"> <img src="/public/images/Andy_Small.png" alt="Profile Picture" style="vertical-align: middle;padding-right: 10px;">Andy Carr
+        <i class="fa fa-caret-down" style="margin-left:20px;"></i>
+      </button>
+
+    </div>
+
+</div>
+
+</div>
+
+<div class="govuk-width-container-fixed">
+    <a href="javascript: history.go(-1)" class="govuk-back-link">Back</a>
+  
+    <main class="govuk-main-wrapper">
+  
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <span class="govuk-caption-xl">
+                Step 3
+              </span>
+          <h1 class="govuk-heading-xl">Choose your services</h1>
+          
+          <p class="govuk-body">
+            Add 6 customisable links for Portal services to your homepage. The links will appear <br>in the position that you have selected them.</p>
+
+            <div class="govuk-inset-text">
+              The links you select can be updated at any time by clicking the "Edit Links"<br>button on the homepage.
+            </div>
+
+
+          <form method="post" class="form">
+
+<div>
+
+          <div class="govuk-form-group-links">
+            <label class="govuk-label" for="primaryFocusYou">
+              Position 1
+              </label> 
+            <select class="govuk-select">
+              <option value="">Select an option</option>
+              <option value="primaryResidentialYou">Residential Conveyancing</option>
+              <option value="primaryCommercialYou">Commercial Conveyancing (Commercial Clients)</option>
+            </select>
+         </div>
+
+         <div class="govuk-form-group-links">
+          <label class="govuk-label" for="primaryFocusYou">
+            Position 2
+            </label> 
+          <select class="govuk-select">
+            <option value="">Select an option</option>
+            <option value="primaryResidentialYou">Residential Conveyancing</option>
+            <option value="primaryCommercialYou">Commercial Conveyancing (Commercial Clients)</option>
+          </select>
+       </div>
+
+       <div class="govuk-form-group-links">
+        <label class="govuk-label" for="primaryFocusYou">
+          Position 3
+          </label> 
+        <select class="govuk-select">
+          <option value="">Select an option</option>
+          <option value="primaryResidentialYou">Residential Conveyancing</option>
+          <option value="primaryCommercialYou">Commercial Conveyancing (Commercial Clients)</option>
+        </select>
+     </div>
+
+     <div class="govuk-form-group-links">
+      <label class="govuk-label" for="primaryFocusYou">
+        Position 4
+        </label> 
+      <select class="govuk-select">
+        <option value="">Select an option</option>
+        <option value="primaryResidentialYou">Residential Conveyancing</option>
+        <option value="primaryCommercialYou">Commercial Conveyancing (Commercial Clients)</option>
+      </select>
+   </div>
+
+   <div class="govuk-form-group-links">
+    <label class="govuk-label" for="primaryFocusYou">
+      Position 5
+      </label> 
+    <select class="govuk-select">
+      <option value="">Select an option</option>
+      <option value="primaryResidentialYou">Residential Conveyancing</option>
+      <option value="primaryCommercialYou">Commercial Conveyancing (Commercial Clients)</option>
+    </select>
+ </div>
+
+ <div class="govuk-form-group-links">
+  <label class="govuk-label" for="primaryFocusYou">
+    Position 6
+    </label> 
+  <select class="govuk-select">
+    <option value="">Select an option</option>
+    <option value="primaryResidentialYou">Residential Conveyancing</option>
+    <option value="primaryCommercialYou">Commercial Conveyancing (Commercial Clients)</option>
+  </select>
+</div>
+
+        </div>
+
+
+         <div class="govuk-form-group" style="margin-bottom:15px;width: 100%;">
+            <button class="govuk-button" style="padding-left: 25px;padding-right: 25px;" type="submit" formaction="homepage">Finish</button>
+        </div>
+
+
+</form>
+
+        </div>
+      </div>
+  
+    </main>
+  </div>
+
+
+
+
+
+
+
+
+
+<!-- Content Area - End -->
+
+   
+
+
+{% endblock %}

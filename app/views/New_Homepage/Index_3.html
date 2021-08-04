@@ -473,7 +473,7 @@ nav a {
  display:block;
  padding:15px 25px; 
  font-size:20px;
- line-height: 30px;
+ line-height: 40px;
  color: #008548;
  text-decoration:none;
 }
@@ -499,11 +499,18 @@ nav ul ul li {
  background: #ffffff;
 }
 
+nav ul ul li a {
+padding: 10px 25px;
+}
+
 nav ul ul li a:hover {
  color: #ffffff;
  background: #008548;
 }
 
+nav ul ul ul ul {
+padding: 5px 0px;
+}
 
 nav ul ul ul li {
  position: relative;
@@ -511,8 +518,14 @@ nav ul ul ul li {
  left:270px;
  color: #008548;
  background: #ffffff;
+ line-height: 25px;
+ min-width: 325px;
 }
 
+nav ul ul ul li a {
+ line-height: 25px;
+ padding: 18px 25px;
+}
 
 
 
@@ -539,7 +552,7 @@ nav ul ul ul li {
                 <li><a style="color:#ffffff !Important;" href="#">Services <i style="margin-left: 5px;" class="fas fa-chevron-down"></i></a>
                     <ul>
                         <li><a href="#">View My Applications</a></li>
-                        <li><a href="#">Information Services<i style="float: right;padding-top: 5px;padding-left: 25px;" class="fas fa-chevron-right"></i></a>
+                        <li><a href="#">Information Services<i style="float: right;padding-top: 10px;padding-left: 25px;" class="fas fa-chevron-right"></i></a>
          
                     <ul>
                         <li><a href="#">Request Official Copies</a></li>
@@ -611,31 +624,7 @@ nav ul ul ul li {
 
 <div id="SectionHeroImage">
 
-  <div class="commsChannel">
-    <div class="commsChannelContentBox govuk-body">
-          <div class="commsChannelTitle">
-            Sign up for HM Land Registry webinars
-          </div>
-          <div class=" commsChannelText">
-            Join our free webinars to learn about a range of land registration topics and how to prepare quality applications.<br><br>
-            <span class="commsChannelLink">Find out more</span>
-          </div>
-    </div>
 
-    <div class="commsChannelBack">
-      <img style="padding:12px 0px 0px 15px;" src="/public/images/icon_BackArrow.png">
-    </div>
-
-    <div class="commsDots">
-      <img src="/public/images/icon_Dots.png">
-    </div>
-
-    <div class="commsChannelForward">
-      <img style="padding:12px 0px 0px 9px;" src="/public/images/icon_ForwardArrow.png">
-    </div>
-
-
-</div>
 
   <div id="SectionHeroContent">
   <div class="govuk-body heroTextBackground" style="font-size:50px; color:#ffffff;margin-bottom: 0;">
@@ -647,68 +636,7 @@ nav ul ul ul li {
 </div>
 </div>
 
-<div id="NotificationsPanel">
-  <div id="NotificationsPanelContent" class="govuk-body">
 
-    <div id="NotificationsPanelItem">
-      <div class="notificationNumber">
-        02
-      </div> 
-      <div class="notificationTextSection">
-        <div class="notificationLink">
-          Requisitions
-        </div>
-        <div class="notificationText">
-          expire within 7 days
-        </div>
-      </div>
-    </div>
-
-    <div id="NotificationsPanelItem">
-      <div class="notificationNumber">
-        03
-      </div> 
-      <div class="notificationTextSection">
-        <div class="notificationLink">
-          Searches
-        </div>
-        <div class="notificationText">
-          expire within 3 days
-        </div>
-      </div>
-    </div>
-
-    <div id="NotificationsPanelItem">
-      <div class="notificationNumber">
-        06
-      </div> 
-      <div class="notificationTextSection">
-        <div class="notificationLink">
-          Updates
-        </div>
-        <div class="notificationText">
-          Since your last login
-        </div>
-      </div>
-    </div>
-
-    <div id="NotificationsPanelItem">
-      <div class="notificationNumber">
-        12
-      </div> 
-      <div class="notificationTextSection">
-        <div class="notificationLink">
-          Documents
-        </div>
-        <div class="notificationText">
-          available to download
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-</div>
 
 <div id="EditableLinksPanel">
 
