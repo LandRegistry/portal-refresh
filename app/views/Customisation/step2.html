@@ -1,40 +1,17 @@
 <!DOCTYPE html>
-{% extends "layout_unbranded5.html" %}
+{% extends "layout_unbranded7.html" %}
 {% from "checkboxes/macro.njk" import govukCheckboxes %}
 {% block pageTitle %} View my applications
 {% endblock %}
 {% block content %}
 
-<script>
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-    
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }
-
-</script>
-
-
-
-
 
 <style>
 
-
+.govuk-footer {
+    padding: 25px;
+    margin-top: 100px;
+}
 
 /* Optional styles for demos */
 
@@ -328,23 +305,24 @@ display:none;
           
           <form method="post" class="form">
 
+
           <div class="govuk-form-group">
             <label class="govuk-label" for="primaryFocusYou">
               Within your conveyancing team/department do you focus on
               </label> 
-            <select class="govuk-select govuk-!-width-one-third">
-              <option value="">Select an option</option>
+            <select class="govuk-select govuk-!-width-one-third"  id="primaryFocusYou" name="primaryFocusYou" type="text">
+              <option value="" hidden></option>
               <option value="primaryResidentialYou">Residential Conveyancing</option>
               <option value="primaryCommercialYou">Commercial Conveyancing (Commercial Clients)</option>
             </select>
          </div>
 
          <div class="govuk-form-group">
-            <label class="govuk-label" for="secondaryFocus">
+            <label class="govuk-label" for="jobRole">
               Which of the following best describes your job role?
               </label> 
-            <select class="govuk-select govuk-!-width-one-third">
-              <option value="">Select an option</option>
+            <select class="govuk-select govuk-!-width-one-third"  id="jobRole" name="jobRole" type="text">
+              <option value="" hidden></option>
               <option value="propertyLawyer">Property Lawyer (Conveyancer, Solicitor, Legal Exec)</option>
               <option value="supportStaff">Support Staff</option>
               <option value="supervisorTrainer">Supervisor/trainer</option>
@@ -377,5 +355,26 @@ display:none;
 
    
 
+
+{% endblock %}
+{% block pageScripts %}
+  <!-- load accessible autocomplete code (used in both examples) -->
+
+
+<script type="text/javascript">
+
+var savedLocation = {{ data['primaryFocusYou'] | dump | safe }}
+document.getElementById('primaryFocusYou').value = savedLocation
+// note the other way to do this would be to save (or look up) the option text from the value (eg make the option text the value), and then set the defaultValue = savedLocation below
+// *************************************************************************************
+</script>
+
+<script type="text/javascript">
+
+var savedLocation = {{ data['jobRole'] | dump | safe }}
+document.getElementById('jobRole').value = savedLocation
+// note the other way to do this would be to save (or look up) the option text from the value (eg make the option text the value), and then set the defaultValue = savedLocation below
+// *************************************************************************************
+</script>
 
 {% endblock %}
