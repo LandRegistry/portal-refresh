@@ -242,7 +242,7 @@ display:none;
 }
 
 .govuk-form-group {
-    margin-bottom: 50px;
+    margin-bottom: 65px;
 }
 
 </style>
@@ -281,7 +281,7 @@ display:none;
 
 
   <div class="dropdown2">
-      <button class="dropbtn2"> <img src="/public/images/Andy_Small.png" alt="Profile Picture" style="vertical-align: middle;padding-right: 10px;">Andy Carr
+      <button class="dropbtn2" style="width:212px;"> <img width="40"  src="/public/images/Andy_Small.png" alt="Profile Picture" style="vertical-align: middle;padding-right: 10px;">Andy Carr
         <i class="fa fa-caret-down" style="margin-left:20px;"></i>
       </button>
 
@@ -299,7 +299,7 @@ display:none;
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
             <span class="govuk-caption-xl">
-                Step 2
+                Step 1
               </span>
           <h1 class="govuk-heading-xl">Tell us about you</h1>
           
@@ -308,24 +308,26 @@ display:none;
 
           <div class="govuk-form-group">
             <label class="govuk-label" for="primaryFocusYou">
-              Within your conveyancing team/department do you focus on
+              Which option best describes your main area of work?
               </label> 
             <select class="govuk-select govuk-!-width-one-third"  id="primaryFocusYou" name="primaryFocusYou" type="text">
               <option value="" hidden></option>
               <option value="primaryResidentialYou">Residential Conveyancing</option>
               <option value="primaryCommercialYou">Commercial Conveyancing (Commercial Clients)</option>
+              <option value="primaryOtherYou">Other</option>
             </select>
          </div>
 
          <div class="govuk-form-group">
             <label class="govuk-label" for="jobRole">
-              Which of the following best describes your job role?
+              Which option best describes your main job role?
               </label> 
             <select class="govuk-select govuk-!-width-one-third"  id="jobRole" name="jobRole" type="text">
               <option value="" hidden></option>
-              <option value="propertyLawyer">Property Lawyer (Conveyancer, Solicitor, Legal Exec)</option>
+              <option value="propertyLawyer">Conveyancer</option>
               <option value="supportStaff">Support Staff</option>
               <option value="supervisorTrainer">Supervisor/trainer</option>
+              <option value="other">Other</option>
             </select>
          </div>
 
