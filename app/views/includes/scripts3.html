@@ -11,6 +11,16 @@
 <script src="/public/javascripts/govuk-frontend.js"></script>
 
 <script type="text/javascript">
+  window._mfq = window._mfq || [];
+  (function() {
+    var mf = document.createElement("script");
+    mf.type = "text/javascript"; mf.defer = true;
+    mf.src = "//cdn.mouseflow.com/projects/b725bd26-7c23-4845-9024-1174a591738a.js";
+    document.getElementsByTagName("head")[0].appendChild(mf);
+  })();
+</script>
+
+<script type="text/javascript">
     $(document).ready(function(){
         $('#attachmentSelection').on('change', function() {
           if ( this.value == '1')
