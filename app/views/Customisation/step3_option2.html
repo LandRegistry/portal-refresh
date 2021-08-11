@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+{% extends "layout_unbranded7.html" %}
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
+{% block pageTitle %} View my applications
+{% endblock %}
+{% block content %}
+
+<script src="/public/javascripts/gridstack-h5b.js"></script>
+<script src="/public/javascripts/events.js"></script>
+
+<style>
+
+.govuk-width-container-fixed {
+    max-width: 1280px !Important;
+}
+
+.govuk-footer {
+    padding: 25px;
+    margin-top: 100px;
+}
+
+/* Optional styles for demos */
+
+
+
+
+.govuk-width-container {
+    max-width: 100%;
+    padding: 0px !Important;
+}
+
+.navbar-container {
+    background-color: #008548;
+    display:flow-root;
+    padding-right: 15px;
+    -webkit-box-shadow: inset 0px 2px 4px 0px rgb(0 0 0 / 15%);
+    -moz-box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.15);
+    box-shadow: inset 0px 2px 4px 0px rgb(0 0 0 / 15%);
+    border-bottom: 0px solid #005ea5;
+}
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+
+  font-family: Arial;
+  float: right;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    padding: 0px 25px;
+    text-decoration: none;
+    line-height: 70px;
+    font-weight: 400;
+}
+
+/* The dropdown container */
+.dropdown2 {
+  float: left;
+  overflow: hidden;
+}
+
+
+.dropdown2 .dropbtn2 {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0px 25px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    line-height: 70px;
+    font-weight: 400;
+}
+
+.dropdown2 .dropbtn2:hover {
+    background-color: #1F8153;
+  cursor: pointer;
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn2 {
+  background-color: #1F8153;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-top: 0px solid #005ea5;
+}
+
+/* Links inside the dropdown */
+.dropdown-content2 a {
+  float: none;
+  color: #00703C;
+  padding: 0px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    line-height: 50px;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content2 a:hover {
+    background-color: #1F8153;
+    color: #fff;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown2:hover .dropdown-content2 {
+  display: block;
+}
+
+.govuk-link:link, a:link {
+    color: #00703C;
+}
+
+.govuk-select {
+    width: 100%;
+}
+
+
+.notificationContent {
+  padding: 20px;
+  width:316px;
+  margin-bottom: 0px;
+}
+
+.notificationTopRow {
+  width:100%;
+display:flex;
+padding-bottom: 3px;
+}
+
+.notificationTitle {
+  font-size:16px;
+  font-weight:700;
+width:50%;
+}
+
+.myAccountTitle {
+  font-size:16px;
+  font-weight:700;
+padding-bottom: 3px;
+}
+
+.notificationTime {
+  font-size:12px;
+  font-weight:400;
+  text-align: right;
+  width:50%;
+}
+
+.notification2ndLine {
+  font-size:14px;
+  font-weight:400;
+  width: 100%;
+  padding-bottom:15px;
+}
+
+.myAccount2ndLine {
+  font-size:14px;
+  font-weight:400;
+  width: 100%;
+  padding-bottom:0px;
+}
+
+.notificationLink a {
+  font-size: 15px;
+    width: 100%;
+    float: left;
+    line-height: unset;
+    background-color: unset !important;
+    color: #00703C !important;
+    font-weight: 700;
+    padding: unset;
+}
+
+.myAccountLinks a {
+  font-size: 15px;
+    width: 100%;
+    line-height: unset;
+    background-color: unset !important;
+    color: #00703C !important;
+    font-weight: 700;
+    padding: unset;
+}
+
+
+.NotificationSingle {
+    display: grid;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 20px;
+}
+
+.NotificationSingleLast {
+    display: grid;
+}
+
+.notificationNavNumber {
+  color: #1F8153;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 500px;
+    font-weight: 700;
+}
+
+.myAccountContent {
+  width:177px;
+  padding: 25px;
+}
+
+.myAccountContent a {
+  padding: 0px;
+}
+
+
+.unselected {
+display:none;
+}
+
+
+
+.govuk-width-container-fixed {
+    max-width:1080px;
+    margin:auto;
+    padding-top: 25px;
+}
+
+.govuk-back-link {
+    margin-bottom:39px;
+}
+
+.govuk-label {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.govuk-form-group {
+    margin-bottom: 50px;
+}
+
+.govuk-form-group-links {
+  width: 28%;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 4%;
+    padding: 0%;
+}
+
+
+
+
+
+
+
+.grid-stack-item-removing {
+  opacity: 0.5;
+}
+.trash {
+  height: 100px;
+  background: rgba(255, 0, 0, 0.1) center center url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCIgdmlld0JveD0iMCAwIDQzOC41MjkgNDM4LjUyOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDM4LjUyOSA0MzguNTI5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQxNy42ODksNzUuNjU0Yy0xLjcxMS0xLjcwOS0zLjkwMS0yLjU2OC02LjU2My0yLjU2OGgtODguMjI0TDMwMi45MTcsMjUuNDFjLTIuODU0LTcuMDQ0LTcuOTk0LTEzLjA0LTE1LjQxMy0xNy45ODkgICAgQzI4MC4wNzgsMi40NzMsMjcyLjU1NiwwLDI2NC45NDUsMGgtOTEuMzYzYy03LjYxMSwwLTE1LjEzMSwyLjQ3My0yMi41NTQsNy40MjFjLTcuNDI0LDQuOTQ5LTEyLjU2MywxMC45NDQtMTUuNDE5LDE3Ljk4OSAgICBsLTE5Ljk4NSw0Ny42NzZoLTg4LjIyYy0yLjY2NywwLTQuODUzLDAuODU5LTYuNTY3LDIuNTY4Yy0xLjcwOSwxLjcxMy0yLjU2OCwzLjkwMy0yLjU2OCw2LjU2N3YxOC4yNzQgICAgYzAsMi42NjQsMC44NTUsNC44NTQsMi41NjgsNi41NjRjMS43MTQsMS43MTIsMy45MDQsMi41NjgsNi41NjcsMi41NjhoMjcuNDA2djI3MS44YzAsMTUuODAzLDQuNDczLDI5LjI2NiwxMy40MTgsNDAuMzk4ICAgIGM4Ljk0NywxMS4xMzksMTkuNzAxLDE2LjcwMywzMi4yNjQsMTYuNzAzaDIzNy41NDJjMTIuNTY2LDAsMjMuMzE5LTUuNzU2LDMyLjI2NS0xNy4yNjhjOC45NDUtMTEuNTIsMTMuNDE1LTI1LjE3NCwxMy40MTUtNDAuOTcxICAgIFYxMDkuNjI3aDI3LjQxMWMyLjY2MiwwLDQuODUzLTAuODU2LDYuNTYzLTIuNTY4YzEuNzA4LTEuNzA5LDIuNTctMy45LDIuNTctNi41NjRWODIuMjIxICAgIEM0MjAuMjYsNzkuNTU3LDQxOS4zOTcsNzcuMzY3LDQxNy42ODksNzUuNjU0eiBNMTY5LjMwMSwzOS42NzhjMS4zMzEtMS43MTIsMi45NS0yLjc2Miw0Ljg1My0zLjE0aDkwLjUwNCAgICBjMS45MDMsMC4zODEsMy41MjUsMS40Myw0Ljg1NCwzLjE0bDEzLjcwOSwzMy40MDRIMTU1LjMxMUwxNjkuMzAxLDM5LjY3OHogTTM0Ny4xNzMsMzgwLjI5MWMwLDQuMTg2LTAuNjY0LDguMDQyLTEuOTk5LDExLjU2MSAgICBjLTEuMzM0LDMuNTE4LTIuNzE3LDYuMDg4LTQuMTQxLDcuNzA2Yy0xLjQzMSwxLjYyMi0yLjQyMywyLjQyNy0yLjk5OCwyLjQyN0gxMDAuNDkzYy0wLjU3MSwwLTEuNTY1LTAuODA1LTIuOTk2LTIuNDI3ICAgIGMtMS40MjktMS42MTgtMi44MS00LjE4OC00LjE0My03LjcwNmMtMS4zMzEtMy41MTktMS45OTctNy4zNzktMS45OTctMTEuNTYxVjEwOS42MjdoMjU1LjgxNVYzODAuMjkxeiIgZmlsbD0iI2ZmOWNhZSIvPgoJCTxwYXRoIGQ9Ik0xMzcuMDQsMzQ3LjE3MmgxOC4yNzFjMi42NjcsMCw0Ljg1OC0wLjg1NSw2LjU2Ny0yLjU2N2MxLjcwOS0xLjcxOCwyLjU2OC0zLjkwMSwyLjU2OC02LjU3VjE3My41ODEgICAgYzAtMi42NjMtMC44NTktNC44NTMtMi41NjgtNi41NjdjLTEuNzE0LTEuNzA5LTMuODk5LTIuNTY1LTYuNTY3LTIuNTY1SDEzNy4wNGMtMi42NjcsMC00Ljg1NCwwLjg1NS02LjU2NywyLjU2NSAgICBjLTEuNzExLDEuNzE0LTIuNTY4LDMuOTA0LTIuNTY4LDYuNTY3djE2NC40NTRjMCwyLjY2OSwwLjg1NCw0Ljg1MywyLjU2OCw2LjU3QzEzMi4xODYsMzQ2LjMxNiwxMzQuMzczLDM0Ny4xNzIsMTM3LjA0LDM0Ny4xNzJ6IiBmaWxsPSIjZmY5Y2FlIi8+CgkJPHBhdGggZD0iTTIxMC4xMjksMzQ3LjE3MmgxOC4yNzFjMi42NjYsMCw0Ljg1Ni0wLjg1NSw2LjU2NC0yLjU2N2MxLjcxOC0xLjcxOCwyLjU2OS0zLjkwMSwyLjU2OS02LjU3VjE3My41ODEgICAgYzAtMi42NjMtMC44NTItNC44NTMtMi41NjktNi41NjdjLTEuNzA4LTEuNzA5LTMuODk4LTIuNTY1LTYuNTY0LTIuNTY1aC0xOC4yNzFjLTIuNjY0LDAtNC44NTQsMC44NTUtNi41NjcsMi41NjUgICAgYy0xLjcxNCwxLjcxNC0yLjU2OCwzLjkwNC0yLjU2OCw2LjU2N3YxNjQuNDU0YzAsMi42NjksMC44NTQsNC44NTMsMi41NjgsNi41N0MyMDUuMjc0LDM0Ni4zMTYsMjA3LjQ2NSwzNDcuMTcyLDIxMC4xMjksMzQ3LjE3MnogICAgIiBmaWxsPSIjZmY5Y2FlIi8+CgkJPHBhdGggZD0iTTI4My4yMiwzNDcuMTcyaDE4LjI2OGMyLjY2OSwwLDQuODU5LTAuODU1LDYuNTctMi41NjdjMS43MTEtMS43MTgsMi41NjItMy45MDEsMi41NjItNi41N1YxNzMuNTgxICAgIGMwLTIuNjYzLTAuODUyLTQuODUzLTIuNTYyLTYuNTY3Yy0xLjcxMS0xLjcwOS0zLjkwMS0yLjU2NS02LjU3LTIuNTY1SDI4My4yMmMtMi42NywwLTQuODUzLDAuODU1LTYuNTcxLDIuNTY1ICAgIGMtMS43MTEsMS43MTQtMi41NjYsMy45MDQtMi41NjYsNi41Njd2MTY0LjQ1NGMwLDIuNjY5LDAuODU1LDQuODUzLDIuNTY2LDYuNTdDMjc4LjM2NywzNDYuMzE2LDI4MC41NSwzNDcuMTcyLDI4My4yMiwzNDcuMTcyeiIgZmlsbD0iI2ZmOWNhZSIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=) no-repeat;
+}
+.sidebar {
+  background: rgba(0, 255, 0, 0.1);
+  padding: 25px 0;
+  height: 100px;
+  text-align: center;
+}
+.sidebar .grid-stack-item {
+  width: 120px;
+  height: 50px;
+  border: 2px dashed green;
+  text-align: center;
+  line-height: 35px;
+  z-index: 10;
+  background: rgba(0, 255, 0, 0.1);
+  cursor: default;
+  display: inline-block;
+}
+.sidebar .grid-stack-item .grid-stack-item-content {
+  background: none;
+}
+
+
+
+.linkTextTitle {
+  font-size:20px;
+}
+
+.linkTextDescription {
+  font-size:14px;
+  padding-bottom: 10px;
+  max-width: 246px;
+}
+
+.linkTextLink {
+  font-weight:700;
+font-size: 15px;
+color:#00703C;
+text-decoration: underline;
+}
+
+.linkIcon {
+  width: 75px;
+    float: left;
+}
+
+.linkTextSection {
+  float: left;
+    width: calc(100% - 80px);
+    text-align: left;
+}
+
+
+.linkSection {
+  padding-top:10px;
+}
+
+.grid-stack>.grid-stack-item>.grid-stack-item-content {
+    padding:10px 20px;
+
+}
+
+.grid-stack>.grid-stack-item>.grid-stack-item-content:hover {
+    background: #F3F2F1;
+    padding:10px 20px;
+}
+
+.grid-stack>.grid-stack-item.ui-draggable-dragging>.grid-stack-item-content {
+  background: #F3F2F1;
+  padding:10px 20px;
+}
+.ui-resizable-handle {
+  display:none !Important;
+}
+
+
+.extraLinksSection {
+  border-style: dashed;
+    border-color: #dedede;
+}
+
+#grid1 {
+  border-style: dashed;
+    border-color: #ffffff;
+}
+
+.editMode {
+  border-style: dashed;
+    border-color: #dedede !Important;
+}
+
+
+
+
+
+
+
+
+
+</style>
+
+
+<!-- Back & clear data top -->
+<!-- Back & clear data top -->
+<div>
+
+<!-- Navigation Menu - Start -->
+<div class="navbar-container">
+
+  <img src="/public/images/Logo-Mono.png" alt="hmlrlogo" style="height: 50px;
+  padding-left: 30px;
+  padding-top: 11px;
+  padding-bottom: 5px;">
+
+<!-- <div class="navbar">
+  <a>Home</a>
+
+  <div class="dropdown2">
+    <button class="dropbtn2">Services
+      <i class="fa fa-caret-down"></i>
+    </button>
+   
+  </div>
+
+  <a>News</a>
+
+  <div class="dropdown2">
+    <button class="dropbtn2">Notifications <span class="notificationNavNumber">2</span>
+      <i class="fa fa-caret-down"></i>
+    </button>
+
+  </div>
+
+
+  <div class="dropdown2">
+      <button class="dropbtn2" style="width:212px;"> <img width="40"  src="/public/images/Andy_Small.png" alt="Profile Picture" style="vertical-align: middle;padding-right: 10px;">Andy Carr
+        <i class="fa fa-caret-down" style="margin-left:20px;"></i>
+      </button>
+
+    </div>
+
+</div> -->
+
+</div>
+
+<div class="govuk-width-container-fixed">
+    <a href="javascript: history.go(-1)" class="govuk-back-link">Back</a>
+  
+    <main class="govuk-main-wrapper">
+  
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <span class="govuk-caption-xl">
+                Step 2
+              </span>
+          <h1 class="govuk-heading-xl">Choose your services</h1>
+          
+          <p class="govuk-body">
+            Add 6 customisable links for Portal services to your homepage. The links will appear in the position that you have selected them.</p>
+
+            <div class="govuk-inset-text">
+              The links you select can be updated at any time by clicking the "Edit Links" button on the homepage.
+            </div>
+
+          <form method="post" class="form">
+
+
+            <div class="container-fluid govuk-body"><style type="text/css" gs-style-id="gridstack-style-24415"></style><style type="text/css" gs-style-id="gridstack-style-73164"></style>
+
+              <div class="grid-stack grid-stack-instance-7527 grid-stack-animate ui-droppable editMode" id="grid1" gs-current-row="1">
+      
+                <div class="grid-stack-item ui-draggable" gs-x="0" gs-y="0" gs-w="4" gs-h="1" gs-id="1">
+                  <div class="grid-stack-item-content" draggable="true">
+                     <div class="linkSection">
+                       <div class="linkIcon">
+                         <img src="/public/images/Icon_DRS.png">
+                       </div>
+                       <div class="linkTextSection">
+                         <div class="linkTextTitle">
+                           Digital Registration Service
+                         </div>
+                         <div class="linkTextDescription">
+                           Submit applications to HM Land Registry online
+                         </div>
+                         <div class="linkTextLink">
+                           Submit applications
+                         </div>
+                       </div>
+                     </div>
+                  </div>
+               </div>
+      
+               <div class="grid-stack-item ui-draggable" gs-x="4" gs-y="0" gs-w="4" gs-h="1" gs-id="2">
+                 <div class="grid-stack-item-content" draggable="true">
+                   <div class="linkSection">
+                     <div class="linkIcon">
+                       <img src="/public/images/Icon_VMA.png">
+                     </div>
+                     <div class="linkTextSection">
+                       <div class="linkTextTitle">
+                         View My Applications
+                       </div>
+                       <div class="linkTextDescription">
+                         View the progress of your applications
+                       </div>
+                       <div class="linkTextLink">
+                         View applications
+                       </div>
+                     </div>
+                   </div>
+                </div>
+              </div>
+      
+              <div class="grid-stack-item ui-draggable" gs-x="8" gs-y="0" gs-w="4" gs-h="1" gs-id="3">
+               <div class="grid-stack-item-content" draggable="true">
+                 <div class="linkSection">
+                   <div class="linkIcon">
+                     <img src="/public/images/Icon_PDF.png">
+                   </div>
+                   <div class="linkTextSection">
+                     <div class="linkTextTitle">
+                       PDF Downloads
+                     </div>
+                     <div class="linkTextDescription">
+                       Access your PDF downloads from the download centre
+                     </div>
+                     <div class="linkTextLink">
+                       Download centre
+                     </div>
+                   </div>
+                 </div>
+              </div>
+            </div>
+      
+            <div class="grid-stack-item ui-draggable" gs-x="0" gs-y="2" gs-w="4" gs-h="1" gs-id="4">
+             <div class="grid-stack-item-content" draggable="true">
+               <div class="linkSection">
+                 <div class="linkIcon">
+                   <img src="/public/images/Icon_OfficialCopies.png">
+                 </div>
+                 <div class="linkTextSection">
+                   <div class="linkTextTitle">
+                     Official Copies
+                   </div>
+                   <div class="linkTextDescription">
+                     Request official copies of a register, title plan and/or documents
+                   </div>
+                   <div class="linkTextLink">
+                     Request a document
+                   </div>
+                 </div>
+               </div>
+            </div>
+          </div>
+      
+          <div class="grid-stack-item ui-draggable" gs-x="4" gs-y="2" gs-w="4" gs-h="1" gs-id="5">
+           <div class="grid-stack-item-content" draggable="true">
+             <div class="linkSection">
+               <div class="linkIcon">
+                 <img src="/public/images/Icon_LandCharge.png">
+               </div>
+               <div class="linkTextSection">
+                 <div class="linkTextTitle">
+                   Land Charge Services
+                 </div>
+                 <div class="linkTextDescription">
+                   Access information from the Land Register or apply for searches
+                 </div>
+                 <div class="linkTextLink">
+                   Start new search
+                 </div>
+               </div>
+             </div>
+          </div>
+        </div>
+      
+        <div class="grid-stack-item ui-draggable" gs-x="8" gs-y="2" gs-w="4" gs-h="1" gs-id="6">
+         <div class="grid-stack-item-content" draggable="true">
+           <div class="linkSection">
+             <div class="linkIcon">
+               <img width="60" src="/public/images/Icon_MapSearch.png">
+             </div>
+             <div class="linkTextSection">
+               <div class="linkTextTitle">
+                 Map Search
+               </div>
+               <div class="linkTextDescription">
+                 Find out if a property is registered, its location, title number & details of tenure
+               </div>
+               <div class="linkTextLink">
+                 Start search
+               </div>
+             </div>
+           </div>
+        </div>
+      </div>
+      
+      
+              </div>
+      
+              <br>
+      
+      <div id="extraLinks">
+      
+        <p style="text-align: center;"><img src="/public/images/Arrows_Green.png" height="50"></p>
+      
+              <!-- <p class="sectionTitle">Drag links in to the My Services section</p> -->
+      
+              <div class="grid-stack grid-stack-instance-4798 grid-stack-animate ui-droppable extraLinksSection" id="grid2" gs-current-row="1" style="min-height:150px;">
+      
+                
+      
+                <div class="grid-stack-item ui-draggable" gs-x="0" gs-y="0" gs-w="4" gs-h="1" gs-id="7">
+                  <div class="grid-stack-item-content" draggable="true">
+                     <div class="linkSection">
+                       <div class="linkIcon">
+                         <img src="/public/images/Icon_DRS.png">
+                       </div>
+                       <div class="linkTextSection">
+                         <div class="linkTextTitle">
+                           Additional Service Link 1
+                         </div>
+                         <div class="linkTextDescription">
+                           This additional link can be dragged into your preferred position
+                         </div>
+                         <div class="linkTextLink">
+                           This is a link
+                         </div>
+                       </div>
+                     </div>
+                  </div>
+               </div>
+      
+               <div class="grid-stack-item ui-draggable" gs-x="4" gs-y="0" gs-w="4" gs-h="1" gs-id="8">
+                 <div class="grid-stack-item-content" draggable="true">
+                   <div class="linkSection">
+                     <div class="linkIcon">
+                       <img src="/public/images/Icon_VMA.png">
+                     </div>
+                     <div class="linkTextSection">
+                       <div class="linkTextTitle">
+                        Additional Service Link 2
+                       </div>
+                       <div class="linkTextDescription">
+                        This additional link can be dragged into your preferred position
+                      </div>
+                      <div class="linkTextLink">
+                        This is a link
+                      </div>
+                     </div>
+                   </div>
+                </div>
+              </div>
+      
+              <div class="grid-stack-item ui-draggable" gs-x="8" gs-y="0" gs-w="4" gs-h="1" gs-id="9">
+               <div class="grid-stack-item-content" draggable="true">
+                 <div class="linkSection">
+                   <div class="linkIcon">
+                     <img src="/public/images/Icon_PDF.png">
+                   </div>
+                   <div class="linkTextSection">
+                     <div class="linkTextTitle">
+                      Additional Service Link 3
+                     </div>
+                     <div class="linkTextDescription">
+                      This additional link can be dragged into your preferred position
+                    </div>
+                    <div class="linkTextLink">
+                      This is a link
+                    </div>
+                   </div>
+                 </div>
+              </div>
+            </div>
+      
+            <div class="grid-stack-item ui-draggable" gs-x="0" gs-y="2" gs-w="4" gs-h="1" gs-id="10">
+             <div class="grid-stack-item-content" draggable="true">
+               <div class="linkSection">
+                 <div class="linkIcon">
+                   <img src="/public/images/Icon_OfficialCopies.png">
+                 </div>
+                 <div class="linkTextSection">
+                   <div class="linkTextTitle">
+                    Additional Service Link 4
+                   </div>
+                   <div class="linkTextDescription">
+                    This additional link can be dragged into your preferred position
+                  </div>
+                  <div class="linkTextLink">
+                    This is a link
+                  </div>
+                 </div>
+               </div>
+            </div>
+          </div>
+      
+          <div class="grid-stack-item ui-draggable" gs-x="4" gs-y="2" gs-w="4" gs-h="1" gs-id="11">
+           <div class="grid-stack-item-content" draggable="true">
+             <div class="linkSection">
+               <div class="linkIcon">
+                 <img src="/public/images/Icon_LandCharge.png">
+               </div>
+               <div class="linkTextSection">
+                 <div class="linkTextTitle">
+                  Additional Service Link 5
+                 </div>
+                 <div class="linkTextDescription">
+                  This additional link can be dragged into your preferred position
+                </div>
+                <div class="linkTextLink">
+                  This is a link
+                </div>
+               </div>
+             </div>
+          </div>
+        </div>
+      
+        <div class="grid-stack-item ui-draggable" gs-x="8" gs-y="2" gs-w="4" gs-h="1" gs-id="12">
+         <div class="grid-stack-item-content" draggable="true">
+           <div class="linkSection">
+             <div class="linkIcon">
+               <img width="60" src="/public/images/Icon_MapSearch.png">
+             </div>
+             <div class="linkTextSection">
+               <div class="linkTextTitle">
+                Additional Service Link 6
+               </div>
+               <div class="linkTextDescription">
+                This additional link can be dragged into your preferred position
+              </div>
+              <div class="linkTextLink">
+                This is a link
+              </div>
+             </div>
+           </div>
+        </div>
+      
+              </div>
+            </div>
+      
+      </div>
+      
+      </div>
+
+
+
+         <div class="govuk-form-group" style="margin-bottom:15px;width: 100%;">
+
+          <button class="govuk-button" style="padding-left: 25px;padding-right: 25px;" onclick="saveGrid()" href="#">Save Layout</button>
+
+          <button class="govuk-button" style="padding-left: 25px;padding-right: 25px;" onclick="loadGrid()" href="#">Load Layout</button>
+
+            <button id="edit" class="govuk-button" style="padding-left: 25px;padding-right: 25px;" type="submit" formaction="homepage">Finish</button>
+        </div>
+
+
+</form>
+
+        </div>
+      </div>
+  
+    </main>
+  </div>
+
+
+
+
+
+
+
+
+
+<!-- Content Area - End -->
+
+   
+<!-- Content Area - End -->
+
+
+  
+  
+
+
+
+
+<script type="text/javascript">
+
+          
+  let opts = {
+cellHeight: '150', // see other possible values (best to do in here)
+cellHeightThrottle: 150,
+dragOut: true,
+    disableOneColumnMode: true, // for jfiddle small window size
+    float: false,
+    acceptWidgets: true,
+}
+let grid = GridStack.init(opts);
+
+
+
+GridStack.init(opts, document.getElementById('grid1'))
+
+GridStack.init(opts, document.getElementById('grid2'))
+
+  </script>
+
+
+
+<script type="text/javascript">
+  let grid = GridStack.init({minRow: 1, cellHeight: 70}); // don't let it collapse when empty
+  
+  grid.on('added removed change', function(e, items) {
+    let str = '';
+    items.forEach(function(item) { str += ' (x,y)=' + item.x + ',' + item.y; });
+    console.log(e.type + ' ' + items.length + ' items:' + str );
+  });
+
+  let serializedData = [
+    {x: 0, y: 0, w: 2, h: 2, id: '0'},
+    {x: 3, y: 1, h: 2, id: '1', content: "<button onclick=\"alert('clicked!')\">Press me</button>"},
+    {x: 4, y: 1, id: '2'},
+    {x: 2, y: 3, w: 3, id: '3'},
+    {x: 1, y: 3, id: '4'}
+  ];
+  serializedData.forEach((n, i) =>
+    n.content = `<button onClick="grid.removeWidget(this.parentNode.parentNode)">X</button><br> ${i}<br> ${n.content ? n.content : ''}`);
+  let serializedFull;
+
+  // 2.x method - just saving list of widgets with content (default)
+  loadGrid = function() {
+    grid.load(serializedData, true); // update things
+  }
+
+  // 2.x method
+  saveGrid = function() {
+    delete serializedFull;
+    serializedData = grid.save();
+    document.querySelector('#saved-data').value = JSON.stringify(serializedData, null, '  ');
+  }
+
+  // 3.1 full method saving the grid options + children (which is recursive for nested grids)
+  saveFullGrid = function() {
+    serializedFull = grid.save(true, true);
+    serializedData = serializedFull.children;
+    document.querySelector('#saved-data').value = JSON.stringify(serializedFull, null, '  ');
+  }
+
+  // 3.1 full method to reload from scratch - delete the grid and add it back from JSON
+  loadFullGrid = function() {
+    if (!serializedFull) return;
+    grid.destroy(true); // nuke everything
+    grid = GridStack.addGrid(document.querySelector('#gridCont'), serializedFull)
+  }
+
+  clearGrid = function() {
+    grid.removeAll();
+  }
+
+  loadGrid();
+</script>
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
