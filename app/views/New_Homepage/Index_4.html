@@ -141,9 +141,7 @@
   display: block;
 }
 
-.govuk-link:link, a:link {
-    color: #00703C;
-}
+
 
 .container-fluid {
   max-width: 1280px;
@@ -339,8 +337,9 @@ text-decoration: underline;
 
 .notificationContent {
   padding: 20px;
-  width:316px;
+  width:290px;
   margin-bottom: 0px;
+  background: #fff;
 }
 
 .notificationTopRow {
@@ -426,6 +425,7 @@ padding-bottom: 3px;
 .myAccountContent {
   width:177px;
   padding: 25px;
+  background: #ffffff;
 }
 
 .myAccountContent a {
@@ -580,6 +580,21 @@ display:none;
     border-radius: 0px;
 }
 
+.parent {display: block;position: relative;float: left;line-height: 70px;}
+.parent a{margin: 20px;color: #FFFFFF;text-decoration: none;}
+.parent:hover > ul {display:block;position:absolute;border-bottom: 1px solid #cccccc;}
+.child {display: none;}
+.child li {background-color: #ffffff;line-height: 40px;border-right:#CCC 1px solid; width:100%;}
+.child li a{color: #00703C; font-weight:700;font-size:15px;}
+ul{list-style: none;margin: 0;padding: 0px; min-width:10em;}
+ul ul ul{left: 100%;top: 0;margin-left:1px;}
+li:hover {background-color: #0ba961;}
+.parent li:hover {background-color: #F0F0F0;}
+.expand{font-size:12px;float:right;margin-right:5px;}
+
+.govuk-link:link, a:link {
+    color: #00703C;
+}
 </style>
 
 
@@ -595,112 +610,126 @@ display:none;
     padding-left: 30px;
     padding-top: 11px;
     padding-bottom: 5px;">
-  
-  <div class="navbar">
-    <a>Home</a>
-  
-    <div class="dropdown2">
-      <button class="dropbtn2">Services
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content2">
-        <a href="#">Applications</a>
-        <a href="#">Information services</a>
-        <a href="#">Land charge services</a>
-        <a href="#">Document registration service</a>
-        <a href="#">Respond to requisition</a>
-        <a href="#">Network services</a>
-        <a href="#">General facilities</a>
-        <a href="#">Administrative services</a>
-      </div>
-    </div>
-  
-    <a>News</a>
-  
-    <div class="dropdown2">
-      <button class="dropbtn2">Notifications <span class="notificationNavNumber">2</span>
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content2">
-  
-          <div class="notificationContent govuk-body">
-  
-  
-            <div class="NotificationSingle">
-                <div class="notificationTopRow">
-                    <div class="notificationTitle">
-                      New Requisition
-                    </div>
-                    <div class="notificationTime">
-                      6 minutes ago
-                    </div>
-              </div>
-                <div class="notification2ndLine">
-                  <b>Title number:</b> CC78908
-                </div>
-                <div class="notificationLink">
-                  <a href="#">Respond to requisition</a>
-                </div>
-            </div>
-  
-  
-            <div class="NotificationSingleLast">
+    
+    <ul id="menu" style="float:right;">
+        <li class="parent"><a href="#">Home</a></li>
+        <li class="parent"><a href="#">Services <i class="fas fa-angle-down"></i></a>
+        <ul class="child">
+            <li class="parent"><a href="#">Applications <span class="expand"><i class="fas fa-angle-right"></i></span></a>
+                <ul class="child">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Link 5</a></li>
+                <li><a href="#">Link 6</a></li>
+                <li><a href="#">Link 8</a></li>
+                <li><a href="#">Link 9</a></li>
+                </ul>
+
+            </li>
+            <li class="parent"><a href="#">Service 3</a>
+
+            </li>
+            <li class="parent"><a href="#">Service 4</a>
+            </li>
+            <li class="parent"><a href="#">Service 5</a>
+            </li>
+            <li class="parent"><a href="#">Service 6</a>
+
+            </li>
+            <li class="parent"><a href="#">Service 7</a>
+
+            </li>
+            <li class="parent"><a href="#">Service 8</a>
+
+            </li>
+
+        </ul>
+        </li>
+        <li class="parent"><a href="#">News</a></li>
+        <li class="parent"><a href="#">Notifications <i class="fas fa-angle-down"></i></a>
+        <ul class="child">
+            <div class="notificationContent govuk-body">
+
+
+          <div class="NotificationSingle">
               <div class="notificationTopRow">
                   <div class="notificationTitle">
-                    New PDF Available
+                    New Requisition
                   </div>
                   <div class="notificationTime">
-                    12 minutes ago
+                    6 minutes ago
                   </div>
             </div>
               <div class="notification2ndLine">
-                <b>Official Copy</b>
+                <b>Title number:</b> CC78908
               </div>
               <div class="notificationLink">
-                <a href="#">Download</a>
+                <a href="#" style="margin:0px;">Respond to requisition</a>
               </div>
           </div>
-  
-  
+
+
+          <div class="NotificationSingleLast">
+            <div class="notificationTopRow">
+                <div class="notificationTitle">
+                  New PDF Available
+                </div>
+                <div class="notificationTime">
+                  12 minutes ago
+                </div>
           </div>
-  
-  
-      </div>
-    </div>
-  
-  
-    <div class="dropdown2">
-        <button class="dropbtn2"> <img src="/public/images/Andy_Small.png" alt="Profile Picture" style="vertical-align: middle;padding-right: 10px;">Andy Carr
-          <i class="fa fa-caret-down" style="margin-left:20px;"></i>
-        </button>
-        <div class="dropdown-content2">
-  
-          <div class="myAccountContent">
-  
-            <div>
-              <div class="myAccountTitle" style="padding-bottom:3px;">
-                Logged in as
-              </div>
-              <div class="myAccount2ndLine">
-                 Administrator
-              </div>
+            <div class="notification2ndLine">
+              <b>Official Copy</b>
             </div>
-            <hr>
-            <div class="myAccountLinks">
-              <a href="#">My profile</a>
-              <hr>
-              <a href="#" style="margin-bottom: 5px;">Contact Us</a>
-  
-              <a href="#">Contact your BUA</a>
-  
-              <button id="logOut" class="govuk-button" >Log out</button>
+            <div class="notificationLink">
+              <a href="#" style="margin:0px;">Download</a>
             </div>
-          </div>
-  
         </div>
-      </div>
-  
-  </div>
+
+
+        </div>
+        </ul>
+        
+        </li>
+
+        <li class="parent" style="min-width: 227px;"><a href="#"><img src="/public/images/Andy_Small.png" alt="Profile Picture" style="vertical-align: middle;padding-right: 10px;">Andy Carr <i class="fas fa-angle-down" style="margin-left:20px;"></i></a>
+            <ul class="child">
+        
+        
+        
+        
+            <div class="govuk-body myAccountContent">
+
+                <div>
+                  <div class="myAccountTitle" style="padding-bottom:3px;">
+                    Logged in as
+                  </div>
+                  <div class="myAccount2ndLine">
+                     Administrator
+                  </div>
+                </div>
+                <hr>
+                <div class="myAccountLinks">
+                  <a href="#" style="margin:0px;">My profile</a>
+                  <hr>
+                  <a href="#" style="margin:0px; margin-bottom: 5px;">Contact Us</a><br>
+      
+                  <a href="#" style="margin:0px;">Contact your BUA</a>
+      
+                  <button id="logOut" class="govuk-button" >Log out</button>
+                </div>
+              </div>
+        
+        
+        </ul>
+        
+        
+        </li>
+    </ul>
+
+
   </div>
 
 <!-- Navigation Menu - End -->
@@ -742,7 +771,7 @@ display:none;
             <div class="linkTextSection">
                 <div class="linkTextTitle" id="value-heading0">No Data</div>
                 <div class="linkTextDescription" id="value-subheading0">No Data</div>
-                <div class="linkTextLink"><a id="value-label0" href='#'>No Data</a></div>
+                <div class="linkTextLink"><a id="value-label0" style="color: #00703C" href='#'>No Data</a></div>
             </div>
         </div>
 
@@ -751,7 +780,7 @@ display:none;
             <div class="linkTextSection">
                 <div class="linkTextTitle" id="value-heading1">No Data</div>
                 <div class="linkTextDescription" id="value-subheading1">No Data</div>
-                <div class="linkTextLink"><a id="value-label1" href='#'>No Data</a></div>
+                <div class="linkTextLink"><a id="value-label1" style="color: #00703C" href='#'>No Data</a></div>
             </div>
         </div>
 
@@ -760,7 +789,7 @@ display:none;
             <div class="linkTextSection">
                 <div class="linkTextTitle" id="value-heading2">No Data</div>
                 <div class="linkTextDescription" id="value-subheading2">No Data</div>
-                <div class="linkTextLink"><a id="value-label2" href='#'>No Data</a></div>
+                <div class="linkTextLink"><a id="value-label2" style="color: #00703C" href='#'>No Data</a></div>
             </div>
         </div>
 
@@ -769,7 +798,7 @@ display:none;
             <div class="linkTextSection">
                 <div class="linkTextTitle" id="value-heading3">No Data</div>
                 <div class="linkTextDescription" id="value-subheading3">No Data</div>
-                <div class="linkTextLink"><a id="value-label3" href='#'>No Data</a></div>
+                <div class="linkTextLink"><a id="value-label3" style="color: #00703C" href='#'>No Data</a></div>
             </div>
         </div>
 
@@ -778,7 +807,7 @@ display:none;
             <div class="linkTextSection">
                 <div class="linkTextTitle" id="value-heading4">No Data</div>
                 <div class="linkTextDescription" id="value-subheading4">No Data</div>
-                <div class="linkTextLink"><a id="value-label4" href='#'>No Data</a></div>
+                <div class="linkTextLink"><a id="value-label4" style="color: #00703C" href='#'>No Data</a></div>
             </div>
         </div>
 
@@ -787,7 +816,7 @@ display:none;
             <div class="linkTextSection">
                 <div class="linkTextTitle" id="value-heading5">No Data</div>
                 <div class="linkTextDescription" id="value-subheading5">No Data</div>
-                <div class="linkTextLink"><a id="value-label5" href='#'>No Data</a></div>
+                <div class="linkTextLink"><a id="value-label5" style="color: #00703C" href='#'>No Data</a></div>
             </div>
         </div>
 
