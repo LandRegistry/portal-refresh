@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% extends "layout_unbranded5.html" %}
+{% extends "layout_unbranded7.html" %}
 {% from "checkboxes/macro.njk" import govukCheckboxes %}
 {% block pageTitle %} View my applications
 {% endblock %}
@@ -32,7 +32,9 @@
 
 <style>
 
-
+.govuk-footer {
+    padding: 25px;
+}
 
 /* Optional styles for demos */
 
@@ -570,6 +572,20 @@ hr {
   max-width: 1200px;
   margin:auto;
   padding: 60px 0px;
+}
+
+#currentDispatchPanel {
+  max-width: 1200px;
+  margin:auto;
+  padding: 60px 0px;
+}
+
+.dividerLine10 {
+  max-width: 1200px;
+  margin:auto;
+  height:10px;
+  background-color: #00703C;
+  display:block;
 }
 
 </style>
@@ -1165,30 +1181,62 @@ hr {
 
 
   
-      <div class="govuk-grid-row">
+  <div class="govuk-grid-row">
 
-        <div class="govuk-grid-column-one-third">
-          <h2 class="sectionTitle" style="margin-top: 0;">Service<br>Information</h2>
-        </div>
+    <div class="govuk-grid-column-one-third">
+      <h2 class="sectionTitle" style="margin-top: 0;">Service<br>Information</h2>
+    </div>
 
-        <div class="govuk-grid-column-two-thirds">
-          <h1 class="govuk-heading-m" style="margin-bottom: 5px;">Scheduled maintenance</h1>
-          <p class="govuk-body">Wednesday 17th February, 2021</p>
-          <p class="govuk-body"><b>Between 8pm and 11:59pm, intermittent interruptions are expected to affect:</b><br>
-            Local Land Charges Search (Business e-services)<br>
-            Local Land Charges Search (Business Gateway)<br>
-            Local Land Charges Search (GOV.UK)<br>
-            Local Land Charges Maintain<br>
-            <br>
-            <a href="#" style="color: #00703C !Important;">Maintenance schedule</a>
-          
-          
-          
-          
-          </p>
-        </div>
-  
-      </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-m" style="margin-bottom: 5px;">Scheduled maintenance</h1>
+      <p class="govuk-body">Wednesday 17th February, 2021</p>
+      <p class="govuk-body"><b>Between 8pm and 11:59pm, intermittent interruptions are expected to affect:</b><br>
+        Local Land Charges Search (Business e-services)<br>
+        Local Land Charges Search (Business Gateway)<br>
+        Local Land Charges Search (GOV.UK)<br>
+        Local Land Charges Maintain<br>
+        <br>
+        <a href="#" style="color: #00703C !Important;">Maintenance schedule</a>
+      
+      
+      
+      
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="dividerLine10">
+
+</div>
+
+
+<div id="currentDispatchPanel" class="govuk-body"">
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="sectionTitle" style="margin-top: 0;">Despatch <br>details</h2>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-m" style="margin-bottom: 5px;">Address</h1>
+      <p class="govuk-body">
+        (PRELIMINARY SERVICES)<br>
+        REGISTRY HOUSE<br>
+        POOLE<br>
+        DORSET<br>
+        DT12 3RD</p>
+      <p class="govuk-body">Any postal search results, official copies etc ordered through business e-services will be sent to this address is changed. See Administrative services.</p>
+
+      <h1 class="govuk-heading-m" style="margin-bottom: 5px;">Direct Debit</h1>
+      <p class="govuk-body">
+        All charges incurred will be charged to the default Variable Direct Debit (Key #3233495) unless this is changed. See Administrative services.</p>
+
+    </div>
+
+  </div>
 
 </div>
 

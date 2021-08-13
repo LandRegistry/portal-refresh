@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% extends "layout_unbranded5.html" %}
+{% extends "layout_unbranded7.html" %}
 {% from "checkboxes/macro.njk" import govukCheckboxes %}
 {% block pageTitle %} View my applications
 {% endblock %}
@@ -34,7 +34,9 @@
 
 <style>
 
-
+.govuk-footer {
+    padding: 25px;
+}
 
 /* Optional styles for demos */
 
@@ -56,7 +58,88 @@
     border-bottom: 0px solid #005ea5;
 }
 /* Navbar container */
+.navbar {
+  overflow: hidden;
 
+  font-family: Arial;
+  float: right;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    padding: 0px 25px;
+    text-decoration: none;
+    line-height: 70px;
+    font-weight: 400;
+}
+
+/* The dropdown container */
+.dropdown2 {
+  float: left;
+  overflow: hidden;
+}
+
+
+.dropdown2 .dropbtn2 {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0px 25px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    line-height: 70px;
+    font-weight: 400;
+}
+
+.dropdown2 .dropbtn2:hover {
+    background-color: #1F8153;
+  cursor: pointer;
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn2 {
+  background-color: #2b9462;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-top: 0px solid #005ea5;
+}
+
+/* Links inside the dropdown */
+.dropdown-content2 a {
+  float: none;
+  color: #00703C;
+  padding: 0px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    line-height: 50px;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content2 a:hover {
+    background-color: #1F8153;
+    color: #fff;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown2:hover .dropdown-content2 {
+  display: block;
+}
 
 .govuk-link:link, a:link {
     color: #00703C;
@@ -341,9 +424,8 @@ padding-bottom: 3px;
 }
 
 .myAccountContent {
-  width:183px;
+  width:177px;
   padding: 25px;
-   background: #fff;
 }
 
 .myAccountContent a {
@@ -369,11 +451,11 @@ hr {
 }
 
 .govuk-form-group-links {
-    width: 26%;
+    width: 29%;
     float: left;
     margin-right: 2%;
     margin-bottom: 1%;
-    padding: 2%;
+    padding: 2% 0% 2% 2%;
 }
 
 .govuk-form-group-links:hover {
@@ -448,86 +530,19 @@ display:none;
   padding: 60px 0px;
 }
 
-
-/* New nav bar */
-
-nav {
-    background-color: #008548;
-    width: fit-content;
-    float: right;
-    position: absolute;
-    right: 0px;
-    top: 0;
-    z-index: 99999;
-}
-nav ul {
- padding: 0;
- margin: 0;
- list-style: none;
- position: relative;
- } 
-nav ul li {
- display:inline-block;
- }
-nav a {
- display:block;
- padding:15px 25px; 
- font-size:20px;
- line-height: 40px;
- color: #008548;
- text-decoration:none;
-}
-nav a:hover { 
- background-color: #008548;
- color:#ffffff; 
-}
-nav ul ul {
- display: none;
- position: absolute; 
- top: 70px; 
-} 
-nav ul li:hover > ul {
- display:inherit;
-
-} 
-nav ul ul li {
- width:270px;
- float:none;
- display:list-item;
- position: relative;
- color: #008548;
- background: #ffffff;
+#currentDispatchPanel {
+  max-width: 1200px;
+  margin:auto;
+  padding: 60px 0px;
 }
 
-nav ul ul li a {
-padding: 10px 25px;
+.dividerLine10 {
+  max-width: 1200px;
+  margin:auto;
+  height:10px;
+  background-color: #00703C;
+  display:block;
 }
-
-nav ul ul li a:hover {
- color: #ffffff;
- background: #008548;
-}
-
-nav ul ul ul ul {
-padding: 5px 0px;
-}
-
-nav ul ul ul li {
- position: relative;
- top:-70px; 
- left:270px;
- color: #008548;
- background: #ffffff;
- line-height: 25px;
- min-width: 325px;
-}
-
-nav ul ul ul li a {
- line-height: 25px;
- padding: 18px 25px;
-}
-
-
 
 </style>
 
@@ -537,6 +552,7 @@ nav ul ul ul li a {
 <div>
 
 <!-- Navigation Menu - Start -->
+
 <div class="navbar-container">
 
   <img src="/public/images/Logo-Mono.png" alt="hmlrlogo" style="height: 50px;
@@ -544,80 +560,15 @@ nav ul ul ul li a {
   padding-top: 11px;
   padding-bottom: 5px;">
 
-
-
-        <nav>
-            <ul>
-                <li><a style="color:#ffffff !Important;" href="#">Home</a></li>
-                <li><a style="color:#ffffff !Important;" href="#">Services <i style="margin-left: 5px;" class="fas fa-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="#">View My Applications</a></li>
-                        <li><a href="#">Information Services<i style="float: right;padding-top: 10px;padding-left: 25px;" class="fas fa-chevron-right"></i></a>
-         
-                    <ul>
-                        <li><a href="#">Request Official Copies</a></li>
-                        <li><a href="#">Official Search of Whole with Priority</a></li>
-                        <li><a href="#">Official Search of Whole without Priority</a></li>
-                        <li><a href="#">Withdraw Official Search of Whole with Priority</a></li>
-                        <li><a href="#">Local Land Charges Search</a></li>
-                        <li><a href="#">Map Search</a></li>
-                        <li><a href="#">Application Enquiry</a></li>
-                        <li><a href="#">Search of the Index Map</a></li>
-                        <li><a href="#">Home Rights Search</a></li>
-                        <li><a href="#">Search of the Index of Relating Franchies and Manors</a></li>
-                        <li><a href="#">Enquiry by Property Description - Title View</a></li>
-                        <li><a href="#">Register View - PDF</a></li>
-                        <li><a href="#">Register View - HTML</a></li>
-                        <li><a href="#">Title Plan View</a></li>
-                        <li><a href="#">Document View</a></li>
-                        <li><a href="#">Request Historical Copies</a></li>
-                    </ul>       
-                </li>
-            </ul> 
-                <li><a style="color:#ffffff !Important;" href="#">News</a></li>
-
-                <li><a style="color:#ffffff !Important;" href="#">Notifications <span class="notificationNavNumber">2</span>
-                    <i style="margin-left: 5px;" class="fas fa-chevron-down"></i></a>
-                     <ul>
-                        <li><a href="#">Photoshop</a></li>
-                        <li><a href="#">Illustrator</a></li>
-                        <li><a href="#">Adobe XD</a></li>
-                    </ul>  
-                </li>
-                
-                <li><a style="color:#ffffff !Important;" href="#"><img src="/public/images/Andy_Small.png" alt="Profile Picture" style="vertical-align: middle;padding-right: 10px;">Andy Carr
-                    <i style="margin-left: 20px;" class="fas fa-chevron-down"></i></a>
-                
-                    <ul>
-                        <div class="myAccountContent govuk-body">
-
-                            <div>
-                              <div class="myAccountTitle" style="padding-bottom:3px;">
-                                Logged in as
-                              </div>
-                              <div class="myAccount2ndLine">
-                                 Administrator
-                              </div>
-                            </div>
-                            <hr>
-                            <div class="myAccountLinks">
-                              <a href="#">My profile</a>
-                              <hr>
-                              <a href="#" style="margin-bottom: 5px;">Contact Us</a>
-                  
-                              <a href="#">Contact your BUA</a>
-                  
-                              <button id="logOut" class="govuk-button" >Log out</button>
-                            </div>
-                          </div>
-                    </ul> 
-                
-                </li>
-            </ul>
-        </nav>
-
+<div class="navbar">
+  <div class="navbar">
+    <a style="color:#ffffff !important;" href="https://imediaux.com/homepage-set-up-questions/">Proceed to next steps <i style="padding-left: 5px;" class="fas fa-chevron-right"></i></a>
+  </div>
 
 </div>
+
+</div>
+
 <!-- Navigation Menu - End -->
 
 <!-- Content Area - Start -->
@@ -645,7 +596,7 @@ nav ul ul ul li a {
 
       <!-- Filters and Search Section - Start -->
       <p class="sectionTitle" style="margin-bottom: 20px;margin-left: 2%;">My Services</p> 
-
+      
 
 <div id="linksDisplay">
     <div class="service-values">
@@ -706,33 +657,6 @@ nav ul ul ul li a {
             </div>
         </div>
 
-        <div class="govuk-form-group-links" id="value6">
-            <div class="linkIcon" id="value-icon6">No Data</div>
-            <div class="linkTextSection">
-                <div class="linkTextTitle" id="value-heading6">No Data</div>
-                <div class="linkTextDescription" id="value-subheading6">No Data</div>
-                <div class="linkTextLink"><a id="value-label6" href='#'>No Data</a></div>
-            </div>
-        </div>
-
-        <div class="govuk-form-group-links" id="value7">
-            <div class="linkIcon" id="value-icon7">No Data</div>
-            <div class="linkTextSection">
-                <div class="linkTextTitle" id="value-heading7">No Data</div>
-                <div class="linkTextDescription" id="value-subheading7">No Data</div>
-                <div class="linkTextLink"><a id="value-label7" href='#'>No Data</a></div>
-            </div>
-        </div>
-
-        <div class="govuk-form-group-links" id="value8">
-            <div class="linkIcon" id="value-icon8">No Data</div>
-            <div class="linkTextSection">
-                <div class="linkTextTitle" id="value-heading8">No Data</div>
-                <div class="linkTextDescription" id="value-subheading8">No Data</div>
-                <div class="linkTextLink"><a id="value-label8" href='#'>No Data</a></div>
-            </div>
-        </div>
-
 
 
 
@@ -743,102 +667,127 @@ nav ul ul ul li a {
 
 
           <div class="govuk-form-group">
-            <label class="govuk-label form-label-bold form-label-bold" for="input0">
+            <label class="govuk-label form-label-bold" for="input0">
               Position 1
             </label>
             <select class="govuk-select selects" name="input0" id="input0">
-                <option value="placeholder">Select a link...</option>
+              <option value="placeholder">Select a link...</option>
               <option value="appenquiry">Application Enquiry</option>
-              <option value="drs" selected>Digital Registration Service</option>
+              <option value="drs">Digital Registration Service</option>
               <option value="lcs">Land Charge Services</option>
-              <option value="mapsearch">Map Search</option>
-              <option value="officialcopies">Official Copies</option>
-              <option value="officialsearches">Official Searches</option>
+              <option value="mapsearch">MapSearch</option>
+              <option value="officialSearchOfPart">Official Search of Part (OS2)</option>
+              <option value="officialSearchOfWhole">Official Search of Whole (OS1)</option>
               <option value="pdf">PDF Downloads</option>
+              <option value="registerViewHTML">Register View - HTML</option>
+              <option value="registerViewPDF">Register View - PDF</option>
               <option value="requesthistorical">Request Historical Copies</option>
+              <option value="officialcopies">Request Official Copies</option>
+              <option value="searchOfTheIndexMap">Search of the Index Map</option>
+              <option value="titlePlanView">Title Plan View</option>
               <option value="vma">View My Applications</option>
             </select>
           </div>
 
 
           <div class="govuk-form-group">
-            <label class="govuk-label form-label-bold form-label-bold" for="input1">
+            <label class="govuk-label form-label-bold" for="input1">
               Position 2
             </label>
             <select class="govuk-select selects" name="input1" id="input1">
-                <option value="placeholder">Select a link...</option>
-                <option value="appenquiry">Application Enquiry</option>
-                <option value="drs">Digital Registration Service</option>
-                <option value="lcs">Land Charge Services</option>
-                <option value="mapsearch">Map Search</option>
-                <option value="officialcopies">Official Copies</option>
-                <option value="officialsearches">Official Searches</option>
-                <option value="pdf">PDF Downloads</option>
-                <option value="requesthistorical">Request Historical Copies</option>
-                <option value="vma" selected>View My Applications</option>
+              <option value="placeholder">Select a link...</option>
+              <option value="appenquiry">Application Enquiry</option>
+              <option value="drs">Digital Registration Service</option>
+              <option value="lcs">Land Charge Services</option>
+              <option value="mapsearch">MapSearch</option>
+              <option value="officialSearchOfPart">Official Search of Part (OS2)</option>
+              <option value="officialSearchOfWhole">Official Search of Whole (OS1)</option>
+              <option value="pdf">PDF Downloads</option>
+              <option value="registerViewHTML">Register View - HTML</option>
+              <option value="registerViewPDF">Register View - PDF</option>
+              <option value="requesthistorical">Request Historical Copies</option>
+              <option value="officialcopies">Request Official Copies</option>
+              <option value="searchOfTheIndexMap">Search of the Index Map</option>
+              <option value="titlePlanView">Title Plan View</option>
+              <option value="vma">View My Applications</option>
             </select>
           </div>
 
 
           <div class="govuk-form-group">
-            <label class="govuk-label form-label-bold form-label-bold" for="input2">
+            <label class="govuk-label form-label-bold" for="input2">
               Position 3
             </label>
             <select class="govuk-select selects" name="input2" id="input2">
-                <option value="placeholder">Select a link...</option>
-                <option value="appenquiry">Application Enquiry</option>
-                <option value="drs">Digital Registration Service</option>
-                <option value="lcs">Land Charge Services</option>
-                <option value="mapsearch">Map Search</option>
-                <option value="officialcopies">Official Copies</option>
-                <option value="officialsearches">Official Searches</option>
-                <option value="pdf" selected>PDF Downloads</option>
-                <option value="requesthistorical">Request Historical Copies</option>
-                <option value="vma">View My Applications</option>
+              <option value="placeholder">Select a link...</option>
+              <option value="appenquiry">Application Enquiry</option>
+              <option value="drs">Digital Registration Service</option>
+              <option value="lcs">Land Charge Services</option>
+              <option value="mapsearch">MapSearch</option>
+              <option value="officialSearchOfPart">Official Search of Part (OS2)</option>
+              <option value="officialSearchOfWhole">Official Search of Whole (OS1)</option>
+              <option value="pdf">PDF Downloads</option>
+              <option value="registerViewHTML">Register View - HTML</option>
+              <option value="registerViewPDF">Register View - PDF</option>
+              <option value="requesthistorical">Request Historical Copies</option>
+              <option value="officialcopies">Request Official Copies</option>
+              <option value="searchOfTheIndexMap">Search of the Index Map</option>
+              <option value="titlePlanView">Title Plan View</option>
+              <option value="vma">View My Applications</option>
             </select>
           </div>
 
 
           <div class="govuk-form-group">
-            <label class="govuk-label form-label-bold form-label-bold" for="input3">
+            <label class="govuk-label form-label-bold" for="input3">
               Position 4
             </label>
             <select class="govuk-select selects" name="input3" id="input3">
-                <option value="placeholder">Select a link...</option>
-                <option value="appenquiry">Application Enquiry</option>
-                <option value="drs">Digital Registration Service</option>
-                <option value="lcs">Land Charge Services</option>
-                <option value="mapsearch">Map Search</option>
-                <option value="officialcopies">Official Copies</option>
-                <option value="officialsearches" selected>Official Searches</option>
-                <option value="pdf">PDF Downloads</option>
-                <option value="requesthistorical">Request Historical Copies</option>
-                <option value="vma">View My Applications</option>
+              <option value="placeholder">Select a link...</option>
+              <option value="appenquiry">Application Enquiry</option>
+              <option value="drs">Digital Registration Service</option>
+              <option value="lcs">Land Charge Services</option>
+              <option value="mapsearch">MapSearch</option>
+              <option value="officialSearchOfPart">Official Search of Part (OS2)</option>
+              <option value="officialSearchOfWhole">Official Search of Whole (OS1)</option>
+              <option value="pdf">PDF Downloads</option>
+              <option value="registerViewHTML">Register View - HTML</option>
+              <option value="registerViewPDF">Register View - PDF</option>
+              <option value="requesthistorical">Request Historical Copies</option>
+              <option value="officialcopies">Request Official Copies</option>
+              <option value="searchOfTheIndexMap">Search of the Index Map</option>
+              <option value="titlePlanView">Title Plan View</option>
+              <option value="vma">View My Applications</option>
             </select>
           </div>
 
 
           <div class="govuk-form-group">
-            <label class="govuk-label form-label-bold form-label-bold" for="input4">
+            <label class="govuk-label form-label-bold" for="input4">
               Position 5
             </label>
             <select class="govuk-select selects" name="input4" id="input4">
-                <option value="placeholder">Select a link...</option>
-                <option value="appenquiry">Application Enquiry</option>
-                <option value="drs">Digital Registration Service</option>
-                <option value="lcs">Land Charge Services</option>
-                <option value="mapsearch">Map Search</option>
-                <option value="officialcopies">Official Copies</option>
-                <option value="officialsearches" selected>Official Searches</option>
-                <option value="pdf">PDF Downloads</option>
-                <option value="requesthistorical">Request Historical Copies</option>
-                <option value="vma">View My Applications</option>
+              <option value="placeholder">Select a link...</option>
+              <option value="appenquiry">Application Enquiry</option>
+              <option value="drs">Digital Registration Service</option>
+              <option value="lcs">Land Charge Services</option>
+              <option value="mapsearch">MapSearch</option>
+              <option value="officialSearchOfPart">Official Search of Part (OS2)</option>
+              <option value="officialSearchOfWhole">Official Search of Whole (OS1)</option>
+              <option value="pdf">PDF Downloads</option>
+              <option value="registerViewHTML">Register View - HTML</option>
+              <option value="registerViewPDF">Register View - PDF</option>
+              <option value="requesthistorical">Request Historical Copies</option>
+              <option value="officialcopies">Request Official Copies</option>
+              <option value="searchOfTheIndexMap">Search of the Index Map</option>
+              <option value="titlePlanView">Title Plan View</option>
+              <option value="vma">View My Applications</option>
             </select>
           </div>
 
 
           <div class="govuk-form-group">
-            <label class="govuk-label form-label-bold form-label-bold" for="input5">
+            <label class="govuk-label form-label-bold" for="input5">
               Position 6
             </label>
             <select class="govuk-select selects" name="input5" id="input5">
@@ -846,70 +795,19 @@ nav ul ul ul li a {
                 <option value="appenquiry">Application Enquiry</option>
                 <option value="drs">Digital Registration Service</option>
                 <option value="lcs">Land Charge Services</option>
-                <option value="mapsearch" selected>Map Search</option>
-                <option value="officialcopies">Official Copies</option>
-                <option value="officialsearches">Official Searches</option>
+                <option value="mapsearch">MapSearch</option>
+                <option value="officialSearchOfPart">Official Search of Part (OS2)</option>
+                <option value="officialSearchOfWhole">Official Search of Whole (OS1)</option>
                 <option value="pdf">PDF Downloads</option>
+                <option value="registerViewHTML">Register View - HTML</option>
+                <option value="registerViewPDF">Register View - PDF</option>
                 <option value="requesthistorical">Request Historical Copies</option>
+                <option value="officialcopies">Request Official Copies</option>
+                <option value="searchOfTheIndexMap">Search of the Index Map</option>
+                <option value="titlePlanView">Title Plan View</option>
                 <option value="vma">View My Applications</option>
             </select>
           </div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label form-label-bold form-label-bold" for="input6">
-              Position 7
-            </label>
-            <select class="govuk-select selects" name="input6" id="input6">
-                <option selected value="placeholder">Select a link...</option>
-                <option value="appenquiry">Application Enquiry</option>
-                <option value="drs">Digital Registration Service</option>
-                <option value="lcs">Land Charge Services</option>
-                <option value="mapsearch">Map Search</option>
-                <option value="officialcopies">Official Copies</option>
-                <option value="officialsearches">Official Searches</option>
-                <option value="pdf">PDF Downloads</option>
-                <option value="requesthistorical">Request Historical Copies</option>
-                <option value="vma">View My Applications</option>
-            </select>
-          </div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label form-label-bold form-label-bold" for="input7">
-              Position 8
-            </label>
-            <select class="govuk-select selects" name="input7" id="input7">
-                <option selected value="placeholder">Select a link...</option>
-                <option value="appenquiry">Application Enquiry</option>
-                <option value="drs">Digital Registration Service</option>
-                <option value="lcs">Land Charge Services</option>
-                <option value="mapsearch">Map Search</option>
-                <option value="officialcopies">Official Copies</option>
-                <option value="officialsearches">Official Searches</option>
-                <option value="pdf">PDF Downloads</option>
-                <option value="requesthistorical">Request Historical Copies</option>
-                <option value="vma">View My Applications</option>
-            </select>
-          </div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label form-label-bold form-label-bold" for="input8">
-              Position 9
-            </label>
-            <select class="govuk-select selects" name="input8" id="input8">
-                <option selected value="placeholder">Select a link...</option>
-                <option value="appenquiry">Application Enquiry</option>
-                <option value="drs">Digital Registration Service</option>
-                <option value="lcs">Land Charge Services</option>
-                <option value="mapsearch">Map Search</option>
-                <option value="officialcopies">Official Copies</option>
-                <option value="officialsearches">Official Searches</option>
-                <option value="pdf">PDF Downloads</option>
-                <option value="requesthistorical">Request Historical Copies</option>
-                <option value="vma">View My Applications</option>
-            </select>
-          </div>
-
-
 
 
 </div>
@@ -1016,6 +914,38 @@ nav ul ul ul li a {
 
 </div>
 
+<div class="dividerLine10">
+
+</div>
+
+
+<div id="currentDispatchPanel" class="govuk-body"">
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="sectionTitle" style="margin-top: 0;">Despatch <br>details</h2>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-m" style="margin-bottom: 5px;">Address</h1>
+      <p class="govuk-body">
+        (PRELIMINARY SERVICES)<br>
+        REGISTRY HOUSE<br>
+        POOLE<br>
+        DORSET<br>
+        DT12 3RD</p>
+      <p class="govuk-body">Any postal search results, official copies etc ordered through business e-services will be sent to this address is changed. See Administrative services.</p>
+
+      <h1 class="govuk-heading-m" style="margin-bottom: 5px;">Direct Debit</h1>
+      <p class="govuk-body">
+        All charges incurred will be charged to the default Variable Direct Debit (Key #3233495) unless this is changed. See Administrative services.</p>
+
+    </div>
+
+  </div>
+
+</div>
+
 
 
 
@@ -1024,91 +954,131 @@ nav ul ul ul li a {
 
 <!-- Content Area - End -->
 
-        <script>
+<script>
 
-const data = [
-{ 
-    id: 'blank', 
-    icon:'',
-    heading:'', 
-    subheading: '', 
-    label: '', 
-    href: ''
-  },
-{ 
-    id: 'appenquiry', 
-    icon:'<img src="/public/images/Icon_link.png">',
-    heading: 'Application Enquiry', 
-    subheading: 'Request information regarding your applications', 
-    label: 'Make Enquiry', 
-    href: '#'
-  },
+  const data = [
   { 
-    id: 'drs', 
-    icon:'<img src="/public/images/Icon_DRS.png">',
-    heading: 'Digital Registration Service', 
-    subheading: 'Submit applications to HM Land Registry online', 
-    label: 'Submit Applications', 
-    href: '#'
-  },
-
-  { 
-    id: 'lcs', 
-    icon:'<img src="/public/images/Icon_LandCharge.png">',
-    heading: 'Land Charge Services', 
-    subheading: 'Access information from the Land Register or apply for searches', 
-    label: 'Start new search', 
-    href: '#'
-  },
-  { 
-    id: 'mapsearch',
-    icon:'<img src="/public/images/Icon_MapSearch.png">', 
-    heading: 'Map Search', 
-    subheading: 'Find out if a property is registered, its location, title number & tenure details', 
-    label: 'Start search', 
-    href: '#'
-  },
-  { 
-    id: 'officialcopies',
-    icon:'<img src="/public/images/Icon_OfficialCopies.png">', 
-    heading: 'Official Copies', 
-    subheading: 'Request official copies of a register, title plan and/or documents', 
-    label: 'Request a document', 
-    href: '#'
-  },
-  { 
-    id: 'officialsearches',
-    icon:'<img src="/public/images/Icon_link.png">', 
-    heading: 'Official Searches', 
-    subheading: 'Request official copies of a register, title plan and/or documents', 
-    label: 'Request a document', 
-    href: '#'
-  },
-  { 
-    id: 'pdf',
-    icon:'<img src="/public/images/Icon_PDF.png">', 
-    heading: 'PDF Downloads', 
-    subheading: 'Access your PDF downloads from the download centre', 
-    label: 'Download centre', 
-    href: '#'
-  },
-  { 
-    id: 'requesthistorical',
-    icon:'<img src="/public/images/Icon_link.png">', 
-    heading: 'Request Historical Copies', 
-    subheading: 'Request historical copies that will be delivered by post', 
-    label: 'Make Request', 
-    href: '#'
-  },
-  { 
-    id: 'vma',
-    icon:'<img src="/public/images/Icon_VMA.png">', 
-    heading: 'View My Applications', 
-    subheading: 'View the progress of your applications', 
-    label: 'View Applications', 
-    href: '#'
-  },
-]
+      id: 'blank', 
+      icon:'',
+      heading:'', 
+      subheading: '', 
+      label: '', 
+      href: ''
+    },
+    { 
+      id: 'officialcopies',
+      icon:'<img width="60" height="60" src="/public/images/icon_requestOfficialCopies.png">', 
+      heading: 'Request Official Copies', 
+      subheading: 'Request official copies of a register, title plan and/or documents', 
+      label: 'Request a document', 
+      href: '#'
+    },
+    { 
+      id: 'appenquiry', 
+      icon:'<img width="60" height="60" src="/public/images/icon_applicationEnquiry.png">',
+      heading: 'Application Enquiry', 
+      subheading: 'Request information regarding your applications', 
+      label: 'Make enquiry', 
+      href: '#'
+    },
+    { 
+      id: 'registerViewHTML',
+      icon:'<img width="60" height="60" src="/public/images/icon_registerViewHTML.png">', 
+      heading: 'Register View - HTML', 
+      subheading: 'The ability for a user to view a register in HTML', 
+      label: 'Request a document', 
+      href: '#'
+    },
+    { 
+      id: 'registerViewPDF',
+      icon:'<img width="60" height="60" src="/public/images/icon_registerViewPDF.png">', 
+      heading: 'Register View - PDF', 
+      subheading: 'The ability for a user to view a register as a PDF', 
+      label: 'Request a document', 
+      href: '#'
+    },
+    { 
+      id: 'officialSearchOfWhole',
+      icon:'<img width="60" height="60" src="/public/images/icon_officialSearchOfWholeOS1.png">', 
+      heading: 'Official Search of Whole (OS1)', 
+      subheading: 'Protect a transaction for value on the whole of the land', 
+      label: 'Start new search', 
+      href: '#'
+    },
+    { 
+      id: 'officialSearchOfPart',
+      icon:'<img width="60" height="60" src="/public/images/icon_officialSearchOfPartOS2.png">', 
+      heading: 'Official Search of Part (OS2)', 
+      subheading: 'Protect a transaction for value on the part of the land', 
+      label: 'Start new search', 
+      href: '#'
+    },
+    { 
+      id: 'vma',
+      icon:'<img width="60" height="60" src="/public/images/icon_viewMyApplications.png">', 
+      heading: 'View My Applications', 
+      subheading: 'View the progress of your applications', 
+      label: 'View applications', 
+      href: '#'
+    },
+    { 
+      id: 'titlePlanView',
+      icon:'<img width="60" height="60" src="/public/images/icon_titlePlanView.png">',
+      heading: 'Title Plan view ', 
+      subheading: 'This enables you to view the title plan of a registered title ', 
+      label: 'View title plan', 
+      href: '#'
+    },
+    { 
+      id: 'mapsearch',
+      icon:'<img width="60" height="60" src="/public/images/icon_mapSearch2.png">', 
+      heading: 'MapSearch', 
+      subheading: 'Find out if a property is registered, its location, title number & tenure details', 
+      label: 'Start search', 
+      href: '#'
+    },
+    { 
+      id: 'searchOfTheIndexMap',
+      icon:'<img width="60" height="60" src="/public/images/icon_searchOfTheIndexMap.png">', 
+      heading: 'Search of the Index Map', 
+      subheading: 'Find out if a piece of land or property is registered with the Land Registry', 
+      label: 'Start search', 
+      href: '#'
+    },
+    { 
+      id: 'pdf',
+      icon:'<img width="60" height="60" src="/public/images/icon_pdfDownloads.png">', 
+      heading: 'PDF Downloads', 
+      subheading: 'Access your PDF downloads from the download centre', 
+      label: 'Download centre', 
+      href: '#'
+    },
+    { 
+      id: 'requesthistorical',
+      icon:'<img width="60" height="60" src="/public/images/icon_requestHistoricalCopies.png">', 
+      heading: 'Request Historical Copies', 
+      subheading: 'Request historical copies that will be delivered by post', 
+      label: 'Make Request', 
+      href: '#'
+    },
+    { 
+      id: 'drs', 
+      icon:'<img width="60" height="60" src="/public/images/icon_digitalRegistrationService.png">',
+      heading: 'Digital Registration Service', 
+      subheading: 'Submit applications to HM Land Registry online', 
+      label: 'Submit Applications', 
+      href: '#'
+    },
+  
+    { 
+      id: 'lcs', 
+      icon:'<img width="60" height="60" src="/public/images/icon_landChargeServices.png">',
+      heading: 'Land Charge Services', 
+      subheading: 'Access information from the Land Register or apply for searches', 
+      label: 'Start new search', 
+      href: '#'
+    },
+  ]
 
 let inEditMode = false
 
@@ -1166,6 +1136,15 @@ button.addEventListener('click', handleEdit)
 
 
 <script>
+
+window.onload = function() {
+  updateValues();
+};
+
+</script>
+
+
+<script>
     function myFunction() {
     var x = document.getElementById("linksDisplay");
     if (x.style.display === "none") {
@@ -1176,5 +1155,41 @@ button.addEventListener('click', handleEdit)
   }
   
   </script>
+
+{% endblock %}
+
+{% block pageScripts %}
+  <!-- load accessible autocomplete code (used in both examples) -->
+
+
+<script type="text/javascript">
+var savedLocation = {{ data['input0'] | dump | safe }}
+document.getElementById('input0').value = savedLocation
+</script>
+
+<script type="text/javascript">
+var savedLocation = {{ data['input1'] | dump | safe }}
+document.getElementById('input1').value = savedLocation
+</script>
+
+<script type="text/javascript">
+var savedLocation = {{ data['input2'] | dump | safe }}
+document.getElementById('input2').value = savedLocation
+</script>
+
+<script type="text/javascript">
+var savedLocation = {{ data['input3'] | dump | safe }}
+document.getElementById('input3').value = savedLocation
+</script>
+
+<script type="text/javascript">
+var savedLocation = {{ data['input4'] | dump | safe }}
+document.getElementById('input4').value = savedLocation
+</script>
+
+<script type="text/javascript">
+var savedLocation = {{ data['input5'] | dump | safe }}
+document.getElementById('input5').value = savedLocation
+</script>
 
 {% endblock %}
