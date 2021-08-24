@@ -420,7 +420,7 @@ padding-bottom: 3px;
 .notificationNavNumber {
   color: #1F8153;
     background-color: #fff;
-    padding: 5px 10px;
+    padding: 5px 9px;
     border-radius: 500px;
     font-weight: 700;
 }
@@ -429,6 +429,7 @@ padding-bottom: 3px;
   width:177px;
   padding: 25px;
   background: #ffffff;
+  margin-bottom: 0;
 }
 
 .myAccountContent a {
@@ -444,7 +445,6 @@ hr {
 
 #logOut {
   margin-bottom: 0px;
-    margin-top: 25px;
     width: 100%;
 }
 
@@ -585,7 +585,7 @@ display:none;
 
 .parent {display: block;position: relative;float: left;line-height: 70px;}
 .parent a{margin: 20px;color: #FFFFFF;text-decoration: none;}
-.parent:hover > ul {display:block;position:absolute;border-bottom: 1px solid #cccccc;}
+.parent:hover > ul {display:block;position:absolute;z-index: 999;}
 .child {display: none;}
 .child li {background-color: #ffffff;line-height: 40px;border-right:#CCC 1px solid; width:100%;}
 .child li a{color: #00703C; font-weight:700;font-size:15px;}
@@ -695,6 +695,8 @@ li:hover {background-color: #0ba961;}
         
         </li>
 
+        <li class="parent"><a href="#">Contact us</a></li>
+
         <li class="parent" style="min-width: 227px;"><a href="#"><img src="/public/images/Andy_Small.png" alt="Profile Picture" style="vertical-align: middle;padding-right: 10px;">Andy Carr <i class="fas fa-angle-down" style="margin-left:20px;"></i></a>
             <ul class="child">
         
@@ -703,23 +705,30 @@ li:hover {background-color: #0ba961;}
         
             <div class="govuk-body myAccountContent">
 
-                <div>
+                  <div>
+                    <div class="myAccountTitle" style="padding-bottom:3px;">
+                      Logged in as:
+                    </div>
+                    <div class="myAccount2ndLine">
+                       Administrator 
+                    </div>
+                    <a href="#" style="margin:0px;color:#00703C;font-weight:700;font-size:14px;">View profile</a>
+                  </div>
+
+                  <hr>
+
                   <div class="myAccountTitle" style="padding-bottom:3px;">
-                    Logged in as
+                    <b>Business Unit Administrator (BUA):</b><br> 
                   </div>
                   <div class="myAccount2ndLine">
-                     Administrator
+                    John Taylor<br>
+                    <!-- <a href="#" style="margin:0px;color:#00703C;"><b>JohnTaylor@bigbusiness.com</b></a> -->
                   </div>
-                </div>
-                <hr>
-                <div class="myAccountLinks">
-                  <a href="#" style="margin:0px;">My profile</a>
-                  <hr>
-                  <a href="#" style="margin:0px; margin-bottom: 5px;">Contact Us</a><br>
-      
-                  <a href="#" style="margin:0px;">Contact your BUA</a>
-      
-                  <button id="logOut" class="govuk-button" >Log out</button>
+
+
+
+
+                  <button id="logOut" class="govuk-button" style="margin-top:20px;">Log out</button>
                 </div>
               </div>
         
@@ -913,12 +922,12 @@ li:hover {background-color: #0ba961;}
               <option value="lcs">Land Charge Services</option>
               <option value="mapsearch">MapSearch</option>
               <option value="officialSearchOfPart">Official Search of Part (OS2)</option>
-              <option value="officialSearchOfWhole">Official Search of Whole (OS1)</option>
+              <option value="officialSearchOfWhole" selected>Official Search of Whole (OS1)</option>
               <option value="pdf">PDF Downloads</option>
               <option value="registerViewHTML">Register View - HTML</option>
               <option value="registerViewPDF">Register View - PDF</option>
               <option value="requesthistorical">Request Historical Copies</option>
-              <option value="officialcopies" selected>Request Official Copies</option>
+              <option value="officialcopies">Request Official Copies</option>
               <option value="searchOfTheIndexMap">Search of the Index Map</option>
               <option value="titlePlanView">Title Plan View</option>
               <option value="vma">View My Applications</option>
@@ -935,8 +944,8 @@ li:hover {background-color: #0ba961;}
               <option value="appenquiry">Application Enquiry</option>
               <option value="drs">Digital Registration Service</option>
               <option value="lcs">Land Charge Services</option>
-              <option value="mapsearch" selected>MapSearch</option>
-              <option value="officialSearchOfPart">Official Search of Part (OS2)</option>
+              <option value="mapsearch">MapSearch</option>
+              <option value="officialSearchOfPart" selected>Official Search of Part (OS2)</option>
               <option value="officialSearchOfWhole">Official Search of Whole (OS1)</option>
               <option value="pdf">PDF Downloads</option>
               <option value="registerViewHTML">Register View - HTML</option>
@@ -959,9 +968,9 @@ li:hover {background-color: #0ba961;}
                 <option value="appenquiry">Application Enquiry</option>
                 <option value="drs">Digital Registration Service</option>
                 <option value="lcs">Land Charge Services</option>
-                <option value="mapsearch">MapSearch</option>
+                <option value="mapsearch" selected>MapSearch</option>
                 <option value="officialSearchOfPart">Official Search of Part (OS2)</option>
-                <option value="officialSearchOfWhole" selected>Official Search of Whole (OS1)</option>
+                <option value="officialSearchOfWhole">Official Search of Whole (OS1)</option>
                 <option value="pdf">PDF Downloads</option>
                 <option value="registerViewHTML">Register View - HTML</option>
                 <option value="registerViewPDF">Register View - PDF</option>
@@ -1120,7 +1129,7 @@ li:hover {background-color: #0ba961;}
 
 <script>
 
-  const data = [
+const data = [
   { 
       id: 'blank', 
       icon:'',
@@ -1198,7 +1207,7 @@ li:hover {background-color: #0ba961;}
       icon:'<img width="60" height="60" src="/public/images/icon_mapSearch2.png">', 
       heading: 'MapSearch', 
       subheading: 'Find out if a property is registered, its location, title number & tenure details', 
-      label: 'Start search', 
+      label: 'Start new search', 
       href: '#'
     },
     { 
@@ -1206,7 +1215,7 @@ li:hover {background-color: #0ba961;}
       icon:'<img width="60" height="60" src="/public/images/icon_searchOfTheIndexMap.png">', 
       heading: 'Search of the Index Map', 
       subheading: 'Find out if a piece of land or property is registered with the Land Registry', 
-      label: 'Start search', 
+      label: 'Start new search', 
       href: '#'
     },
     { 
