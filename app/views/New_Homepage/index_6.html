@@ -253,7 +253,6 @@ font-size: 17px;
 .linkTextDescription {
   font-size:14px;
   padding-bottom: 10px;
-  max-width: 246px;
 }
 
 .linkTextLink {
@@ -268,11 +267,7 @@ text-decoration: underline;
     float: left;
 }
 
-.linkTextSection {
-  float: left;
-    width: calc(100% - 80px);
-    text-align: left;
-}
+
 
 .sectionTitle {
   font-weight:700;
@@ -309,7 +304,6 @@ text-decoration: underline;
 
 .newsTextLink {
   color:#00703C;
-  border-bottom: 1px solid #00703C;
   line-height: 40px;
 }
 
@@ -451,18 +445,13 @@ hr {
 #inputs {
     margin: 0% 2%;
     float:left;
+    margin-top: 27px;
 }
 
 .govuk-form-group-links {
-    width: 29%;
+    width: 31%;
     float: left;
     margin-right: 2%;
-    margin-bottom: 1%;
-    padding: 2% 0% 2% 2%;
-}
-
-.govuk-form-group-links:hover {
-background-color: #F3F2F1;
 }
 
 .unselected {
@@ -596,6 +585,26 @@ li:hover {background-color: #0ba961;}
 .expand{font-size:12px;float:right;margin-right:5px;}
 
 
+
+.govuk-form-group-links:hover .linkTextSection {
+  float: left;
+    text-align: left;
+    border-left: 8px solid #00703C;
+    padding: 15px;
+    background: #F3F2F1;
+    width: 90%;
+    cursor:pointer;
+}
+
+.linkTextSection {
+  float: left;
+  text-align: left;
+  border-left:8px solid #ffffff;
+    padding: 15px;
+    width: 90%;
+}
+
+
 </style>
 
 
@@ -718,10 +727,10 @@ li:hover {background-color: #0ba961;}
                   <hr>
 
                   <div class="myAccountTitle" style="padding-bottom:3px;">
-                    <b>Business Unit Administrator (BUA):</b><br> 
+                    <b>Business Unit Administrator (BUA):</b> 
                   </div>
                   <div class="myAccount2ndLine">
-                    John Taylor<br>
+                    John Taylor
                     <!-- <a href="#" style="margin:0px;color:#00703C;"><b>JohnTaylor@bigbusiness.com</b></a> -->
                   </div>
 
@@ -764,20 +773,19 @@ li:hover {background-color: #0ba961;}
 
 <div id="EditableLinksPanel">
 
-<button id="edit" class="govuk-button" style="float: right;right: 30px;" onclick="myFunction()">Edit Links</button>
+
 <div id="linksPanel" class="govuk-body" style="background: #ffffff;">
 
       <!-- Filters and Search Section - Start -->
-      <p class="sectionTitle" style="margin-bottom: 20px;margin-left: 2%;">My Services</p> 
+      <p class="sectionTitle" style="margin-bottom: 0px;margin-left: 2%;">My Services<button id="edit" class="govuk-button" style="float:right;margin-bottom: 0;margin-right: 3%;" onclick="myFunction()">Edit Links</button></p> 
       
 
 <div id="linksDisplay">
     <div class="service-values">
 
 <!-- value 0 is actually the first one in the sequence, so value 2 is actually the third -->
-
+      <div id="row1Links" style="float: left;width: 100%;min-height: 125px;margin-top:25px;">
         <div class="govuk-form-group-links" id="value0">
-            <div class="linkIcon" id="value-icon0">No Data</div>
             <div class="linkTextSection">
                 <div class="linkTextTitle" id="value-heading0">No Data</div>
                 <div class="linkTextDescription" id="value-subheading0">No Data</div>
@@ -786,7 +794,6 @@ li:hover {background-color: #0ba961;}
         </div>
 
         <div class="govuk-form-group-links" id="value1">
-            <div class="linkIcon" id="value-icon1">No Data</div>
             <div class="linkTextSection">
                 <div class="linkTextTitle" id="value-heading1">No Data</div>
                 <div class="linkTextDescription" id="value-subheading1">No Data</div>
@@ -795,16 +802,15 @@ li:hover {background-color: #0ba961;}
         </div>
 
         <div class="govuk-form-group-links" id="value2">
-            <div class="linkIcon" id="value-icon2">No Data</div>
             <div class="linkTextSection">
                 <div class="linkTextTitle" id="value-heading2">No Data</div>
                 <div class="linkTextDescription" id="value-subheading2">No Data</div>
                 <div class="linkTextLink"><a id="value-label2" style="color: #00703C" href='#'>No Data</a></div>
             </div>
         </div>
-
+      </div>
+      <div id="row2Links" style="float: left;width: 100%;min-height: 125px;">
         <div class="govuk-form-group-links" id="value3">
-            <div class="linkIcon" id="value-icon3">No Data</div>
             <div class="linkTextSection">
                 <div class="linkTextTitle" id="value-heading3">No Data</div>
                 <div class="linkTextDescription" id="value-subheading3">No Data</div>
@@ -813,7 +819,6 @@ li:hover {background-color: #0ba961;}
         </div>
 
         <div class="govuk-form-group-links" id="value4">
-            <div class="linkIcon" id="value-icon4">No Data</div>
             <div class="linkTextSection">
                 <div class="linkTextTitle" id="value-heading4">No Data</div>
                 <div class="linkTextDescription" id="value-subheading4">No Data</div>
@@ -822,16 +827,13 @@ li:hover {background-color: #0ba961;}
         </div>
 
         <div class="govuk-form-group-links" id="value5">
-            <div class="linkIcon" id="value-icon5">No Data</div>
             <div class="linkTextSection">
                 <div class="linkTextTitle" id="value-heading5">No Data</div>
                 <div class="linkTextDescription" id="value-subheading5">No Data</div>
                 <div class="linkTextLink"><a id="value-label5" style="color: #00703C" href='#'>No Data</a></div>
             </div>
         </div>
-
-
-
+      </div>
 
     </div> 
 </div>   
@@ -892,7 +894,7 @@ li:hover {background-color: #0ba961;}
                 <option value="registerViewHTML">Register View (HTML)</option>
                 <option value="registerViewPDF">Register View (PDF)</option>
                 <option value="registrationView">Registration View</option>
-                <option value="removalOfUnilateralNotice">Removal of a Unilateral <br>Notice (e-UN2)</option>
+                <option value="removalOfUnilateralNotice">Removal of a Unilateral Notice (e-UN2)</option>
                 <option value="replyToRequisition">Reply To Requisition</option>
                 <option value="restrictions">Restrictions (Standard e-RX1)</option>
                 <option value="searchOfTheIndexFranchisesAndManors">Search of the Index of Franchies and Manors (SIF)</option>
@@ -963,7 +965,7 @@ li:hover {background-color: #0ba961;}
                 <option value="registerViewHTML">Register View (HTML)</option>
                 <option value="registerViewPDF">Register View (PDF)</option>
                 <option value="registrationView">Registration View</option>
-                <option value="removalOfUnilateralNotice">Removal of a Unilateral <br>Notice (e-UN2)</option>
+                <option value="removalOfUnilateralNotice">Removal of a Unilateral Notice (e-UN2)</option>
                 <option value="replyToRequisition">Reply To Requisition</option>
                 <option value="restrictions">Restrictions (Standard e-RX1)</option>
                 <option value="searchOfTheIndexFranchisesAndManors">Search of the Index of Franchies and Manors (SIF)</option>
@@ -1034,7 +1036,7 @@ li:hover {background-color: #0ba961;}
                 <option value="registerViewHTML">Register View (HTML)</option>
                 <option value="registerViewPDF">Register View (PDF)</option>
                 <option value="registrationView">Registration View</option>
-                <option value="removalOfUnilateralNotice">Removal of a Unilateral <br>Notice (e-UN2)</option>
+                <option value="removalOfUnilateralNotice">Removal of a Unilateral Notice (e-UN2)</option>
                 <option value="replyToRequisition">Reply To Requisition</option>
                 <option value="restrictions">Restrictions (Standard e-RX1)</option>
                 <option value="searchOfTheIndexFranchisesAndManors">Search of the Index of Franchies and Manors (SIF)</option>
@@ -1105,7 +1107,7 @@ li:hover {background-color: #0ba961;}
                 <option value="registerViewHTML">Register View (HTML)</option>
                 <option value="registerViewPDF">Register View (PDF)</option>
                 <option value="registrationView">Registration View</option>
-                <option value="removalOfUnilateralNotice">Removal of a Unilateral <br>Notice (e-UN2)</option>
+                <option value="removalOfUnilateralNotice">Removal of a Unilateral Notice (e-UN2)</option>
                 <option value="replyToRequisition">Reply To Requisition</option>
                 <option value="restrictions">Restrictions (Standard e-RX1)</option>
                 <option value="searchOfTheIndexFranchisesAndManors">Search of the Index of Franchies and Manors (SIF)</option>
@@ -1176,7 +1178,7 @@ li:hover {background-color: #0ba961;}
                 <option value="registerViewHTML">Register View (HTML)</option>
                 <option value="registerViewPDF">Register View (PDF)</option>
                 <option value="registrationView">Registration View</option>
-                <option value="removalOfUnilateralNotice">Removal of a Unilateral <br>Notice (e-UN2)</option>
+                <option value="removalOfUnilateralNotice">Removal of a Unilateral Notice (e-UN2)</option>
                 <option value="replyToRequisition">Reply To Requisition</option>
                 <option value="restrictions">Restrictions (Standard e-RX1)</option>
                 <option value="searchOfTheIndexFranchisesAndManors">Search of the Index of Franchies and Manors (SIF)</option>
@@ -1247,7 +1249,7 @@ li:hover {background-color: #0ba961;}
                 <option value="registerViewHTML">Register View (HTML)</option>
                 <option value="registerViewPDF">Register View (PDF)</option>
                 <option value="registrationView">Registration View</option>
-                <option value="removalOfUnilateralNotice">Removal of a Unilateral <br>Notice (e-UN2)</option>
+                <option value="removalOfUnilateralNotice">Removal of a Unilateral Notice (e-UN2)</option>
                 <option value="replyToRequisition">Reply To Requisition</option>
                 <option value="restrictions">Restrictions (Standard e-RX1)</option>
                 <option value="searchOfTheIndexFranchisesAndManors">Search of the Index of Franchies and Manors (SIF)</option>
@@ -1291,7 +1293,7 @@ li:hover {background-color: #0ba961;}
           </div>
       </div>
       <div class="newsTextLink">
-        <a href="#"><img src="/public/images/Green_Chevron.png" class="newsChevron">Watch tour video</a>
+        <a href="#"><b>Watch tour video</b></a>
       </div>
 
     </div>
@@ -1311,7 +1313,7 @@ li:hover {background-color: #0ba961;}
           </div>
       </div>
       <div class="newsTextLink">
-        <a href="#"><img src="/public/images/Green_Chevron.png" class="newsChevron">Read article</a>
+        <a href="#"><b>Read article</b></a>
       </div>
 
     </div>
@@ -1331,7 +1333,7 @@ li:hover {background-color: #0ba961;}
           </div>
       </div>
       <div class="newsTextLink">
-        <a href="#"><img src="/public/images/Green_Chevron.png" class="newsChevron">View the roadmap</a>
+        <a href="#"><b>View the roadmap</b></a>
       </div>
 
     </div>
@@ -1415,7 +1417,6 @@ li:hover {background-color: #0ba961;}
   const data = [
   { 
       id: 'blank', 
-      icon:'',
       heading:'', 
       subheading: '', 
       label: '', 
@@ -1423,15 +1424,13 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'digitalRegistrationService',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_digitalRegistrationService.png">', 
       heading: 'Digital Registration Service', 
-      subheading: 'Submit application to HM Land <br>Registry online', 
+      subheading: 'Submit application to HM Land Registry online', 
       label: 'Submit applications', 
       href: '#'
     },
     { 
       id: 'viewMyApplications',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_viewMyApplications.png">', 
       heading: 'View My Applications', 
       subheading: 'View the progress of your applications', 
       label: 'View applications', 
@@ -1439,7 +1438,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'applicationEnquiry',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_applicationEnquiry.png">', 
       heading: 'Application Enquiry', 
       subheading: 'Request information regarding your applications', 
       label: 'Make enquiry', 
@@ -1447,7 +1445,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'localLandCharges',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_landChargeServices.png">', 
       heading: 'Local Land Charges', 
       subheading: 'Lorem ipsum aut et harum quiam, anduscime atia con', 
       label: 'Start new search', 
@@ -1455,7 +1452,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'officialSearchOfWholeOS1',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_officialSearchOfWholeOS1.png">', 
       heading: 'Official Search of Whole (OS1)', 
       subheading: 'Protect a transaction for value on the whole of the land', 
       label: 'Start new search', 
@@ -1463,7 +1459,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'officialSearchOfPartOS2',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_officialSearchOfPartOS2.png">', 
       heading: 'Official Search of Part (OS2)', 
       subheading: 'Protect a transaction for value on part of the land', 
       label: 'Start new search', 
@@ -1471,15 +1466,13 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'officialSearchOfWholeOrPartWithoutPriorityOS3',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_officialSearchOfWholeWithoutPriorityOS3.png">', 
-      heading: 'Official Search of whole or part <br>without priority (OS3)', 
+      heading: 'Official Search of whole or part without priority (OS3)', 
       subheading: 'Allow a person who is not entitled to make a priority search or search of the register', 
       label: 'Start new search', 
       href: '#'
     },
     { 
       id: 'cancellationOfOfficialSearchOfWholeOS1',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_cancellationOS1.png">', 
       heading: 'Cancellation of Official Search of Whole (OS1)', 
       subheading: 'An OS1 can be cancelled within the priority 30 day period if no longer required', 
       label: 'Start new search', 
@@ -1487,7 +1480,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'cancellationOfOfficialSearchOfPartOS2',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_cancellationOS2.png">', 
       heading: 'Cancellation of Official Search of Part (OS2)', 
       subheading: 'An OS2 can be cancelled within the priority 30 day period if no longer required', 
       label: 'Start new search', 
@@ -1495,7 +1487,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'documentView',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_documentView.png">', 
       heading: 'Document View', 
       subheading: 'Documents can be viewed on line to find out information', 
       label: 'View documents', 
@@ -1503,7 +1494,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'homeRightsSearch',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_homeRightsSearch.png">', 
       heading: 'Home Rights Search', 
       subheading: 'Establish if a notice has been registered protecting a spouse or civil partnership rights', 
       label: 'Start new search', 
@@ -1511,15 +1501,13 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'officialCopyDeedsReferred',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_officialCopyDeedsReferred.png">', 
       heading: 'Official Copy – Deeds referred', 
       subheading: 'An official copy of a deed that is referred to on the register', 
       label: 'Request a document', 
       href: '#'
     },
     { 
-      id: 'officialCopyRegisterHistorical',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_requestHistoricalCopies.png">', 
+      id: 'officialCopyRegisterHistorical', 
       heading: 'Official Copy – Register (Historical)', 
       subheading: 'An official copy of the register from a historical date', 
       label: 'Request a document', 
@@ -1527,7 +1515,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'officialCopyTitlePlanHistorical',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_officialCopyTitlePlanHistorical.png">', 
       heading: 'Official Copy – Title Plan (Historical)', 
       subheading: 'An official copy of the title plan from a historical date', 
       label: 'Request a document', 
@@ -1535,7 +1522,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'officialCopyRegisterPlanCI',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_officialCopyRegisterPlanCI.png">', 
       heading: 'Official Copy – Register, Title Plan or CI', 
       subheading: 'Lorem ipsum aut et harum quiam, anduscime atia con', 
       label: 'Request a document', 
@@ -1543,15 +1529,13 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'searchOfTheIndexMap',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_searchOfTheIndexMap.png">', 
       heading: 'Search of the Index Map', 
       subheading: 'Find out if a piece of land or property is registered with the Land Registry', 
       label: 'Start new search', 
       href: '#'
     },
     { 
-      id: 'registerViewPDF',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_registerViewPDF.png">', 
+      id: 'registerViewPDF', 
       heading: 'Register View (PDF)', 
       subheading: 'The ability for a user to view a register as a PDF', 
       label: 'View applications', 
@@ -1559,39 +1543,34 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'registerViewHTML',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_registerViewHTML.png">', 
       heading: 'Register View (HTML)', 
       subheading: 'The ability for a user to view a register as in HTML', 
       label: 'View applications', 
       href: '#'
     },
     { 
-      id: 'searchOfTheIndexFranchisesAndManors',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_searchOfTheIndexFranchisesAndManors.png">', 
-      heading: 'Search of the Index of <br>Franchies and Manors (SIF)', 
+      id: 'searchOfTheIndexFranchisesAndManors', 
+      heading: 'Search of the Index of Franchies and Manors (SIF)', 
       subheading: 'A SIF allows the user to search this index for a Franchise or Manor', 
       label: 'Start new search', 
       href: '#'
     },
     { 
       id: 'titlePlanView',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_titlePlanView.png">', 
       heading: 'Title Plan View', 
       subheading: 'This enables you to view the title plan of a registered title', 
       label: 'Start new search', 
       href: '#'
     },
     { 
-      id: 'withdrawlOfficialSearchWithPriority',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_withdrawlOfficialSearchWithPriority.png">', 
-      heading: 'Withdraw Official Search <br>with Priority', 
+      id: 'withdrawlOfficialSearchWithPriority', 
+      heading: 'Withdraw Official Search with Priority', 
       subheading: 'Apply for the search to be withdrawn if a customer no longer needs the protection', 
       label: 'Make withdrawl', 
       href: '#'
     },
     { 
       id: 'agreedNotice',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_agreedNotice.png">', 
       heading: 'Agreed Notice', 
       subheading: 'Apply to have an interest noted on the register', 
       label: 'Make application', 
@@ -1599,23 +1578,20 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'cancellationOfACaution',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_cancellationOfACaution.png">', 
       heading: 'Cancellation of a Caution', 
       subheading: 'Proprietors of an estate affected by a caution may apply for a caution to be cancelled', 
       label: 'Make a cancellation', 
       href: '#'
     },
     { 
-      id: 'cancellationOfANotice',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_cancellationOfANotice.png">', 
-      heading: 'Cancellation of a Notice <br>(Not Unilateral)', 
+      id: 'cancellationOfANotice', 
+      heading: 'Cancellation of a Notice (Not Unilateral)', 
       subheading: 'This enables you to cancel an Agreed Notice', 
       label: 'Make a cancellation', 
       href: '#'
     },
     { 
       id: 'changeOfAddressForService',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_changeOfAddressForService.png">', 
       heading: 'Change of address for service', 
       subheading: 'A registered proprietor can apply to change their address for service', 
       label: 'Request change', 
@@ -1623,7 +1599,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'changeOfName',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_changeOfName.png">', 
       heading: 'Change of Name', 
       subheading: 'A registered proprietor can apply to change their address for service', 
       label: 'Request change', 
@@ -1631,7 +1606,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'changeOfPropertyDescription',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_changeOfPropertyDescription.png">', 
       heading: 'Change of Property Description', 
       subheading: 'Apply to change the property description of their property at any time', 
       label: 'Request change', 
@@ -1639,7 +1613,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'statutoryCharge',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_statutoryCharge.png">', 
       heading: 'Statutory Charge', 
       subheading: 'Make an electronic application to register a statutory charge', 
       label: 'Make an application', 
@@ -1647,7 +1620,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'deathOfJointProprietor',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_deathOfJointProprietor.png">', 
       heading: 'Death of Joint Proprietor', 
       subheading: 'Register notice of the death of a joint proprietor of a registered estate', 
       label: 'Request change', 
@@ -1655,23 +1627,20 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'homeRights',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_homeRights.png">', 
-      heading: 'Home Rights (E-HR1 Notice of <br>home rights)', 
+      heading: 'Home Rights (E-HR1 Notice <br>of home rights)', 
       subheading: 'Protect a right to occupy the matrimonial or civil partnership home with an agreed notice', 
       label: 'Request change', 
       href: '#'
     },
     { 
-      id: 'cancellationOfHomeRights',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_cancellationOfHomeRights.png">', 
-      heading: 'Cancellation of Home <br>rights (e-HR4)', 
+      id: 'cancellationOfHomeRights', 
+      heading: 'Cancellation of Home rights (e-HR4)', 
       subheading: 'A request to cancel a Home rights entry from the register', 
       label: 'Request change', 
       href: '#'
     },
     { 
-      id: 'restrictions',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_restrictions.png">', 
+      id: 'restrictions', 
       heading: 'Restrictions (Standard e-RX1)', 
       subheading: 'For restrictions that follow one of the forms set out in schedule 4, LRR 2003', 
       label: 'Request change', 
@@ -1679,47 +1648,41 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'cancellationOfRestriction',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_cancellationOfRestriction.png">', 
-      heading: 'Cancellation of restriction <br>(e-RX3)', 
+      heading: 'Cancellation of restriction (e-RX3)', 
       subheading: 'Cancel a restriction from the register of title by someone other than the restrictioner', 
       label: 'Request cancellation', 
       href: '#'
     },
     { 
       id: 'withdrawlOfARestriction',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_withdrawlOfARestriction.png">', 
-      heading: 'Withdrawal of a Restriction <br>(e-RX4)', 
+      heading: 'Withdrawal of a Restriction (e-RX4)', 
       subheading: 'Withdraw voluntary restrictions', 
       label: 'Make withdrawl', 
       href: '#'
     },
     { 
       id: 'unilateralNotice',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_unilateralNotice.png">', 
       heading: 'Unilateral Notice (e-UN1)', 
       subheading: 'Proprietors of an estate affected by a caution may apply for a caution to be cancelled', 
       label: 'Request cancellation', 
       href: '#'
     },
     { 
-      id: 'cancellationOfUnilateralNotice',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_cancellationOfUnilateralNotice.png">', 
-      heading: 'Cancellation of Unilateral <br>Notice (eUN4)', 
+      id: 'cancellationOfUnilateralNotice', 
+      heading: 'Cancellation of Unilateral Notice (eUN4)', 
       subheading: 'Cancel a unilateral notice from the registered title', 
       label: 'Request cancellation', 
       href: '#'
     },
     { 
       id: 'removalOfUnilateralNotice',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_removalOfUnilateralNotice.png">', 
-      heading: 'Removal of a Unilateral <br>Notice (e-UN2)', 
+      heading: 'Removal of a Unilateral Notice (e-UN2)', 
       subheading: 'Remove a unilateral notice from the registered title', 
       label: 'Request removal', 
       href: '#'
     },
     { 
       id: 'withdrawlOfCaution',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_withdrawlOfCaution.png">', 
       heading: 'Withdrawl of Caution', 
       subheading: 'Remove a caution entry form the registered title', 
       label: 'Make withdrawl', 
@@ -1727,7 +1690,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'dischargeOfCharge',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_dischargeOfCharge.png">', 
       heading: 'Discharge of a Charge', 
       subheading: 'Remove a charge entry from the register of title as the debt has been repaid', 
       label: 'Request cancellation', 
@@ -1735,15 +1697,13 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'enquiryByPropertyDescription',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_enquiryByPropertyDescription.png">', 
-      heading: 'Enquiry by Property Description - Title View', 
+      heading: 'Enquiry by Property Description <br>- Title View', 
       subheading: 'Lorem ipsum essimin plate voluptatis digent', 
       label: 'Make an enquiry', 
       href: '#'
     },
     { 
       id: 'bankruptcySearch',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_BankruptcySearch.png">', 
       heading: 'Bankruptcy Search', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum niscii', 
       label: 'Start new search', 
@@ -1751,7 +1711,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'fullSearch',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_fullSearch.png">', 
       heading: 'Full Search', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum nisciis imolor adi', 
       label: 'Start new search', 
@@ -1759,7 +1718,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'documentRegistrationService',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_documentRegistrationService.png">', 
       heading: 'Document Registration Service', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum nisciis imolor adi', 
       label: 'Submit applications', 
@@ -1767,15 +1725,13 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'registrationView',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_registrationView.png">', 
       heading: 'Registration View', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum nisciis imolor adi', 
       label: 'View the register', 
       href: '#'
     },
     { 
-      id: 'replyToRequisition',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_replyToRequisitio.png">', 
+      id: 'replyToRequisition', 
       heading: 'Reply To Requisition', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum nisciis imolor adi', 
       label: 'Reply to requisition', 
@@ -1783,7 +1739,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'dataSynchronisationEnquiry',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_dataSynchronisationEnquiry.png">', 
       heading: 'Data Synchronisation Enquiry', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum nisciis imolor adi', 
       label: 'Make an enquiry', 
@@ -1791,7 +1746,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'dataSynchronisationDownloads',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_dataSynchronisationDownloads.png">', 
       heading: 'Data Synchronisation Downloads', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum nisciis imolor adi', 
       label: 'Download document', 
@@ -1799,23 +1753,20 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'pdfDownloads',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_pdfDownloads.png">', 
       heading: 'PDF Downloads', 
-      subheading: 'Access your PDF downloads <br>from the download centre', 
+      subheading: 'Access your PDF downloads from the download centre', 
       label: 'View downloads', 
       href: '#'
     },
     { 
       id: 'Notifications',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_Notifications.png">', 
       heading: 'Notifications', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum', 
       label: 'View notifications', 
       href: '#'
     },
     { 
-      id: 'messageArea',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_messageArea.png">', 
+      id: 'messageArea', 
       heading: 'Message Area', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum', 
       label: 'View messages', 
@@ -1823,7 +1774,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'servicesRequested',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_servicesRequested.png">', 
       heading: 'Services Requested', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum', 
       label: 'View requests', 
@@ -1831,23 +1781,20 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'alternateDespatchAddress',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_alternateDespatchAddress.png">', 
       heading: 'Alternate despatch address', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum', 
       label: 'View address', 
       href: '#'
     },
     { 
-      id: 'manageBusinessUnits',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_manageBusinessUnits.png">', 
+      id: 'manageBusinessUnits', 
       heading: 'Manage Business Units', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum', 
       label: 'Manage units', 
       href: '#'
     },
     { 
-      id: 'manageGroups',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_manageBusinessGroups.png">', 
+      id: 'manageGroups', 
       heading: 'Manage Groups', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum', 
       label: 'Manage groups', 
@@ -1855,7 +1802,6 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'manageUsers',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_manageBusinessUsers.png">', 
       heading: 'Manage Users', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum', 
       label: 'Manage users', 
@@ -1863,31 +1809,27 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'createUser',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_createUser.png">', 
       heading: 'Create User', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum', 
       label: 'Create user', 
       href: '#'
     },
     { 
-      id: 'personalDetails',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_personalDetails.png">', 
+      id: 'personalDetails', 
       heading: 'Personal Details', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum', 
       label: 'View details', 
       href: '#'
     },
     { 
-      id: 'changePassword',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_changePassword.png">', 
+      id: 'changePassword', 
       heading: 'Change Password', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum', 
       label: 'Change password', 
       href: '#'
     },
     { 
-      id: 'administratorReport',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_administratorReport.png">', 
+      id: 'administratorReport', 
       heading: 'Administrator Report', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum', 
       label: 'View report', 
@@ -1895,15 +1837,13 @@ li:hover {background-color: #0ba961;}
     },
     { 
       id: 'vddinformation',
-      icon:'<img width="60" Make a requestheight="61" src="/public/images/icon_set1/icon_vddinformation.png">', 
       heading: 'VDD Information', 
       subheading: 'Lorem ipsum rum etur autet aut ape la sant volo mossunt facerum niscii', 
       label: 'View information', 
       href: '#'
     },
     { 
-      id: 'mapSearch',
-      icon:'<img width="60" height="61" src="/public/images/icon_set1/icon_mapSearch.png">', 
+      id: 'mapSearch', 
       heading: 'Map Search', 
       subheading: 'Find out if a property is registered, its location, title number & tenure details', 
       label: 'Start new search', 
@@ -1935,7 +1875,6 @@ const updateValues = () => {
     if(service) {
       // Update the text of the relevant fields
       document.getElementById(`value${index}`).classList.remove('unselected')
-    document.getElementById(`value-icon${index}`).innerHTML = service.icon
       document.getElementById(`value-heading${index}`).innerHTML = service.heading
       document.getElementById(`value-subheading${index}`).innerHTML = service.subheading
       document.getElementById(`value-label${index}`).innerHTML = service.label
