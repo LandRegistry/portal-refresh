@@ -1,0 +1,31 @@
+.govuk-width-container{
+    max-width: 960px;
+    background-color: pink;
+    margin: 15px 15px;
+}
+
+
+
+.govuk-grid-row {
+    background-color: white;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.grey-container{
+    background-color: #f3f2f1;
+}
+
+.govuk-radios{
+    background-color: blueviolet;
+}
+
+.govuk-table{
+    border: 0px;}
+
+.govuk-table__row:nth-child(1){
+    border-top: 1px solid #bfc1c3;}
+
+.govuk-table__header{
+    padding: 10px 30px 10px 0px;
+}

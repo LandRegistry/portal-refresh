@@ -9,40 +9,39 @@ $govuk-global-styles: true;
 @import "patterns/task-list";
 @import "patterns/related-items";
 
+
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+#menu  {
+background-color: rgba(163, 213, 47, 0);
+Padding-top: 10px;
+Padding-bottom: 200px;
+font-size: 14px;
+
+}
 
 
-  #menu  {
-  background-color: rgba(163, 213, 47, 0);
-  Padding-top: 10px;
-  Padding-bottom: 200px;
-  font-size: 14px;
+#label {
+  font-family: arial;
+  font-size: 16px;
+}
 
-  }
+#form-submit-button {
 
+  background: transparent;
 
-  #label {
-    font-family: arial;
-    font-size: 16px;
-  }
+  box-shadow: 0px 0px 0px transparent;
 
-  #form-submit-button {
+  border: 0px solid transparent;
 
-    background: transparent;
+  text-shadow: 0px 0px 0px transparent;
 
-    box-shadow: 0px 0px 0px transparent;
+  font-size: 16px;
 
-    border: 0px solid transparent;
-
-    text-shadow: 0px 0px 0px transparent;
-
-    font-size: 16px;
-
-    text-color: black;
+  text-color: black;
 
 }
 
