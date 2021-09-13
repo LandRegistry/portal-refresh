@@ -138,6 +138,39 @@ p {
     margin-top:0px;
 }
 
+.govuk-fieldset {
+    padding: 0px;
+}
+
+.govuk-checkboxes__item {
+    padding-left: 0px;
+}
+
+label {
+    width:unset;
+}
+
+.govuk-checkboxes__label {
+    padding: 8px 0px 0px 55px;
+}
+
+.nav {
+    clear: both;
+    height: 2.5em;
+    margin: 0px 0px 2px 0px;
+    margin-left: 0;
+}
+
+.govuk-checkboxes--small .govuk-checkboxes__item {
+    min-height: 0;
+    margin-bottom: 0;
+    padding-left: 0px;
+    float: left;
+}
+
+.govuk-checkboxes--small .govuk-checkboxes__label {
+    padding: 10px 15px 0px 33px;
+}
 </style>
 
 
@@ -292,12 +325,32 @@ p {
                                 <div class="leftBoxMediumGrey">
                                     <h3 style="margin-bottom:10px;">View Colleague's Applications</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a tortor eget nulla gravida gravida. In interdum et risus placerat scelerisque. Aliquam et pellentesque est.</p>
-                                    <p>Current status: <b>Enabled</b></p>
+
+                                    <div class="govuk-form-group" style="padding-top: 10px;margin-bottom: 10px;">
+                                        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                                          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                            <div class="govuk-checkboxes__item">
+                                              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+                                              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                                Enable functionality
+                                              </label>
+                                            </div>
+                                            
+                                          </div>
+                                      
+                                        </fieldset>
+                                      </div>
+
+
                                 </div>
                                 <div class="rightBoxGrey" style="line-height: 15px;">
-                                    <a href="#">Edit status</a>
+  
                                 </div>
                             </div>
+                            <!-- <div class="nav">
+                                <div class="twoCol" style="width:400px;">&nbsp;</div>
+                                <input type="submit" class="last" value="Confirm" onclick="window.location.href='manageBusinessUnit_RP_enabled'">
+                            </div> -->
 
                         </div>
         
