@@ -138,6 +138,40 @@ p {
     margin-top:0px;
 }
 
+.govuk-fieldset {
+    padding: 0px;
+}
+
+.govuk-checkboxes__item {
+    padding-left: 0px;
+}
+
+label {
+    width:unset;
+}
+
+.govuk-checkboxes__label {
+    padding: 8px 0px 0px 55px;
+}
+
+.nav {
+    clear: both;
+    height: 2.5em;
+    margin: 0px 0px 2px 0px;
+    margin-left: 0;
+}
+
+.govuk-checkboxes--small .govuk-checkboxes__item {
+    min-height: 0;
+    margin-bottom: 0;
+    padding-left: 0px;
+    float: left;
+}
+
+.govuk-checkboxes--small .govuk-checkboxes__label {
+    padding: 10px 15px 0px 33px;
+}
+
 </style>
 
 
@@ -236,24 +270,35 @@ p {
 
                             <div class="limeGreenColour limeGreen" style="height: 28px;width: 650px; margin-bottom: 2px;"></div>
                             <div class="container formHeading" style="margin-bottom:2px !Important;"><h1>Business unit</h1></div>
-                            <div class="container formHeading"><h3>Business unit details</h3></div>
+                            <div class="container formHeading"><h3>View Colleague's Applications details</h3></div>
 
                             <div class="contentMiddleSection">
                                 <div class="leftBoxLightGrey">
-                                    <h3 style="margin-bottom:10px;">General information</h3>
-                                    <p>Business unit name: Portal Refresh Ltd</p>
-                                    <p>Company registration number: </p>
-                                    <p>Account status: Active</p>
+                                    <h3 style="margin-bottom:10px;">Edit status</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a tortor eget nulla gravida gravida. In interdum et risus placerat scelerisque. Aliquam et pellentesque est.</p>
+
+
+                                    <div class="govuk-form-group" style="padding-top: 10px;">
+                                        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                                          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                            <div class="govuk-checkboxes__item">
+                                              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                                Enable functionality
+                                              </label>
+                                            </div>
+                                            
+                                          </div>
+                                      
+                                        </fieldset>
+                                      </div>
+
                                 </div>
                                 <div class="rightBoxGrey"></div>
                             </div>
-                            <div class="contentMiddleSection">
-                                <div class="leftBoxMediumGrey">
-                                    <h3 style="margin-bottom:10px;">Address details</h3>
-                                    <p>Postal address: 21 The Street, Plymouth, PL1 1AA, United Kingdom</p>
-                                    <p>DX Address: </p>
-                                </div>
-                                <div class="rightBoxGrey"></div>
+                            <div class="nav">
+                                <div class="twoCol" style="width:400px;">&nbsp;</div>
+                                <input type="submit" class="last" value="Confirm" onclick="window.location.href='manageBusinessUnit_RP_enabled'">
                             </div>
 
                         </div>
