@@ -1,0 +1,682 @@
+/* 21-01-2008 S.Millis :  Amended #help.dd class to align text with dt - S.Millis   */
+/* 24-01-2008 S.Millis :  Added #portletContent id selector to table.tableActions a    */
+/* 14-02-2008 S.Millis :  1) Created new footer class for base of results Tables when no action buttons are required.
+                          2) Created new radioControl and labelContainer class to control wrapping of radio btn labels.
+                          3) Numerous changes to accomodate the right padding introduced to oddPanel and evenPanel */
+
+
+#portletContent {
+  float:left;
+  width:1100px;  
+  text-align:left;
+  overflow:visible;
+  padding-top:5px;  
+  margin-bottom:5px;
+}  
+
+#portletContent h1 { 
+  margin:0px;
+}
+
+#portletContent h3 {
+  font-size:110%;
+}
+
+#portletContent h3, h4{
+  padding-bottom:5px;
+}
+
+.bold {
+  font-weight:bold;
+}
+
+#portletContent .textHighlight {
+	color:#055501;
+	font-weight:bold;
+}
+
+
+#portletContent a{  
+  text-decoration:underline;
+}  
+
+
+#portletContent table {
+  border-collapse:collapse;   /* removes the need to define cellspacing=0 on each table */
+}
+
+
+#formHeader {
+  clear:both;
+  width:629px;
+  background-color:#9B9B9D; 
+  background-image:url("/public/images/cutoff_9B9B9D.gif"); 
+  background-position:100% 100%;
+  background-repeat:no-repeat;
+  margin:0px 0px 2px 0px;
+  padding:9px 7px 9px 14px;
+  position:relative;
+}
+
+#formSubHeader {
+  width:624px;
+  background-color:#9B9B9D; 
+  margin:0px 0px 1px 0px;
+  padding:9px 0px 9px 14px;
+}
+
+#formSubHeader h3 {
+  padding-bottom:0px;
+}
+
+#formError {
+  width:624px;
+  background-color:#CDCDCE; 
+  margin:0px 0px 1px 0px;
+  padding:9px 0px 0px 14px;
+  color:red;
+  font-weight:bold;
+}
+
+/***************  Styling form HTML elements  ***************/
+
+.formBg {
+  width:100%;
+  background-image:url("/public/images/bg_FFFFFF.gif"); 
+  background-position:100% 100%;
+  background-repeat:no-repeat;   
+  padding-bottom:10px;
+}
+
+#portletContent label {
+  clear:both;
+  float:none;
+  display:inline;
+}  
+
+#portletContent label.fieldLabel {
+  margin:0px;
+  padding:0px;
+  padding-top:3px;
+  float:left;
+  width:10em; 
+}
+
+#portletContent label.fieldLabel.short {
+  width:8em; 
+}
+
+#portletContent label.fieldLabel.long {
+  width:13em; 
+}
+
+#portletContent label.fieldLabel.extraLong{
+  width:15em;
+}
+
+textArea {
+  width:99%; 
+  height:60px;
+  margin:0px;
+}
+
+input.textField {   
+  margin-bottom:2px;   
+  _margin-bottom:0px;
+}
+
+input.radioControl {   
+  clear:both;
+  float:left;
+}
+
+div.labelContainer {
+  padding:3px 0px 0px 3px;
+  float:left;
+}
+
+input.submitForm{
+  background-color:transparent;
+  background-image:url('/public/images/submit.gif');
+  background-repeat:no-repeat;
+  border:none;
+  cursor:pointer; 
+  width:25px;
+
+}
+
+input.secondaryBtn {
+  margin-left:5px;
+  padding:0px 8px 0px 5px;
+  _padding:0px 8px 0px 8px;
+  background-color:transparent;
+  background-image:url('/public/images/cutoff_AFAFB1.gif');
+  background-position:100% 100%;
+  background-repeat:no-repeat;
+  border:none;
+  color:#000000;
+  cursor:pointer; 
+  font-weight:bold;
+  height:20px;
+  overflow:visible;
+}
+
+
+a.secondaryBtn {
+  margin-left:5px;
+  padding:4px 8px 2px 8px;
+  _padding:5px 8px 5px 8px;
+  background-image:url('/public/images/cutoff_AFAFB1.gif');
+  background-position:100% 100%;
+  background-repeat:no-repeat;
+  color:#000000;
+  cursor:pointer; 
+  font-weight:bold;
+  text-decoration:none;
+}
+
+
+div.textTip {
+  display:inline;
+  margin-left:5px;
+}
+
+.formFunctions {
+  position:absolute;
+  top:8px;
+  right:15px;
+}
+
+.formFunctions input{
+  width:25px;
+  height:25px;
+  background-color:transparent; 
+  background-repeat:no-repeat;
+  border:none;
+  cursor:pointer; 
+}
+
+.formFunctions input.cancel {
+  background-image:url('/public/images/cancel.gif');  
+}
+
+.formFunctions input.help {
+  background-image:url('/public/images/help.gif'); 
+}
+
+/* Form Panels */
+
+.oddPanel,
+.evenPanel {
+  float:left;
+  width:610px; 
+  padding:8px 14px 13px 14px;
+  background-color:#CDCDCE;   
+  border-bottom:1px solid #FFFFFF;
+}
+
+.oddPanel.cutOff,
+.evenPanel.cutOff {
+  background-image:url('/public/images/white_cutoff_20px.gif'); 
+  background-position:100% 100%;
+  background-repeat:no-repeat;
+}
+
+
+.oddPanel.infoPanel,
+.evenPanel.infoPanel {
+  background-image:url('/public/images/form_right.gif'); 
+  background-position:100% 0%;
+  background-repeat:repeat-y;
+}
+
+.infoPanel.cutOff {
+  background-position:100% 100%;
+}
+
+
+.oddPanel{
+  background-color:#D7D7D8;
+}
+
+.leftPanel {
+  float:left;
+  padding-right:14px;
+  width:485px;
+}
+
+.rightPanel {
+  float:right;
+  padding-left:14px;
+  width:92px;
+}
+
+.errorText {
+  color:red;
+}
+
+.errorTextColourValid {
+  color:#740000;
+}
+
+/***************    Data Table Formatting ****************/
+
+.blueTable,
+.greyTable,
+.orangeTable {
+  margin:0px;
+  padding:5px 0px;
+  width: 100%;
+}
+
+.blueTable th,
+.greyTable th,
+.orangeTable th {
+  background-image:none;  
+  font-weight:bold;
+  border-bottom:1px solid white;
+  height:2em;
+  padding-left:5px;
+  text-align:left;
+}
+
+.blueTable td,
+.greyTable td,
+.orangeTable td {
+  padding:4px 4px 2px 4px;
+  border-bottom:1px solid white;
+  vertical-align:top;
+  border-right:solid white 1px;
+}
+
+td.shortCol { width:10%; }
+td.medCol { width:25%; }
+td.longCol { width:35%; }
+td.lastCol { border-right:0px; }
+
+td.radioBtnCol {
+  padding:0px;
+  width:4%;
+  border-right:0px;
+}
+
+.blueTable td.actions,
+.greyTable td.actions,
+.orangeTable td.actions {
+  padding:0px;
+  border-bottom:0px;
+  border-right:0px;
+}
+
+.blueTable th { background-color:#C7E5EB; }
+.blueTable .footer { background-image:url("/public/images/cutoff_C7E5EB.gif");} 
+.blueTable tr.oddRow { background-color:#D8EDF1; }
+.blueTable tr.evenRow { background-color:#E3F2F5; }
+.blueTable .actions td {background-image:url("/public/images/cutoff_C7E5EB.gif");}
+
+.greyTable th { background-color:#AFAFB1; }
+.greyTable .footer { background-image:url("/public/images/cutoff_AFAFB1.gif");} 
+.greyTable tr.oddRow { background-color:#E1E1E1; } 
+.greyTable tr.evenRow { background-color:#EBEBEB; }
+.greyTable .actions td {background-image:url("/public/images/cutoff_AFAFB1.gif");}
+
+.orangeTable th { background-color:#FBA141; }
+.orangeTable .footer { background-image:url("/public/images/cutoff_FBA141.gif");}
+.orangeTable tr.oddRow { background-color:#FCC488; }
+.orangeTable tr.evenRow { background-color:#FDD0A0; }
+.orangeTable .actions td {background-image:url("/public/images/cutoff_FBA141.gif");}
+
+.blueTable .footer,   
+.greyTable .footer,
+.orangeTable .footer {
+  height:1.5em;
+  padding-left:5px;
+  text-align:left;
+  border:none;
+  background-color:transparent;  
+  background-position:100% 100%;
+}
+
+.rightBorder {
+  border-right:1px solid white;
+}
+
+.leftBorder {
+  border-left:1px solid white;
+}
+
+/***************   Action Buttons in Table Footer    **************/
+
+table.tableActions {
+  width: 100%;
+  margin:0px;
+  padding:0px;
+}
+
+table.tableActions td {
+  padding:0px;
+  border-bottom:0px;
+  background-position:0% 0%;
+  background-repeat:no-repeat; 
+}
+
+table.tableActions td.action {
+  width:15%;
+  height:20px;
+}
+
+
+table.tableActions .last{
+  border-right:0px;
+  background-position:100% 100%;
+}
+
+table.tableActions input,
+table.tableActions a {
+  text-align:center;
+  background-color:transparent;  
+  border:none;
+  color:#000000;
+  cursor:pointer; 
+  font-weight:bold;
+  height:2em;
+  width:100%;
+  background-color:transparent;
+
+}
+
+#portletContent table.tableActions a {
+  padding-top:0.4em;
+  height:1.6em;
+  float:left;  
+  text-decoration:none;  
+}
+
+
+
+
+/* LRO Style */
+
+.oneCol{
+  padding:0px;
+  margin:0px;
+  width:215px;  
+  padding-right:5px;
+  margin-left:0px;
+  float:left;
+}
+
+.twoCol{
+  padding:0px;
+  margin:0px;
+  width:445px;  
+  padding-right:5px;
+  margin-left:0px;
+  float:left;
+}
+
+
+
+.rhSideCol{
+  float:left;
+  margin:0px;
+  padding:0px;
+  padding-right:5px;
+  width:215px; 
+}
+
+.oneColDiv {
+  float:left;
+  margin:0px;
+  padding:8px 14px 8px 14px;
+  margin-bottom:5px;
+  width:192px; 
+}
+
+.twoColDiv {
+  float:left;
+  margin:0px;
+  padding:14px 14px 14px 14px;
+  margin-bottom:5px;
+  width:417px;
+  position:relative;
+}
+
+.threeColDiv {
+  float:left;
+  margin:0px;
+  padding:14px 14px 14px 14px;
+  margin-bottom:5px;
+  width:637px;
+  position:relative;
+}
+
+.rhsModule {
+  float:left;
+  margin:0px;
+  padding:13px 14px 14px 14px;
+  margin-bottom:5px;
+  width:187px; 
+}
+
+.twoColDiv h1 {
+padding-bottom:20px;
+}
+
+.whiteFill {
+  background-color:#FFFFFF; 
+  margin-bottom:0px;
+  padding-bottom:0px;
+}
+ 
+
+.bgWhite {
+
+  background-image:url("/public/images/bg_FFFFFF.gif"); 
+  background-position:100% 100%;
+  background-repeat:no-repeat; 
+}
+
+.bgGreen {
+  background-image:url("/public/images/bg_87C426.gif"); 
+  background-position:100% 100%;
+  background-repeat:no-repeat; 
+}
+
+.bgGreen1 {
+  background-image:url("/public/images/bg_B7DC7D.gif"); 
+  background-position:100% 100%;
+  background-repeat:no-repeat; 
+}
+
+.bgGreen2 {
+  background-image:url("/public/images/bg_F3F9E9.gif"); 
+  background-position:100% 100%;
+  background-repeat:no-repeat; 
+}
+
+
+.bgYellow {
+  background-image:url("/public/images/bg_DDE660.gif"); 
+  background-position:100% 100%;
+  background-repeat:no-repeat; 
+}
+
+
+
+.nav{
+ clear:both;
+ height:2.5em;
+ margin:0px 0px 2px 0px;
+ margin-left:-14px;
+}
+
+.nav.indent {
+  margin-left:0px; 
+  padding-right:0px;
+}
+
+.nav div {
+ float:left; 
+  height:1.9em;
+  background-image:url("/public/images/cutoff_D4E038.gif"); 
+  background-position:0% 0%;
+  background-repeat:no-repeat; 
+  padding-top:0.6em;
+}
+
+.nav div.steps { 
+  padding-left:14px;
+  width:194px; 
+}
+
+.nav div.oneCol {
+  padding-left:14px;
+  width:95px;
+}
+
+.nav div.twoCol {
+  padding-left:14px;
+  width:210px;
+}
+
+
+.nav div.placeHolder {
+  float:left; 
+  width:101px;
+}
+
+.nav div.topCutoff{
+  float:left; 
+  margin-left:1px;
+  width:246px;
+  background-color:transparent;
+  background-image:url("/public/images/cutoff_D4E038.gif"); 
+  background-position:100% 100%;
+  background-repeat:no-repeat; 
+}
+.nav div.topCutoff.noBorder{
+  margin-left:0px;
+  width:247px;
+}
+
+.nav input, 
+.buttonLink{
+  border:0px;
+  margin-left:1px;
+  font-weight:bold;
+  float:left; 
+  height:2.5em;
+  width:100px;
+  cursor:pointer; 
+  background-color:transparent;
+  background-image:url("/public/images/cutoff_D4E038.gif"); 
+  background-position:0% 0%;
+  background-repeat:no-repeat; 
+  
+}
+
+.nav input.last:hover, .nav input.last:active, .nav input.last:focus {
+  background-image:url("/public/images/cutoff_E6EB99.gif");
+  background-position:100% 100%;
+  background-repeat:no-repeat;
+}
+
+#portletContent a.buttonLink {
+  text-decoration:none;  
+  text-align:center;
+  padding-top: 0.6em;
+  height:1.9em;
+}
+
+input.last,
+.buttonLink.last {
+  background-position:100% 100%;
+}
+
+
+.nav div.last{
+  background-position:100% 100%;
+  width:100px;
+  margin-left:1px;
+}
+
+.twoColDiv .textIndent{
+  padding-top:6px;
+  margin-left:12.4em;
+}
+
+.floatRight{
+  float:right;
+}
+
+#propertyDetails {
+  margin:0px;
+  padding:0px;
+}
+
+#propertyDetails th{
+  width:5em;
+  vertical-align:top;
+  text-align:left;
+}
+
+#propertyDetails td{
+  vertical-align:top;
+}
+
+#help dd{
+  padding:5px 8px 5px 12px;
+  width:391px;
+  background-color:#EEF3AF;
+  margin:0px;
+  margin-bottom:2px;
+  border-left:5px solid #DDE660;
+}
+
+#help dt{
+  padding:5px 8px 5px 8px;
+  width:400px;
+  cursor:pointer; 
+  background-color:#DDE660;
+  margin-bottom:2px;
+}
+
+.hidden {
+  display:none;
+}
+
+.skip {
+	position: absolute;
+	left: -999em;
+	width: 990em;
+}
+
+a.skip:active,  a.skip:focus {
+	left: 65em;
+	width: 10em;
+	background-color:#FFFFFF;
+	margin:2px 0px 20px 0px;
+	padding:5px 14px 5px 14px;
+	background-image:url("./images/cutoff4.gif");
+	background-position: bottom right;
+	background-repeat:no-repeat;
+	font-family:arial,helvetica;
+	font-size:110%;
+	font-weight:bold;
+	color: #000000;
+	text-decoration:none;
+}
+
+a.skip:hover{
+	background-color:#D4E038;
+	background-image:url("./images/cutoff3.gif");
+	color: #000000;
+	text-decoration:none;
+}
+
+#mainContentAnchor{
+position: absolute;
+	left: -999em;
+	width: 990em;
+}
