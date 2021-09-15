@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-{% extends "layout_unbranded5.html" %}
+{% extends "layout_unbranded7.html" %}
 {% from "checkboxes/macro.njk" import govukCheckboxes %}
 {% block pageTitle %} View my applications
 {% endblock %}
 {% block content %}
-
 
 <style>
 
@@ -14,6 +13,14 @@ display:none;
 
 
 .govuk-link:link, a:link {
+    color: #00703C;
+}
+
+a {
+    color: #00703C;
+}
+
+a:visited {
     color: #00703C;
 }
 
@@ -50,87 +57,6 @@ display:none;
     text-decoration: none;
     line-height: 70px;
     font-weight: 400;
-}
-
-
-.accordionNEW {
-  background-color: #ffffff;
-  padding: 18px 8px 0px 0px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 19px;
-  transition: 0.4s;
-  color: #00703C;
-  cursor: pointer;
-  margin-top: 9px;
-}
-
-.active, .accordionNEW:hover {
-  background-color: #ffffff;
-}
-
-.accordionNEW:before {
-    content: "";
-    width: 30px;
-    height: 30px;
-    background: white url(/public/images/down-arrow.svg);
-    background-size: 30px 30px;
-    top: -4px;
-    right: 5px;
-    position: relative;
-    float: left;
-}
-
-.active:before {
-    content: "";
-    width: 30px;
-    height: 30px;
-    background: white url(/public/images/up-arrow.svg);
-    background-size: 30px 30px;
-    top: -4px;
-    right: 5px;
-    position: relative;
-    float: left;
-}
-
-.panelNEW {
-  padding: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-
-
-.panelNEW.active {
-  overflow: unset;
-  max-height:unset;
-}
-
-.panelNEW.active:before {
-    content: unset;
-    width: unset;
-    height: unset;
-    background: unset;
-    background-size: unset;
-    top: unset;
-    right: unset;
-    position: unset;
-    float: unset;
-}
-
-.accordionBorder {
-    border-top:1px solid #b1b4b6;
-}
-
-.select2-container {
-    width: 100% !important;
-}
-
-.select2-container--open .select2-dropdown--below {
-    width: unset;
-    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
 }
 
 
@@ -289,7 +215,7 @@ padding-bottom: 3px;
   width:177px;
   padding: 25px;
   background: #ffffff;
-  margin-bottom:0px;
+    margin-bottom:0px;
 }
 
 .myAccountContent a {
@@ -319,7 +245,7 @@ hr {
 .parent {display: block;position: relative;float: left;line-height: 70px;}
 .parent a{margin: 20px;color: #FFFFFF;text-decoration: none;}
 .parent:hover > ul {display:block;position:absolute;}
-.child {display: none;box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 10%); z-index:999999;}
+.child {display: none;box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 10%);z-index:99999;}
 .child li {background-color: #ffffff;line-height: 40px;border-right:#CCC 0px solid; width:100%;}
 .child li a{color: #00703C; font-weight:700;font-size:15px;}
 ul{list-style: none;margin: 0;padding: 0px; min-width:10em;}
@@ -447,55 +373,11 @@ li:hover {background-color: #0ba961;}
     margin-bottom:0px;
 }
 
-.greyButton {
-    background-color: #005ea5;
-    border: 1px solid #005ea5;
-    padding: 0px 15px 0px 15px;
-    margin-right: 10px;
-    cursor: pointer;
-    color: #ffffff !important;
-    text-decoration: none;
-    line-height: 37px;
-    font-size: 16px;
-    border-radius: 0px;
-    margin-left: 0px;
-    display: inline-block;
-    margin-bottom: 10px;
-}
 
-.checkbox2 .govuk-checkboxes__item {
-    width: 100%;
-    margin-bottom: 0px;
-}
 
-.checkbox3 .govuk-checkboxes__item {
-    width: 100%;
-    margin-bottom: 0px;
-}
-
-.govuk-form-group {
-    margin-bottom: 9px;
-}
-
-.govuk-checkboxes--small .govuk-checkboxes__item {
-    float: unset;
-}
-
-.greyButton {
-    background-color: #F3F2F1;
-    border: 1px solid #dedede;
-    padding: 0px 15px;
-    display: inline-block;
-    margin-top: 5px;
-    margin-right: 5px;
-    cursor: pointer;
-    color: #0b0c0c !important;
-    text-decoration: none;
-    line-height: 38px;
-}
-
-.accordionBorder {
-    border-top: 1px solid #b1b4b6;
+.panelNEW.active {
+    overflow: unset;
+    max-height: unset;
 }
 
 .paginationDesign {
@@ -508,6 +390,40 @@ li:hover {background-color: #0ba961;}
     border-top: 0px;
 }
 
+.open {
+    border: 5px solid #44a477 !important;
+    background: #44a477 !important;
+    color: #fff !important;
+}
+
+.tag {
+    border-radius: 0px;
+    float: right;
+    color: #0b0c0c;
+}
+
+.open .expandy-row-trigger2 {
+    font-weight: 400;
+    color: #ffffff !important;
+}
+
+
+.govuk-button--secondary {
+    background-color: #f3f2f1;
+    -webkit-box-shadow: 0 2px 0 #929191;
+    box-shadow: 0 2px 0 #929191;
+    font-size: 17px;
+}
+
+.govuk-button--secondary, .govuk-button--secondary:link, .govuk-button--secondary:visited, .govuk-button--secondary:active, .govuk-button--secondary:hover {
+    color: #0b0c0c;
+}
+
+.tag {
+    border-radius: 0px;
+    float: right;
+    color: #0b0c0c;
+}
 
 </style>
 
@@ -656,12 +572,12 @@ li:hover {background-color: #0ba961;}
 
 
   <div id="FiltersAndSearch" style="width: 300px;float: left;padding: 30px;background: #fff;padding-top:50px;min-height: 700px;">
-   <form id="search" style="">
+
       <div class="" style="">
-        
+        <form id="search" style="">
 
             <div>
-               <h1 class="govuk-heading-l" style="font-size:34px;">View applications</h1>
+                <h1 class="govuk-heading-l" style="font-size:34px;">View applications</h1>
             </div>
     
             <div class="govuk-body" style="margin-bottom: 30px;">
@@ -671,149 +587,119 @@ li:hover {background-color: #0ba961;}
 
                     <input type="text" id="search-input" class="searchBox" style="width: calc(100% - 84px);">
                     <button class="searchButton" value="submit" id="search-button">Search</button>
-                    <a href="#" id="reset" class="govuk-link govuk-link--no-visited-state" style="font-size: 14px;margin-top: 10px;color:#00703C !Important;
+                    <a href="#" id="reset" class="govuk-link " style="font-size: 14px;margin-top: 10px;color:#00703C !Important;
                     "><u> Reset search</u></a>
             </div>
 
 
-            <button class="accordionNEW accordionBorder">Application type</button>
-            <div class="panelNEW">
-
-      
-                        {{ govukCheckboxes ({
-                            idPrefix: "application-type2",
-                            name: "application-type2",
-                            classes: "govuk-checkboxes govuk-checkboxes--small checkbox2",
-                            fieldset: {
-                              legend: {
-                                text: ""
-                              }
-                            },
-                            items: [
-                            {
-                            value: "Preliminary",
-                            text: "Register update",
-                            checked: false,
-                            id: "Preliminary"
-                            },
-                            {
-                            value: "Substantive",
-                            text: "Register create"   ,
-                            checked: false,
-                            id: "Substantive"
-                            },
-                            {
-                            value: "Sobstantive",
-                            text: "Register query"   ,
-                            checked: false,
-                            id: "Sobstantive"
-                            }
-                            ]
-                          }) }}     
-      
+                <details class="govuk-details" data-module="govuk-details3"  style="padding-left:0px; margin-bottom:15px;">
+                    <summary class="govuk-details__summary" style="">
+                    Filter by application type
+                    </summary>
+                    <div class="govuk-details-text">
+                    {{ govukCheckboxes ({
+                    idPrefix: "application-type2",
+                    name: "application-type2",
+                    classes: "govuk-checkboxes govuk-checkboxes--small",
+                    fieldset: {
+                    legend: {
+                    text: ""
+                    }
+                    },
+                    items: [
+                    {
+                    value: "Preliminary",
+                    text: "Register update",
+                    checked: false,
+                    id: "Preliminary"
+                    },
+                    {
+                    value: "Substantive",
+                    text: "Register create"   ,
+                    checked: false,
+                    id: "Substantive"
+                    },
+                    {
+                    value: "Sobstantive",
+                    text: "Register query"   ,
+                    checked: false,
+                    id: "Sobstantive"
+                    }
+                    ]
+                    }) }}
+                    </div>
+                </details>
  
-            </div>
 
 
-          <button class="accordionNEW accordionBorder">Application status</button>
-          <div class="panelNEW">
-                      {{ govukCheckboxes ({
-                        idPrefix: "application-progress2",
-                        name: "application-progress2",
-                        classes: "govuk-checkboxes govuk-checkboxes--small checkbox3",
-                        fieldset: {
-                        legend: {
-                          text: ""
-                        }
-                        },
-                        items: [
-                        {
-                           value: "Saved",
-                           text: "Saved"   ,
-                           checked: false,
-                           id: "Saved"
-                           },
-                        {
-                        value: "Received",
-                        text: "Received"   ,
-                        checked: false,
-                        id: "Received"
-                        },
-                        {
-                        value: "Cancelled",
-                        text: "Cancelled"   ,
-                          checked: false,
-                        id: "Cancelled"
-                        },
-                        {
-                            value: "Completed",
-                            text: "Completed"   ,
-                              checked: false,
-                            id: "Completed"
-                            },
-                        {
-                        value: "Delayed",
-                        text: "Delayed"   ,
-                          checked: false,
-                        id: "Delayed"
-                        },
-                        {
-                            value: "DelayedRA",
-                            text: "Delayed - Requires Action"   ,
-                              checked: false,
-                            id: "DelayedRA"
-                            },
-                            {
-                            value: "DelayedTime",
-                            text: "Delayed - Time Extension"   ,
-                              checked: false,
-                            id: "DelayedTime"
-                            },
+             <details class="govuk-details" data-module="govuk-details2"  style="padding-left:0px;margin-bottom:15px;">
+                <summary class="govuk-details__summary">
+                   Filter by application progress
+                </summary>
+                <div class="govuk-details-text">
+                   {{ govukCheckboxes  ({
+                   idPrefix: "application-progress2",
+                   name: "application-progress2",
+                   classes: "govuk-checkboxes govuk-checkboxes--small",
+                   fieldset: {
+                   legend: {
+                   text: ""
+                   }
+                   },
+                   items: [
+                   {
+                   value: "Cancelled",
+                   text: "Cancelled"   ,
+                   checked: false,
+                   id: "Cancelled"
+                   },
+                   {
+                   value: "Completed",
+                   text: "Completed"   ,
+                   checked: false,
+                   id: "Completed"
+                   },
+                   {
+                   value: "Delayed",
+                   text: "Delayed"   ,
+                   checked: false,
+                   id: "Delayed"
+                   },
+                   {
+                   value: "Received",
+                   text: "Received"   ,
+                   checked: false,
+                   id: "Received"
+                   },
+                   {
+                   value: "Saved",
+                   text: "Saved"   ,
+                   checked: false,
+                   id: "Saved"
+                   }
+                   ]
+                   }) }}
+                </div>
+             </details>
 
-                            {
-                                value: "DelayedPending",
-                                text: "Delayed - Prior Pending"   ,
-                                  checked: false,
-                                id: "DelayedPending"
-                                }   
-                        ]
-                        }) 
-                    }}
-
-          </div>
+             <details class="govuk-details" style="padding-left:0px;color: #00703C;cursor: pointer;">
+                <summary class="govuk-details__summary">
+                    Export
+                 </summary>
+                 <div style="margin-top:10px;margin-left:24px;">
+                    <a class="greyButton" href="/public/files/example-export.csv">CSV</a>
+                </div>
+             </details>
 
 
-          <button class="accordionNEW accordionBorder">Export</button>
-          <div class="panelNEW">
-            <a class="greyButton" style="margin-bottom:10px;" target="_blank" href="/public/files/example.csv"><i style="padding-right: 5px;
-               font-size: 17px;" class="fas fa-file-download"></i> CSV</a>
-          </div>
+             <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;" onclick="window.location.href='#'">
+               Guidance
+             </button>
 
-
-          <div class="accordionBorder" style="padding-top: 30px;margin-top: 9px; width: 100%;">
-            <a class="greyButton" style="" target="_blank" href="V1-Help.html"><i class="fas fa-info-circle" style="padding-right: 5px;font-size: 20px;"></i>Guidance</a>
-           </div>
 
 
       </form>
 
-      <script>
-         var acc = document.getElementsByClassName("accordionNEW");
-         var i;
-         
-         for (i = 0; i < acc.length; i++) {
-           acc[i].addEventListener("click", function() {
-             this.classList.toggle("active");
-             var panelNEW = this.nextElementSibling;
-             if (panelNEW.style.minHeight) {
-               panelNEW.style.minHeight = null;
-             } else {
-
-               panelNEW.classList.toggle("active");
-             } 
-           });
-         }
-         </script>
 
 
 
@@ -841,11 +727,12 @@ li:hover {background-color: #0ba961;}
               <th class="govuk-table__header sortable" scope="col">
                  <div>Received by HMLR</div>
               </th>
-              <th class="govuk-table__header" scope="col">Application progress</th>
+              
               <th class="govuk-table__header" scope="col">
                  <div>Estimated completion date <a style="font-size:12px;display:block;" href="V1-help#ecd" target="_blank">What's this?</a></div>
               </th>
-              <th class="govuk-table__header"scope="col">Show/hide details</th>
+              <th class="govuk-table__header" scope="col" width="120px"></th>
+              <th class="govuk-table__header"scope="col"></th>
            </tr>
         </thead>
         {% macro rows(page) %}
@@ -867,12 +754,14 @@ li:hover {background-color: #0ba961;}
                  <p class="govuk-visually-hidden"> Preliminary Cancelled </p>
               </td>
               <td class="govuk-table__cell " scope="row" data-sortable="2021-08-05">05/08/21</td>
-              <td class="govuk-table__cell " scope="row">Cancelled</td>
+              
               <td class="govuk-table__cell "  data-sortable="0"></td>
+              <td class="govuk-table__cell " scope="row"><span class="tag cancelled">Cancelled</span></td>
               <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
            </tr>
            <!-- 1 Expanded row -->
-           <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+           <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;border: 5px solid #44a477 !important;">
+
               <td class="govuk-table__cell" colspan="1"></td>
               <td class="govuk-table__cell" colspan="7" style="padding-top: 30px;">
                  <div>
@@ -930,12 +819,15 @@ li:hover {background-color: #0ba961;}
                     <div class="rowContentSection">
                        <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
                        <div class="expandedText">
-                          <div class="expandedText">
-                             <a class="greyButton" style="margin-left:0px;" href="#">Save as PDF</a>
-                          </div>
+                        <div class="expandedText">
+                           <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;">
+                              Save as PDF
+                            </button>
+                         </div>
                        </div>
                     </div>
               </td>
+
            </tr>
         </tbody>
      
@@ -957,12 +849,13 @@ li:hover {background-color: #0ba961;}
                <p class="govuk-visually-hidden"> Preliminary Received </p>
             </td>
             <td class="govuk-table__cell " scope="row" data-sortable="2021-08-01">01/08/21</td>
-            <td class="govuk-table__cell " scope="row">Received</td>
+            
             <td class="govuk-table__cell "  data-sortable="0">04/11/2021</td>
+            <td class="govuk-table__cell " scope="row"><span class="tag received">Received</span></td>
             <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
          </tr>
          <!-- 1 Expanded row -->
-         <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+         <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;border: 5px solid #44a477 !important;">
             <td class="govuk-table__cell" colspan="1"></td>
             <td class="govuk-table__cell" colspan="7" style="padding-top: 30px;">
                <div>
@@ -1020,22 +913,23 @@ li:hover {background-color: #0ba961;}
                      <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
                      <div class="expandedText">
                         <div class="expandedText">
-                           <a class="greyButton" href="#">Respond</a> 
-                           <a class="greyButton" style="margin-left:0px;" href="#">Application Enquiry</a> 
-                           <a class="greyButton" style="margin-left:0px;" href="#">Save as PDF</a>
-                        </div>
+                           <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;">
+                              Respond
+                            </button>
+                            <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;">
+                              Application Enquiry
+                            </button>
+                            <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;">
+                              Save as PDF
+                            </button>
+                         </div>
                      </div>
                   </div>
             </td>
          </tr>
       </tbody>
      
-     
-     
-     
-     
-     
-     
+  
      
          <!-- Application 3 -->
          <tbody class="govuk-table__body">
@@ -1052,12 +946,13 @@ li:hover {background-color: #0ba961;}
                    <p class="govuk-visually-hidden"> Preliminary Delayed </p>
                 </td>
                 <td class="govuk-table__cell " scope="row" data-sortable="2021-07-25">25/07/21</td>
-                <td class="govuk-table__cell " scope="row">Delayed</td>
+               
                 <td class="govuk-table__cell "  data-sortable="0">24/10/2021</td>
+                <td class="govuk-table__cell " scope="row"><span class="tag delayed">Delayed</span></td>
                 <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
              </tr>
              <!-- 1 Expanded row -->
-             <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+             <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;border: 5px solid #44a477 !important;">
                 <td class="govuk-table__cell" colspan="1"></td>
                 <td class="govuk-table__cell" colspan="7" style="padding-top: 30px;">
                    <div>
@@ -1107,9 +1002,15 @@ li:hover {background-color: #0ba961;}
                          <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
                          <div class="expandedText">
                             <div class="expandedText">
-                               <a class="greyButton" href="#">Respond</a> 
-                               <a class="greyButton" style="margin-left:0px;" href="#">Application Enquiry</a> 
-                               <a class="greyButton" style="margin-left:0px;" href="#">Save as PDF</a>
+                              <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;">
+                                 Respond
+                               </button>
+                               <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;">
+                                 Application Enquiry
+                               </button>
+                               <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;">
+                                 Save as PDF
+                               </button>
                             </div>
                          </div>
                       </div>
@@ -1117,17 +1018,7 @@ li:hover {background-color: #0ba961;}
              </tr>
           </tbody>
      
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
+ 
      
          <!-- Application 4 -->
          <tbody class="govuk-table__body">
@@ -1141,15 +1032,16 @@ li:hover {background-color: #0ba961;}
                 <td class="govuk-table__cell ">Ainsley.Brown.43</td>
                 <td class="govuk-table__cell Substantive" id="">
                    Register Update
-                   <p class="govuk-visually-hidden"> Preliminary Received </p>
+                   <p class="govuk-visually-hidden"> Preliminary Completed </p>
                 </td>
                 <td class="govuk-table__cell " scope="row" data-sortable="2021-07-25">25/07/21</td>
-                <td class="govuk-table__cell " scope="row">Received</td>
-                <td class="govuk-table__cell "  data-sortable="0">28/10/2021</td>
+                
+                <td class="govuk-table__cell "  data-sortable="0"></td>
+                <td class="govuk-table__cell " scope="row"><span class="tag completed">Completed</span></td>
                 <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
              </tr>
              <!-- 1 Expanded row -->
-             <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+             <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;border: 5px solid #44a477 !important;">
                 <td class="govuk-table__cell" colspan="1"></td>
                 <td class="govuk-table__cell" colspan="7" style="padding-top: 30px;">
                    <div>
@@ -1158,7 +1050,7 @@ li:hover {background-color: #0ba961;}
                             Application Progress
                          </div>
                          <div class="expandedText">
-                            Receieved: Awaiting Processing
+                            Completed
                          </div>
                       </div>
                       <div class="rowContentSection">
@@ -1199,10 +1091,16 @@ li:hover {background-color: #0ba961;}
                       <div class="rowContentSection">
                          <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
                          <div class="expandedText">
-                            <div class="expandedText">
-                               <a class="greyButton" href="#">Respond</a> 
-                               <a class="greyButton" style="margin-left:0px;" href="#">Application Enquiry</a> 
-                               <a class="greyButton" style="margin-left:0px;" href="#">Save as PDF</a>
+                           <div class="expandedText">
+                              <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;">
+                                 Respond
+                               </button>
+                               <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;">
+                                 Application Enquiry
+                               </button>
+                               <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;">
+                                 Save as PDF
+                               </button>
                             </div>
                          </div>
                       </div> 
@@ -1224,26 +1122,26 @@ li:hover {background-color: #0ba961;}
      <div class="govuk-body paginationDesign" style="">
  
  
-      <div>
-      Application rows
-          <select class="form-control" style="margin-left:5px;line-height:24px; padding:5px 10px;border-radius:0px;">
-                  <option value="10">10</option>
-                  <option value="25">25</option>
-                  <option value="50">50</option>
-          </select>
-      </div>
-
-      <div style="padding-left:30px;">
-          1-4 of 4
-      </div>
-
-      <div style="padding-left:30px;">
-          <svg xmlns="http://www.w3.org/2000/svg" height="29px" viewBox="0 0 24 24" width="24px" fill="#dedede"><path d="M24 0v24H0V0h24z" fill="none"/><path d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6 1.41-1.41zM6 6h2v12H6V6z"/></svg>
-          <svg style="padding-left:15px;" xmlns="http://www.w3.org/2000/svg" height="29px" viewBox="0 0 24 24" width="24px" fill="#dedede"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"/></svg>
-          <svg style="padding-left:15px;" xmlns="http://www.w3.org/2000/svg" height="29px" viewBox="0 0 24 24" width="24px" fill="#dedede"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
-          <svg style="padding-left:15px;" xmlns="http://www.w3.org/2000/svg" height="29px" viewBox="0 0 24 24" width="24px" fill="#dedede"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6-1.41 1.41zM16 6h2v12h-2V6z"/></svg>
-      </div>
-  </div>
+             <div>
+             Application rows
+                 <select class="form-control" style="margin-left:5px;line-height:24px; padding:5px 10px;border-radius:0px;">
+                         <option value="10">10</option>
+                         <option value="25">25</option>
+                         <option value="50">50</option>
+                 </select>
+             </div>
+ 
+             <div style="padding-left:30px;">
+                 1-4 of 4
+             </div>
+ 
+             <div style="padding-left:30px;">
+                 <svg xmlns="http://www.w3.org/2000/svg" height="29px" viewBox="0 0 24 24" width="24px" fill="#dedede"><path d="M24 0v24H0V0h24z" fill="none"/><path d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6 1.41-1.41zM6 6h2v12H6V6z"/></svg>
+                 <svg style="padding-left:15px;" xmlns="http://www.w3.org/2000/svg" height="29px" viewBox="0 0 24 24" width="24px" fill="#dedede"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"/></svg>
+                 <svg style="padding-left:15px;" xmlns="http://www.w3.org/2000/svg" height="29px" viewBox="0 0 24 24" width="24px" fill="#dedede"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                 <svg style="padding-left:15px;" xmlns="http://www.w3.org/2000/svg" height="29px" viewBox="0 0 24 24" width="24px" fill="#dedede"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path d="M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6-1.41 1.41zM16 6h2v12h-2V6z"/></svg>
+             </div>
+         </div>
 
   </div>
 
@@ -1273,4 +1171,3 @@ li:hover {background-color: #0ba961;}
 <!-- Content Area - End -->
 
 {% endblock %}
-
