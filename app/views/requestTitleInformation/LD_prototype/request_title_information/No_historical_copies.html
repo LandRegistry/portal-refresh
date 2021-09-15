@@ -158,60 +158,238 @@
 <div class="govuk-width-container">
   
     <main class="govuk-main-wrapper">
+      <main class="govuk-main-wrapper">
   
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <a href="#" class="govuk-back-link">Back</a>
-  
-            <h1 class="govuk-heading-xl">This is a different page</h1>
-            <div class="govuk-form-group">
-              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-                  Customer reference
+        <div class="govuk-grid-row">
+          <form class = "form" action="Summary_No_historical_copies" method="POST">
+
+            <div class="govuk-grid-column-two-thirds">
+              <a href="#" class="govuk-back-link">Back</a>
+      
+              <h1 class="govuk-heading-xl">Request title information</h1>
+              <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Title number</th>
+                    <td class="govuk-table__cell">DN461880</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Address</th>
+                    <td class="govuk-table__cell">SEATON COURT, 2 WILLIAM PRANCE ROAD, PLYMOUTH, PL6 5WS</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Tenure</th>
+                    <td class="govuk-table__cell">FREEHOLD</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Title administered by</th>
+                    <td class="govuk-table__cell">HM LAND REGISTRY, PLYMOUTH OFFICE</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h2 class="govuk-heading-m">Register and title plans</h2>
+              <p>I you order both the register and title plan, they will be delivered together
+                either electronically or by post.
+              </p>
+              <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                <table class="govuk-table">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header table_2_header">Document type</th>
+                      <th scope="row" class="govuk-table__header table_2_header">Status</th>
+                      <th scope="row" class="govuk-table__header table_2_header">Format</th>
+                      <th scope="row" class="govuk-table__header table_2_header">Cost</th>                  
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-table__cell2">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="register" name="register" type="checkbox" value="0" onclick="checkbox1()">
+                          <label class="govuk-label govuk-checkboxes__label" for="register">
+                            Register
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell2">Official Copy</td>
+                      <td class="govuk-table__cell govuk-table__cell2">PDF</td>
+                      <td class="govuk-table__cell govuk-table__cell2">£3.00</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-table__cell2">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="title_plan" name="title_plan" type="checkbox" value="title_plan" onclick="checkbox2()">
+                          <label class="govuk-label govuk-checkboxes__label" for="title_plan">
+                            Title plan
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell2">Official Copy</td>
+                      <td class="govuk-table__cell govuk-table__cell2">PDF</td>
+                      <td class="govuk-table__cell govuk-table__cell2">£3.00</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-table__cell2">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="title_plan_map" name="title_plan_map" type="checkbox" value="title_plan_map" onclick="checkbox3()">
+                          <label class="govuk-label govuk-checkboxes__label" for="title_plan_map">
+                            Title plan map
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell2">Official Copy</td>
+                      <td class="govuk-table__cell govuk-table__cell2">PDF</td>
+                      <td class="govuk-table__cell govuk-table__cell2">£3.00</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </fieldset>
+
+              <h2 class="govuk-heading-m">Documents referred to in the register</h2>
+              <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                <table class="govuk-table">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header table_2_header">Document type</th>
+                      <th scope="row" class="govuk-table__header table_2_header">Entry number</th>
+                      <th scope="row" class="govuk-table__header table_2_header">Date</th>
+                      <th scope="row" class="govuk-table__header table_2_header">Filed under</th>  
+                      <th scope="row" class="govuk-table__header table_2_header">Cost</th>                                  
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-table__cell2">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="deed" name="deed" type="checkbox" value="deed" onclick="checkbox4()">
+                          <label class="govuk-label govuk-checkboxes__label" for="deed">
+                            Deed
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell2">B3</td>
+                      <td class="govuk-table__cell govuk-table__cell2">28/03/2002</td>
+                      <td class="govuk-table__cell govuk-table__cell2">-</td>
+                      <td class="govuk-table__cell govuk-table__cell2">£3.00</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-table__cell2">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="lease" name="lease" type="checkbox" value="lease" onclick="checkbox5()">
+                          <label class="govuk-label govuk-checkboxes__label" for="lease">
+                            Lease
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell2">L1</td>
+                      <td class="govuk-table__cell govuk-table__cell2">23/12/2016</td>
+                      <td class="govuk-table__cell govuk-table__cell2">DN680790</td>
+                      <td class="govuk-table__cell govuk-table__cell2">£3.00</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-table__cell2">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="transfer_Afour" name="transfer_Afour" type="checkbox" value="transfer_Afour" onclick="checkbox6()">
+                          <label class="govuk-label govuk-checkboxes__label" for="transfer_Afour">
+                            Transfer
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell2">A4, A5, C3, C4</td>
+                      <td class="govuk-table__cell govuk-table__cell2">28/03/2002</td>
+                      <td class="govuk-table__cell govuk-table__cell2">-</td>
+                      <td class="govuk-table__cell govuk-table__cell2">£3.00</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-table__cell2">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="transfer_Aeight" name="transfer_Aeight" type="checkbox" value="transfer_Aeight" onclick="checkbox7()">
+                          <label class="govuk-label govuk-checkboxes__label" for="transfer_Aeight">
+                            Transfer
+                          </label>
+                        </div>
+                      </td>
+                      <td class="govuk-table__cell govuk-table__cell2">A8, A9</td>
+                      <td class="govuk-table__cell govuk-table__cell2">14/09/2018</td>
+                      <td class="govuk-table__cell govuk-table__cell2">DN703819</td>
+                      <td class="govuk-table__cell govuk-table__cell2">£3.00</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </fieldset>
+
+              <h2 class="govuk-heading-m">Documents not available</h2>
+                <table class="govuk-table">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header table_2_header">Document type</th>
+                      <th scope="row" class="govuk-table__header table_2_header">Entry number</th>
+                      <th scope="row" class="govuk-table__header table_2_header">Date</th>                               
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-table__cell2">Deed of exchange</td>
+                      <td class="govuk-table__cell govuk-table__cell2">A2</td>
+                      <td class="govuk-table__cell govuk-table__cell2">28/03/2002</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-table__cell2">Deed of harmonisation</td>
+                      <td class="govuk-table__cell govuk-table__cell2">A2</td>
+                      <td class="govuk-table__cell govuk-table__cell2">23/12/2016</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-table__cell2">Transfer</td>
+                      <td class="govuk-table__cell govuk-table__cell2">A3, C1</td>
+                      <td class="govuk-table__cell govuk-table__cell2">28/03/2002</td>
+                    </tr>
+                  </tbody>
+                </table>
+              
+              <h2 class="govuk-heading-m">Non referred documents/Certificate in form CI</h2>
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="file-upload-1">
+                  Add non referred document
                 </label>
-              </h1>
-              <div id="customer-reference-hint" class="govuk-hint">
-                To help you identify the search on your variable Direct Debit statement.
+                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
               </div>
-              <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="file-upload-1">
+                  Add certificate in form CI
+                </label>
+                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+              </div>
+
+              <button class="govuk-button" data-module="govuk-button">
+                Checkout
+              </button>
+
+
             </div>
 
-            <div class="govuk-form-group">
-              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-                  Title plan
-                </label>
-              </h1>
-              <div id="customer-reference-hint" class="govuk-hint">
-                If you don't know the title number, <a href="#" class="govuk-link">we can help you</a> with that.
+
+
+            <div class="govuk-grid-column-one-third">
+              <div class = "grey-container" id="side_container">
+                <h3 class="govuk-heading-s">Basket</h3>
+                <p>Empty</p>
+                <div id="basket_items_container">
+                  <ul id="basket_item">
+                  </ul>
+                </div>
+                <div id="items_cost_container">
+                  <ul id="items_cost">
+                  </ul>
+                </div>
+                <p>Total</p>
+                <p id="total_cost">£0.00</p>
+                <button class="govuk-button" data-module="govuk-button">
+                  Checkout
+                </button>
               </div>
-              <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
-            </div>
-            <form class="form" action="Documents_summary.html" method="post">
-              <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="historicalCopies" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label" for="waste">
-                          Include historical copies
-                        </label>
-                      </div>
-                    </div>
-                  </fieldset>
-                </form>
-              </div>
-              <button class="govuk-button" data-module="govuk-button" onclick="Historicalcopies()">
-                Continue
-              </button>
-            </form>
-          </div>
-        <div class="govuk-grid-column-one-third">
-          <div class = "grey-container">
-            <h3 class="govuk-heading-s">Service information</h3>
-            <p class="govuk-body">Find out current and past information about a registered property, such as its previous owners and the deeds.</p>
-          </div>
-        </div>   
-      </div>
-  
+            </div>  
+          </form>
+        </div>
+    
+      </main>
+ 
     </main>
 </div>
 

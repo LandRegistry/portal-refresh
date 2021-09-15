@@ -158,60 +158,58 @@
 <div class="govuk-width-container">
   
     <main class="govuk-main-wrapper">
-  
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <a href="#" class="govuk-back-link">Back</a>
-  
-            <h1 class="govuk-heading-xl">Request title information</h1>
-            <div class="govuk-form-group">
-              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-                  Customer reference
-                </label>
-              </h1>
-              <div id="customer-reference-hint" class="govuk-hint">
-                To help you identify the search on your variable Direct Debit statement.
-              </div>
-              <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
-            </div>
-
-            <div class="govuk-form-group">
-              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-                  Title plan
-                </label>
-              </h1>
-              <div id="customer-reference-hint" class="govuk-hint">
-                If you don't know the title number, <a href="#" class="govuk-link">we can help you</a> with that.
-              </div>
-              <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
-            </div>
-            <form class="form" action="Documents_summary.html" method="post">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <a href="#" class="govuk-back-link">Back</a>
+    
+              <h1 class="govuk-heading-xl">Request title information</h1>
               <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="historicalCopies" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label" for="waste">
-                          Include historical copies
-                        </label>
-                      </div>
-                    </div>
-                  </fieldset>
-                </form>
+                <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+                    Customer reference
+                  </label>
+                </h1>
+                <div id="customer-reference-hint" class="govuk-hint">
+                  To help you identify the search on your variable Direct Debit statement.
+                </div>
+                <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
               </div>
-              <button class="govuk-button" data-module="govuk-button" onclick="Historicalcopies()">
-                Continue
-              </button>
-            </form>
-          </div>
-        <div class="govuk-grid-column-one-third">
-          <div class = "grey-container">
-            <h3 class="govuk-heading-s">Service information</h3>
-            <p class="govuk-body">Find out current and past information about a registered property, such as its previous owners and the deeds.</p>
-          </div>
-        </div>   
-      </div>
-  
+
+              <div class="govuk-form-group">
+                <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+                    Title plan
+                  </label>
+                </h1>
+                <div id="customer-reference-hint" class="govuk-hint">
+                  If you don't know the title number, <a href="#" class="govuk-link">we can help you</a> with that.
+                </div>
+                <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+              </div>
+              <form class="form" action="Documents_summary.html" method="post">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="historicalCopies" name="waste" type="checkbox" value="carcasses">
+                          <label class="govuk-label govuk-checkboxes__label" for="waste">
+                            Include historical copies
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
+                <button class="govuk-button" data-module="govuk-button" onclick="Historicalcopies()">
+                  Continue
+                </button>
+              </form>
+            </div>
+          <div class="govuk-grid-column-one-third">
+            <div class = "grey-container">
+              <h3 class="govuk-heading-s">Service information</h3>
+              <p class="govuk-body">Find out current and past information about a registered property, such as its previous owners and the deeds.</p>
+            </div>
+          </div>   
+        </div>
     </main>
 </div>
 

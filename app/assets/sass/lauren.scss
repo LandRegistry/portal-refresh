@@ -20,12 +20,29 @@
     background-color: blueviolet;
 }
 
+.govuk-fieldset{
+    padding:0px;
+}
+
 .govuk-table{
-    border: 0px;}
+    border: 0px;
+    width: 100%;}
 
 .govuk-table__row:nth-child(1){
     border-top: 1px solid #bfc1c3;}
 
 .govuk-table__header{
     padding: 10px 30px 10px 0px;
+}
+
+.govuk-table__row:hover{
+    background: none;
+}
+
+.table_2_header{
+    padding: 10px 0px;
+}
+
+.govuk-table__cell2{
+    padding: 10px 0px;
 }
