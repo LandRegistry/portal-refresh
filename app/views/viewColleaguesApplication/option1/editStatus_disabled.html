@@ -172,6 +172,16 @@ label {
     padding: 10px 15px 0px 33px;
 }
 
+.greyCorner {
+    background-image: url(/public/images/grey_corner.jpg);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+input.first, .buttonLink.first {
+    background-position: 0% 100%;
+}
+
 </style>
 
 
@@ -272,7 +282,7 @@ label {
                             <div class="container formHeading" style="margin-bottom:2px !Important;"><h1>Business unit</h1></div>
                             <div class="container formHeading"><h3>View colleague's applications details</h3></div>
 
-                            <div class="contentMiddleSection">
+                            <div class="contentMiddleSection greyCorner">
                                 <div class="leftBoxLightGrey">
                                     <h3 style="margin-bottom:10px;">Edit status</h3>
 
@@ -295,8 +305,9 @@ label {
                                 <div class="rightBoxGrey"></div>
                             </div>
                             <div class="nav">
-                                <div class="twoCol" style="width:400px;">&nbsp;</div>
-                                <input type="submit" class="last" value="Confirm" onclick="window.location.href='manageBusinessUnit_RP_enabled'">
+                                <div class="twoCol" style="width:300px;">&nbsp;</div>
+                                <input type="submit" class="first" value="« Previous" onclick="window.location.href='manageBusinessUnit_RP_disabled'">
+                                <input type="submit" class="last" value="Save" onclick="window.location.href='manageBusinessUnit_RP_enabled'">
                             </div>
 
                         </div>
