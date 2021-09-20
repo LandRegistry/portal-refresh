@@ -123,31 +123,25 @@
 }
 </style>
 
-<script defer>
+<script>
+ function Historicalcopies(){
+   if(document.getElementById('historicalCopies').checked){
+    window.location.href = "Documents_summary";
+   }
+    else{
+      // go to y page
+    }
+   }
+ 
 
-// document.getElementById("printCost_inTable").textContent = "Hello world";
-  
-// var Test = document.getElementById("title_plan_map_row");
-// console.log(Test);
-// console.log(5+5);
-
-document.addEventListener("DOMContentLoaded", function(event) {
-  var one = document.getElementById("printCost_inTable");
-  console.log(one);
-  document.getElementById("printCost_inTable").textContent = "Hello Lauren";
-  sessionStorage.setItem("BasketTotal", "Fred");
-  var y = sessionStorage.getItem("BasketTotal");
-  console.log(y);
-  console.log('Testing testing');
-})
-
-</script>  
+</script>
 
 
 <!-- Back & clear data top -->
 <!-- Back & clear data top -->
 <body onload="whatwasCheckedBefore()">
-
+    
+<div>
 
 <!-- Navigation Menu - Start -->
 <div class="navbar-container">
@@ -163,6 +157,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <!-- Main page -- Start -->
 <div class="govuk-width-container">
   
+    <main class="govuk-main-wrapper">
       <main class="govuk-main-wrapper">
   
         <div class="govuk-grid-row">
@@ -260,17 +255,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                   £3.00
                 </dd>
               </div>
-              <div class="govuk-summary-list__row" id="total_cost_row">
-                <dt class="govuk-summary-list__key">
-                  Total
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  <p id="printCost_inTable"></p>
-                </dd>
-              </div>
             </dl>
 
 
@@ -280,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
           <div class="govuk-grid-column-one-third">
             <div class = "grey-container" id="side_container">
-              <h3 class="govuk-heading-s" id="NeedHelp">Need help</h3>
+              <h3 class="govuk-heading-s">Need help</h3>
               <a href="#" class="govuk-link">HM Land Registry fees</a>
               <a href="#" class="govuk-link">Contact us</a>
 
@@ -290,6 +274,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
       </main>
  
+    </main>
 </div>
 
 

@@ -1,5 +1,3 @@
-const session = require("express-session");
-
 var noOfboxesChecked = 0;
 var totalAmounttoPay = 0;
 var twoDP_total = totalAmounttoPay.toFixed(2);
@@ -34,6 +32,8 @@ function checkbox1() {
         // sessionStorage.removeItem('register');
         sessionStorage.setItem('register', 'true');
 
+        bool_register = true;
+
        var li_register = document.createElement("LI");
        li_register.setAttribute("id", "register_id");
        var tn_register = document.createTextNode("Register - Official Copy");
@@ -58,6 +58,9 @@ function checkbox1() {
     //    a = sessionStorage.setItem('register', 'null');
        sessionStorage.removeItem('register');
 
+
+       bool_register = false; 
+
        register_id.remove();
        register_cost.remove();
        
@@ -79,7 +82,9 @@ function checkbox1() {
     if(document.getElementById('title_plan').checked){
         // sessionStorage.removeItem('titleplan');
         sessionStorage.setItem('titleplan', 'true');
-              
+       
+        bool_title_plan = true;
+       
         var li_title_plan = document.createElement("LI");
        li_title_plan.setAttribute("id", "title_plan_id");
        var tn_title_plan = document.createTextNode("Title Plan - Official Copy");
@@ -106,6 +111,9 @@ function checkbox1() {
 
        sessionStorage.removeItem('titleplan');
 
+       bool_title_plan = false;
+
+
        title_plan_id.remove();
        title_plan_cost.remove();
        
@@ -130,6 +138,7 @@ function checkbox1() {
         // sessionStorage.removeItem('titleplanmap');
         sessionStorage.setItem('titleplanmap', 'true');       
        
+        bool_title_plan_map = true;
        var li_title_plan_map = document.createElement("LI");
        li_title_plan_map.setAttribute("id", "title_plan_map_id");
        var tn_title_plan_map = document.createTextNode("Title Plan Map - Official Copy");
@@ -155,6 +164,8 @@ function checkbox1() {
         sessionStorage.removeItem('titleplanmap');
         // sessionStorage.setItem('titleplanmap', 'false');
        
+        bool_title_plan = false;
+
        title_plan_map_id.remove();
        title_plan_map_cost.remove();
        
@@ -178,6 +189,9 @@ function checkbox1() {
     if(document.getElementById('deed').checked){
         // sessionStorage.removeItem('deed');
         sessionStorage.setItem('deed', 'true');  
+
+        bool_deed = true;
+
 
        var li_deed = document.createElement("LI");
        li_deed.setAttribute("id", "deed_id");
@@ -204,6 +218,8 @@ function checkbox1() {
         sessionStorage.removeItem('deed');
         // sessionStorage.setItem('deed', 'false');  
 
+       bool_deed = false;
+
        deed_id.remove();
        deed_cost.remove();
        
@@ -227,6 +243,8 @@ function checkbox1() {
     if(document.getElementById('lease').checked){
         // sessionStorage.removeItem('lease');
         sessionStorage.setItem('lease', 'true');  
+
+        bool_lease = true;
 
        var li_lease = document.createElement("LI");
        li_lease.setAttribute("id", "lease_id");
@@ -253,6 +271,8 @@ function checkbox1() {
         sessionStorage.removeItem('lease');
         // sessionStorage.setItem('lease', 'false'); 
 
+       bool_lease = false;
+
        lease_id.remove();
        lease_cost.remove();
        
@@ -275,6 +295,9 @@ function checkbox1() {
     if(document.getElementById('transfer_Afour').checked){
         // sessionStorage.removeItem('transfer_afour');
         sessionStorage.setItem('transfer_afour', 'true'); 
+
+        bool_transfer_Afour = true;
+
        
        var li_transfer_Afour = document.createElement("LI");
        li_transfer_Afour.setAttribute("id", "transfer_Afour_id");
@@ -301,6 +324,8 @@ function checkbox1() {
         sessionStorage.removeItem('transfer_afour');
         // sessionStorage.setItem('transfer_afour', 'false'); 
 
+        bool_transfer_Afour = false;
+
 
         transfer_Afour_id.remove();
         transfer_Afour_cost.remove();
@@ -324,6 +349,8 @@ function checkbox1() {
     if(document.getElementById('transfer_Aeight').checked){
         // sessionStorage.removeItem('transfer_aeight');
         sessionStorage.setItem('transfer_aeight', 'true'); 
+        bool_transfer_Aeight = true;
+
 
        var li_transfer_Aeight = document.createElement("LI");
        li_transfer_Aeight.setAttribute("id", "transfer_Aeight_id");
@@ -349,6 +376,7 @@ function checkbox1() {
      else{
         sessionStorage.removeItem('transfer_aeight');
         // sessionStorage.setItem('transfer_aeight', 'false'); 
+        bool_transfer_Aeight = false;
 
         transfer_Aeight_id.remove();
         transfer_Aeight_cost.remove();
@@ -454,20 +482,13 @@ function whatwasCheckedBefore(){
     // }
 
         // var regValue = JSON.parse(window.localStorage.getItem('register'));
-        // var regValue = sessionStorage.getItem('register');
-        // var titleplanValue = sessionStorage.getItem('titleplan');
-        // var titleplanmapValue = sessionStorage.getItem('titleplanmap');
-        // var deedValue = sessionStorage.getItem('deed');
-        // var leaseValue = sessionStorage.getItem('lease');
-        // var transfer_a4Value = sessionStorage.getItem('transfer_afour');
-        // var transfer_a8Value = sessionStorage.getItem('transfer_aeight');
-
-        // printTotal_atCheckout();
-
-        // const element = document.getElementById("printCost_inTable");
-        // element.innerHTML= "Hello world";
-
-        // document.getElementById("printCost_inTable").innerHTML= "Hello world";
+        var regValue = sessionStorage.getItem('register');
+        var titleplanValue = sessionStorage.getItem('titleplan');
+        var titleplanmapValue = sessionStorage.getItem('titleplanmap');
+        var deedValue = sessionStorage.getItem('deed');
+        var leaseValue = sessionStorage.getItem('lease');
+        var transfer_a4Value = sessionStorage.getItem('transfer_afour');
+        var transfer_a8Value = sessionStorage.getItem('transfer_aeight');
 
 
         if (sessionStorage.getItem("register") === null){
@@ -505,28 +526,5 @@ function whatwasCheckedBefore(){
             seven.remove();
         }
 
-        printTheTotal();
 
-        // document.getElementById("printCost_inTable").textContent= "Hello world";
-
-
-}
-
-// function printTotal_atCheckout(){
-//     document.getElementById("printCost_inTable").textContent= "Hello world";
-// }
-
-function printTheTotal(){
-    var paragraphNode = document.getElementById("printCost_inTable");
-    var printCost = document.createTextNode();
-    var twoDP_total = totalAmounttoPay.toFixed(2);
-
-}
-
-function logTotalCost(){
-    // var twoDP_total = totalAmounttoPay.toFixed(2);
-    // var x = String(twoDP_total);
-    sessionStorage.setItem("BasketTotal", "Hello world");
-    var y = sessionStorage.getItem("BasketTotal");
-    console.log(y);
 }
