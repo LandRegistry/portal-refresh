@@ -124,23 +124,26 @@
 </style>
 
 <script>
- function Historicalcopies(){
-   if(document.getElementById('historicalCopies').checked){
-    window.location.href = "Documents_summary";
-   }
-    else{
-      // go to y page
-    }
-   }
- 
+document.addEventListener("DOMContentLoaded", function(event){
+  whatwasCheckedBefore();
+  var y = sessionStorage.getItem('TestingStorage');
+  console.log(y);
+  var z = '£' + y
+  document.getElementById('TotalCost_inTable').textContent = z;
+  document.getElementById('TotalCost').textContent = z;
+})
+
+window.addEventListener("load", function(event) {
+            document.querySelector("body").style.display = "block";
+        });
 
 </script>
 
 
 <!-- Back & clear data top -->
 <!-- Back & clear data top -->
-<body onload="whatwasCheckedBefore()">
-    
+<!-- <body onload="whatwasCheckedBefore()"> -->
+<body style="display:none;">
 <div>
 
 <!-- Navigation Menu - Start -->
@@ -163,101 +166,116 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             <a href="#" class="govuk-back-link">Back</a>
+            <form class="form" action="Confirmation_No_historical_copies" method="post">
+
     
-            <h1 class="govuk-heading-xl">Checkout</h1>
-            
-            <dl class="govuk-summary-list">
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Document name
-                </dt>
-                <dt class="govuk-summary-list__key">
-                  Format
-                </dt>
-                <dt class="govuk-summary-list__key">
-                  Cost
-                </dt>
-              </div>
-              <div class="govuk-summary-list__row" id="register_row">
-                <dt class="govuk-summary-list__key">
-                  Register - Official Copy
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  PDF
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  £3.00
-                </dd>
-              </div>
-              <div class="govuk-summary-list__row" id="title_plan_row">
-                <dt class="govuk-summary-list__key">
-                  Title plan - Official Copy
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  PDF
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  £3.00
-                </dd>
-              </div>
-              <div class="govuk-summary-list__row" id="title_plan_map_row">
-                <dt class="govuk-summary-list__key">
-                  Title plan map - Official Copy
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  PDF
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  £3.00
-                </dd>
-              </div>
-              <div class="govuk-summary-list__row" id="deed_row">
-                <dt class="govuk-summary-list__key">
-                  Deed
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  PDF
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  £3.00
-                </dd>
-              </div>
-              <div class="govuk-summary-list__row" id="lease_row">
-                <dt class="govuk-summary-list__key">
-                  Lease
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  PDF
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  £3.00
-                </dd>
-              </div>
-              <div class="govuk-summary-list__row" id="transfer_Afour_row">
-                <dt class="govuk-summary-list__key">
-                  Transfer
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  PDF
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  £3.00
-                </dd>
-              </div>
-              <div class="govuk-summary-list__row" id="transfer_Aeight_row">
-                <dt class="govuk-summary-list__key">
-                  Transfer
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  PDF
-                </dd>
-                <dd class="govuk-summary-list__actions">
-                  £3.00
-                </dd>
-              </div>
-            </dl>
+              <h1 class="govuk-heading-l">Checkout</h1>
 
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Document name
+                  </dt>
+                  <dt class="govuk-summary-list__key">
+                    Format
+                  </dt>
+                  <dt class="govuk-summary-list__key">
+                  </dt>
+                </div>
+                <div class="govuk-summary-list__row" id="register_row">
+                  <dt class="govuk-summary-list__key">
+                    Register - Official Copy
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    PDF
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    £3.00
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row" id="title_plan_row">
+                  <dt class="govuk-summary-list__key">
+                    Title plan - Official Copy
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    PDF
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    £3.00                </dd>
+                </div>
+                <div class="govuk-summary-list__row" id="title_plan_map_row">
+                  <dt class="govuk-summary-list__key">
+                    Title plan map - Official Copy
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    PDF
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    £3.00                </dd>
+                </div>
+                <div class="govuk-summary-list__row" id="deed_row">
+                  <dt class="govuk-summary-list__key">
+                    Deed
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    PDF
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    £3.00                </dd>
+                </div>
+                <div class="govuk-summary-list__row" id="lease_row">
+                  <dt class="govuk-summary-list__key">
+                    Lease
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    PDF
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    £3.00                
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row" id="transfer_Afour_row">
+                  <dt class="govuk-summary-list__key">
+                    Transfer
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    PDF
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    £3.00                
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row" id="transfer_Aeight_row">
+                  <dt class="govuk-summary-list__key">
+                    Transfer
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    PDF
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    £3.00
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row" id="transfer_Aeight_row">
+                  <dt class="govuk-summary-list__key">
+                    Total
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <p id="TotalCost_inTable">£0.00</p>
+                  </dd>
+                </div>
+              </dl>
+              <p>If you proceed with this application <strong id="TotalCost">£0.00</strong> will be charged to your account</p>
 
+              <button class="govuk-button" data-module="govuk-button" onclick="LogTotalCost()">
+                Order now
+              </button>
+            </form>
+
+      
           </div>
 
 
