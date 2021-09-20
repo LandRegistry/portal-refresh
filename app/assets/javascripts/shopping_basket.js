@@ -32,8 +32,6 @@ function checkbox1() {
         // sessionStorage.removeItem('register');
         sessionStorage.setItem('register', 'true');
 
-        bool_register = true;
-
        var li_register = document.createElement("LI");
        li_register.setAttribute("id", "register_id");
        var tn_register = document.createTextNode("Register - Official Copy");
@@ -52,6 +50,9 @@ function checkbox1() {
  
        noOfboxesChecked += 1;
        areBoxesticked();
+
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
  
      }
      else{
@@ -71,6 +72,8 @@ function checkbox1() {
        noOfboxesChecked -= 1; 
        areBoxesticked();
  
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
      }
  }
 
@@ -104,6 +107,8 @@ function checkbox1() {
        noOfboxesChecked += 1; 
        areBoxesticked();
  
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
        
      }
      else{
@@ -124,7 +129,8 @@ function checkbox1() {
        noOfboxesChecked -= 1;
        areBoxesticked();
  
-       
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
      }
  }
 
@@ -158,7 +164,8 @@ function checkbox1() {
        noOfboxesChecked += 1; 
        areBoxesticked();
  
-       
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
      }
      else{
         sessionStorage.removeItem('titleplanmap');
@@ -176,7 +183,8 @@ function checkbox1() {
        noOfboxesChecked -= 1;
        areBoxesticked();
  
-       
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
      }
  }
 
@@ -212,6 +220,8 @@ function checkbox1() {
        noOfboxesChecked += 1; 
        areBoxesticked();
  
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
        
      }
      else{
@@ -230,7 +240,8 @@ function checkbox1() {
        noOfboxesChecked -= 1;
        areBoxesticked();
  
-       
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
      }
  } 
 
@@ -265,7 +276,8 @@ function checkbox1() {
        noOfboxesChecked += 1; 
        areBoxesticked();
  
-       
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
      }
      else{
         sessionStorage.removeItem('lease');
@@ -283,7 +295,8 @@ function checkbox1() {
        noOfboxesChecked -= 1;
        areBoxesticked();
  
-       
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
      }
  } 
 
@@ -318,7 +331,8 @@ function checkbox1() {
        noOfboxesChecked += 1; 
        areBoxesticked();
  
-       
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
      }
      else{
         sessionStorage.removeItem('transfer_afour');
@@ -337,7 +351,8 @@ function checkbox1() {
        noOfboxesChecked -= 1;
        areBoxesticked();
  
-       
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
      }
  } 
  
@@ -371,7 +386,8 @@ function checkbox1() {
        noOfboxesChecked += 1; 
        areBoxesticked();
  
-       
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
      }
      else{
         sessionStorage.removeItem('transfer_aeight');
@@ -388,7 +404,8 @@ function checkbox1() {
        noOfboxesChecked -= 1;
        areBoxesticked();
  
-       
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
      }
  }
 
@@ -527,4 +544,8 @@ function whatwasCheckedBefore(){
         }
 
 
+}
+
+function LogTotalCost(){
+    sessionStorage.setItem('Question','Mark');
 }
