@@ -125,12 +125,22 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function(event){
-  whatwasCheckedBefore();
+  whatwasCheckedBeforeHistorical();
   var y = sessionStorage.getItem('TestingStorage');
   console.log(y);
-  var z = '£' + y
-  document.getElementById('TotalCost_inTable').textContent = z;
-  document.getElementById('TotalCost').textContent = z;
+
+  if(y === null){
+    var z = '£0.00';
+    document.getElementById('TotalCost_inTable').textContent = z;
+    document.getElementById('TotalCost').textContent = z;
+  }
+
+  else{
+    var z = '£' + y;
+    document.getElementById('TotalCost_inTable').textContent = z;
+    document.getElementById('TotalCost').textContent = z;
+  }
+  
 })
 
 window.addEventListener("load", function(event) {
@@ -166,7 +176,7 @@ window.addEventListener("load", function(event) {
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             <a href="#" class="govuk-back-link">Back</a>
-            <form class="form" action="Confirmation_No_historical_copies" method="post">
+            <form class="form" action="Confirmation_historical_copies" method="post">
 
     
               <h1 class="govuk-heading-l">Checkout</h1>
@@ -181,17 +191,6 @@ window.addEventListener("load", function(event) {
                   </dt>
                   <dt class="govuk-summary-list__key">
                   </dt>
-                </div>
-                <div class="govuk-summary-list__row" id="register_row">
-                  <dt class="govuk-summary-list__key">
-                    Register - Official Copy
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    PDF
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    £3.00
-                  </dd>
                 </div>
                 <div class="govuk-summary-list__row" id="register1A_row">
                   <dt class="govuk-summary-list__key">
@@ -226,9 +225,9 @@ window.addEventListener("load", function(event) {
                     £3.00
                   </dd>
                 </div>
-                <div class="govuk-summary-list__row" id="title_plan_row">
+                <div class="govuk-summary-list__row" id="title_plan2A_row">
                   <dt class="govuk-summary-list__key">
-                    Title plan - Official Copy
+                    Title plan - Current - Official Copy
                   </dt>
                   <dd class="govuk-summary-list__value">
                     PDF
@@ -236,9 +235,49 @@ window.addEventListener("load", function(event) {
                   <dd class="govuk-summary-list__actions">
                     £3.00                </dd>
                 </div>
-                <div class="govuk-summary-list__row" id="title_plan_map_row">
+                <div class="govuk-summary-list__row" id="title_plan2B_row">
                   <dt class="govuk-summary-list__key">
-                    Title plan map - Official Copy
+                    Title plan - 2016 - Non-official Copy
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    PDF
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    £3.00                </dd>
+                </div>
+                <div class="govuk-summary-list__row" id="title_plan2C_row">
+                  <dt class="govuk-summary-list__key">
+                    Title plan - 2002 - Non-official Copy
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    PDF
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    £3.00                </dd>
+                </div>
+                <div class="govuk-summary-list__row" id="title_plan_map3A_row">
+                  <dt class="govuk-summary-list__key">
+                    Title plan map - Current - Official Copy
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    PDF
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    £3.00                </dd>
+                </div>
+                <div class="govuk-summary-list__row" id="title_plan_map3B_row">
+                  <dt class="govuk-summary-list__key">
+                    Title plan map - 2016 - Non-official Copy
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    PDF
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    £3.00                </dd>
+                </div>
+                <div class="govuk-summary-list__row" id="title_plan_map3C_row">
+                  <dt class="govuk-summary-list__key">
+                    Title plan map - 2002 - Non-official Copy
                   </dt>
                   <dd class="govuk-summary-list__value">
                     PDF
@@ -303,7 +342,7 @@ window.addEventListener("load", function(event) {
               </dl>
               <p>If you proceed with this application <strong id="TotalCost">£0.00</strong> will be charged to your account</p>
 
-              <button class="govuk-button" data-module="govuk-button" onclick="LogTotalCost()">
+              <button class="govuk-button" data-module="govuk-button">
                 Order now
               </button>
             </form>

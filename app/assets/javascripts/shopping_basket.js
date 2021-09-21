@@ -85,7 +85,7 @@ function checkbox1A() {
        noOfboxesChecked += 1;
        areBoxesticked();
 
-       sessionStorage.setItem('TestingStorage_Historical', twoDP_total); 
+       sessionStorage.setItem('TestingStorage', twoDP_total); 
  
      }
      else{
@@ -102,7 +102,7 @@ function checkbox1A() {
        noOfboxesChecked -= 1; 
        areBoxesticked();
  
-       sessionStorage.setItem('TestingStorage_Historical', twoDP_total);
+       sessionStorage.setItem('TestingStorage', twoDP_total);
 
      }
  }
@@ -135,7 +135,7 @@ function checkbox1B() {
        noOfboxesChecked += 1;
        areBoxesticked();
 
-       sessionStorage.setItem('TestingStorage_Historical', twoDP_total); 
+       sessionStorage.setItem('TestingStorage', twoDP_total); 
  
      }
      else{
@@ -152,7 +152,7 @@ function checkbox1B() {
        noOfboxesChecked -= 1; 
        areBoxesticked();
  
-       sessionStorage.setItem('TestingStorage_Historical', twoDP_total);
+       sessionStorage.setItem('TestingStorage', twoDP_total);
 
      }
 }
@@ -186,7 +186,7 @@ function checkbox1C() {
        noOfboxesChecked += 1;
        areBoxesticked();
 
-       sessionStorage.setItem('TestingStorage_Historical', twoDP_total); 
+       sessionStorage.setItem('TestingStorage', twoDP_total); 
  
      }
      else{
@@ -203,7 +203,7 @@ function checkbox1C() {
        noOfboxesChecked -= 1; 
        areBoxesticked();
  
-       sessionStorage.setItem('TestingStorage_Historical', twoDP_total);
+       sessionStorage.setItem('TestingStorage', twoDP_total);
 
      }
 }
@@ -862,6 +862,9 @@ function checkbox3C() {
         // here experimentation begins
         var element = document.getElementById("side_container");
         element.appendChild(empty_button);
+        var Emptyelement = document.getElementById("empty_wording");
+        Emptyelement.style.display = "none";
+
 		
         // here it ends
         // document.body.appendChild(empty_button);
@@ -870,6 +873,8 @@ function checkbox3C() {
     else if (noOfboxesChecked == 0 && totalAmounttoPay ==0){
         empty_button_id.remove();	
         doesEmptyExist = false;
+        var Emptyelement = document.getElementById("empty_wording");
+        Emptyelement.style.display = "block";
     }
 }
 
@@ -996,21 +1001,6 @@ function whatwasCheckedBefore(){
             one.remove();
         }
 
-        if (sessionStorage.getItem("register1A") === null){
-            var oneA = document.getElementById("register1A_row");
-            oneA.remove();
-        }
-
-        if (sessionStorage.getItem("register1B") === null){
-            var oneB = document.getElementById("register1B_row");
-            oneB.remove();
-        }
-
-        // if (sessionStorage.getItem("register1C") === null){
-        //     var oneC = document.getElementById("register1C_row");
-        //     oneC.remove();
-        // }
-
         if (sessionStorage.getItem("titleplan") === null){
             var two = document.getElementById("title_plan_row");
             two.remove();
@@ -1040,6 +1030,78 @@ function whatwasCheckedBefore(){
             var seven = document.getElementById("transfer_Aeight_row");
             seven.remove();
         }
+
+
+}
+
+function whatwasCheckedBeforeHistorical(){
+
+
+    if (sessionStorage.getItem("register1A") === null){
+        var oneA = document.getElementById("register1A_row");
+        oneA.remove();
+    }
+
+    if (sessionStorage.getItem("register1B") === null){
+        var oneB = document.getElementById("register1B_row");
+        oneB.remove();
+    }
+
+    if (sessionStorage.getItem("register1C") === null){
+        var oneC = document.getElementById("register1C_row");
+        oneC.remove();
+    }
+
+    if (sessionStorage.getItem("titleplanA") === null){
+        var twoA = document.getElementById("title_plan2A_row");
+        twoA.remove();
+    }
+
+    if (sessionStorage.getItem("titleplanB") === null){
+        var twoB = document.getElementById("title_plan2B_row");
+        twoB.remove();
+    }
+
+    if (sessionStorage.getItem("titleplanC") === null){
+        var twoC = document.getElementById("title_plan2C_row");
+        twoC.remove();
+    }
+
+    if (sessionStorage.getItem("titleplanmap3A") === null){
+        var threeA = document.getElementById("title_plan_map3A_row");
+        threeA.remove();
+    }
+
+    if (sessionStorage.getItem("titleplanmap3B") === null){
+        var threeB = document.getElementById("title_plan_map3B_row");
+        threeB.remove();
+    }
+
+    if (sessionStorage.getItem("titleplanmap3C") === null){
+        var threeC = document.getElementById("title_plan_map3C_row");
+        threeC.remove();
+    }
+
+
+    if (sessionStorage.getItem("deed")=== null){
+        var four4 = document.getElementById("deed_row");
+        four4.remove();
+    }
+
+    if (sessionStorage.getItem("lease")=== null){
+        var five5 = document.getElementById("lease_row");
+        five5.remove();
+    }
+
+    if (sessionStorage.getItem("transfer_afour")=== null){
+        var six6 = document.getElementById("transfer_Afour_row");
+        six6.remove();
+    }
+
+    if (sessionStorage.getItem("transfer_aeight")=== null){
+        var seven7 = document.getElementById("transfer_Aeight_row");
+        seven7.remove();
+    }
 
 
 }
