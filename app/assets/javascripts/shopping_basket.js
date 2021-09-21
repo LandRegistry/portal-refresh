@@ -480,6 +480,156 @@ function checkbox1C() {
      }
  }
 
+function checkbox3A() {
+    var list = document.getElementById("basket_item");
+    var total_list = document.getElementById("items_cost");
+ 
+    
+    if(document.getElementById('title_plan_map_current').checked){
+        // sessionStorage.removeItem('titleplanmap');
+        sessionStorage.setItem('titleplanmap3A', 'true');       
+       
+        var li_title_plan_map3A = document.createElement("LI");
+       li_title_plan_map3A.setAttribute("id", "title_plan_map_id3A");
+       var tn_title_plan_map3A = document.createTextNode("Title Plan Map - Current - Official Copy");
+       var litn_title_plan_map3A = li_title_plan_map3A.appendChild(tn_title_plan_map3A);
+       list.insertBefore(li_title_plan_map3A, list.childNodes[0]);
+       
+       var cost_li_title_plan_map3A = document.createElement("LI");
+       cost_li_title_plan_map3A.setAttribute("id", "title_plan_map_cost3A");
+       var cost_tn_title_plan_map3A = document.createTextNode("£3.00");
+       var cost_litn_title_plan3A = cost_li_title_plan_map3A.appendChild(cost_tn_title_plan_map3A);
+       total_list.insertBefore(cost_li_title_plan_map3A, total_list.childNodes[0]);
+       
+       totalAmounttoPay += 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+       
+       noOfboxesChecked += 1; 
+       areBoxesticked();
+ 
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
+     }
+     else{
+        sessionStorage.removeItem('titleplanmap3A');
+        // sessionStorage.setItem('titleplanmap', 'false');
+       
+        title_plan_map_id3A.remove();
+       title_plan_map_cost3A.remove();
+       
+       totalAmounttoPay -= 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+       
+       noOfboxesChecked -= 1;
+       areBoxesticked();
+ 
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
+     }
+}
+
+function checkbox3B() {
+    var list = document.getElementById("basket_item");
+    var total_list = document.getElementById("items_cost");
+ 
+    
+    if(document.getElementById('title_plan_map_16').checked){
+        // sessionStorage.removeItem('titleplanmap');
+        sessionStorage.setItem('titleplanmap3B', 'true');       
+       
+        var li_title_plan_map3B = document.createElement("LI");
+       li_title_plan_map3B.setAttribute("id", "title_plan_map_id3B");
+       var tn_title_plan_map3B = document.createTextNode("Title Plan Map - 2016 - Non-official Copy");
+       var litn_title_plan_map3B = li_title_plan_map3B.appendChild(tn_title_plan_map3B);
+       list.insertBefore(li_title_plan_map3B, list.childNodes[0]);
+       
+       var cost_li_title_plan_map3B = document.createElement("LI");
+       cost_li_title_plan_map3B.setAttribute("id", "title_plan_map_cost3B");
+       var cost_tn_title_plan_map3B = document.createTextNode("£3.00");
+       var cost_litn_title_plan3B = cost_li_title_plan_map3B.appendChild(cost_tn_title_plan_map3B);
+       total_list.insertBefore(cost_li_title_plan_map3B, total_list.childNodes[0]);
+       
+       totalAmounttoPay += 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+       
+       noOfboxesChecked += 1; 
+       areBoxesticked();
+ 
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
+     }
+     else{
+        sessionStorage.removeItem('titleplanmap3B');
+        // sessionStorage.setItem('titleplanmap', 'false');
+       
+        title_plan_map_id3B.remove();
+       title_plan_map_cost3B.remove();
+       
+       totalAmounttoPay -= 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+       
+       noOfboxesChecked -= 1;
+       areBoxesticked();
+ 
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
+     }
+}
+
+function checkbox3C() {
+    var list = document.getElementById("basket_item");
+    var total_list = document.getElementById("items_cost");
+ 
+    
+    if(document.getElementById('title_plan_map_02').checked){
+        // sessionStorage.removeItem('titleplanmap');
+        sessionStorage.setItem('titleplanmap3C', 'true');       
+       
+        var li_title_plan_map3C = document.createElement("LI");
+       li_title_plan_map3C.setAttribute("id", "title_plan_map_id3C");
+       var tn_title_plan_map3C = document.createTextNode("Title Plan Map - 2002 - Non-official Copy");
+       var litn_title_plan_map3C = li_title_plan_map3C.appendChild(tn_title_plan_map3C);
+       list.insertBefore(li_title_plan_map3C, list.childNodes[0]);
+       
+       var cost_li_title_plan_map3C = document.createElement("LI");
+       cost_li_title_plan_map3C.setAttribute("id", "title_plan_map_cost3C");
+       var cost_tn_title_plan_map3C = document.createTextNode("£3.00");
+       var cost_litn_title_plan3C = cost_li_title_plan_map3C.appendChild(cost_tn_title_plan_map3C);
+       total_list.insertBefore(cost_li_title_plan_map3C, total_list.childNodes[0]);
+       
+       totalAmounttoPay += 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+       
+       noOfboxesChecked += 1; 
+       areBoxesticked();
+ 
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
+     }
+     else{
+        sessionStorage.removeItem('titleplanmap3C');
+        // sessionStorage.setItem('titleplanmap', 'false');
+       
+        title_plan_map_id3C.remove();
+       title_plan_map_cost3C.remove();
+       
+       totalAmounttoPay -= 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+       
+       noOfboxesChecked -= 1;
+       areBoxesticked();
+ 
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
+     }
+}
+
 
  function checkbox4() {
     var list = document.getElementById("basket_item");
@@ -760,28 +910,46 @@ function emptyTheBasket(){
 
     if(document.getElementById('title_plan_current').checked){
         document.getElementById('title_plan_current').checked = false;
-        title_plan_id.remove();
-        title_plan_cost.remove();
+        title_plan_idA.remove();
+        title_plan_costA.remove();
       }
 
     if(document.getElementById('title_plan_16').checked){
     document.getElementById('title_plan_16').checked = false;
-    title_plan_id.remove();
-    title_plan_cost.remove();
+    title_plan_idB.remove();
+    title_plan_costB.remove();
     }
 
     if(document.getElementById('title_plan_02').checked){
     document.getElementById('title_plan_02').checked = false;
-    title_plan_id.remove();
-    title_plan_cost.remove();
+    title_plan_idC.remove();
+    title_plan_costC.remove();
     }  
-
 
     if(document.getElementById('title_plan_map').checked){
         document.getElementById('title_plan_map').checked = false;
         title_plan_map_id.remove();
         title_plan_map_cost.remove();
       }
+
+    if(document.getElementById('title_plan_map_current').checked){
+    document.getElementById('title_plan_map_current').checked = false;
+    title_plan_map_id3A.remove();
+    title_plan_map_cost3A.remove();
+    }  
+
+    if(document.getElementById('title_plan_map_16').checked){
+        document.getElementById('title_plan_map_16').checked = false;
+        title_plan_map_id3B.remove();
+        title_plan_map_cost3B.remove();
+        }  
+
+    if(document.getElementById('title_plan_map_02').checked){
+        document.getElementById('title_plan_map_02').checked = false;
+        title_plan_map_id3B.remove();
+        title_plan_map_cost3B.remove();
+        } 
+
     if(document.getElementById('deed').checked){
         document.getElementById('deed').checked = false;
         deed_id.remove();
