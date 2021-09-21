@@ -2,10 +2,6 @@ function helloworld(){
     console.log('hello world');
   }
 
-function lauren() {
-    console.log('hello world');
-}
-
 var noOfboxesChecked = 0;
 var totalAmounttoPay = 0;
 var twoDP_total = totalAmounttoPay.toFixed(2);
@@ -111,6 +107,108 @@ function checkbox1A() {
      }
  }
 
+function checkbox1B() {
+    var list = document.getElementById("basket_item");
+    var total_list = document.getElementById("items_cost");
+
+    
+    if(document.getElementById('register_sixteen').checked){
+        // sessionStorage.removeItem('register');
+        sessionStorage.setItem('register1B', 'true');
+
+       var li_registerB = document.createElement("LI");
+       li_registerB.setAttribute("id", "register_idB");
+       var tn_registerB = document.createTextNode("Register - 2016 - Non-official Copy");
+       var litn_registerB = li_registerB.appendChild(tn_registerB);
+       list.insertBefore(li_registerB, list.childNodes[0]);
+       
+       var cost_li_registerB = document.createElement("LI");
+       cost_li_registerB.setAttribute("id", "register_costB");
+       var cost_tn_registerB = document.createTextNode("£3.00");
+       var cost_litn_registerB = cost_li_registerB.appendChild(cost_tn_registerB);
+       total_list.insertBefore(cost_li_registerB, total_list.childNodes[0]);
+       
+       totalAmounttoPay += 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+ 
+       noOfboxesChecked += 1;
+       areBoxesticked();
+
+       sessionStorage.setItem('TestingStorage_Historical', twoDP_total); 
+ 
+     }
+     else{
+    //    a = sessionStorage.setItem('register', 'null');
+       sessionStorage.removeItem('register1B');
+
+       register_idB.remove();
+       register_costB.remove();
+       
+       totalAmounttoPay -= 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+ 
+       noOfboxesChecked -= 1; 
+       areBoxesticked();
+ 
+       sessionStorage.setItem('TestingStorage_Historical', twoDP_total);
+
+     }
+}
+
+
+function checkbox1C() {
+    var list = document.getElementById("basket_item");
+    var total_list = document.getElementById("items_cost");
+
+    
+    if(document.getElementById('register_02').checked){
+        // sessionStorage.removeItem('register');
+        sessionStorage.setItem('register1C', 'true');
+
+       var li_registerC = document.createElement("LI");
+       li_registerC.setAttribute("id", "register_idC");
+       var tn_registerC = document.createTextNode("Register - 2002 - Non-official Copy");
+       var litn_registerC = li_registerC.appendChild(tn_registerC);
+       list.insertBefore(li_registerC, list.childNodes[0]);
+       
+       var cost_li_registerC = document.createElement("LI");
+       cost_li_registerC.setAttribute("id", "register_costC");
+       var cost_tn_registerC = document.createTextNode("£3.00");
+       var cost_litn_registerC = cost_li_registerC.appendChild(cost_tn_registerC);
+       total_list.insertBefore(cost_li_registerC, total_list.childNodes[0]);
+       
+       totalAmounttoPay += 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+ 
+       noOfboxesChecked += 1;
+       areBoxesticked();
+
+       sessionStorage.setItem('TestingStorage_Historical', twoDP_total); 
+ 
+     }
+     else{
+    //    a = sessionStorage.setItem('register', 'null');
+       sessionStorage.removeItem('register1C');
+
+       register_idC.remove();
+       register_costC.remove();
+       
+       totalAmounttoPay -= 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+ 
+       noOfboxesChecked -= 1; 
+       areBoxesticked();
+ 
+       sessionStorage.setItem('TestingStorage_Historical', twoDP_total);
+
+     }
+}
+
+
 
  function checkbox2() {
     var list = document.getElementById("basket_item");
@@ -168,6 +266,165 @@ function checkbox1A() {
 
      }
  }
+
+
+ function checkbox2A() {
+    var list = document.getElementById("basket_item");
+    var total_list = document.getElementById("items_cost");
+ 
+    
+    if(document.getElementById('title_plan_current').checked){
+        // sessionStorage.removeItem('titleplan');
+        sessionStorage.setItem('titleplanA', 'true');
+              
+        var li_title_planA = document.createElement("LI");
+       li_title_planA.setAttribute("id", "title_plan_idA");
+       var tn_title_planA = document.createTextNode("Title Plan - Current - Official Copy");
+       var litn_title_planA = li_title_planA.appendChild(tn_title_planA);
+       list.insertBefore(li_title_planA, list.childNodes[0]);
+       
+       var cost_li_title_planA = document.createElement("LI");
+       cost_li_title_planA.setAttribute("id", "title_plan_costA");
+       var cost_tn_title_planA = document.createTextNode("£3.00");
+       var cost_litn_title_planA = cost_li_title_planA.appendChild(cost_tn_title_planA);
+       total_list.insertBefore(cost_li_title_planA, total_list.childNodes[0]);
+       
+       totalAmounttoPay += 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+       
+       noOfboxesChecked += 1; 
+       areBoxesticked();
+ 
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
+       
+     }
+     else{
+    //    b = sessionStorage.setItem('titleplan', 'null');
+
+       sessionStorage.removeItem('titleplanA');
+
+       title_plan_idA.remove();
+       title_plan_costA.remove();
+       
+       totalAmounttoPay -= 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+       
+       noOfboxesChecked -= 1;
+       areBoxesticked();
+ 
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
+     }
+ }
+
+
+ function checkbox2B() {
+    var list = document.getElementById("basket_item");
+    var total_list = document.getElementById("items_cost");
+ 
+    
+    if(document.getElementById('title_plan_16').checked){
+        // sessionStorage.removeItem('titleplan');
+        sessionStorage.setItem('titleplanB', 'true');
+              
+        var li_title_planB = document.createElement("LI");
+       li_title_planB.setAttribute("id", "title_plan_idB");
+       var tn_title_planB = document.createTextNode("Title Plan - 2016 - Non-official Copy");
+       var litn_title_planB = li_title_planB.appendChild(tn_title_planB);
+       list.insertBefore(li_title_planB, list.childNodes[0]);
+       
+       var cost_li_title_planB = document.createElement("LI");
+       cost_li_title_planB.setAttribute("id", "title_plan_costB");
+       var cost_tn_title_planB = document.createTextNode("£3.00");
+       var cost_litn_title_planB = cost_li_title_planB.appendChild(cost_tn_title_planB);
+       total_list.insertBefore(cost_li_title_planB, total_list.childNodes[0]);
+       
+       totalAmounttoPay += 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+       
+       noOfboxesChecked += 1; 
+       areBoxesticked();
+ 
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
+       
+     }
+     else{
+    //    b = sessionStorage.setItem('titleplan', 'null');
+
+       sessionStorage.removeItem('titleplanB');
+
+       title_plan_idB.remove();
+       title_plan_costB.remove();
+       
+       totalAmounttoPay -= 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+       
+       noOfboxesChecked -= 1;
+       areBoxesticked();
+ 
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
+     }
+ } 
+
+
+ function checkbox2C() {
+    var list = document.getElementById("basket_item");
+    var total_list = document.getElementById("items_cost");
+ 
+    
+    if(document.getElementById('title_plan_02').checked){
+        // sessionStorage.removeItem('titleplan');
+        sessionStorage.setItem('titleplanC', 'true');
+              
+        var li_title_planC = document.createElement("LI");
+       li_title_planC.setAttribute("id", "title_plan_idC");
+       var tn_title_planC = document.createTextNode("Title Plan - 2002 - Non-official Copy");
+       var litn_title_planC = li_title_planC.appendChild(tn_title_planC);
+       list.insertBefore(li_title_planC, list.childNodes[0]);
+       
+       var cost_li_title_planC = document.createElement("LI");
+       cost_li_title_planC.setAttribute("id", "title_plan_costC");
+       var cost_tn_title_planC = document.createTextNode("£3.00");
+       var cost_litn_title_planC = cost_li_title_planB.appendChild(cost_tn_title_planC);
+       total_list.insertBefore(cost_li_title_planC, total_list.childNodes[0]);
+       
+       totalAmounttoPay += 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+       
+       noOfboxesChecked += 1; 
+       areBoxesticked();
+ 
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
+       
+     }
+     else{
+    //    b = sessionStorage.setItem('titleplan', 'null');
+
+       sessionStorage.removeItem('titleplanC');
+
+       title_plan_idC.remove();
+       title_plan_costC.remove();
+       
+       totalAmounttoPay -= 3; 
+       var twoDP_total = totalAmounttoPay.toFixed(2);
+       document.getElementById("total_cost").innerHTML= twoDP_total;
+       
+       noOfboxesChecked -= 1;
+       areBoxesticked();
+ 
+       sessionStorage.setItem('TestingStorage', twoDP_total);
+
+     }
+ }  
 
 
  function checkbox3() {
@@ -450,7 +707,7 @@ function checkbox1A() {
         empty_button.setAttribute("id", "empty_button_id");
         empty_button.setAttribute("onclick", "emptyTheBasket()");
         empty_button.setAttribute("type", "button");
-        empty_button.setAttribute("class", "govuk-button--warning");
+        empty_button.setAttribute("class", "govuk-button govuk-button--warning");
 		empty_button.innerHTML = "Empty";      
         // here experimentation begins
         var element = document.getElementById("side_container");
@@ -471,6 +728,7 @@ function emptyTheBasket(){
     totalAmounttoPay = 0;
     var twoDP_total = totalAmounttoPay.toFixed(2);
     document.getElementById("total_cost").innerHTML= twoDP_total;
+    
     if(document.getElementById('register').checked){
 	  document.getElementById('register').checked = false;
 	  register_id.remove();
@@ -481,12 +739,44 @@ function emptyTheBasket(){
         register_idA.remove();
         register_costA.remove();
       }
+    
+    if(document.getElementById('register_sixteen').checked){
+    document.getElementById('register_sixteen').checked = false;
+    register_idB.remove();
+    register_costB.remove();
+    }  
+
+    if(document.getElementById('register_02').checked){
+        document.getElementById('register_02').checked = false;
+        register_idC.remove();
+        register_costC.remove();
+        }
 
     if(document.getElementById('title_plan').checked){
 	  document.getElementById('title_plan').checked = false;
 	  title_plan_id.remove();
       title_plan_cost.remove();
 	}
+
+    if(document.getElementById('title_plan_current').checked){
+        document.getElementById('title_plan_current').checked = false;
+        title_plan_id.remove();
+        title_plan_cost.remove();
+      }
+
+    if(document.getElementById('title_plan_16').checked){
+    document.getElementById('title_plan_16').checked = false;
+    title_plan_id.remove();
+    title_plan_cost.remove();
+    }
+
+    if(document.getElementById('title_plan_02').checked){
+    document.getElementById('title_plan_02').checked = false;
+    title_plan_id.remove();
+    title_plan_cost.remove();
+    }  
+
+
     if(document.getElementById('title_plan_map').checked){
         document.getElementById('title_plan_map').checked = false;
         title_plan_map_id.remove();
@@ -548,10 +838,10 @@ function whatwasCheckedBefore(){
             oneB.remove();
         }
 
-        if (sessionStorage.getItem("register1C") === null){
-            var oneC = document.getElementById("register1C_row");
-            oneC.remove();
-        }
+        // if (sessionStorage.getItem("register1C") === null){
+        //     var oneC = document.getElementById("register1C_row");
+        //     oneC.remove();
+        // }
 
         if (sessionStorage.getItem("titleplan") === null){
             var two = document.getElementById("title_plan_row");
