@@ -30,7 +30,7 @@ function checkbox1() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked += 1;
        areBoxesticked();
@@ -47,7 +47,7 @@ function checkbox1() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked -= 1; 
        areBoxesticked();
@@ -80,7 +80,7 @@ function checkbox1A() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked += 1;
        areBoxesticked();
@@ -97,7 +97,7 @@ function checkbox1A() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked -= 1; 
        areBoxesticked();
@@ -130,7 +130,7 @@ function checkbox1B() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked += 1;
        areBoxesticked();
@@ -147,7 +147,7 @@ function checkbox1B() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked -= 1; 
        areBoxesticked();
@@ -181,7 +181,7 @@ function checkbox1C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked += 1;
        areBoxesticked();
@@ -198,7 +198,7 @@ function checkbox1C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked -= 1; 
        areBoxesticked();
@@ -235,7 +235,7 @@ function checkbox1C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -257,7 +257,7 @@ function checkbox1C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -291,7 +291,7 @@ function checkbox1C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -310,7 +310,7 @@ function checkbox1C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -344,7 +344,7 @@ function checkbox1C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -363,7 +363,7 @@ function checkbox1C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -397,7 +397,7 @@ function checkbox1C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -416,7 +416,7 @@ function checkbox1C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -452,7 +452,7 @@ function checkbox1C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -471,7 +471,7 @@ function checkbox1C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -504,7 +504,7 @@ function checkbox3A() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -521,7 +521,7 @@ function checkbox3A() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -554,7 +554,7 @@ function checkbox3B() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -571,7 +571,7 @@ function checkbox3B() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -604,7 +604,7 @@ function checkbox3C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -621,7 +621,7 @@ function checkbox3C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -658,7 +658,7 @@ function checkbox3C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -678,7 +678,7 @@ function checkbox3C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -714,7 +714,7 @@ function checkbox3C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -733,7 +733,7 @@ function checkbox3C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -769,7 +769,7 @@ function checkbox3C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -789,7 +789,7 @@ function checkbox3C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -824,7 +824,7 @@ function checkbox3C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -842,7 +842,7 @@ function checkbox3C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
