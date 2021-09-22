@@ -392,7 +392,7 @@ function checkbox1C() {
        var cost_li_title_planC = document.createElement("LI");
        cost_li_title_planC.setAttribute("id", "title_plan_costC");
        var cost_tn_title_planC = document.createTextNode("£3.00");
-       var cost_litn_title_planC = cost_li_title_planB.appendChild(cost_tn_title_planC);
+       var cost_litn_title_planC = cost_li_title_planC.appendChild(cost_tn_title_planC);
        total_list.insertBefore(cost_li_title_planC, total_list.childNodes[0]);
        
        totalAmounttoPay += 3; 
@@ -445,7 +445,6 @@ function checkbox1C() {
        
        var cost_li_title_plan_map = document.createElement("LI");
        cost_li_title_plan_map.setAttribute("id", "title_plan_map_cost");
-       cost_li_title_plan_map.setAttribute("style", "padding-bottom:29px;");
        var cost_tn_title_plan_map = document.createTextNode("£3.00");
        var cost_litn_title_plan = cost_li_title_plan_map.appendChild(cost_tn_title_plan_map);
        total_list.insertBefore(cost_li_title_plan_map, total_list.childNodes[0]);
@@ -498,6 +497,7 @@ function checkbox3A() {
        
        var cost_li_title_plan_map3A = document.createElement("LI");
        cost_li_title_plan_map3A.setAttribute("id", "title_plan_map_cost3A");
+       cost_li_title_plan_map3A.setAttribute("style", "padding-bottom:29px;");
        var cost_tn_title_plan_map3A = document.createTextNode("£3.00");
        var cost_litn_title_plan3A = cost_li_title_plan_map3A.appendChild(cost_tn_title_plan_map3A);
        total_list.insertBefore(cost_li_title_plan_map3A, total_list.childNodes[0]);
@@ -548,6 +548,7 @@ function checkbox3B() {
        
        var cost_li_title_plan_map3B = document.createElement("LI");
        cost_li_title_plan_map3B.setAttribute("id", "title_plan_map_cost3B");
+       cost_li_title_plan_map3B.setAttribute("style", "padding-bottom:29px;");
        var cost_tn_title_plan_map3B = document.createTextNode("£3.00");
        var cost_litn_title_plan3B = cost_li_title_plan_map3B.appendChild(cost_tn_title_plan_map3B);
        total_list.insertBefore(cost_li_title_plan_map3B, total_list.childNodes[0]);
@@ -598,6 +599,7 @@ function checkbox3C() {
        
        var cost_li_title_plan_map3C = document.createElement("LI");
        cost_li_title_plan_map3C.setAttribute("id", "title_plan_map_cost3C");
+       cost_li_title_plan_map3C.setAttribute("style", "padding-bottom:29px;");
        var cost_tn_title_plan_map3C = document.createTextNode("£3.00");
        var cost_litn_title_plan3C = cost_li_title_plan_map3C.appendChild(cost_tn_title_plan_map3C);
        total_list.insertBefore(cost_li_title_plan_map3C, total_list.childNodes[0]);

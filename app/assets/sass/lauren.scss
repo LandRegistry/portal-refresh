@@ -2,7 +2,7 @@
 
 .govuk-heading-xl, .govuk-fieldset__heading, .govuk-label, .govuk-radios__label, .govuk-hint, .govuk-radios__hint,
 .govuk-button, .govuk-back-link, .govuk-heading-s, .govuk-body, .govuk-heading-m, .govuk-heading-l,
-.govuk-table__header, .govuk-table__cell, .govuk-file-upload{
+.govuk-table__header, .govuk-table__cell, .govuk-file-upload, .govuk-summary-list__key, .govuk-summary-list__value{
     font-family: "Roboto";
 }
 
@@ -95,6 +95,13 @@ li{
     border-bottom: 0px;
 }
 
+// Styling the checkout page
+.govuk-summary-list__key{
+    padding: 12px 0px;
+}
+
+
+
 // Rest of styling
 
 .govuk-width-container{
@@ -104,7 +111,7 @@ li{
 
 .govuk-grid-row {
     background-color: white;
-    max-width: 960px;
+    max-width: 1150px;
     margin: 0 auto;
 }
 
@@ -113,7 +120,7 @@ li{
     background-color: #f3f2f1;
     margin-top: 80px;
     padding: 25px;
-    width: 290px;
+    width: 360px;
     position: fixed;
 }
 
@@ -141,7 +148,7 @@ li{
 
 
 .govuk-table__cell2{
-    padding: 10px 0px;
+    padding: 12px 0px;
 }
 
 .govuk-accordion__controls {
