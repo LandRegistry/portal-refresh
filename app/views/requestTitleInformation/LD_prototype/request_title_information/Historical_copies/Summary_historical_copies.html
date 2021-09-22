@@ -121,6 +121,10 @@
 .dropdown2:hover .dropdown-content2 {
   display: block;
 }
+
+.govuk-summary-list__actions{
+  text-align: left;
+}
 </style>
 
 <script>
@@ -179,17 +183,17 @@ window.addEventListener("load", function(event) {
             <form class="form" action="Confirmation_historical_copies" method="post">
 
     
-              <h1 class="govuk-heading-l">Checkout</h1>
+              <h1 class="govuk-heading-l" id="largeHeading_whatService">Checkout</h1>
 
-              <dl class="govuk-summary-list">
+              <dl class="govuk-summary-list" style="margin-bottom: 30px;">
                 <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
+                  <dt class="govuk-summary-list__key" style="width:60%;">
                     Document name
                   </dt>
-                  <dt class="govuk-summary-list__key">
+                  <dt class="govuk-summary-list__key" style="width:25%;">
                     Format
                   </dt>
-                  <dt class="govuk-summary-list__key">
+                  <dt class="govuk-summary-list__key" style="width:15%;">
                   </dt>
                 </div>
                 <div class="govuk-summary-list__row" id="register1A_row">
@@ -329,20 +333,20 @@ window.addEventListener("load", function(event) {
                   </dd>
                 </div>
                 <div class="govuk-summary-list__row" id="transfer_Aeight_row">
-                  <dt class="govuk-summary-list__key">
+                  <dt class="govuk-summary-list__key" style="border-bottom: 0px;">
                     Total
                   </dt>
-                  <dd class="govuk-summary-list__value">
+                  <dd class="govuk-summary-list__value" style="border-bottom: 0px;">
                     
                   </dd>
-                  <dd class="govuk-summary-list__actions">
+                  <dd class="govuk-summary-list__actions" style="border-bottom: 0px;">
                     <p id="TotalCost_inTable">£0.00</p>
                   </dd>
                 </div>
               </dl>
               <p>If you proceed with this application <strong id="TotalCost">£0.00</strong> will be charged to your account</p>
 
-              <button class="govuk-button" data-module="govuk-button">
+              <button class="govuk-button" data-module="govuk-button" style="margin-top:50px;">
                 Order now
               </button>
             </form>
@@ -354,8 +358,8 @@ window.addEventListener("load", function(event) {
 
           <div class="govuk-grid-column-one-third">
             <div class = "grey-container" id="side_container">
-              <h3 class="govuk-heading-s">Need help</h3>
-              <a href="#" class="govuk-link">HM Land Registry fees</a>
+              <h3 class="govuk-heading-m">Need help</h3>
+              <a href="#" class="govuk-link" style="display:block; padding: 0 0 10px 0;">HM Land Registry fees</a>
               <a href="#" class="govuk-link">Contact us</a>
 
             </div>

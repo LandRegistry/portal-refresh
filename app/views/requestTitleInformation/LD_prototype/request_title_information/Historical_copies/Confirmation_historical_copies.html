@@ -160,7 +160,7 @@ window.addEventListener("load", function(event) {
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
     
-            <div class="govuk-panel govuk-panel--confirmation">
+            <div class="govuk-panel govuk-panel--confirmation" style="margin-top:80px; margin-bottom: 45px;">
               <h1 class="govuk-panel__title">
                 Order confirmed
               </h1>
@@ -169,15 +169,15 @@ window.addEventListener("load", function(event) {
               </div>
             </div>
 
-            <dl class="govuk-summary-list">
+            <dl class="govuk-summary-list" style="margin-bottom: 70px;">
               <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
+                <dt class="govuk-summary-list__key" style="width:60%;">
                   Document name
                 </dt>
-                <dt class="govuk-summary-list__key">
+                <dt class="govuk-summary-list__key" style="width:25%;">
                   Format
                 </dt>
-                <dt class="govuk-summary-list__key">
+                <dt class="govuk-summary-list__key" style="width:15%;">
                 </dt>
               </div>
               <div class="govuk-summary-list__row" id="register1A_row">
@@ -324,12 +324,14 @@ window.addEventListener("load", function(event) {
             </p>
             <p>If you have ordered a document that is only available by post, this will arrive within 3 - 5 working days.</p>
 
-            <button class="govuk-button" data-module="govuk-button" onclick="LogTotalCost()">
-              Order again
-            </button>
+            <div style="display:flex; width: 300px; justify-content:space-between;">
+              <button class="govuk-button" data-module="govuk-button" onclick="LogTotalCost()" style="margin-top:50px;">
+                Order again
+              </button>
 
-            <p>or</p>
-            <a href="#" class="govuk-link govuk-link--no-visited-state">return to Home</a>
+              <p style="margin-top: 55px;">or</p>
+              <a href="#" class="govuk-link govuk-link--no-visited-state" style="margin-top: 59px;">return to Home</a>
+            </div> 
 
       
           </div>
@@ -338,8 +340,8 @@ window.addEventListener("load", function(event) {
 
           <div class="govuk-grid-column-one-third">
             <div class = "grey-container" id="side_container">
-              <h3 class="govuk-heading-s">Need help</h3>
-              <a href="#" class="govuk-link">HM Land Registry fees</a>
+              <h3 class="govuk-heading-m">Need help</h3>
+              <a href="#" class="govuk-link" style="display:block; padding: 0 0 10px 0;">HM Land Registry fees</a>
               <a href="#" class="govuk-link">Contact us</a>
 
             </div>
