@@ -247,7 +247,8 @@ font-size: 17px;
 }
 
 .linkTextTitle {
-  font-size:20px;
+  font-size:19px;
+  font-weight:600;
 }
 
 .linkTextDescription {
@@ -596,6 +597,13 @@ li:hover {background-color: #0ba961;}
 .expand{font-size:12px;float:right;margin-right:5px;}
 
 
+.govuk-body-m, .govuk-body, .govuk-heading-l, .govuk-heading-m, .govuk-button, .govuk-select, .govuk-link, a, p {
+    font-family: 'Roboto', 'Arial', sans-serif !important;
+}
+
+.govuk-heading-l, .govuk-heading-m,.govuk-heading-xl {
+  font-weight:600;
+}
 </style>
 
 
@@ -751,13 +759,13 @@ li:hover {background-color: #0ba961;}
 
 
   <div id="SectionHeroContent">
-  <div class="govuk-body heroTextBackground" style="font-size:50px; color:#ffffff;margin-bottom: 0;">
-    HM Land Registry Portal
+    <h1 class="heroTextBackground govuk-heading-xl" style="color:#ffffff;margin-bottom: 0;">
+      HM Land Registry Portal
+    </h1>
+    <p class="govuk-body govuk-!-font-size-24 heroTextBackground" style="color:#ffffff;">
+      Where property professionals can access their online services
+    </p>
   </div>
-  <div class="govuk-body heroTextBackground" style="font-size:25px; color:#ffffff;">
-    Where property professionals can access their online services
-  </div>
-</div>
 </div>
 
 
