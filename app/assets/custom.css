@@ -8,14 +8,10 @@
   border-bottom: 0px !important;
 }
 
-.govuk-width-container {
-  max-width: 100%;
-  padding: 15px !Important;
-}
-
 .govuk-main-wrapper {
   padding-top: 0px;
   padding-bottom: 0px;
+  background-color: aqua;
 }
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -145,9 +141,9 @@ margin-bottom: 20px;
   font-size: 16px;
 }
 
-.govuk-fieldset {
+/* .govuk-fieldset {
 padding: 20px;
-}
+} */
 
 .expandedTitles {
   font-size: 20px;
