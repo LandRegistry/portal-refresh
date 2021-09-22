@@ -347,19 +347,19 @@
               
               <h2 class="govuk-heading-m">Non referred documents/Certificate in form CI</h2>
               <div class="govuk-form-group">
-                <label class="govuk-label" for="file-upload-1">
+                <label class="govuk-heading-s" style="font-size:16px;" for="file-upload-1">
                   Add non referred document
                 </label>
-                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+                <input class="govuk-file-upload" style="font-size:16px;" id="file-upload-1" name="file-upload-1" type="file">
               </div>
               <div class="govuk-form-group">
-                <label class="govuk-label" for="file-upload-1">
+                <label class="govuk-heading-s" style="font-size:16px;" for="file-upload-1">
                   Add certificate in form CI
                 </label>
-                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+                <input class="govuk-file-upload" style="font-size:16px;" id="file-upload-1" name="file-upload-1" type="file">
               </div>
 
-              <button class="govuk-button" data-module="govuk-button" onclick="LogTotalCost()">
+              <button style="margin-top: 50px;" class="govuk-button" data-module="govuk-button" onclick="LogTotalCost()">
                 Checkout
               </button>
 
@@ -369,11 +369,11 @@
 
 
             <div class="govuk-grid-column-one-third">
-              <div class = "grey-container" id="side_container">
-                <h3 class="govuk-heading-s">Basket</h3>
-                <p id="empty_wording" style="display:block;">Empty</p>
-                <div id = "BasketHolder" style="display: flex; justify-content: space-between; padding: 0px;">
-                  <div id="basket_items_container">
+              <div class = "grey-container">
+                <h3 class="govuk-heading-m">Basket</h3>
+                <p id="empty_wording" style="display:block; margin-bottom: 0px; font-size: 16px;">Empty</p>
+                <div id = "BasketHolder" style="display: flex; justify-content: space-between; padding: 0px; margin: 0px;">
+                  <div id="basket_items_container" style="padding: 0px;">
                     <ul id="basket_item">
                     </ul>
                   </div>
@@ -382,14 +382,16 @@
                     </ul>
                   </div>
                 </div>
-                <hr>
+                <hr style="margin-bottom: 20px;">
                 <div style="display: flex; justify-content: space-between; padding:0px;">
-                  <p>Total</p>
-                  <p id="total_cost">£0.00</p>
+                  <p style="font-size: 16px; font-weight: 600;">Total</p>
+                  <p style="font-size: 16px; font-weight: 600;" id="total_cost">£0.00</p>
                 </div>
-                <button class="govuk-button" data-module="govuk-button" onclick="LogTotalCost()">
-                  Checkout
-                </button>
+                <div id="side_container" style="display: flex; justify-content: space-between;">
+                  <button class="govuk-button" data-module="govuk-button" onclick="LogTotalCost()">
+                    Checkout
+                  </button>
+                </div>
               </div>
             </div>  
           </form>

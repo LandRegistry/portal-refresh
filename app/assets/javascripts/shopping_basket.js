@@ -445,6 +445,7 @@ function checkbox1C() {
        
        var cost_li_title_plan_map = document.createElement("LI");
        cost_li_title_plan_map.setAttribute("id", "title_plan_map_cost");
+       cost_li_title_plan_map.setAttribute("style", "padding-bottom:29px;");
        var cost_tn_title_plan_map = document.createTextNode("£3.00");
        var cost_litn_title_plan = cost_li_title_plan_map.appendChild(cost_tn_title_plan_map);
        total_list.insertBefore(cost_li_title_plan_map, total_list.childNodes[0]);
