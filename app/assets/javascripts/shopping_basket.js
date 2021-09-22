@@ -997,112 +997,149 @@ function emptyTheBasket(){
     var twoDP_total = totalAmounttoPay.toFixed(2);
     document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
     
-    if(document.getElementById('register').checked){
-	  document.getElementById('register').checked = false;
-	  register_id.remove();
-      register_cost.remove();
-	}
+    if(document.getElementById('register') != null){
+        console.log('it works here too');
 
-
-    if(document.getElementById('title_plan').checked){
-	  document.getElementById('title_plan').checked = false;
-	  title_plan_id.remove();
-      title_plan_cost.remove();
-	}
-
- 
-
-    if(document.getElementById('title_plan_map').checked){
-        document.getElementById('title_plan_map').checked = false;
-        title_plan_map_id.remove();
-        title_plan_map_cost.remove();
-      }
-
-
-    if(document.getElementById('deed').checked){
-        document.getElementById('deed').checked = false;
-        deed_id.remove();
-        deed_cost.remove();
-      }  
-    if(document.getElementById('lease').checked){
-        document.getElementById('lease').checked = false;
-        lease_id.remove();
-        lease_cost.remove();
-    }
-
-    if(document.getElementById('transfer_Afour').checked){
-        document.getElementById('transfer_Afour').checked = false;
-        transfer_Afour_id.remove();
-        transfer_Afour_cost.remove();
-    }
-
-
-    if(document.getElementById('transfer_Aeight').checked){
-        document.getElementById('transfer_Aeight').checked = false;
-        transfer_Aeight_id.remove();
-        transfer_Aeight_cost.remove();
-    }
-
-    if(document.getElementById('register_current').checked){
-        document.getElementById('register_current').checked = false;
-        register_idA.remove();
-        register_costA.remove();
-      }
-    
-    if(document.getElementById('register_sixteen').checked){
-    document.getElementById('register_sixteen').checked = false;
-    register_idB.remove();
-    register_costB.remove();
-    }  
-
-    if(document.getElementById('register_02').checked){
-        document.getElementById('register_02').checked = false;
-        register_idC.remove();
-        register_costC.remove();
+        if(document.getElementById('register').checked){
+        document.getElementById('register').checked = false;
+        register_id.remove();
+        register_cost.remove();
         }
 
-    if(document.getElementById('title_plan_current').checked){
-        document.getElementById('title_plan_current').checked = false;
-        title_plan_idA.remove();
-        title_plan_costA.remove();
+
+        if(document.getElementById('title_plan').checked){
+        document.getElementById('title_plan').checked = false;
+        title_plan_id.remove();
+        title_plan_cost.remove();
         }
 
-    if(document.getElementById('title_plan_16').checked){
-    document.getElementById('title_plan_16').checked = false;
-    title_plan_idB.remove();
-    title_plan_costB.remove();
-    }
-
-    if(document.getElementById('title_plan_02').checked){
-    document.getElementById('title_plan_02').checked = false;
-    title_plan_idC.remove();
-    title_plan_costC.remove();
-    } 
-
-    if(document.getElementById('title_plan_map_current').checked){
-        document.getElementById('title_plan_map_current').checked = false;
-        title_plan_map_id3A.remove();
-        title_plan_map_cost3A.remove();
-        }  
     
-    if(document.getElementById('title_plan_map_16').checked){
-        document.getElementById('title_plan_map_16').checked = false;
-        title_plan_map_id3B.remove();
-        title_plan_map_cost3B.remove();
+
+        if(document.getElementById('title_plan_map').checked){
+            document.getElementById('title_plan_map').checked = false;
+            title_plan_map_id.remove();
+            title_plan_map_cost.remove();
+        }
+
+
+        if(document.getElementById('deed').checked){
+            document.getElementById('deed').checked = false;
+            deed_id.remove();
+            deed_cost.remove();
+        }  
+        if(document.getElementById('lease').checked){
+            document.getElementById('lease').checked = false;
+            lease_id.remove();
+            lease_cost.remove();
+        }
+
+        if(document.getElementById('transfer_Afour').checked){
+            document.getElementById('transfer_Afour').checked = false;
+            transfer_Afour_id.remove();
+            transfer_Afour_cost.remove();
+        }
+
+
+        if(document.getElementById('transfer_Aeight').checked){
+            document.getElementById('transfer_Aeight').checked = false;
+            transfer_Aeight_id.remove();
+            transfer_Aeight_cost.remove();
+        }
+
+        empty_button_id.remove();
+        doesEmptyExist = false;
+        
+        var Emptyelement = document.getElementById("empty_wording");
+        Emptyelement.style.display = "block";
+
+    }    
+
+    if(document.getElementById('register') === null){
+        console.log('hello world');
+
+        if(document.getElementById('register_current').checked){
+            document.getElementById('register_current').checked = false;
+            register_idA.remove();
+            register_costA.remove();
+        }
+        
+        if(document.getElementById('register_sixteen').checked){
+        document.getElementById('register_sixteen').checked = false;
+        register_idB.remove();
+        register_costB.remove();
         }  
 
-    if(document.getElementById('title_plan_map_02').checked){
-        document.getElementById('title_plan_map_02').checked = false;
-        title_plan_map_id3B.remove();
-        title_plan_map_cost3B.remove();
+        if(document.getElementById('register_02').checked){
+            document.getElementById('register_02').checked = false;
+            register_idC.remove();
+            register_costC.remove();
+            }
+
+        if(document.getElementById('title_plan_current').checked){
+            document.getElementById('title_plan_current').checked = false;
+            title_plan_idA.remove();
+            title_plan_costA.remove();
+            }
+
+        if(document.getElementById('title_plan_16').checked){
+        document.getElementById('title_plan_16').checked = false;
+        title_plan_idB.remove();
+        title_plan_costB.remove();
+        }
+
+        if(document.getElementById('title_plan_02').checked){
+        document.getElementById('title_plan_02').checked = false;
+        title_plan_idC.remove();
+        title_plan_costC.remove();
         } 
 
-    empty_button_id.remove();
-    doesEmptyExist = false;
-    
-    var Emptyelement = document.getElementById("empty_wording");
-    Emptyelement.style.display = "block";
+        if(document.getElementById('title_plan_map_current').checked){
+            document.getElementById('title_plan_map_current').checked = false;
+            title_plan_map_id3A.remove();
+            title_plan_map_cost3A.remove();
+            }  
+        
+        if(document.getElementById('title_plan_map_16').checked){
+            document.getElementById('title_plan_map_16').checked = false;
+            title_plan_map_id3B.remove();
+            title_plan_map_cost3B.remove();
+            }  
 
+        if(document.getElementById('title_plan_map_02').checked){
+            document.getElementById('title_plan_map_02').checked = false;
+            title_plan_map_id3B.remove();
+            title_plan_map_cost3B.remove();
+            } 
+        if(document.getElementById('deed').checked){
+            document.getElementById('deed').checked = false;
+            deed_id.remove();
+            deed_cost.remove();
+        }  
+        if(document.getElementById('lease').checked){
+            document.getElementById('lease').checked = false;
+            lease_id.remove();
+            lease_cost.remove();
+        }
+
+        if(document.getElementById('transfer_Afour').checked){
+            document.getElementById('transfer_Afour').checked = false;
+            transfer_Afour_id.remove();
+            transfer_Afour_cost.remove();
+        }
+
+
+        if(document.getElementById('transfer_Aeight').checked){
+            document.getElementById('transfer_Aeight').checked = false;
+            transfer_Aeight_id.remove();
+            transfer_Aeight_cost.remove();
+        }
+
+        empty_button_id.remove();
+        doesEmptyExist = false;
+        
+        var Emptyelement = document.getElementById("empty_wording");
+        Emptyelement.style.display = "block";
+        }    
 }
 
 
