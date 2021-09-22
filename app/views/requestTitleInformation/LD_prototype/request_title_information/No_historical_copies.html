@@ -166,18 +166,18 @@
             <div class="govuk-grid-column-two-thirds">
               <a href="#" class="govuk-back-link">Back</a>
       
-              <h1 class="govuk-heading-xl">Request title information</h1>
+              <h1 class="govuk-heading-xl" id="largeHeading_whatService">Request title information</h1>
               <h2 class="govuk-heading-l">Property details</h2>
 
               <table class="govuk-table">
                 <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
+                  <tr class="govuk-table__row" id="first-row">
                     <th scope="row" class="govuk-table__header">Title number</th>
                     <td class="govuk-table__cell">DN461880</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Address</th>
-                    <td class="govuk-table__cell">SEATON COURT, 2 WILLIAM PRANCE ROAD, PLYMOUTH, PL6 5WS</td>
+                    <td class="govuk-table__cell">SEATON COURT, 2 WILLIAM PRANCE ROAD, PLYMOUTH, <br>PL6 5WS</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Tenure</th>
@@ -191,7 +191,7 @@
               </table>
 
               <h2 class="govuk-heading-m">Register and title plans</h2>
-              <p>I you order both the register and title plan, they will be delivered together
+              <p>If you order both the register and title plan, they will be delivered together
                 either electronically or by post.
               </p>
               <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
@@ -204,7 +204,7 @@
                       <th scope="row" class="govuk-table__header table_2_header">Cost</th>                  
                     </tr>
                     <tr class="govuk-table__row">
-                      <td class="govuk-table__cell govuk-table__cell2">
+                      <td class="govuk-table__cell govuk-table__cell2" style="width:40%;">
                         <div class="govuk-checkboxes__item">
                           <input class="govuk-checkboxes__input" id="register" name="register" type="checkbox" value="0" onclick="checkbox1()">
                           <label class="govuk-label govuk-checkboxes__label" for="register">
@@ -212,9 +212,9 @@
                           </label>
                         </div>
                       </td>
-                      <td class="govuk-table__cell govuk-table__cell2">Official Copy</td>
-                      <td class="govuk-table__cell govuk-table__cell2">PDF</td>
-                      <td class="govuk-table__cell govuk-table__cell2">£3.00</td>
+                      <td class="govuk-table__cell govuk-table__cell2" style="width:25%;">Official Copy</td>
+                      <td class="govuk-table__cell govuk-table__cell2" style="width:25%;">PDF</td>
+                      <td class="govuk-table__cell govuk-table__cell2" style="width:10%;">£3.00</td>
                     </tr>
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell govuk-table__cell2">
@@ -252,11 +252,11 @@
                 <table class="govuk-table">
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header table_2_header">Document type</th>
-                      <th scope="row" class="govuk-table__header table_2_header">Entry number</th>
-                      <th scope="row" class="govuk-table__header table_2_header">Date</th>
-                      <th scope="row" class="govuk-table__header table_2_header">Filed under</th>  
-                      <th scope="row" class="govuk-table__header table_2_header">Cost</th>                                  
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:25%;">Document type</th>
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:21.5%;">Entry number</th>
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:21.5%;">Date</th>
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:21.5%;">Filed under</th>  
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:10%;">Cost</th>                                  
                     </tr>
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell govuk-table__cell2">
@@ -323,9 +323,9 @@
                 <table class="govuk-table">
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header table_2_header">Document type</th>
-                      <th scope="row" class="govuk-table__header table_2_header">Entry number</th>
-                      <th scope="row" class="govuk-table__header table_2_header">Date</th>                               
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:37.5%;">Document type</th>
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:37.5%;">Entry number</th>
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:25%;">Date</th>                               
                     </tr>
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell govuk-table__cell2">Deed of exchange</td>
@@ -372,16 +372,21 @@
               <div class = "grey-container" id="side_container">
                 <h3 class="govuk-heading-s">Basket</h3>
                 <p id="empty_wording" style="display:block;">Empty</p>
-                <div id="basket_items_container">
-                  <ul id="basket_item">
-                  </ul>
+                <div id = "BasketHolder" style="display: flex; justify-content: space-between; padding: 0px;">
+                  <div id="basket_items_container">
+                    <ul id="basket_item">
+                    </ul>
+                  </div>
+                  <div id="items_cost_container">
+                    <ul id="items_cost">
+                    </ul>
+                  </div>
                 </div>
-                <div id="items_cost_container">
-                  <ul id="items_cost">
-                  </ul>
+                <hr>
+                <div style="display: flex; justify-content: space-between; padding:0px;">
+                  <p>Total</p>
+                  <p id="total_cost">£0.00</p>
                 </div>
-                <p>Total</p>
-                <p id="total_cost">£0.00</p>
                 <button class="govuk-button" data-module="govuk-button" onclick="LogTotalCost()">
                   Checkout
                 </button>
