@@ -126,11 +126,22 @@
 <script>
 document.addEventListener("DOMContentLoaded", function(event){
   whatwasCheckedBefore();
-  var y = sessionStorage.getItem('TestingStorage');
-  console.log(y);
-  var z = '£' + y
-  document.getElementById('TotalCost_inTable').textContent = z;
-  document.getElementById('TotalCost').textContent = z;
+  var h = sessionStorage.getItem('TestingStorage');
+  console.log(h);
+  console.log('Hello world');
+
+  if(h === null){
+    var i = '£0.00';
+    document.getElementById('TotalCost_inTable').textContent = i;
+    document.getElementById('TotalCost').textContent = i;
+  }
+
+  else{
+    var i = '£' + h;
+    document.getElementById('TotalCost_inTable').textContent = i;
+    document.getElementById('TotalCost').textContent = i;
+  }  
+
 })
 
 window.addEventListener("load", function(event) {

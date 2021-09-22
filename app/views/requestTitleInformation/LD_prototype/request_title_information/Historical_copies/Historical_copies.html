@@ -154,7 +154,7 @@
       <main class="govuk-main-wrapper">
   
         <div class="govuk-grid-row">
-          <form class = "form" action="Summary_No_historical_copies" method="POST">
+          <form class = "form" action="Summary_historical_copies" method="POST">
 
             <div class="govuk-grid-column-two-thirds">
               <a href="#" class="govuk-back-link">Back</a>
@@ -226,7 +226,7 @@
                                   <tr class="govuk-table__row">
                                     <td class="govuk-table__cell govuk-table__cell2">
                                       <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="register_sixteen" name="register_sixteen" type="checkbox" value="register_sixteen" onclick="lauren()">
+                                        <input class="govuk-checkboxes__input" id="register_sixteen" name="register_sixteen" type="checkbox" value="register_sixteen" onclick="checkbox1B()">
                                         <label class="govuk-label govuk-checkboxes__label" for="register">
                                           2016
                                         </label>
@@ -239,7 +239,7 @@
                                   <tr class="govuk-table__row">
                                     <td class="govuk-table__cell govuk-table__cell2">
                                       <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="register_02" name="register_02" type="checkbox" value="register_02">
+                                        <input class="govuk-checkboxes__input" id="register_02" name="register_02" type="checkbox" value="register_02" onclick="checkbox1C()">
                                         <label class="govuk-label govuk-checkboxes__label" for="register">
                                           2002
                                         </label>
@@ -257,7 +257,7 @@
                     </tr>
 
 
-                    <!-- <tr class="govuk-table__row">
+                    <tr class="govuk-table__row">
                       <td colspan="4" class="govuk-table__cell govuk-table__cell2">
                         <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default" style="margin-bottom: 0px;">
                           <div class="govuk-accordion__section ">
@@ -300,7 +300,7 @@
                                   <tr class="govuk-table__row">
                                     <td class="govuk-table__cell govuk-table__cell2">
                                       <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="title_plan_02" name="title_plan_02" type="checkbox" value="title_plan_02" onclick="checkbox2B()">
+                                        <input class="govuk-checkboxes__input" id="title_plan_02" name="title_plan_02" type="checkbox" value="title_plan_02" onclick="checkbox2C()">
                                         <label class="govuk-label govuk-checkboxes__label" for="register">
                                           2002
                                         </label>
@@ -315,10 +315,10 @@
                             </div>
                           </div>
                       </td>
-                    </tr> -->
+                    </tr>
 
 
-                    <!-- <tr class="govuk-table__row">
+                    <tr class="govuk-table__row">
                       <td colspan="4" class="govuk-table__cell govuk-table__cell2">
                         <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default" style="margin-bottom: 0px;">
                           <div class="govuk-accordion__section ">
@@ -376,7 +376,7 @@
                             </div>
                           </div>
                       </td>
-                    </tr> -->
+                    </tr>
 
                   </tbody>
                 </table>
@@ -506,7 +506,7 @@
             <div class="govuk-grid-column-one-third">
               <div class = "grey-container" id="side_container">
                 <h3 class="govuk-heading-s">Basket</h3>
-                <p>Empty</p>
+                <p id="empty_wording" style="display:block;">Empty</p>
                 <div id="basket_items_container">
                   <ul id="basket_item">
                   </ul>
