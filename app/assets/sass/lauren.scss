@@ -1,37 +1,160 @@
+@@ -1,52 +1,154 @@
 // .govuk-width-container{
 //     max-width: 960px;
 //     background-color: pink;
 //     margin: 15px 15px;
 // }
+// START Making changes to the typography
 
+.govuk-heading-xl, .govuk-fieldset__heading, .govuk-label, .govuk-radios__label, .govuk-hint, .govuk-radios__hint,
+.govuk-button, .govuk-back-link, .govuk-heading-s, .govuk-body, .govuk-heading-m, .govuk-heading-l,
+.govuk-table__header, .govuk-table__cell, .govuk-file-upload, .govuk-summary-list__key, .govuk-summary-list__value{
+    font-family: "Roboto";
+}
 
+p{
+    font-family: "Roboto";
+}
 
 .govuk-grid-row {
     background-color: pink;
     max-width: 960px;
     margin: 0 auto;
+#largeHeading_whatService{
+    margin-top: 25px;
+    margin-bottom: 45px;
 }
 
 .govuk-fieldset{
+#radio_label_whatService{
+    font-weight: 500;
+}
+
+#sign-in-item-hint, #sign-in-2-item-hint{
+    font-size: 16px;
+    color: #454A4C
+}
+
+#customer-reference-hint{
+    color:black;
+    font-size: 18px;
+}
+
+.govuk-link:link, a:link{
+    color: #00703C;
+}
+
+// START fixing spacing on what_service page
+
+.govuk-back-link{
+    margin-top: 30px;
+}
+
+.govuk-radios{
+    margin-top: 10px;
+}
+
+.govuk-radios__item{
+    margin-bottom: 20px;
+}
+
+// START fixing spacing on Request Title Information page
+
+#grey-container-text{
+    margin-bottom: 0px;
+}
+
+#requestTitleInformation-group, #form_group{
+    margin-bottom: 40px;
+}
+
+#first-row{
+    border-top: 1px solid #bfc1c3;}
+
+// Styling the shopping basket page - non-historical copies
+
+.govuk-table__header, .govuk-table__cell{
+    font-size: 16px;
+}
+
+.govuk-table__header{
+    vertical-align: middle;
+    padding: 12px 0px 12px 0px;
+}
+
+.govuk-table__cell{
+    padding: 18px 0px 18px 30px;
+    color: #242424;
+}
+
+// Styling the shopping basket
+
+ul{
+    list-style: none;
     padding: 0px;
 }
 
+li{
+    padding: 0px 0px 10px 0px; 
+    font-family: 'Roboto';
+    font-weight: 400;
+}
 
-.grey-container{
-    background-color: #f3f2f1;
+// Styling the accordians
+
+.govuk-accordion{
+    border-bottom: 0px;
+}
+
+// Styling the checkout page
+.govuk-summary-list__key{
+    padding: 12px 0px;
 }
 
 
+
+// Rest of styling
+
+// .govuk-width-container{
+//     background-color: pink;
+// }
+
+
+.govuk-grid-row {
+    background-color: white;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.grey-container{
+    box-sizing: border-box;
+    background-color: #f3f2f1;
+    margin-top: 80px;
+    padding: 25px;
+    width: 360px;
+    position: fixed;
+}
+
+// .govuk-radios{
+//     background-color: blueviolet;
+// }
+
 .govuk-fieldset{
     padding:20px;
+    padding:0px;
 }
 
 .govuk-table{
     border: 0px;
     width: 100%;}
+    width: 100%;
+    margin-bottom:60px;
+}
 
 .govuk-table__row:nth-child(1){
     border-top: 1px solid #bfc1c3;}
+// .govuk-table__row:nth-child(1){
+//     border-top: 1px solid #bfc1c3;}
 
 .govuk-table__header{
     padding: 10px 30px 10px 0px;
@@ -47,10 +170,8 @@
 
 .govuk-table__cell2{
     padding: 10px 0px;
+    padding: 12px 0px;
 }
 
 .govuk-accordion__controls {
-    display:none;
-}
-
-
+@ @@

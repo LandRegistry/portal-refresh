@@ -30,7 +30,7 @@ function checkbox1() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked += 1;
        areBoxesticked();
@@ -47,7 +47,7 @@ function checkbox1() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked -= 1; 
        areBoxesticked();
@@ -80,7 +80,7 @@ function checkbox1A() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked += 1;
        areBoxesticked();
@@ -97,7 +97,7 @@ function checkbox1A() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked -= 1; 
        areBoxesticked();
@@ -130,7 +130,7 @@ function checkbox1B() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked += 1;
        areBoxesticked();
@@ -147,7 +147,7 @@ function checkbox1B() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked -= 1; 
        areBoxesticked();
@@ -181,7 +181,7 @@ function checkbox1C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked += 1;
        areBoxesticked();
@@ -198,7 +198,7 @@ function checkbox1C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
  
        noOfboxesChecked -= 1; 
        areBoxesticked();
@@ -235,7 +235,7 @@ function checkbox1C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -257,7 +257,7 @@ function checkbox1C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -291,7 +291,7 @@ function checkbox1C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -310,7 +310,7 @@ function checkbox1C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -344,7 +344,7 @@ function checkbox1C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -363,7 +363,7 @@ function checkbox1C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -392,12 +392,12 @@ function checkbox1C() {
        var cost_li_title_planC = document.createElement("LI");
        cost_li_title_planC.setAttribute("id", "title_plan_costC");
        var cost_tn_title_planC = document.createTextNode("£3.00");
-       var cost_litn_title_planC = cost_li_title_planB.appendChild(cost_tn_title_planC);
+       var cost_litn_title_planC = cost_li_title_planC.appendChild(cost_tn_title_planC);
        total_list.insertBefore(cost_li_title_planC, total_list.childNodes[0]);
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -416,7 +416,7 @@ function checkbox1C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -451,7 +451,7 @@ function checkbox1C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -470,7 +470,7 @@ function checkbox1C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -497,13 +497,14 @@ function checkbox3A() {
        
        var cost_li_title_plan_map3A = document.createElement("LI");
        cost_li_title_plan_map3A.setAttribute("id", "title_plan_map_cost3A");
+       cost_li_title_plan_map3A.setAttribute("style", "padding-bottom:29px;");
        var cost_tn_title_plan_map3A = document.createTextNode("£3.00");
        var cost_litn_title_plan3A = cost_li_title_plan_map3A.appendChild(cost_tn_title_plan_map3A);
        total_list.insertBefore(cost_li_title_plan_map3A, total_list.childNodes[0]);
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -520,7 +521,7 @@ function checkbox3A() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -547,13 +548,14 @@ function checkbox3B() {
        
        var cost_li_title_plan_map3B = document.createElement("LI");
        cost_li_title_plan_map3B.setAttribute("id", "title_plan_map_cost3B");
+       cost_li_title_plan_map3B.setAttribute("style", "padding-bottom:29px;");
        var cost_tn_title_plan_map3B = document.createTextNode("£3.00");
        var cost_litn_title_plan3B = cost_li_title_plan_map3B.appendChild(cost_tn_title_plan_map3B);
        total_list.insertBefore(cost_li_title_plan_map3B, total_list.childNodes[0]);
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -570,7 +572,7 @@ function checkbox3B() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -597,13 +599,14 @@ function checkbox3C() {
        
        var cost_li_title_plan_map3C = document.createElement("LI");
        cost_li_title_plan_map3C.setAttribute("id", "title_plan_map_cost3C");
+       cost_li_title_plan_map3C.setAttribute("style", "padding-bottom:29px;");
        var cost_tn_title_plan_map3C = document.createTextNode("£3.00");
        var cost_litn_title_plan3C = cost_li_title_plan_map3C.appendChild(cost_tn_title_plan_map3C);
        total_list.insertBefore(cost_li_title_plan_map3C, total_list.childNodes[0]);
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -620,7 +623,7 @@ function checkbox3C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -657,7 +660,7 @@ function checkbox3C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -677,7 +680,7 @@ function checkbox3C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -713,7 +716,7 @@ function checkbox3C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -732,7 +735,7 @@ function checkbox3C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -768,7 +771,7 @@ function checkbox3C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -788,7 +791,7 @@ function checkbox3C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -823,7 +826,7 @@ function checkbox3C() {
        
        totalAmounttoPay += 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked += 1; 
        areBoxesticked();
@@ -841,7 +844,7 @@ function checkbox3C() {
        
        totalAmounttoPay -= 3; 
        var twoDP_total = totalAmounttoPay.toFixed(2);
-       document.getElementById("total_cost").innerHTML= twoDP_total;
+       document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
        
        noOfboxesChecked -= 1;
        areBoxesticked();
@@ -878,112 +881,267 @@ function checkbox3C() {
     }
 }
 
+// function emptyTheBasket(){
+// 	noOfboxesChecked = 0; 
+//     totalAmounttoPay = 0;
+//     var twoDP_total = totalAmounttoPay.toFixed(2);
+//     document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
+    
+//     if(document.getElementById('register').checked){
+// 	  document.getElementById('register').checked = false;
+// 	  register_id.remove();
+//       register_cost.remove();
+// 	}
+//     if(document.getElementById('register_current').checked){
+//         document.getElementById('register_current').checked = false;
+//         register_idA.remove();
+//         register_costA.remove();
+//       }
+    
+//     if(document.getElementById('register_sixteen').checked){
+//     document.getElementById('register_sixteen').checked = false;
+//     register_idB.remove();
+//     register_costB.remove();
+//     }  
+
+//     if(document.getElementById('register_02').checked){
+//         document.getElementById('register_02').checked = false;
+//         register_idC.remove();
+//         register_costC.remove();
+//         }
+
+//     if(document.getElementById('title_plan').checked){
+// 	  document.getElementById('title_plan').checked = false;
+// 	  title_plan_id.remove();
+//       title_plan_cost.remove();
+// 	}
+
+//     if(document.getElementById('title_plan_current').checked){
+//         document.getElementById('title_plan_current').checked = false;
+//         title_plan_idA.remove();
+//         title_plan_costA.remove();
+//       }
+
+//     if(document.getElementById('title_plan_16').checked){
+//     document.getElementById('title_plan_16').checked = false;
+//     title_plan_idB.remove();
+//     title_plan_costB.remove();
+//     }
+
+//     if(document.getElementById('title_plan_02').checked){
+//     document.getElementById('title_plan_02').checked = false;
+//     title_plan_idC.remove();
+//     title_plan_costC.remove();
+//     }  
+
+//     if(document.getElementById('title_plan_map').checked){
+//         document.getElementById('title_plan_map').checked = false;
+//         title_plan_map_id.remove();
+//         title_plan_map_cost.remove();
+//       }
+
+//     if(document.getElementById('title_plan_map_current').checked){
+//     document.getElementById('title_plan_map_current').checked = false;
+//     title_plan_map_id3A.remove();
+//     title_plan_map_cost3A.remove();
+//     }  
+
+//     if(document.getElementById('title_plan_map_16').checked){
+//         document.getElementById('title_plan_map_16').checked = false;
+//         title_plan_map_id3B.remove();
+//         title_plan_map_cost3B.remove();
+//         }  
+
+//     if(document.getElementById('title_plan_map_02').checked){
+//         document.getElementById('title_plan_map_02').checked = false;
+//         title_plan_map_id3B.remove();
+//         title_plan_map_cost3B.remove();
+//         } 
+
+//     if(document.getElementById('deed').checked){
+//         document.getElementById('deed').checked = false;
+//         deed_id.remove();
+//         deed_cost.remove();
+//       }  
+//     if(document.getElementById('lease').checked){
+//         document.getElementById('lease').checked = false;
+//         lease_id.remove();
+//         lease_cost.remove();
+//     }
+
+//     if(document.getElementById('transfer_Afour').checked){
+//         document.getElementById('transfer_Afour').checked = false;
+//         transfer_Afour_id.remove();
+//         transfer_Afour_cost.remove();
+//     }
+
+
+//     if(document.getElementById('transfer_Aeight').checked){
+//         document.getElementById('transfer_Aeight').checked = false;
+//         transfer_Aeight_id.remove();
+//         transfer_Aeight_cost.remove();
+//     }
+
+
+//     empty_button_id.remove();
+//     doesEmptyExist = false;
+
+// }
+
+
+   
 function emptyTheBasket(){
-	noOfboxesChecked = 0; 
+	console.log(location.href);
+    noOfboxesChecked = 0; 
     totalAmounttoPay = 0;
     var twoDP_total = totalAmounttoPay.toFixed(2);
-    document.getElementById("total_cost").innerHTML= twoDP_total;
+    document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
     
-    if(document.getElementById('register').checked){
-	  document.getElementById('register').checked = false;
-	  register_id.remove();
-      register_cost.remove();
-	}
-    if(document.getElementById('register_current').checked){
-        document.getElementById('register_current').checked = false;
-        register_idA.remove();
-        register_costA.remove();
-      }
-    
-    if(document.getElementById('register_sixteen').checked){
-    document.getElementById('register_sixteen').checked = false;
-    register_idB.remove();
-    register_costB.remove();
-    }  
+    if(document.getElementById('register') != null){
+        console.log('it works here too');
 
-    if(document.getElementById('register_02').checked){
-        document.getElementById('register_02').checked = false;
-        register_idC.remove();
-        register_costC.remove();
+        if(document.getElementById('register').checked){
+        document.getElementById('register').checked = false;
+        register_id.remove();
+        register_cost.remove();
         }
 
-    if(document.getElementById('title_plan').checked){
-	  document.getElementById('title_plan').checked = false;
-	  title_plan_id.remove();
-      title_plan_cost.remove();
-	}
 
-    if(document.getElementById('title_plan_current').checked){
-        document.getElementById('title_plan_current').checked = false;
-        title_plan_idA.remove();
-        title_plan_costA.remove();
-      }
+        if(document.getElementById('title_plan').checked){
+        document.getElementById('title_plan').checked = false;
+        title_plan_id.remove();
+        title_plan_cost.remove();
+        }
 
-    if(document.getElementById('title_plan_16').checked){
-    document.getElementById('title_plan_16').checked = false;
-    title_plan_idB.remove();
-    title_plan_costB.remove();
-    }
+    
 
-    if(document.getElementById('title_plan_02').checked){
-    document.getElementById('title_plan_02').checked = false;
-    title_plan_idC.remove();
-    title_plan_costC.remove();
-    }  
+        if(document.getElementById('title_plan_map').checked){
+            document.getElementById('title_plan_map').checked = false;
+            title_plan_map_id.remove();
+            title_plan_map_cost.remove();
+        }
 
-    if(document.getElementById('title_plan_map').checked){
-        document.getElementById('title_plan_map').checked = false;
-        title_plan_map_id.remove();
-        title_plan_map_cost.remove();
-      }
 
-    if(document.getElementById('title_plan_map_current').checked){
-    document.getElementById('title_plan_map_current').checked = false;
-    title_plan_map_id3A.remove();
-    title_plan_map_cost3A.remove();
-    }  
+        if(document.getElementById('deed').checked){
+            document.getElementById('deed').checked = false;
+            deed_id.remove();
+            deed_cost.remove();
+        }  
+        if(document.getElementById('lease').checked){
+            document.getElementById('lease').checked = false;
+            lease_id.remove();
+            lease_cost.remove();
+        }
 
-    if(document.getElementById('title_plan_map_16').checked){
-        document.getElementById('title_plan_map_16').checked = false;
-        title_plan_map_id3B.remove();
-        title_plan_map_cost3B.remove();
+        if(document.getElementById('transfer_Afour').checked){
+            document.getElementById('transfer_Afour').checked = false;
+            transfer_Afour_id.remove();
+            transfer_Afour_cost.remove();
+        }
+
+
+        if(document.getElementById('transfer_Aeight').checked){
+            document.getElementById('transfer_Aeight').checked = false;
+            transfer_Aeight_id.remove();
+            transfer_Aeight_cost.remove();
+        }
+
+        empty_button_id.remove();
+        doesEmptyExist = false;
+        
+        var Emptyelement = document.getElementById("empty_wording");
+        Emptyelement.style.display = "block";
+
+    }    
+
+    if(document.getElementById('register') === null){
+        console.log('hello world');
+
+        if(document.getElementById('register_current').checked){
+            document.getElementById('register_current').checked = false;
+            register_idA.remove();
+            register_costA.remove();
+        }
+        
+        if(document.getElementById('register_sixteen').checked){
+        document.getElementById('register_sixteen').checked = false;
+        register_idB.remove();
+        register_costB.remove();
         }  
 
-    if(document.getElementById('title_plan_map_02').checked){
-        document.getElementById('title_plan_map_02').checked = false;
-        title_plan_map_id3B.remove();
-        title_plan_map_cost3B.remove();
+        if(document.getElementById('register_02').checked){
+            document.getElementById('register_02').checked = false;
+            register_idC.remove();
+            register_costC.remove();
+            }
+
+        if(document.getElementById('title_plan_current').checked){
+            document.getElementById('title_plan_current').checked = false;
+            title_plan_idA.remove();
+            title_plan_costA.remove();
+            }
+
+        if(document.getElementById('title_plan_16').checked){
+        document.getElementById('title_plan_16').checked = false;
+        title_plan_idB.remove();
+        title_plan_costB.remove();
+        }
+
+        if(document.getElementById('title_plan_02').checked){
+        document.getElementById('title_plan_02').checked = false;
+        title_plan_idC.remove();
+        title_plan_costC.remove();
         } 
 
-    if(document.getElementById('deed').checked){
-        document.getElementById('deed').checked = false;
-        deed_id.remove();
-        deed_cost.remove();
-      }  
-    if(document.getElementById('lease').checked){
-        document.getElementById('lease').checked = false;
-        lease_id.remove();
-        lease_cost.remove();
-    }
+        if(document.getElementById('title_plan_map_current').checked){
+            document.getElementById('title_plan_map_current').checked = false;
+            title_plan_map_id3A.remove();
+            title_plan_map_cost3A.remove();
+            }  
+        
+        if(document.getElementById('title_plan_map_16').checked){
+            document.getElementById('title_plan_map_16').checked = false;
+            title_plan_map_id3B.remove();
+            title_plan_map_cost3B.remove();
+            }  
 
-    if(document.getElementById('transfer_Afour').checked){
-        document.getElementById('transfer_Afour').checked = false;
-        transfer_Afour_id.remove();
-        transfer_Afour_cost.remove();
-    }
+        if(document.getElementById('title_plan_map_02').checked){
+            document.getElementById('title_plan_map_02').checked = false;
+            title_plan_map_id3B.remove();
+            title_plan_map_cost3B.remove();
+            } 
+        if(document.getElementById('deed').checked){
+            document.getElementById('deed').checked = false;
+            deed_id.remove();
+            deed_cost.remove();
+        }  
+        if(document.getElementById('lease').checked){
+            document.getElementById('lease').checked = false;
+            lease_id.remove();
+            lease_cost.remove();
+        }
+
+        if(document.getElementById('transfer_Afour').checked){
+            document.getElementById('transfer_Afour').checked = false;
+            transfer_Afour_id.remove();
+            transfer_Afour_cost.remove();
+        }
 
 
-    if(document.getElementById('transfer_Aeight').checked){
-        document.getElementById('transfer_Aeight').checked = false;
-        transfer_Aeight_id.remove();
-        transfer_Aeight_cost.remove();
-    }
+        if(document.getElementById('transfer_Aeight').checked){
+            document.getElementById('transfer_Aeight').checked = false;
+            transfer_Aeight_id.remove();
+            transfer_Aeight_cost.remove();
+        }
 
-
-    empty_button_id.remove();
-    doesEmptyExist = false;
-
+        empty_button_id.remove();
+        doesEmptyExist = false;
+        
+        var Emptyelement = document.getElementById("empty_wording");
+        Emptyelement.style.display = "block";
+        }    
 }
+
 
 function whatwasCheckedBefore(){
 
