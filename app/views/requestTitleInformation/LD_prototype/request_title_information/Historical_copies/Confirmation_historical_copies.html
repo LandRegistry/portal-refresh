@@ -9,6 +9,12 @@
 {% block content %}
 
 <style>
+
+.govuk-panel--confirmation {
+    color: #ffffff;
+    background: #00703C;
+}
+
     .alert-icon {
     animation: blink 2s;
     animation-iteration-count: 3;
@@ -325,12 +331,12 @@ window.addEventListener("load", function(event) {
             <p>If you have ordered a document that is only available by post, this will arrive within 3 - 5 working days.</p>
 
             <div style="display:flex; width: 300px; justify-content:space-between;">
-              <button class="govuk-button" data-module="govuk-button" onclick="LogTotalCost()" style="margin-top:50px;">
+              <button class="govuk-button" data-module="govuk-button" onclick="window.location.href='/requestTitleInformation/LD_prototype/what_service'" style="margin-top:50px;">
                 Order again
               </button>
 
               <p style="margin-top: 55px;">or</p>
-              <a href="#" class="govuk-link govuk-link--no-visited-state" style="margin-top: 59px;">return to Home</a>
+              <a href="/requestTitleInformation/LD_prototype/" class="govuk-link govuk-link--no-visited-state" style="margin-top: 59px;">return to Home</a>
             </div> 
 
       
