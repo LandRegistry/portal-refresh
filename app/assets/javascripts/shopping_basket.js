@@ -1001,16 +1001,18 @@ function emptyTheBasket(){
         console.log('it works here too');
 
         if(document.getElementById('register').checked){
-        document.getElementById('register').checked = false;
-        register_id.remove();
-        register_cost.remove();
+            document.getElementById('register').checked = false;
+            register_id.remove();
+            register_cost.remove();
+            sessionStorage.removeItem('register');
         }
 
 
         if(document.getElementById('title_plan').checked){
-        document.getElementById('title_plan').checked = false;
-        title_plan_id.remove();
-        title_plan_cost.remove();
+            document.getElementById('title_plan').checked = false;
+            title_plan_id.remove();
+            title_plan_cost.remove();
+            sessionStorage.removeItem('titleplan');
         }
 
     
@@ -1019,6 +1021,8 @@ function emptyTheBasket(){
             document.getElementById('title_plan_map').checked = false;
             title_plan_map_id.remove();
             title_plan_map_cost.remove();
+            sessionStorage.removeItem('titleplanmap');
+
         }
 
 
@@ -1026,17 +1030,21 @@ function emptyTheBasket(){
             document.getElementById('deed').checked = false;
             deed_id.remove();
             deed_cost.remove();
+            sessionStorage.removeItem('deed');
+
         }  
         if(document.getElementById('lease').checked){
             document.getElementById('lease').checked = false;
             lease_id.remove();
             lease_cost.remove();
+            sessionStorage.removeItem('lease');
         }
 
         if(document.getElementById('transfer_Afour').checked){
             document.getElementById('transfer_Afour').checked = false;
             transfer_Afour_id.remove();
             transfer_Afour_cost.remove();
+            sessionStorage.removeItem('transfer_afour');
         }
 
 
@@ -1061,70 +1069,88 @@ function emptyTheBasket(){
             document.getElementById('register_current').checked = false;
             register_idA.remove();
             register_costA.remove();
+            sessionStorage.removeItem('register1A');
         }
         
         if(document.getElementById('register_sixteen').checked){
         document.getElementById('register_sixteen').checked = false;
         register_idB.remove();
         register_costB.remove();
+        sessionStorage.removeItem('register1B');
         }  
 
         if(document.getElementById('register_02').checked){
             document.getElementById('register_02').checked = false;
             register_idC.remove();
             register_costC.remove();
+            sessionStorage.removeItem('register1C');
+
             }
 
         if(document.getElementById('title_plan_current').checked){
             document.getElementById('title_plan_current').checked = false;
             title_plan_idA.remove();
             title_plan_costA.remove();
+            sessionStorage.removeItem('titleplanA');
             }
 
         if(document.getElementById('title_plan_16').checked){
         document.getElementById('title_plan_16').checked = false;
         title_plan_idB.remove();
         title_plan_costB.remove();
+        sessionStorage.removeItem('titleplanB');
+
         }
 
         if(document.getElementById('title_plan_02').checked){
         document.getElementById('title_plan_02').checked = false;
         title_plan_idC.remove();
         title_plan_costC.remove();
+        sessionStorage.removeItem('titleplanC');
         } 
 
         if(document.getElementById('title_plan_map_current').checked){
             document.getElementById('title_plan_map_current').checked = false;
             title_plan_map_id3A.remove();
             title_plan_map_cost3A.remove();
+            sessionStorage.removeItem('titleplanmap3A');
             }  
         
         if(document.getElementById('title_plan_map_16').checked){
             document.getElementById('title_plan_map_16').checked = false;
+            document.getElementById('title_plan_map_id3B');
+            document.getElementById('title_plan_map_cost3B');
             title_plan_map_id3B.remove();
             title_plan_map_cost3B.remove();
+            sessionStorage.removeItem('titleplanmap3B');
+
             }  
 
         if(document.getElementById('title_plan_map_02').checked){
             document.getElementById('title_plan_map_02').checked = false;
-            title_plan_map_id3B.remove();
-            title_plan_map_cost3B.remove();
+            title_plan_map_id3C.remove();
+            title_plan_map_cost3C.remove();
+            sessionStorage.removeItem('titleplanmap3C');
+
             } 
         if(document.getElementById('deed').checked){
             document.getElementById('deed').checked = false;
             deed_id.remove();
             deed_cost.remove();
+            sessionStorage.removeItem('deed');
         }  
         if(document.getElementById('lease').checked){
             document.getElementById('lease').checked = false;
             lease_id.remove();
             lease_cost.remove();
+            sessionStorage.removeItem('lease');
         }
 
         if(document.getElementById('transfer_Afour').checked){
             document.getElementById('transfer_Afour').checked = false;
             transfer_Afour_id.remove();
             transfer_Afour_cost.remove();
+            sessionStorage.removeItem('transfer_afour');
         }
 
 
@@ -1132,6 +1158,7 @@ function emptyTheBasket(){
             document.getElementById('transfer_Aeight').checked = false;
             transfer_Aeight_id.remove();
             transfer_Aeight_cost.remove();
+            sessionStorage.removeItem('transfer_aeight');
         }
 
         empty_button_id.remove();
