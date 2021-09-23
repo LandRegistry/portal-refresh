@@ -1,0 +1,387 @@
+{% extends "layout_portal.html" %}
+{% block content %}
+
+<style>
+
+    .govuk-template__body {
+    background-color: #EAEAEA;
+    color: #000000;
+    font-size: 70%;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+}
+
+
+
+
+.govuk-width-container {
+    max-width: 1100px;
+    padding: 0px !Important;
+    margin: auto;
+}
+
+.lightGrey {
+    background-image: url(/public/images/bg_16.gif);
+    background-color: transparent ! important;
+}
+
+.darkGrey {
+    background-color: #b3b3b2;
+}
+
+.limeGreen {
+    background-image: url(/public/images/cutoff_D4E038.gif);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.limeGreenColour {
+    background-color:#d6e739;
+}
+
+.activeMenu {
+    background-image: url(/public/images/signpost2l.gif) !important;
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+}
+
+
+.columnMiddle {
+    width: 665px;
+}
+
+.box {
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    padding-bottom:10px;
+}
+
+.formHeading {
+    margin: unset !important;
+    width:616px !Important;
+
+}
+
+.boxContent01 h3 {
+    font-size: 120%;
+    margin: 4px 0px 0px 0px;
+}
+
+.leftBoxLightGrey {
+    padding: 10px;
+    background-color: #d8d7d8;
+    width: 500px;
+    float: left;
+}
+
+.leftBoxMediumGrey {
+    padding: 10px;
+    background-color: #cecdce;
+    width: 500px;
+    float: left;
+}
+
+.rightBoxGrey {
+    padding: 10px;
+    float: left;
+    width: 104px;
+}
+
+.contentMiddleSection {
+    margin-bottom: 0px;
+    display: inline-block;
+    background-color: #ecebec;
+}
+
+p {
+    font-size: 14px;
+}
+
+.govuk-link:link, a:link {
+    color: #000000;
+    font-weight: 600;
+}
+
+.extraSideMenu {
+    background: #ffffff;
+
+}
+
+.menu2 {
+    margin: 3px 5px 0px 0px;
+    border-left: 5px solid #d6e739;
+}
+
+.menu2 ul {
+    clear: both;
+    display: inline;
+    float: left;
+    list-style: none;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    width: 204px;
+}
+
+.menu2 ul li a {
+    line-height: 20px;
+    text-decoration: none !important;
+    font-size: 13px;
+    font-weight:400;
+}
+
+.menu2 ul li {
+    padding: 3px 15px;
+    margin-top:0px;
+}
+
+.govuk-fieldset {
+    padding: 0px;
+}
+
+.govuk-checkboxes__item {
+    padding-left: 0px;
+}
+
+label {
+    width:unset;
+}
+
+.govuk-checkboxes__label {
+    padding: 8px 0px 0px 55px;
+}
+
+.nav {
+    clear: both;
+    height: 2.5em;
+    margin: 0px 0px 2px 0px;
+    margin-left: 0;
+}
+
+.govuk-checkboxes--small .govuk-checkboxes__item {
+    min-height: 0;
+    margin-bottom: 0;
+    padding-left: 0px;
+    float: left;
+}
+
+.govuk-checkboxes--small .govuk-checkboxes__label {
+    padding: 10px 15px 0px 33px;
+}
+</style>
+
+
+
+
+    <div class="lrTopNav">
+        <ul>
+            <li>
+                <a href="https://www.gov.uk/land-registry">HM Land Registry</a>
+            </li>
+            <li class="on">
+                <a href="/eservices/ECHOM_HomepageServices">Business e-services</a>
+            </li>
+            <li>
+                <a href="/eservices/FindAProperty/view/QuickEnquiryInit.do">Find a property</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="page">
+        <!-- header START -->
+            <div class="container header">
+                <div class="container headerLeft"><img src="/public/images/title.gif" alt="HM Land Registry"></div>
+                <div class="container headerRight"><img src="/public/images/logo.gif" alt=""></div>
+                <div class="clear">&nbsp;</div>
+                <div class="container headerLeft"></div>
+                <div class="container headerRight">
+                    <h2 class="hide">Supplementary menu links</h2>
+                    <ul class="listHorizontal">
+                        <li>
+                            <a href="#" target="_blank">Logout</a>
+                        </li>
+                        <li class="last">
+                            <a href="https://www.gov.uk/guidance/contact-hm-land-registry" target="_blank">Contact HM Land Registry</a>
+                            <span class="newWindow">
+                                 <img src="/public/images/new_window.gif" alt="Link opens in new window">
+                             </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear">&nbsp;</div>
+            </div>
+        <!-- header END -->
+            <div class="clear">&nbsp;</div>
+        <!-- body START -->
+            <div class="container body">
+                <div class="container columnLeft">
+        <!-- left START -->
+                    <div class="container search">
+                        <div class="clear"><p>&nbsp;</p></div>
+                        <div class="clear"><p>&nbsp;</p></div>
+                        <div class="clear"><p>&nbsp;</p></div>
+                        <div class="clear"><p>&nbsp;</p></div>
+                    </div>
+                    <div class="clear">&nbsp;</div>
+                    <div class="container menu">
+                        <div class="bookmark"><a name="accessMain" id="accessMain"><span>&nbsp;</span></a></div>
+                        <ul>
+                            <li class="navleveloneoff"><a href="#">My Portal Home page</a></li>
+                            <li class="navleveloneoff"><a href="#">General Facilities</a></li>
+                            <li class="navleveloneoff "><a class="activeMenu" href="#">Administrative Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="container menu2 extraSideMenu">
+                        <ul>
+                            <li style="background-color: #eaf396;">
+                                <a style="font-weight:700;" href="#">Manage business unit</a>
+                            </li>
+                            <li>
+                                <a href="#">Manage users</a>
+                            </li>
+                            <li>
+                                <a href="#">Personal details</a>
+                            </li>
+                            <li>
+                                <a href="#">Change password</a>
+                            </li>
+                            <li>
+                                <a href="#">Administrator Report</a>
+                            </li>
+                            <li>
+                                <a href="#">VDD Information</a>
+                            </li>
+                        </ul>
+                    </div>
+        <!-- left END -->
+                    <div class=""></div>
+                </div>
+                <div class="container column">
+                    <div id="mainContentAnchor"></div>
+                    <div class="container columnMiddle">
+        <!-- middle START -->
+                        <div class="bookmark"><a name="accessContent" id="accessContent"><span>&nbsp;</span></a></div>
+                        <div class="container box boxColour01 boxContent01">
+
+                            <div class="limeGreenColour limeGreen" style="height: 28px;width: 650px; margin-bottom: 2px;"></div>
+                            <div class="container formHeading" style="margin-bottom:2px !Important;"><h1>Business unit</h1></div>
+                            <div class="container formHeading"><h3>Business unit details</h3></div>
+
+                            <div class="contentMiddleSection">
+                                <div class="leftBoxLightGrey">
+                                    <h3 style="margin-bottom:10px;">General information</h3>
+                                    <p>Business unit name: Portal Refresh Ltd</p>
+                                    <p>Company registration number: </p>
+                                    <p>Account status: Active</p>
+                                </div>
+                                <div class="rightBoxGrey"></div>
+                            </div>
+                            <div class="contentMiddleSection">
+                                <div class="leftBoxMediumGrey">
+                                    <h3 style="margin-bottom:10px;">Address details</h3>
+                                    <p>Postal address: 21 The Street, Plymouth, PL1 1AA, United Kingdom</p>
+                                    <p>DX Address: </p>
+                                </div>
+                                <div class="rightBoxGrey"></div>
+                            </div>
+                            <div class="contentMiddleSection">
+                                <div class="leftBoxLightGrey">
+                                    <h3 style="margin-bottom:10px;">Contact details</h3>
+                                    <p>Email address: portal.refresh@landregistry.gov.uk</p>
+                                    <p>Correspondence email address: </p>
+                                    <p>Alternate corresspondence email address: Not supplied</p>
+                                    <p>Landline number: 01752 445588 </p>
+                                    <p>Fax number:</p>
+                                </div>
+                                <div class="rightBoxGrey"></div>
+                            </div>
+                            <div class="contentMiddleSection">
+                                <div class="leftBoxMediumGrey">
+                                    <h3 style="margin-bottom:10px;">Other information</h3>
+                                    <p>VDD account numbers: 3233495, 3234324, 8899767</p>
+                                    <p>Primary business unit administrator: <a href="#">My Portal Refresh</a></p>
+                                    <p>Responsible person: Mr Portal Refresh</p>
+                                </div>
+                                <div class="rightBoxGrey" style="line-height: 15px;">
+                                    <a href="#">View groups</a><br><br>
+                                    <a href="#">Change primary</a><br>
+                                    <a href="#">Business unit</a>
+                                    <a href="#">Administrator</a>
+                                </div>
+                            </div>
+                            <div class="contentMiddleSection">
+                                <div class="leftBoxLightGrey">
+                                    <h3 style="margin-bottom:10px;">Document preferences</h3>
+                                    <p>RCS downloads suppression for business unit disabled</p>
+                                    <p>Combined results document for business unit disabled</p>
+                                </div>
+                                <div class="rightBoxGrey"></div>
+                            </div>
+                            <div class="contentMiddleSection">
+                                <div class="leftBoxMediumGrey">
+                                    <h3 style="margin-bottom:10px;">View colleague's applications</h3>
+                                    
+                                    <div class="govuk-form-group" style="padding-top: 10px;margin-bottom: 10px;">
+                                        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                                          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                            <div class="govuk-checkboxes__item">
+                                              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
+                                              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                                Enable
+                                              </label>
+                                            </div>
+                                            
+                                          </div>
+                                      
+                                        </fieldset>
+                                      </div>
+
+
+                                </div>
+                                <div class="rightBoxGrey" style="line-height: 15px;">
+  
+                                </div>
+                            </div>
+                            <!-- <div class="nav">
+                                <div class="twoCol" style="width:400px;">&nbsp;</div>
+                                <input type="submit" class="last" value="Confirm" onclick="window.location.href='manageBusinessUnit_RP_enabled'">
+                            </div> -->
+
+                        </div>
+        
+        <!-- middle END -->
+                        <div class="clear">&nbsp;</div>
+                    </div>
+
+                </div>
+        <!-- body END -->
+                <div class="clear">&nbsp;</div>
+        <!-- footer START -->
+                <div class="container footer">
+                    <div class="bookmark"><a name="accessFooter" id="accessFooter"><span>&nbsp;</span></a></div>
+                    <h2 class="hide">Footer menu links</h2>
+                    <ul class="listHorizontal">
+                        <li><a href="https://www.gov.uk/government/collections/business-e-services#terms-and-conditions" target="_blank">Terms and conditions (Business e-services) </a><span class="newWindow"><img src="/public/images/new_window.gif" alt="Link opens in new window"></span></li>
+                        <li><a href="/Themes/html/tandc_FaP.html" target="_blank">Terms and conditions (Find a property) </a><span class="newWindow"><img src="/public/images/new_window.gif" alt="Link opens in new window"></span></li>
+                        <li class="last"><a href="https://www.gov.uk/government/organisations/land-registry#freedom-of-information" target="_blank">Freedom of information </a><span class="newWindow"><img src="/public/images/new_window.gif" alt="Link opens in new window"></span></li>
+                    </ul>
+                    <br>
+                    <ul class="listHorizontal">
+                        <li><a href="/Themes/html/accessibility_statement.html" target="_blank">Accessibility statement (Business e-services) </a><span class="newWindow"><img src="/public/images/new_window.gif" alt="Link opens in new window"></span></li>
+                        <li><a href="/Themes/html/accessibility_statement_FaP.html" target="_blank">Accessibility statement (Find a property) </a><span class="newWindow"><img src="/public/images/new_window.gif" alt="Link opens in new window"></span></li>
+                        <li class="last"><a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/" target="_blank">© Crown copyright </a><span class="newWindow"><img src="/public/images/new_window.gif" alt="Link opens in new window"></span></li>
+                    </ul>
+                </div>
+        <!-- footer END -->
+                <div class="clear">&nbsp;</div>
+            </div>
+            <div class="clear">&nbsp;</div>
+        </div>
+
+
+
+{% endblock %}

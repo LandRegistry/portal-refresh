@@ -9,11 +9,11 @@
       if (!targetRow.classList.contains('hide-row')) {
           targetRow.classList.add('hide-row')
           currentRow.classList.remove('open')
-          item.textContent = 'View details'
+          item.textContent = ''
       } else {
           targetRow.classList.remove('hide-row')
           currentRow.classList.add('open')
-          item.textContent = 'Hide details'
+          item.textContent = ''
       }
     }
 

@@ -11,10 +11,11 @@
 
 {% block head %}
   <link href="/public/stylesheets/styles.css" media="all" rel="stylesheet" type="text/css">
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
   <link href="/public/custom.css" media="all" rel="stylesheet" type="text/css">
-  <link href="/public/javascripts/gridstack.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="/public/generic.css" media="all" rel="stylesheet" type="text/css">
+  <link href="/public/all.css" media="all" rel="stylesheet" type="text/css">
+  <link href="/public/access.css" media="all" rel="stylesheet" type="text/css">
+  <link href="/public/application.css" media="all" rel="stylesheet" type="text/css">
 
 {% endblock %}
 
@@ -39,12 +40,3 @@
     }) }}
   {% endblock %}
 {% endif %}
-
-{% block bodyEnd %}
-  {% block scripts %}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  {% include "includes/scripts4.html" %}
-    {% block pageScripts %}{% endblock %}
-  {% endblock %}
-  <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
-{% endblock %}

@@ -1,0 +1,243 @@
+{% extends "layout_portal.html" %}
+{% block content %}
+
+<style>
+
+    .govuk-template__body {
+    background-color: #EAEAEA;
+    color: #000000;
+    font-size: 70%;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+}
+
+
+
+
+.govuk-width-container {
+    max-width: 1100px;
+    padding: 0px !Important;
+    margin: auto;
+}
+
+
+</style>
+
+
+
+
+    <div class="lrTopNav">
+        <ul>
+            <li>
+                <a href="https://www.gov.uk/land-registry">HM Land Registry</a>
+            </li>
+            <li class="on">
+                <a href="/eservices/ECHOM_HomepageServices">Business e-services</a>
+            </li>
+            <li>
+                <a href="/eservices/FindAProperty/view/QuickEnquiryInit.do">Find a property</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="page">
+        <!-- header START -->
+            <div class="container header">
+                <div class="container headerLeft"><img src="/public/images/title.gif" alt="HM Land Registry"></div>
+                <div class="container headerRight"><img src="/public/images/logo.gif" alt=""></div>
+                <div class="clear">&nbsp;</div>
+                <div class="container headerLeft"></div>
+                <div class="container headerRight">
+                    <h2 class="hide">Supplementary menu links</h2>
+                    <ul class="listHorizontal">
+                        <li class="last">
+                            <a href="https://www.gov.uk/guidance/contact-hm-land-registry" target="_blank">Contact HM Land Registry</a>
+                            <span class="newWindow">
+                                 <img src="/public/images/new_window.gif" alt="Link opens in new window">
+                             </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear">&nbsp;</div>
+            </div>
+        <!-- header END -->
+            <div class="clear">&nbsp;</div>
+        <!-- body START -->
+            <div class="container body">
+                <div class="container columnLeft">
+        <!-- left START -->
+                    <div class="container search">
+                        <div class="clear"><p>&nbsp;</p></div>
+                        <div class="clear"><p>&nbsp;</p></div>
+                        <div class="clear"><p>&nbsp;</p></div>
+                        <div class="clear"><p>&nbsp;</p></div>
+                    </div>
+                    <div class="clear">&nbsp;</div>
+                    <div class="container menu">
+                        <div class="bookmark"><a name="accessMain" id="accessMain"><span>&nbsp;</span></a></div>
+                        <ul>
+                            <li class="navleveloneoff"><a href="/eservices/HomePageRouter">Return to Home page</a></li>
+                        </ul>
+                    </div>
+        <!-- left END -->
+                    <div class="clear">&nbsp;</div>
+                </div>
+                <div class="container column">
+                    <div id="mainContentAnchor"></div>
+                    <div class="container columnMiddle">
+        <!-- middle START -->
+                        <div class="bookmark"><a name="accessContent" id="accessContent"><span>&nbsp;</span></a></div>
+                        <div class="container box boxColour01 boxContent01">
+
+                            <div class="clear">&nbsp;</div>
+                            <form method="post" action="/pkmslogin.form" name="loginform">
+                                <div class="container formHeading"><h1>HM Land Registry Portal Login</h1></div>
+                                <div class="container formHeading z1">Required fields are marked by *</div>
+                                <div class="container box boxColour16 formLogin">
+                                    <fieldset>
+                                        <legend class="h3style">Welcome to the HM Land Registry portal</legend>
+                                        <br><br>
+                                    <strong>Business e-services users</strong> can login to access Business e-services.
+                                        <br><br>
+                                        <strong>Property search users</strong> can login to purchase products from Find a property.
+                                        <br><br>
+                                        <div class="errorTextColourValid">
+                                            <script type="text/javascript">
+                                                /*<![CDATA[*/
+                                                document.write(getOurMessage(""));
+        
+                                                function getOurMessage(message) {
+                                                    if (startsWith(message, "HPDIA0200W")) {
+                                                        return "There is an error with your login details. Business e-services users should contact their administrator should the error persist.";
+                                                    } else {
+                                                        return message;
+                                                    }
+                                                }
+        
+                                                function startsWith(str, s) {
+                                                    var reg = new RegExp ("^" + s);
+                                                    return reg.test(str);
+                                                }
+                                                /*]]>*/
+                                            </script>
+        
+                                            <br>
+                                            <script type="text/javascript">
+                                                /*<![CDATA[*/
+                                                var exDate=new Date();
+                                                exDate.setDate(exDate.getDate()+1);
+                                                document.cookie = 'targetURLeSec=/eservices/;expires'+exDate;
+                                                /*]]>*/
+                                            </script>
+        
+                                            <!-- DO NOT TRANSLATE OR MODIFY any part of the hidden parameter(s) -->
+        
+                                            <!--
+                                              The following block of code provides users with a warning message
+                                              if they do not have cookies configured on their browsers.
+                                              If this environment does not use cookies to maintain login sessions,
+                                              simply remove or comment out the block below.
+                                            -->
+        
+                                            <!-- BEGIN Cookie check block -->
+        
+                                            <!--
+                                            DO NOT TRANSLATE anything inside the SCRIPT tag except the quoted
+                                            string warningString.  i.e. var warningString = "Translate this string";
+                                            -->
+        
+                                            <script type="text/javascript">
+                                                /*<![CDATA[*/
+                                                var warningString = "<strong>WARNING:</strong> To maintain your login session, make sure that your browser is configured to accept Cookies.<br/><br/>";
+                                                document.cookie = 'acceptsCookies=yes';
+                                                if(document.cookie == ''){
+                                                document.write(warningString);
+                                                }
+                                                else{
+                                                document.cookie = 'acceptsCookies=yes; expires=Fri, 13-Apr-1970 00:00:00 GMT';
+                                                }
+                                                /*]]>*/
+                                            </script>
+                                        </div>
+                                        
+                                        <noscript>
+                                            <p><strong>WARNING:</strong> To maintain your login session, make sure that
+                                            your browser is configured to accept Cookies.<br/><br/></p>
+                                        </noscript>
+        
+                                        <!-- END Cookie check block -->
+        
+                                    <label for="username" class="fieldLabel bold" style="width:7em;"><span class="hidden">Required</span>* Username:</label>
+                                        <input type="text" class="textField" id="username" name="username">
+                                        <br><br>
+                                    <label for="password" class="fieldLabel bold" style="width:7em;"><span class="hidden">Required</span>* Password:</label>
+                                        <input type="password" id="password" name="password" class="textField">
+                                        <br><br>
+                                        <input type="hidden" name="login-form-type" value="pwd">
+                                    </fieldset>
+                                </div>
+                                <div class="nav">
+                                    <div class="twoCol z3">&nbsp;</div>
+                                    <input type="submit" class="last" value="Login" onclick="trimFormFields();">
+                                </div>
+                            </form>
+                        </div>
+        
+        <!-- middle END -->
+                        <div class="clear">&nbsp;</div>
+                    </div>
+                    <div class="container columnRight">
+        <!-- right START -->
+                        <div class="bookmark"><a name="accessSub" id="accessSub"><span>&nbsp;</span></a></div>
+                        <div class="container box boxColour02-new">
+                            <h2 class="pb05">Login problems</h2>
+                            <h3 class="pb05">Business e-services users</h3>
+                                <ul>
+                                    <li class="noB"><a href="/eservices/ResetPassword">Reset password, PIN or OTP Token</a></li>
+                                </ul>
+                            <h3 class="pb05">Property search users</h3>
+                            <ul>
+                                <li class="noB"><a href="/eservices/PropertySearchUser/resendActivationEmailInit.do">Activation email not received?</a></li>
+                                <li class="noB"><a href="/eservices/ResetPassword">Forgotten password?</a></li>
+                                <li class="noB"><a href="/eservices/PropertySearchUser/remindUsernameInit.do">Forgotten username?</a></li>
+                            </ul>
+                        </div>
+                        <div class="container box boxColour02-new">
+                            <h2 class="pb05">Information panel</h2>
+                            HM Land Registry has developed a range of electronic services (Business e-services) for businesses and other corporate bodies. These are delivered through the Land Registry Portal.
+                            <br><br>
+                            For more information view the 
+                            <a class="block" href="https://www.gov.uk/government/collections/business-e-services">HM Land Registry Business e-services pages.</a>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="clear">&nbsp;</div>
+                </div>
+        <!-- body END -->
+                <div class="clear">&nbsp;</div>
+        <!-- footer START -->
+                <div class="container footer">
+                    <div class="bookmark"><a name="accessFooter" id="accessFooter"><span>&nbsp;</span></a></div>
+                    <h2 class="hide">Footer menu links</h2>
+                    <ul class="listHorizontal">
+                        <li><a href="https://www.gov.uk/government/collections/business-e-services#terms-and-conditions" target="_blank">Terms and conditions (Business e-services) </a><span class="newWindow"><img src="/public/images/new_window.gif" alt="Link opens in new window"></span></li>
+                        <li><a href="/Themes/html/tandc_FaP.html" target="_blank">Terms and conditions (Find a property) </a><span class="newWindow"><img src="/public/images/new_window.gif" alt="Link opens in new window"></span></li>
+                        <li class="last"><a href="https://www.gov.uk/government/organisations/land-registry#freedom-of-information" target="_blank">Freedom of information </a><span class="newWindow"><img src="/public/images/new_window.gif" alt="Link opens in new window"></span></li>
+                    </ul>
+                    <br>
+                    <ul class="listHorizontal">
+                        <li><a href="/Themes/html/accessibility_statement.html" target="_blank">Accessibility statement (Business e-services) </a><span class="newWindow"><img src="/public/images/new_window.gif" alt="Link opens in new window"></span></li>
+                        <li><a href="/Themes/html/accessibility_statement_FaP.html" target="_blank">Accessibility statement (Find a property) </a><span class="newWindow"><img src="/public/images/new_window.gif" alt="Link opens in new window"></span></li>
+                        <li class="last"><a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/" target="_blank">© Crown copyright </a><span class="newWindow"><img src="/public/images/new_window.gif" alt="Link opens in new window"></span></li>
+                    </ul>
+                </div>
+        <!-- footer END -->
+                <div class="clear">&nbsp;</div>
+            </div>
+            <div class="clear">&nbsp;</div>
+        </div>
+
+
+
+{% endblock %}
