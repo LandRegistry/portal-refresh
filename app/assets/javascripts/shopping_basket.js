@@ -996,23 +996,38 @@ function emptyTheBasket(){
     totalAmounttoPay = 0;
     var twoDP_total = totalAmounttoPay.toFixed(2);
     document.getElementById("total_cost").innerHTML= '£' + twoDP_total;
+    sessionStorage.setItem('TestingStorage', twoDP_total);
     
     if(document.getElementById('register') != null){
         console.log('it works here too');
 
         if(document.getElementById('register').checked){
+<<<<<<< Updated upstream
             document.getElementById('register').checked = false;
             register_id.remove();
             register_cost.remove();
             sessionStorage.removeItem('register');
+=======
+        document.getElementById('register').checked = false;
+        register_id.remove();
+        register_cost.remove();
+        sessionStorage.removeItem('register');
+>>>>>>> Stashed changes
         }
 
 
         if(document.getElementById('title_plan').checked){
+<<<<<<< Updated upstream
             document.getElementById('title_plan').checked = false;
             title_plan_id.remove();
             title_plan_cost.remove();
             sessionStorage.removeItem('titleplan');
+=======
+        document.getElementById('title_plan').checked = false;
+        title_plan_id.remove();
+        title_plan_cost.remove();
+        sessionStorage.removeItem('titleplan');
+>>>>>>> Stashed changes
         }
 
     
@@ -1031,7 +1046,10 @@ function emptyTheBasket(){
             deed_id.remove();
             deed_cost.remove();
             sessionStorage.removeItem('deed');
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
         }  
         if(document.getElementById('lease').checked){
             document.getElementById('lease').checked = false;
@@ -1052,6 +1070,7 @@ function emptyTheBasket(){
             document.getElementById('transfer_Aeight').checked = false;
             transfer_Aeight_id.remove();
             transfer_Aeight_cost.remove();
+            sessionStorage.removeItem('transfer_aeight');
         }
 
         empty_button_id.remove();
@@ -1130,8 +1149,11 @@ function emptyTheBasket(){
             document.getElementById('title_plan_map_02').checked = false;
             title_plan_map_id3C.remove();
             title_plan_map_cost3C.remove();
+<<<<<<< Updated upstream
             sessionStorage.removeItem('titleplanmap3C');
 
+=======
+>>>>>>> Stashed changes
             } 
         if(document.getElementById('deed').checked){
             document.getElementById('deed').checked = false;
