@@ -1,3 +1,4 @@
+// START Making changes to the typography
 .govuk-heading-xl, .govuk-fieldset__heading, .govuk-label, .govuk-radios__label, .govuk-hint, .govuk-radios__hint,
 .govuk-button, .govuk-back-link, .govuk-heading-s, .govuk-body, .govuk-heading-m, .govuk-heading-l,
 .govuk-table__header, .govuk-table__cell, .govuk-file-upload, .govuk-summary-list__key, .govuk-summary-list__value{
@@ -8,10 +9,9 @@ p{
     font-family: "Roboto";
 }
 
-.govuk-grid-row {
-    background-color: pink;
-    max-width: 960px;
-    margin: 0 auto;
+#largeHeading_whatService{
+    margin-top: 25px;
+    margin-bottom: 45px;
 }
 
 #largeHeading_whatService{
@@ -63,8 +63,8 @@ p{
 }
 
 #first-row{
-    border-top: 1px solid #bfc1c3;
-}
+    border-top: 1px solid #bfc1c3;}
+
 
 // Styling the shopping basket page - non-historical copies
 
@@ -110,9 +110,6 @@ li{
 
 // Rest of styling
 
-// .govuk-width-container{
-//     background-color: pink;
-// }
 
 
 .govuk-grid-row {
@@ -135,31 +132,30 @@ li{
 // }
 
 .govuk-fieldset{
-    padding:20px;
     padding:0px;
 }
 
 .govuk-table{
     border: 0px;
     width: 100%;
-    width: 100%;
     margin-bottom:60px;
 }
 
-.govuk-table__row:nth-child(1){
-    border-top: 1px solid #bfc1c3;}
+// .govuk-table__row:nth-child(1){
+//     border-top: 1px solid #bfc1c3;}
 
-.govuk-table__header{
-    padding: 10px 30px 10px 0px;
-}
 
 .govuk-table__row:hover{
     background: none;
 }
 
-.table_2_header{
-    padding: 10px 0px;
+.govuk-table__cell2{
+    padding: 12px 0px;
 }
 
-.govuk-table__cell2 {
-    padding: 12px 0px;}
+.govuk-accordion__controls {
+    display:none;
+}
+
+
+

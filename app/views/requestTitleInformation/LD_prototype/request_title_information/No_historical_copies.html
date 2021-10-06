@@ -9,6 +9,8 @@
 {% block content %}
 
 <style>
+
+
     .alert-icon {
     animation: blink 2s;
     animation-iteration-count: 3;
@@ -121,6 +123,8 @@
 .dropdown2:hover .dropdown-content2 {
   display: block;
 }
+
+
 </style>
 
 <script>
@@ -164,14 +168,14 @@
           <form class = "form" action="Summary_No_historical_copies" method="POST">
 
             <div class="govuk-grid-column-two-thirds">
-              <a href="#" class="govuk-back-link">Back</a>
+              <a class="govuk-back-link" href="javascript: history.go(-1)">Back</a>
       
-              <h1 class="govuk-heading-xl">Request title information</h1>
+              <h1 class="govuk-heading-xl" id="largeHeading_whatService">Request title information</h1>
               <h2 class="govuk-heading-l">Property details</h2>
 
               <table class="govuk-table">
                 <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
+                  <tr class="govuk-table__row" id="first-row">
                     <th scope="row" class="govuk-table__header">Title number</th>
                     <td class="govuk-table__cell">DN461880</td>
                   </tr>
@@ -191,7 +195,7 @@
               </table>
 
               <h2 class="govuk-heading-m">Register and title plans</h2>
-              <p>I you order both the register and title plan, they will be delivered together
+              <p>If you order both the register and title plan, they will be delivered together
                 either electronically or by post.
               </p>
               <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
@@ -204,7 +208,7 @@
                       <th scope="row" class="govuk-table__header table_2_header">Cost</th>                  
                     </tr>
                     <tr class="govuk-table__row">
-                      <td class="govuk-table__cell govuk-table__cell2">
+                      <td class="govuk-table__cell govuk-table__cell2" style="width:40%;">
                         <div class="govuk-checkboxes__item">
                           <input class="govuk-checkboxes__input" id="register" name="register" type="checkbox" value="0" onclick="checkbox1()">
                           <label class="govuk-label govuk-checkboxes__label" for="register">
@@ -212,9 +216,9 @@
                           </label>
                         </div>
                       </td>
-                      <td class="govuk-table__cell govuk-table__cell2">Official Copy</td>
-                      <td class="govuk-table__cell govuk-table__cell2">PDF</td>
-                      <td class="govuk-table__cell govuk-table__cell2">£3.00</td>
+                      <td class="govuk-table__cell govuk-table__cell2" style="width:25%;">Official Copy</td>
+                      <td class="govuk-table__cell govuk-table__cell2" style="width:25%;">PDF</td>
+                      <td class="govuk-table__cell govuk-table__cell2" style="width:10%;">£3.00</td>
                     </tr>
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell govuk-table__cell2">
@@ -252,11 +256,11 @@
                 <table class="govuk-table">
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header table_2_header">Document type</th>
-                      <th scope="row" class="govuk-table__header table_2_header">Entry number</th>
-                      <th scope="row" class="govuk-table__header table_2_header">Date</th>
-                      <th scope="row" class="govuk-table__header table_2_header">Filed under</th>  
-                      <th scope="row" class="govuk-table__header table_2_header">Cost</th>                                  
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:25%;">Document type</th>
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:21.5%;">Entry number</th>
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:21.5%;">Date</th>
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:21.5%;">Filed under</th>  
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:10%;">Cost</th>                                  
                     </tr>
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell govuk-table__cell2">
@@ -323,9 +327,9 @@
                 <table class="govuk-table">
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header table_2_header">Document type</th>
-                      <th scope="row" class="govuk-table__header table_2_header">Entry number</th>
-                      <th scope="row" class="govuk-table__header table_2_header">Date</th>                               
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:37.5%;">Document type</th>
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:37.5%;">Entry number</th>
+                      <th scope="row" class="govuk-table__header table_2_header" style="width:25%;">Date</th>                               
                     </tr>
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell govuk-table__cell2">Deed of exchange</td>
@@ -347,19 +351,19 @@
               
               <h2 class="govuk-heading-m">Non referred documents/Certificate in form CI</h2>
               <div class="govuk-form-group">
-                <label class="govuk-label" for="file-upload-1">
+                <label class="govuk-heading-s" style="font-size:16px;" for="file-upload-1">
                   Add non referred document
                 </label>
-                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+                <input class="govuk-file-upload" style="font-size:16px;" id="file-upload-1" name="file-upload-1" type="file">
               </div>
               <div class="govuk-form-group">
-                <label class="govuk-label" for="file-upload-1">
+                <label class="govuk-heading-s" style="font-size:16px;" for="file-upload-1">
                   Add certificate in form CI
                 </label>
-                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+                <input class="govuk-file-upload" style="font-size:16px;" id="file-upload-1" name="file-upload-1" type="file">
               </div>
 
-              <button class="govuk-button" data-module="govuk-button" onclick="LogTotalCost()">
+              <button style="margin-top: 50px;" class="govuk-button" data-module="govuk-button" onclick="LogTotalCost()">
                 Checkout
               </button>
 
@@ -368,12 +372,12 @@
 
 
 
-            <div class="govuk-grid-column-one-third">
+<div class="govuk-grid-column-one-third">
               <div class = "grey-container">
-                <h3 class="govuk-heading-s">Basket</h3>
-                <p id="empty_wording" style="display:block;">Empty</p>
-                <div style="display: flex; justify-content: space-between;">
-                  <div id="basket_items_container">
+                <h3 class="govuk-heading-m">Basket</h3>
+                <p id="empty_wording" style="display:block; margin-bottom: 0px; font-size: 16px;">Empty</p>
+                <div id = "BasketHolder" style="display: flex; justify-content: space-between; padding: 0px; margin: 0px;">
+                  <div id="basket_items_container" style="padding: 0px;">
                     <ul id="basket_item">
                     </ul>
                   </div>
@@ -382,9 +386,10 @@
                     </ul>
                   </div>
                 </div>
-                <div style="display: flex; justify-content: space-between;">
-                  <p>Total</p>
-                  <p id="total_cost">£0.00</p>
+                <hr style="margin-bottom: 20px;">
+                <div style="display: flex; justify-content: space-between; padding:0px;">
+                  <p style="font-size: 16px; font-weight: 600;">Total</p>
+                  <p style="font-size: 16px; font-weight: 600;" id="total_cost">£0.00</p>
                 </div>
                 <div id="side_container" style="display: flex; justify-content: space-between;">
                   <button class="govuk-button" data-module="govuk-button" onclick="LogTotalCost()">
@@ -399,6 +404,26 @@
       </main>
  
     </main>
+
+    <footer class="govuk-footer " role="contentinfo" style="margin-top: 60px; background-color: #f3f2f1; border-top: 5px solid #00703C;">
+      <div class="govuk-grid-row" style="background-color: #f3f2f1;">
+        <div class="govuk-footer__meta">
+          <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+    
+            <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+              <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145" />
+            </svg>
+            <span class="govuk-footer__licence-description">
+              All content is available under the
+              <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+            </span>
+          </div>
+          <div class="govuk-footer__meta-item">
+            <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+          </div>
+        </div>
+      </div>
+    </footer> 
 </div>
 
 
