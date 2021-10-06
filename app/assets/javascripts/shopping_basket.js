@@ -991,7 +991,7 @@ function checkbox3C() {
 
    
 function emptyTheBasket(){
-	console.log(location.href);
+    console.log(location.href);
     noOfboxesChecked = 0; 
     totalAmounttoPay = 0;
     var twoDP_total = totalAmounttoPay.toFixed(2);
@@ -1169,6 +1169,7 @@ function emptyTheBasket(){
         Emptyelement.style.display = "block";
         }    
 }
+
 
 
 function whatwasCheckedBefore(){

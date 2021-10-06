@@ -1,5 +1,4 @@
 // START Making changes to the typography
-
 .govuk-heading-xl, .govuk-fieldset__heading, .govuk-label, .govuk-radios__label, .govuk-hint, .govuk-radios__hint,
 .govuk-button, .govuk-back-link, .govuk-heading-s, .govuk-body, .govuk-heading-m, .govuk-heading-l,
 .govuk-table__header, .govuk-table__cell, .govuk-file-upload, .govuk-summary-list__key, .govuk-summary-list__value{
@@ -14,6 +13,12 @@ p{
     margin-top: 25px;
     margin-bottom: 45px;
 }
+
+#largeHeading_whatService{
+    margin-top: 25px;
+    margin-bottom: 45px;
+}
+
 
 #radio_label_whatService{
     font-weight: 500;
@@ -59,6 +64,7 @@ p{
 
 #first-row{
     border-top: 1px solid #bfc1c3;}
+
 
 // Styling the shopping basket page - non-historical copies
 
@@ -143,7 +149,6 @@ li{
     background: none;
 }
 
-
 .govuk-table__cell2{
     padding: 12px 0px;
 }
@@ -151,5 +156,6 @@ li{
 .govuk-accordion__controls {
     display:none;
 }
+
 
 
