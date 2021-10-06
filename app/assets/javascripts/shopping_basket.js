@@ -1052,6 +1052,7 @@ function emptyTheBasket(){
             document.getElementById('transfer_Aeight').checked = false;
             transfer_Aeight_id.remove();
             transfer_Aeight_cost.remove();
+            sessionStorage.removeItem('transfer_aeight');
         }
 
         empty_button_id.remove();
