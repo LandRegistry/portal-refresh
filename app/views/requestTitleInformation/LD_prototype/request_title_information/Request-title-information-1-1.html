@@ -124,7 +124,16 @@
 </style>
 
 <script>
- function Historicalcopies(){
+ function storeTitleNumber(){
+  // var input = document.getElementByID('title-number').value;
+  //  sessionStorage.setItem('Titlenumber', 'Lauren Dowling'); 
+  var input = document.getElementById('title-number').value;
+  sessionStorage.setItem("Titlenumber", input);
+  var yo = sessionStorage.getItem("Titlenumber");
+  console.log(yo);
+ }
+
+function Historicalcopies(){
    if(document.getElementById('historicalCopies').checked){
     window.location.href = "Historical_copies/Historical_copies";
    }
@@ -173,18 +182,19 @@
                 </div>
                 <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
               </div>
+              
+              <form class="form" method="post" onsubmit="storeTitleNumber()">
 
-              <div class="govuk-form-group" id="requestTitleInformation-group">
-                <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
-                    Title plan
-                  </label>
-                </h1>
-                <div id="customer-reference-hint" class="govuk-hint">
-                  If you don't know the title number, <a href="#" class="govuk-link">we can help you</a> with that.
+                <div class="govuk-form-group" id="requestTitleInformation-group">
+                  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+                      Title plan
+                    </label>
+                  </h1>
+                  <div id="customer-reference-hint" class="govuk-hint">
+                    If you don't know the title number, <a href="#" class="govuk-link">we can help you</a> with that.
+                  </div>
+                  <input class="govuk-input govuk-input--width-10" id="title-number" name="title-number" type="text">
                 </div>
-                <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
-              </div>
-              <form class="form" action="Documents_summary.html" method="post">
                 <div class="govuk-form-group" id="form_group">
                     <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
                       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -196,12 +206,13 @@
                         </div>
                       </div>
                     </fieldset>
-                  </form>
                 </div>
-                <button class="govuk-button" data-module="govuk-button" onclick="Historicalcopies()">
-                  Continue
-                </button>
-              </form>
+
+              <button class="govuk-button" data-module="govuk-button" type="submit" formaction="javascript:Historicalcopies()">
+                Continue
+              </button>
+            </form>
+
             </div>
           <div class="govuk-grid-column-one-third">
             <div class = "grey-container" style="position: static; ">

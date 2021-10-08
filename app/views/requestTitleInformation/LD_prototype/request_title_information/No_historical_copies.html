@@ -128,14 +128,11 @@
 </style>
 
 <script>
- function Historicalcopies(){
-   if(document.getElementById('historicalCopies').checked){
-    window.location.href = "Documents_summary";
-   }
-    else{
-      // go to y page
-    }
-   }
+ 
+document.addEventListener("DOMContentLoaded", function(event){
+  var TN = sessionStorage.getItem('Titlenumber');
+  document.getElementById("Title-number").innerHTML = TN;
+})
  
 
 </script>
@@ -177,7 +174,7 @@
                 <tbody class="govuk-table__body">
                   <tr class="govuk-table__row" id="first-row">
                     <th scope="row" class="govuk-table__header">Title number</th>
-                    <td class="govuk-table__cell">DN461880</td>
+                    <td class="govuk-table__cell" id="Title-number">title number</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Address</th>
