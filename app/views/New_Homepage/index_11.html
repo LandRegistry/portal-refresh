@@ -58,7 +58,7 @@
     -webkit-box-shadow: inset 0px 2px 4px 0px rgb(0 0 0 / 15%);
     -moz-box-shadow: inset 0px 2px 4px 0px rgba(0,0,0,0.15);
     box-shadow: inset 0px 2px 4px 0px rgb(0 0 0 / 15%);
-    border-bottom: 0px solid #005ea5;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 /* Navbar container */
 .navbar {
@@ -152,21 +152,14 @@
 }
 
 #SectionHeroImage {
-  background-image: url("/public/images/ForestBG.png");
-  height:288px;
   width:100%;
+  background-color: #008548;
 }
 
 #SectionHeroContent {
   max-width: 1200px;
     margin: auto;
-    padding-top: 140px;
-}
-
-.heroTextBackground {
-  background-color: rgb(0 0 0 / 50%);
-    width: fit-content;
-    padding: 5px 20px;
+    padding: 100px 0px;
 }
 
 
@@ -415,7 +408,7 @@ padding-bottom: 3px;
 .notificationNavNumber {
   color: #1F8153;
     background-color: #fff;
-    padding: 5px 9px;
+    padding: 5px 10px;
     border-radius: 500px;
     font-weight: 700;
 }
@@ -602,10 +595,6 @@ li:hover {background-color: #0ba961;}
 }
 
 
-.linkTextSection:hover {
-  background: #F3F2F1;
-}
-
 .govuk-heading-m {
     margin-bottom: 5px;
 }
@@ -646,7 +635,7 @@ li:hover {background-color: #0ba961;}
 
 <div class="navbar-container">
 
-    <img src="/public/images/Logo-Mono.png" alt="hmlrlogo" style="height: 50px;
+    <img src="/public/images/HMLR_Logo.svg" alt="hmlrlogo" style="height: 50px;
     padding-left: 30px;
     padding-top: 11px;
     padding-bottom: 5px;">
@@ -789,14 +778,17 @@ li:hover {background-color: #0ba961;}
 
 
 
-  <div id="SectionHeroContent">
-  <h1 class="heroTextBackground govuk-heading-xl" style="color:#ffffff;margin-bottom: 0;">
-    HM Land Registry Portal
-  </h1>
-  <p class="govuk-body govuk-!-font-size-24 heroTextBackground" style="color:#ffffff;">
-    Where property professionals can access their online services
-  </p>
-</div>
+  <div id="SectionHeroContent" class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl" style="color:#ffffff;margin-bottom: 15px;">
+        HM Land Registry Portal
+      </h1>
+      <p class="govuk-body govuk-!-font-size-24" style="color:#ffffff;">
+        Where property professionals can access their online services
+      </p>
+    </div>
+  </div>
+
 </div>
 
 
@@ -880,6 +872,10 @@ li:hover {background-color: #0ba961;}
           </div>
 
         </div> 
+
+
+
+
     </div>   
       
     <div id="inputs">
@@ -1325,58 +1321,6 @@ li:hover {background-color: #0ba961;}
     </div>
 </div>
 
-<div class="dividerLine10"></div>
-
-<div id="NewsPanel">
-  <div id="NewsPanelContent" class="govuk-body">
-
-<h2 class="govuk-heading-l govuk-!-font-size-36">News</h2>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third">
-
-    <div class="newsImage">
-      <img src="/public/images/News_4.png" style="width:100%;">
-    </div>
-
-    <div class="newsTextSection">
-        <p class="govuk-body govuk-!-font-size-14">2 September 2021 — News story</p>
-        <h3 class="govuk-heading-s newsTextTitle"><a href="#">View My Applications Update</a></h3>
-        <p>A short video designed to showcase the new functionality recently added.</p>
-    </div>
-
-  </div>
-
-
-  <div class="govuk-grid-column-one-third">
-    <div class="newsImage">
-      <img src="/public/images/News_2.png" style="width:100%;">
-    </div>
-
-    <div class="newsTextSection">
-      <p class="govuk-body govuk-!-font-size-14">25 August 2021 — Guidance</p>
-      <h3 class="govuk-heading-s newsTextTitle"><a href="#">View our response to Covid-19</a></h3>
-      <p>How we are delivering our services during the coronavirus outbreak.</p>
-  </div>
-</div>
-  
-  <div class="govuk-grid-column-one-third">
-    <div class="newsImage">
-      <img src="/public/images/News_3.png" style="width:100%;">
-    </div>
-
-    <div class="newsTextSection">
-      <p class="govuk-body govuk-!-font-size-14">17 August 2021 — Press release</p>
-      <h3 class="govuk-heading-s newsTextTitle"><a href="#">Portal roadmap for 2021</a></h3>
-      <p>See what features are planned for 2021 and have your say for its future.</p>
-  </div>
-
-  </div>
-  
-  </div>
-
-  </div>
-</div> 
 
 <div class="dividerLine10"></div>
 
