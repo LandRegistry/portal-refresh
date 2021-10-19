@@ -537,7 +537,7 @@ input[disabled]
 
         </ul>
         </li>
-        <li class="parent"><a href="#">Notifications <span class="notificationNavNumber">2</span> <i class="fas fa-angle-down"></i></a>
+        <!-- <li class="parent"><a href="#">Notifications <span class="notificationNavNumber">2</span> <i class="fas fa-angle-down"></i></a>
         <ul class="child">
             <div class="notificationContent govuk-body">
 
@@ -581,7 +581,7 @@ input[disabled]
         </div>
         </ul>
         
-        </li>
+        </li> -->
 
         <li class="parent"><a href="#">Contact us</a></li>
 
@@ -606,7 +606,7 @@ input[disabled]
                   <hr>
 
                   <div class="myAccountTitle" style="padding-bottom:3px;">
-                    <b>Business Unit Administrator (BUA):</b> 
+                    <b>Primary Business Unit Administrator (BUA):</b> 
                   </div>
                   <div class="myAccount2ndLine">
                     John Taylor
@@ -779,23 +779,23 @@ input[disabled]
 
    <div class="notification" id="hideNotification2">
       <div class="notification-image">
-          <img src="/public/images/icon_group.svg" alt="Group Icon">
+          <img src="/public/images/icon_group_new.svg" alt="Group Icon">
       </div>
       <div class="notification-text">
-         <p class="title">NEW: View Colleague'a Applications (VCA)</p>
-          <p class="bodycopy"><b>What is the Estimated Completion Date?</b><br>
-              The Estimated Completion Date (ECD) is the date by which 90% of applications to create a new register or update a register are expected to be completed. To find out more information about the ECD, such as how it is calculated, please visit the <a href="V1-help#ecd" target="_blank">help page</a>.</p>
+         <p class="title">NEW: View applications</p>
+         <p class="bodycopy"><b>What is view applications?</b><br>
+           You can now view and search applications lodged by your business unit unless your business unit has opted out. To find out more information, please visit the <a href="V1-help#ecd" target="_blank">help page</a>.</p>
 
-              <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="waste-hint" style="padding:0px;">
+             <div class="govuk-form-group">
+                 <fieldset class="govuk-fieldset" aria-describedby="waste-hint" style="padding:0px;">
 
-                    <div class="govuk-checkboxes">
-                      
-                          <div class="govuk-checkboxes__item">
-                              <input type="checkbox" id="chkAgree" onclick="goFurther()" class="govuk-checkboxes__input" name="chkAgree">
-                              <label class="govuk-label govuk-checkboxes__label" for="chkAgree" style="font-weight: 700;">
-                                I understand the date provided is an estimate only
-                              </label>
+                   <div class="govuk-checkboxes">
+                     
+                         <div class="govuk-checkboxes__item">
+                             <input type="checkbox" id="chkAgree" onclick="goFurther()" class="govuk-checkboxes__input" name="chkAgree">
+                             <label class="govuk-label govuk-checkboxes__label" for="chkAgree" style="font-weight: 700;">
+                                I do not want to see this message again
+                             </label>
                           </div>
                       </div>
                   </fieldset>
