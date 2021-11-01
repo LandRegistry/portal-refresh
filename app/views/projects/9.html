@@ -843,6 +843,15 @@ li:hover {background-color: #0ba961;}
 
 }
 
+.govuk-table__header, .govuk-table__cell {
+    padding: 17px 16px 13px 0px;
+}
+
+td {
+  font-size: 1rem;
+  line-height: 1.375rem;
+}
+
 </style>
 
 
@@ -1223,141 +1232,97 @@ li:hover {background-color: #0ba961;}
 
         <div class="table-content-section">
 
-            <h1 class="govuk-heading-l" style="font-size:34px;margin-bottom:15px;">Create new project</h1>
+            <h1 class="govuk-heading-l" style="font-size:34px;margin-bottom:40px;">Link applications to project</h1>
 
-            <p> Projects allow you to group related applications together.</p>
-
-            <div style="padding-top: 20px;min-height: 100px;">
-
-              <div class="govuk-form-group" style="float: left;">
-                <label class="govuk-label govuk-!-font-weight-bold" for="address-town">
-                  Project name
-                </label>
-                <input class="govuk-input" id="address-town" value="HS2" name="address-town" type="text" autocomplete="address-level2" style="width:300px;">
-            </div>
-
-            <div class="govuk-form-group" style="float: left;margin-left: 50px;">
-                <label class="govuk-label govuk-!-font-weight-bold" for="address-town">
-                  Project email address
-                </label>
-                
-                <input class="govuk-input" value="hs2@companyname.com" id="address-town" name="address-town" type="text" autocomplete="address-level2" style="width:300px;"><div class="govuk-hint" style="font-size:16px;margin-top: 5px;">Notifications will be sent to this address</div>
-            </div>
-
-    
-            </div>
-
-            <div style="padding-top:25px;">
-                <div class="govuk-body" style="margin-bottom: 15px;">
+                <div class="govuk-body" style="margin-bottom: 40px;">
                     <label class="govuk-label form-label-bold">
-                        Add project team members
+                        Project name
+                    </label>
+                    <p>HS2</p>
+                </div>
+
+                <div class="govuk-body" style="margin-bottom: 40px;">
+                  <label class="govuk-label form-label-bold">
+                      Project team members
+                  </label>
+                  <p style="margin-bottom: 5px;">John Baptise-Kelly <span style="font-size: 12px;color: #00703c;font-weight: 600;">(Project owner)</span></p>
+                  <p style="margin-bottom: 5px;">Andy Carr</p>
+                  <p style="margin-bottom: 5px;">Pat Gannon</p>
+                  <p style="margin-bottom: 5px;">John Taylor</p>
+              </div>
+
+
+
+            <div>
+                <div class="govuk-body" style="margin-bottom: 25px;">
+                    <label class="govuk-label form-label-bold">
+                        Search for applications by title number
                     </label>
                     <select id="cat" class="form-control" style="height:39px;width:300px;border:2px solid #000000;" onchange="location = this.value;">
                             <option value="#"></option>
-                            <option value="#">Aaron Flynn</option>
-                            <option value="#">Alex Blewett</option>
-                            <option value="4.html">Andy Carr</option>
-                            <option value="#">Duncan Anderson</option>
-                            <option value="#">James Thomas</option>
-                            <option value="3.html">John Baptiste-Kelly</option>
-                            <option value="#">John James</option>
-                            <option value="6">John Taylor</option>
-                            <option value="#">Jon Parker</option>
-                            <option value="#">Juan Pinto-del-Rio</option>
-                            <option value="#">Lukas Kroening-Maynard</option>
-                            <option value="#">Mark Hornsby</option>
-                            <option value="#">Melvia Mathew</option>
-                            <option value="#">Neil Butler</option>
-                            <option value="#">Nicola Andrews</option>
-                            <option value="5">Pat Gannon</option>
-                            <option value="#">Romani Davies</option>
-                            <option value="#">Simon Skidmore</option>
-                            <option value="#">Sue Watchman</option>
-                            <option value="#">Tony Watson</option>
+                            <option value="10.html">CB980123</option>
+                            <option value="#">LR4652</option>
+                            <option value="#">LR4653</option>
+                            <option value="10.html">LR4654</option>
+                            <option value="#">LR4655</option>
+                            <option value="#">LR4656</option>
+                            <option value="8.html">LR4657</option>
+                            <option value="#">LR4658</option>
+                            <option value="9">LP45173</option>
+                            <option value="#">NN980165</option>
+                            <option value="#">NN980166</option>
+                            <option value="10.html">NN980167</option>
+                            <option value="#">NN980168</option>
+                            <option value="#">NN980169</option>
+                            <option value="8.html">NN980170</option>
+                            <option value="#">NN980171</option>
+                            <option value="9">NN980172</option>
+                            <option value="#">ST445444</option>
+                            <option value="8.html">ST445446</option>
+                            <option value="#">ST445447</option>
+                            <option value="9">ST445449</option>
+
                     </select>
                 </div>
 
-                <label class="govuk-label form-label-bold" style="padding-top:30px;">
-                  Select the project owner
-              </label>
 
-
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset">
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" checked>
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          John Baptise-Kelly (<span style="color:#d4351c; text-decoration: underline;font-size:14px;">remove</span>)
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                          Andy Carr (<span style="color:#d4351c; text-decoration: underline;font-size:14px;">remove</span>)
-                        </label>
-                      </div>
-                      <!-- <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
-                          Pat Gannon (<span style="color:#d4351c; text-decoration: underline;font-size:14px;">remove</span>)
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-                          John Taylor (<span style="color:#d4351c; text-decoration: underline;font-size:14px;">remove</span>)
-                        </label>
-                      </div> -->
-                    </div>
-                
-                  </fieldset>
-                </div>
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header">Title number</th>
+                      <th scope="col" class="govuk-table__header">Customer ref</th>
+                      <th scope="col" class="govuk-table__header">Application type</th>
+                      <th scope="col" class="govuk-table__header"></th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">NN980165</td>
+                      <td class="govuk-table__cell">JT/938/Watkins</td>
+                      <td class="govuk-table__cell">Official search of whole with priority</td>
+                      <td class="govuk-table__cell"><span style="color:#d4351c; text-decoration: underline;font-size:14px;">Remove</span></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">LP45173</td>
+                      <td class="govuk-table__cell">Smith.20313</td>
+                      <td class="govuk-table__cell">Transfer of part</td>
+                      <td class="govuk-table__cell"><span style="color:#d4351c; text-decoration: underline;font-size:14px;">Remove</span></td>
+                    </tr>
+                  </tbody>
+                </table>
 
 
             </div>
-    
-
-            <hr style="margin:50px 0px 40px 0px;">
+  
 
 
-            <div class="govuk-body" style="margin-bottom:0px;">
-                <h3 class="govuk-heading-m" style="margin-bottom:5px;">Confirm</h3>
-        
-                <p style="margin-bottom:0px;letter-spacing:-0.2px;">
-In creating this project, I am aware that <b>all</b> project team members will have access to <b>all</b> correspondence and notifications related to this project. Members of this project will be able to reply to requisitions and access DRS applications on behalf of my organisation.
-
-
-<div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="waste-hint" style="padding:0px;">
-
-      <div class="govuk-checkboxes" style="margin-top:25px;">
-        
-            <div class="govuk-checkboxes__item">
-                <input type="checkbox" id="chkAgree" onclick="goFurther()" class="govuk-checkboxes__input" name="chkAgree">
-                <label class="govuk-label govuk-checkboxes__label" for="chkAgree" style="font-weight: 700;">
-                   I consent to this on behalf of my organisation
-                </label>
-             </div>
-         </div>
-     </fieldset>
- </div>
-
-
-
-                </p>
-        
-            </div>
-
-            <hr style="margin:50px 0px;">
-
-            <div style="padding-bottom:40px;">
+            <div style="padding-bottom:40px;padding-top:50px;">
                 <button class="govuk-button govuk-button--secondary" data-module="govuk-button"  style="float:left;">
                     Cancel
                 </button>
 
-                <button class="govuk-button" data-module="govuk-button" style="float:right;width:150px;" id="btnSubmit" onclick="window.location.href='5.html'" disabled>
-                    Create project
+                <button class="govuk-button" data-module="govuk-button" style="float:right;width:200px;" id="btnSubmit" onclick="window.location.href='15.html'">
+                    Link applications
                   </button>
         
 
