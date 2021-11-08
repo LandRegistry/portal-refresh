@@ -1,87 +1,89 @@
 var howmanyMembersSelected = 0;
 var anyMemberSelected = false;
+var AaronFlynn, AlexBlewett, AndyCarr, DuncanAnderson, JamesThomas, JohnBaptisteKelly, JohnJames, JohnTaylor, JonParker, JuanPintodelRio, LukasKroeningMaynard, MarkHornsby, MelviaMathew, NeilButler, NicolaAndrews, PatGannon, RomaniDavies, SimonSkidmore, SueWatchman, TonyWatson;
+AaronFlynn= AlexBlewett= AndyCarr= DuncanAnderson= JamesThomas= JohnBaptisteKelly= JohnJames= JohnTaylor= JonParker= JuanPintodelRio= LukasKroeningMaynard= MarkHornsby= MelviaMathew= NeilButler= NicolaAndrews= PatGannon= RomaniDavies= SimonSkidmore= SueWatchman= TonyWatson = false;
 
 function TeamMemberSelected(){
 
     var TeamMember = document.getElementById("cat").value;
 
-    if (TeamMember === 'AaronFlynn'){
+    if ((TeamMember === 'AaronFlynn') && (AaronFlynn === false)){
         AaronFlynnSelected();
     }
 
-    if (TeamMember === 'AlexBlewett'){
+    if ((TeamMember === 'AlexBlewett') && (AlexBlewett === false)){
         AlexBlewettSelected();
     }
 
-    if (TeamMember === 'AndyCarr'){
+    if ((TeamMember === 'AndyCarr') && (AndyCarr === false)){
         AndyCarrSelected();
     }
 
-    if (TeamMember === 'DuncanAnderson'){
+    if ((TeamMember === 'DuncanAnderson') && (DuncanAnderson === false)){
         DuncanAndersonSelected();
     }
 
-    if (TeamMember === 'JamesThomas'){
+    if ((TeamMember === 'JamesThomas') && (JamesThomas === false)){
         JamesThomasSelected();
     }
 
-    if (TeamMember === 'JohnBaptisteKelly'){
+    if ((TeamMember === 'JohnBaptisteKelly') && (JohnBaptisteKelly === false)){
         JohnBaptisteKellySelected();
     }
 
-    if (TeamMember === 'JohnJames'){
+    if ((TeamMember === 'JohnJames') && (JohnJames === false)){
         JohnJamesSelected();
     }
 
-    if (TeamMember === 'JohnTaylor'){
+    if ((TeamMember === 'JohnTaylor') && (JohnTaylor === false)){
         JohnTaylorSelected();
     }
 
-    if (TeamMember === 'JonParker'){
+    if ((TeamMember === 'JonParker') && (JonParker === false)){
         JonParkerSelected();
     }
 
-    if (TeamMember === 'JuanPintodelRio'){
+    if ((TeamMember === 'JuanPintodelRio') && (JuanPintodelRio === false)){
         JuanPintodelRioSelected();
     }
     
-    if (TeamMember === 'LukasKroeningMaynard'){
+    if ((TeamMember === 'LukasKroeningMaynard') && (LukasKroeningMaynard === false)){
         LukasKroeningMaynardSelected();
     }
 
-    if (TeamMember === 'MarkHornsby'){
+    if ((TeamMember === 'MarkHornsby') && (MarkHornsby === false)){
         MarkHornsbySelected();
     }
 
-    if (TeamMember === 'MelviaMathew'){
+    if ((TeamMember === 'MelviaMathew') && (MelviaMathew === false)){
         MelviaMathewSelected();
     }
 
-    if (TeamMember === 'NeilButler'){
+    if ((TeamMember === 'NeilButler') && (NeilButler === false)){
         NeilButlerSelected();
     }
 
-    if (TeamMember === 'NicolaAndrews'){
+    if ((TeamMember === 'NicolaAndrews') && (NicolaAndrews === false)){
         NicolaAndrewsSelected();
     }
 
-    if (TeamMember === 'PatGannon'){
+    if ((TeamMember === 'PatGannon') && (PatGannon === false)){
         PatGannonSelected();
     }
 
-    if (TeamMember === 'RomaniDavies'){
+    if ((TeamMember === 'RomaniDavies') && (RomaniDavies === false)){
         RomaniDaviesSelected();
     }
 
-    if (TeamMember === 'SimonSkidmore'){
+    if ((TeamMember === 'SimonSkidmore') && (SimonSkidmore === false)){
         SimonSkidmoreSelected();
     }
 
-    if (TeamMember === 'SueWatchman'){
+    if ((TeamMember === 'SueWatchman') && (SueWatchman === false)){
         SueWatchmanSelected();
     }
 
-    if (TeamMember === 'TonyWatson'){
+    if ((TeamMember === 'TonyWatson') && (TonyWatson === false)){
         TonyWatsonSelected();
     }
 
@@ -96,6 +98,8 @@ function CreateDeleteHeading(){
         var li_header = document.createElement('LI');
         li_header.setAttribute("id", "header_id");
         li_header.setAttribute("class", "govuk-label form-label-bold");
+        li_header.setAttribute("style", "margin-top:25px;");
+
         var tn_header = document.createTextNode("Select the product owner");
         var litn_header = li_header.appendChild(tn_header);
         header.insertBefore(li_header, header.childNodes[0]);
@@ -109,39 +113,122 @@ function CreateDeleteHeading(){
 }
 
 
+// // AARON FLYNN
+
+// function AaronFlynnSelected() {
+
+// 	var listOfMembers = document.getElementById("addMemberListhere");
+
+// 	var li_AaronFlynn = document.createElement('LI');
+// 	li_AaronFlynn.setAttribute('id', 'AaronFlynn_id');
+
+// 	var checkbox_AaronFlynn = document.createElement('input');
+//     checkbox_AaronFlynn.type = 'checkbox';
+//     checkbox_AaronFlynn.id = 'AaronFlynn_checkbox';
+//     checkbox_AaronFlynn.name = 'AaronFlynn';
+//     checkbox_AaronFlynn.value = 'AaronFlynn';
+//     checkbox_AaronFlynn.setAttribute('class', 'govuk-checkboxes__input');
+
+
+//     // document.getElementById("AaronFlynn_checkbox").className = "govuk-checkboxes__input";
+    
+//   	var label_AaronFlynn = document.createElement('label');
+//     label_AaronFlynn.htmlFor = 'AaronFlynn';
+//     label_AaronFlynn.appendChild(document.createTextNode('Aaron Flynn'));
+//     label_AaronFlynn.setAttribute('class', 'govuk-label govuk-checkboxes__label');
+//     label_AaronFlynn.setAttribute('style', 'padding: 8px 8px 5px 15px;');
+    
+//   	var button_AaronFlynn = document.createElement('button');
+//   	button_AaronFlynn.setAttribute('id', 'AaronFlynn_id_remove');
+//     button_AaronFlynn.setAttribute('class', 'removeButton');
+// 	  button_AaronFlynn.setAttribute('onclick', 'remove_AaronFlynn()');
+//     button_AaronFlynn.setAttribute('style', 'padding-left:0px;');
+//     tn_button_AaronFlynn = document.createTextNode("remove");
+//     litn_button_AaronFlynn = button_AaronFlynn.appendChild(tn_button_AaronFlynn);
+    
+ 
+//     listOfMembers.appendChild(li_AaronFlynn);
+//   	li_AaronFlynn.appendChild(checkbox_AaronFlynn);
+//     li_AaronFlynn.appendChild(label_AaronFlynn);
+//     li_AaronFlynn.appendChild(button_AaronFlynn);
+    
+//   	howmanyMembersSelected += 1;
+//     CreateDeleteHeading();
+//     }
+    
+// function remove_AaronFlynn(){
+// 	AaronFlynn_id.remove();
+//   	howmanyMembersSelected -= 1;
+//     CreateDeleteHeading();
+
+    
+// }
+
 // AARON FLYNN
 
-function AaronFlynnSelected(){
-	var listOfMembers = document.getElementById("addMemberListhere");
-    
-    var li_AaronFlynn = document.createElement('LI');
-    li_AaronFlynn.setAttribute("id", "AaronFlynn_id");
-  	var tn_AaronFlynn = document.createTextNode("Aaron Flynn");
-  	var litn_AaronFlynn = li_AaronFlynn.appendChild(tn_AaronFlynn);
-  	listOfMembers.insertBefore(li_AaronFlynn, listOfMembers.childNodes[0]);
-    
-    var li_AaronFlynn_remove = document.createElement('BUTTON');
-    li_AaronFlynn_remove.setAttribute("id", "AaronFlynn_id_remove");
-  	li_AaronFlynn_remove.setAttribute("class", "remove_styling");
-  	li_AaronFlynn_remove.setAttribute("onclick", "remove_AaronFlynn()");
-  	var tn_AaronFlynn_remove = document.createTextNode("Remove");
-    
-  	var litn_AaronFlynn_remove = li_AaronFlynn_remove.appendChild(tn_AaronFlynn_remove);
-  	li_AaronFlynn.appendChild(li_AaronFlynn_remove);
+function AaronFlynnSelected() {
+  AaronFlynn = true;
 
-    howmanyMembersSelected += 1;
+	var listOfMembers = document.getElementById("MembersGoHere");
+
+	var div_AaronFlynn = document.createElement('DIV');
+	div_AaronFlynn.setAttribute('id', 'AaronFlynn_id');
+  div_AaronFlynn.setAttribute('class', 'govuk-checkboxes__item');
+  div_AaronFlynn.setAttribute('style', 'position: absolute;');
+
+
+
+	var checkbox_AaronFlynn = document.createElement('input');
+    checkbox_AaronFlynn.type = 'checkbox';
+    checkbox_AaronFlynn.id = 'AaronFlynn_checkbox';
+    checkbox_AaronFlynn.name = 'AaronFlynn';
+    checkbox_AaronFlynn.value = 'AaronFlynn';
+    // checkbox_AaronFlynn.setAttribute('class', 'govuk-checkboxes__input');
+    checkbox_AaronFlynn.className = "govuk-checkboxes__input";
+    
+  	var label_AaronFlynn = document.createElement('label');
+    label_AaronFlynn.htmlFor = 'AaronFlynn';
+    label_AaronFlynn.appendChild(document.createTextNode('Aaron Flynn'));
+    label_AaronFlynn.setAttribute('class', 'govuk-label govuk-checkboxes__label');
+    label_AaronFlynn.setAttribute('style', 'padding: 11.5px 10px 5px 0px;');
+    
+  	var button_AaronFlynn = document.createElement('button');
+    console.log('button created');
+  	button_AaronFlynn.setAttribute('id', 'AaronFlynn_id_remove');
+    button_AaronFlynn.setAttribute('class', 'removeButton');
+	  button_AaronFlynn.setAttribute('onclick', 'remove_AaronFlynn()');
+    button_AaronFlynn.setAttribute('style', 'padding-left:6px;');
+    tn_button_AaronFlynn = document.createTextNode("remove");
+    litn_button_AaronFlynn = button_AaronFlynn.appendChild(tn_button_AaronFlynn);
+    console.log('button complete');
+    
+ 
+    listOfMembers.appendChild(div_AaronFlynn);
+  	div_AaronFlynn.appendChild(checkbox_AaronFlynn);
+    div_AaronFlynn.appendChild(label_AaronFlynn);
+    label_AaronFlynn.appendChild(button_AaronFlynn);
+
+
+    
+  	howmanyMembersSelected += 1;
     CreateDeleteHeading();
     }
-
+    
 function remove_AaronFlynn(){
 	AaronFlynn_id.remove();
-    howmanyMembersSelected -= 1;
+  	howmanyMembersSelected -= 1;
     CreateDeleteHeading();
+
+    AaronFlynn = false;
+
+    
 }
 
 // ALEX BLEWETT
 
 function AlexBlewettSelected(){
+  AlexBlewett = true;
+
 	var listOfMembers = document.getElementById("addMemberListhere");
     
     var li_AlexBlewett = document.createElement('LI');
@@ -166,10 +253,14 @@ function remove_AlexBlewett(){
 	AlexBlewett_id.remove();
     howmanyMembersSelected -= 1;
     CreateDeleteHeading();
+
+    AlexBlewett = false;
 }
 
 // ANDY CARR
 function AndyCarrSelected(){
+  AndyCarr = true;
+
 	var listOfMembers = document.getElementById("addMemberListhere");
     
     var li_AndyCarr = document.createElement('LI');
@@ -196,11 +287,14 @@ function remove_AndyCarr(){
 
     howmanyMembersSelected -= 1;
     CreateDeleteHeading();
+    AndyCarr = false;
 }
 
 // DUNCAN ANDERSON
 
 function DuncanAndersonSelected(){
+  DuncanAnderson = true;
+
 	var listOfMembers = document.getElementById("addMemberListhere");
     
     var li_DuncanAnderson = document.createElement('LI');
@@ -227,10 +321,12 @@ function remove_DuncanAnderson(){
 
     howmanyMembersSelected -= 1;
     CreateDeleteHeading();
+    DuncanAnderson = false;
 }
 
 // JAMES THOMAS
 function JamesThomasSelected(){
+  JamesThomas = true;
 	var listOfMembers = document.getElementById("addMemberListhere");
     
     var li_JamesThomas = document.createElement('LI');
@@ -257,6 +353,8 @@ function remove_JamesThomas(){
 
     howmanyMembersSelected -= 1;
     CreateDeleteHeading();
+    JamesThomas = false;
+
 }
 
 // JOHN BAPTISTE KELLY

@@ -845,6 +845,25 @@ li:hover {background-color: #0ba961;}
 
 }
 
+.removeButton{
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+  text-decoration: underline;
+  color: #d3451c;
+  font-size: 14px;
+}
+
+.removeButton::before{
+  content: '(';
+  color: #0b0c0c;
+}
+
+.removeButton::after{
+  content: ')';
+  color: #0b0c0c;
+}
+
 </style>
 
 
@@ -1349,11 +1368,34 @@ li:hover {background-color: #0ba961;}
                       </div> -->
 
               </div>
+              <div class="Header_container">
+                <ul id="addHeaderhere">
+
+                </ul>
+              </div>
               <div class="MemberList_container">
                 <ul id="addMemberListhere">
 
                 </ul>
               </div>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" id="MembersGoHere">
+                    <!-- <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="AaronFlynn" name="AaronFlynn" type="checkbox" value="AaronFlynn">
+                      <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                        Aaron Flynn
+                      </label>
+                    </div> -->
+                    
+                    
+ 
+                  </div>
+              
+                </fieldset>
+              </div>
+
             </form>
   
               <hr style="margin:50px 0px 40px 0px;">
