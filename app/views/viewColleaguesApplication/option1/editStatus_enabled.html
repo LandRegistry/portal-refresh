@@ -142,17 +142,6 @@ p {
     padding: 0px;
 }
 
-.govuk-checkboxes__item {
-    padding-left: 0px;
-}
-
-label {
-    width:unset;
-}
-
-.govuk-checkboxes__label {
-    padding: 8px 0px 0px 55px;
-}
 
 .nav {
     clear: both;
@@ -161,16 +150,6 @@ label {
     margin-left: 0;
 }
 
-.govuk-checkboxes--small .govuk-checkboxes__item {
-    min-height: 0;
-    margin-bottom: 0;
-    padding-left: 0px;
-    float: left;
-}
-
-.govuk-checkboxes--small .govuk-checkboxes__label {
-    padding: 10px 15px 0px 33px;
-}
 
 .greyCorner {
     background-image: url(/public/images/grey_corner.jpg);
@@ -180,6 +159,25 @@ label {
 
 input.first, .buttonLink.first {
     background-position: 0% 100%;
+}
+
+.govuk-radios__input:checked + .govuk-radios__label::after {
+    opacity: 1;
+    left: -27px;
+}
+
+.govuk-radios--small .govuk-radios__label::before {
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    left: -33px;
+}
+
+.box label {
+    clear: both;
+    font-weight: unset;
+    margin: 0px 0px 0px 0px;
+    font-size: 16px;
 }
 
 </style>
@@ -284,18 +282,25 @@ input.first, .buttonLink.first {
 
                             <div class="contentMiddleSection greyCorner">
                                 <div class="leftBoxLightGrey">
-                                    <h3 style="margin-bottom:10px;">Edit status</h3>
+                                    <p style="margin-bottom:10px;">Specify if you require the users within your Business Unit to view their colleague's applications</p>
 
-                                    <div class="govuk-form-group" style="padding-top: 10px;">
-                                        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                                          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                                            <div class="govuk-checkboxes__item">
-                                              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked>
-                                              <label class="govuk-label govuk-checkboxes__label" for="waste">
-                                                Enable
+
+
+                                    <div class="govuk-form-group">
+                                        <fieldset class="govuk-fieldset">
+                                          <div class="govuk-radios govuk-radios--small">
+                                            <div class="govuk-radios__item">
+                                              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month" checked>
+                                              <label class="govuk-label govuk-radios__label" for="changed-name">
+                                                Opt in
                                               </label>
                                             </div>
-                                            
+                                            <div class="govuk-radios__item">
+                                              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                                              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                                Opt out
+                                              </label>
+                                            </div>
                                           </div>
                                       
                                         </fieldset>
