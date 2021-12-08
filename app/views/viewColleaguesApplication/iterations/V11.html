@@ -13,7 +13,7 @@ display:none;
 
 
 .govuk-link:link, a:link {
-    color: #00703C;
+    color: #006637;
 }
 
 .govuk-width-container {
@@ -22,7 +22,7 @@ display:none;
 }
 
 .navbar-container {
-    background-color: #008548;
+    background-color: #006637;
     display:flow-root;
     padding-right: 15px;
     -webkit-box-shadow: inset 0px 2px 4px 0px rgb(0 0 0 / 15%);
@@ -335,8 +335,8 @@ li:hover {background-color: #0ba961;}
     border-style: none;
     height: 39px;
     width: 39px;
-    background-color: #008548;
-    border-color: #008548;
+    background-color: #006637;
+    border-color: #006637;
 }
 
 #search-button:hover {
@@ -512,7 +512,7 @@ li:hover {background-color: #0ba961;}
     <!-- Filters and Search Section - Start -->
 
 
-  <div id="FiltersAndSearch" style="width: 300px;float: left;padding: 30px;background: #fff;padding-top:50px;    height: calc(100vh - 272px);min-height: 700px;">
+  <div id="FiltersAndSearch" style="width: 300px;float: left;padding: 30px;background: #fff;padding-top:50px;min-height: 700px;">
 
       <div class="" style="">
         <form id="search" style="">
@@ -554,7 +554,7 @@ li:hover {background-color: #0ba961;}
             <div class="govuk-body" style="margin-bottom: 30px;">
 
                <input type="text" id="search-input" class="searchBox" style="width: calc(100% - 57px);">
-               <button class="searchButton" value="submit" id="search-button"><i class="fas fa-search"></i></button>
+               <button class="searchButton" value="submit" id="search-button"><i style="margin-top:3px;" class="fas fa-search"></i></button>
                <a href="#" id="reset" class="govuk-link govuk-link--no-visited-state" style="font-size: 14px;padding-top: 10px;display: block;"><u> Reset search</u></a>
 
          </div>
@@ -763,41 +763,52 @@ li:hover {background-color: #0ba961;}
                        <div>
                           <div style="float:left;line-height: 22px;">
                              <b>Review</b><br>
-                             <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter of cancellation issued 22/09/21</a><br>
-                             <a target="_blank" href="/public/files/requisition-example-document.pdf">Warning of cancellation issued 15/09/21</a><br>
-                             <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition issued 01/09/21</a><br>
+                             <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter of cancellation issued 22/09/21</a><br>
+                             <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Warning of cancellation issued 15/09/21</a><br>
+                             <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Requisition issued 01/09/21</a><br>
                           </div>
                           <div style="float:left;padding-left: 50px;line-height: 22px;">
                              <b>Resolved</b><br>
      
-                             <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 28/08/21</a><br>
+                             <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 28/08/21</a><br>
                           </div>
                           <div style="float:left;padding-left: 50px;line-height: 22px;">
                              <b>Information only</b><br>
-                             <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 26/08/21</a>
+                             <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 26/08/21</a>
                           </div>
                        </div>
                     </div>
-                    <div class="rowContentSection">
-                       <div class="expandedTitles">
-                          Files
-                       </div>
-                       <div class="expandedText" style="line-height: 22px;">
-                          <a href="#">Cancellation </a>
-                       </div>
-                    </div>
+
                  </div>
+
                  <div style="float: left;width: 100%;padding: 0px;">
-                    <div class="rowContentSection">
-                       <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
-                       <div class="expandedText">
-                          <div class="expandedText">
+                  <div class="rowContentSection">
+                     <div class="expandedTitles">
+                        Files
+                     </div>
+                     <div class="expandedText" style="line-height: 22px;">
+                        <a style="color:#006637;" href="#">Cancellation </a>
+                     </div>
+                  </div>
+                  </div>
+
+                 <div style="float: left;width: 100%;padding: 0px;">
+                  <div class="rowContentSection">
+                     <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
+                     <div class="expandedText">
+                        <div class="expandedText">
                            <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;" onclick="window.location.href='#'">
+                              Respond
+                            </button>
+                            <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;" onclick="window.location.href='#'">
+                              Application enquiry
+                            </button>
+                            <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;" onclick="window.location.href='#'">
                               Save as PDF
                             </button>
-                          </div>
-                       </div>
-                    </div>
+                        </div>
+                     </div>
+                  </div>
               </td>
            </tr>
         </tbody>
@@ -858,26 +869,31 @@ li:hover {background-color: #0ba961;}
                         </div>
                         <div style="float:left;padding-left: 50px;line-height: 22px;">
                            <b>Resolved</b><br>
-                           <a target="_blank" href="/public/files/requisition-example-document.pdf">Warning of cancellation issued 22/09/21</a><br>
-                           <a target="_blank" href="/public/files/requisition-example-document.pdf">Requisition issued 15/09/21</a><br>
+                           <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Warning of cancellation issued 22/09/21</a><br>
+                           <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Requisition issued 15/09/21</a><br>
                         </div>
                         <div style="float:left;padding-left: 50px;line-height: 22px;">
                            <b>Information only</b><br>
-                           <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 26/08/21</a><br>
-                           <a target="_blank" href="/public/files/requisition-example-document.pdf">Notice issued 25/08/21</a>
+                           <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 26/08/21</a><br>
+                           <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Notice issued 25/08/21</a>
                         </div>
                      </div>
                   </div>
+               </div>
+
+
+               <div style="float: left;width: 100%;padding: 0px;">
                   <div class="rowContentSection">
                      <div class="expandedTitles">
                         Files
                      </div>
                      <div class="expandedText" style="line-height: 22px;">
-                        <a href="#">Registration Completion Sheet dated </a><br>
-                        <a href="#">Official Copy of Register</a>
+                        <a style="color:#006637;" href="#">Registration Completion Sheet dated </a><br>
+                        <a style="color:#006637;" href="#">Official Copy of Register</a>
                      </div>
                   </div>
-               </div>
+                  </div>
+
                <div style="float: left;width: 100%;padding: 0px;">
                   <div class="rowContentSection">
                      <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
@@ -958,9 +974,9 @@ li:hover {background-color: #0ba961;}
                             </div>
                             <div style="float:left;padding-left: 50px;line-height: 22px;">
                                <b>Information only</b><br>
-                               <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 06/08/21</a><br>
-                               <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 05/08/21</a><br>
-                               <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 04/08/21</a><br>
+                               <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 06/08/21</a><br>
+                               <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 05/08/21</a><br>
+                               <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 04/08/21</a><br>
                             </div>
                          </div>
                       </div>
@@ -1047,9 +1063,9 @@ li:hover {background-color: #0ba961;}
                             </div>
                             <div style="float:left;padding-left: 50px;line-height: 22px;">
                                <b>Information only</b><br>
-                               <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 06/08/21</a><br>
-                               <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 05/08/21</a><br>
-                               <a target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 04/08/21</a><br>
+                               <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 06/08/21</a><br>
+                               <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 05/08/21</a><br>
+                               <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 04/08/21</a><br>
                             </div>
                          </div>
                       </div>
