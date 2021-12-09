@@ -42,7 +42,7 @@
 
 
 .govuk-link:link, a:link {
-    color: #00703C;
+    color: #006637;
 }
 
 .govuk-width-container {
@@ -51,7 +51,7 @@
 }
 
 .navbar-container {
-    background-color: #008548;
+    background-color: #006637;
     display:flow-root;
     padding-right: 15px;
     -webkit-box-shadow: inset 0px 2px 4px 0px rgb(0 0 0 / 15%);
@@ -124,7 +124,7 @@
 /* Links inside the dropdown */
 .dropdown-content2 a {
   float: none;
-  color: #00703C;
+  color: #006637;
   padding: 0px 16px;
     text-decoration: none;
     display: block;
@@ -151,10 +151,12 @@
 }
 
 #SectionHeroImage {
-  background-image: url("/public/images/ForestBG.png");
+  background-image: url("/public/images/heroImage.png");
   height:288px;
   width:100%;
   position:relative;
+  background-size: cover;
+  background-position-y: bottom;
 }
 
 #SectionHeroContent {
@@ -227,7 +229,7 @@
 .notificationLink {
 font-weight:700;
 font-size: 20px;
-color:#00703C;
+color:#006637;
 text-decoration: underline;
 }
 
@@ -248,7 +250,7 @@ font-size: 17px;
 .linkTextLink {
   font-weight:700;
 font-size: 15px;
-color:#00703C;
+color:#006637;
 text-decoration: underline;
 }
 
@@ -266,15 +268,16 @@ text-decoration: underline;
 }
 
 .newsImage {
-  border:2px solid #00703C;
+
   margin-bottom: 15px;
-    max-height: 167px;
+    max-height: 185px;
     overflow: hidden;
+    border: 1px solid #d8dde0;
 }
 
 #newsArticle {
-  width: 28%;
-    margin-right: 5%;
+    width: 380px;
+    margin-right: 30px;
     float: left;
 }
 
@@ -297,12 +300,12 @@ text-decoration: underline;
 }
 
 .newsTextLink {
-  color:#00703C;
+  color:#006637;
   line-height: 40px;
 }
 
 .newsTextLink a {
-  color:#00703C !Important;
+  color:#006637 !Important;
 }
 
 .newsChevron {
@@ -378,7 +381,7 @@ padding-bottom: 3px;
     float: left;
     line-height: unset;
     background-color: unset !important;
-    color: #00703C !important;
+    color: #006637 !important;
     font-weight: 700;
     padding: unset;
 }
@@ -388,7 +391,7 @@ padding-bottom: 3px;
     width: 100%;
     line-height: unset;
     background-color: unset !important;
-    color: #00703C !important;
+    color: #006637 !important;
     font-weight: 700;
     padding: unset;
 }
@@ -486,7 +489,7 @@ display:none;
 .commsChannelBack {
   width:50px;
   height:50px;
-  background: #00703C;
+  background: #006637;
   color:#ffffff;
   position: absolute;
   left:0px;
@@ -497,7 +500,7 @@ display:none;
 .commsChannelForward {
   width:50px;
   height:50px;
-  background: #00703C;
+  background: #006637;
   color:#ffffff;
   position: absolute;
   right:0px;
@@ -527,7 +530,7 @@ display:none;
   max-width: 1200px;
   margin:75px auto;
   height:10px;
-  background-color: #00703C;
+  background-color: #006637;
   display:block;
 }
 
@@ -572,10 +575,10 @@ display:none;
 .parent:hover > ul {display:block;position:absolute;}
 .child {display: none;}
 .child li {background-color: #ffffff;line-height: 40px;border-right:#CCC 1px solid; width:100%;}
-.child li a{color: #00703C; font-weight:700;font-size:15px;}
+.child li a{color: #006637; font-weight:700;font-size:15px;}
 ul{list-style: none;margin: 0;padding: 0px; min-width:10em;}
 ul ul ul{left: 100%;top: 0;margin-left:1px;}
-li:hover {background-color: #0ba961;}
+li:hover {background-color: #014727;}
 .parent li:hover {background-color: #F0F0F0;}
 .expand{font-size:12px;float:right;margin-right:5px;}
 
@@ -629,7 +632,7 @@ li:hover {background-color: #0ba961;}
 }
 
 .heroTextBackground {
-  background-color: #008548;
+  background-color: #006637;
   padding:25px;
   bottom: -48px;
     margin-bottom: 0;
@@ -637,6 +640,15 @@ li:hover {background-color: #0ba961;}
     padding: 32px 40px;
     position: absolute;
     top: auto;
+}
+
+.govuk-button {
+  background-color: #006637;
+}
+
+
+.govuk-button:hover {
+  background-color:#014727;
 }
 
 .child {
@@ -663,7 +675,7 @@ li:hover {background-color: #0ba961;}
    
    <ul id="menu" style="float:right;">
        <li class="parent"><a href="#">Home</a></li>
-       <li class="parent"><a href="#">Services <i class="fas fa-angle-down" style="margin-left:5px;"></i></a>
+       <li class="parent"><a href="#">Services <img style="position:relative;top:7px;" width="25" src="/public/images/icon_govuk_chevrondown.svg"></a>
        <ul class="child">
            <li class="parent"><a href="#">Applications <span class="expand"><i class="fas fa-angle-right"></i></span></a>
                <ul class="child">
@@ -745,7 +757,7 @@ li:hover {background-color: #0ba961;}
 
        <li class="parent"><a href="#">Contact us</a></li>
 
-       <li class="parent"><a href="#">Andy Carr <i class="fas fa-angle-down" style="margin-left:5px;"></i></a>
+       <li class="parent"><a href="#">Andy Carr <img style="position:relative;top:7px;" width="25" src="/public/images/icon_govuk_chevrondown.svg"></a>
            <ul class="child" style="right:0;">
        
        
@@ -760,7 +772,7 @@ li:hover {background-color: #0ba961;}
                    <div class="myAccount2ndLine">
                       Administrator 
                    </div>
-                   <a href="#" style="margin:0px;color:#00703C;font-weight:700;font-size:14px;">View profile</a>
+                   <a href="#" style="margin:0px;color:#006637;font-weight:700;font-size:14px;">View profile</a>
                  </div>
 
                  <hr>
@@ -770,7 +782,7 @@ li:hover {background-color: #0ba961;}
                  </div>
                  <div class="myAccount2ndLine">
                    John Taylor
-                   <!-- <a href="#" style="margin:0px;color:#00703C;"><b>JohnTaylor@bigbusiness.com</b></a> -->
+                   <!-- <a href="#" style="margin:0px;color:#006637;"><b>JohnTaylor@bigbusiness.com</b></a> -->
                  </div>
 
 
@@ -831,7 +843,7 @@ li:hover {background-color: #0ba961;}
                   <div class="linkTextSectionContent">
                     <h3 class="govuk-heading-m" id="value-heading0">No Data</h3>
                     <p class="govuk-body" id="value-subheading0">No Data</p>
-                    <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:0px;"><a id="value-label0" style="color: #00703C;" href='#'>No Data</a></p>
+                    <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:0px;"><a id="value-label0" style="color: #006637;" href='#'>No Data</a></p>
                 </div>
               </div>
             </li>
@@ -841,7 +853,7 @@ li:hover {background-color: #0ba961;}
                   <div class="linkTextSectionContent">
                     <h3 class="govuk-heading-m"  id="value-heading1">No Data</h3>
                     <p class="govuk-body" id="value-subheading1">No Data</p>
-                    <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:0px;"><a id="value-label1" style="color: #00703C" href='#'>No Data</a></p>
+                    <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:0px;"><a id="value-label1" style="color: #006637" href='#'>No Data</a></p>
                 </div>
               </div>
             </li>
@@ -851,7 +863,7 @@ li:hover {background-color: #0ba961;}
                   <div class="linkTextSectionContent">
                     <h3 class="govuk-heading-m" id="value-heading2">No Data</h3>
                     <p class="govuk-body" id="value-subheading2">No Data</p>
-                    <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:0px;"><a id="value-label2" style="color: #00703C" href='#'>No Data</a></p>
+                    <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:0px;"><a id="value-label2" style="color: #006637" href='#'>No Data</a></p>
                 </div>
               </div>
             </li>
@@ -864,7 +876,7 @@ li:hover {background-color: #0ba961;}
                   <div class="linkTextSectionContent">
                     <h3 class="govuk-heading-m" id="value-heading3">No Data</h3>
                     <p class="govuk-body" id="value-subheading3">No Data</p>
-                    <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:0px;"><a id="value-label3" style="color: #00703C" href='#'>No Data</a></p>
+                    <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:0px;"><a id="value-label3" style="color: #006637" href='#'>No Data</a></p>
                 </div>
               </div>
             </li>
@@ -874,7 +886,7 @@ li:hover {background-color: #0ba961;}
                   <div class="linkTextSectionContent">
                     <h3 class="govuk-heading-m" id="value-heading4">No Data</h3>
                       <p class="govuk-body" id="value-subheading4">No Data</p>
-                        <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:0px;"><a id="value-label4" style="color: #00703C" href='#'>No Data</a></p>
+                        <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:0px;"><a id="value-label4" style="color: #006637" href='#'>No Data</a></p>
                 </div>
               </div>
             </li>
@@ -884,7 +896,7 @@ li:hover {background-color: #0ba961;}
                   <div class="linkTextSectionContent">
                   <h3 class="govuk-heading-m" id="value-heading5">No Data</h3>
                     <p class="govuk-body" id="value-subheading5">No Data</p>
-                    <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:0px;"><a id="value-label5" style="color: #00703C" href='#'>No Data</a></p>
+                    <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom:0px;"><a id="value-label5" style="color: #006637" href='#'>No Data</a></p>
                 </div>
               </div>
             </li>
@@ -1328,13 +1340,100 @@ li:hover {background-color: #0ba961;}
     <!-- <div class="govuk-grid-row" style="max-width: 1230px;margin: auto;padding-top:25px;">
       <div class="govuk-grid-column-full">
       <p class="govuk-body" style="margin-bottom:0px;">
-        <a style="color: #00703C; font-weight:600;" href="#">View full list of services</a>
+        <a style="color: #006637; font-weight:600;" href="#">View full list of services</a>
       </p>
       </div>
    </div> -->
 
     </div>
 </div>
+
+<div class="dividerLine10"></div>
+
+<div id="NewsPanel">
+  <div id="NewsPanelContent" class="govuk-body">
+
+<h2 class="govuk-heading-l govuk-!-font-size-36">News</h2>
+
+
+
+
+    <div id="newsArticle">
+
+
+
+
+
+
+
+      <div class="newsImage">
+        <img src="/public/images/vca2-news.png" style="width:100%;">
+      </div>
+
+      <div class="newsTextSection">
+          <p class="govuk-body govuk-!-font-size-14">10 December 2021 — News story</p>
+          <h3 class="govuk-heading-s newsTextTitle"><a style="color:#006637;" href="#">View Colleagues Applications</a></h3>
+          <p>A short video designed to showcase the new functionality recently added.</p>
+      </div>
+
+    </div>
+
+
+    <!-- <div id="newsArticle">
+      <div class="newsImage">
+        <img src="/public/images/News_2.png" style="width:100%;">
+      </div>
+
+      <div class="newsTextSection">
+        <p class="govuk-body govuk-!-font-size-14">4 December 2021 — Guidance</p>
+        <h3 class="govuk-heading-s newsTextTitle"><a style="color:#006637;" href="#">View our response to Covid-19</a></h3>
+        <p>How we are delivering our services during the coronavirus outbreak.</p>
+    </div>
+
+    </div> -->
+
+    <div id="newsArticle">
+      <div class="newsImage">
+        <img src="/public/images/ap-news.png" style="width:100%;">
+      </div>
+
+      <div class="newsTextSection">
+        <p class="govuk-body govuk-!-font-size-14">4 December 2021 — Guidance</p>
+        <h3 class="govuk-heading-s newsTextTitle"><a style="color:#006637;" href="#">Requesting an application to be expedited</a></h3>
+        <p>All requests must be made by using the Application Enquiry service.</p>
+    </div>
+
+    </div>
+
+
+    <div id="newsArticle" style="margin-right:0px;">
+      <div class="newsImage">
+        <img src="/public/images/drs-news.png" style="width:100%;">
+      </div>
+
+      <div class="newsTextSection">
+        <p class="govuk-body govuk-!-font-size-14">17 November 2021 — News story</p>
+        <h3 class="govuk-heading-s newsTextTitle"><a style="color:#006637;" href="#">Document registration is changing</a></h3>
+        <p>From November 2022 the Document Registration option will be removed.</p>
+    </div>
+
+    </div>
+
+    <!-- <div id="newsArticle" style="margin-right:0px;">
+      <div class="newsImage">
+        <img src="/public/images/News_3.png" style="width:100%;">
+      </div>
+
+      <div class="newsTextSection">
+        <p class="govuk-body govuk-!-font-size-14">17 November 2021 — Press release</p>
+        <h3 class="govuk-heading-s newsTextTitle"><a style="color:#006637;" href="#">Portal roadmap for 2022</a></h3>
+        <p>See what features are planned for 2021 and have your say for its future.</p>
+    </div>
+
+    </div> -->
+
+  </div>
+</div> 
 
 <div class="dividerLine10"></div>
 
@@ -1357,7 +1456,7 @@ li:hover {background-color: #0ba961;}
         Local Land Charges Search (GOV.UK)<br>
         Local Land Charges Maintain<br>
         <br>
-        <a href="#" style="color: #00703C !Important;">Maintenance schedule</a>
+        <a href="#" style="color: #006637 !Important;">Maintenance schedule</a>
       
       
       
@@ -1400,7 +1499,7 @@ li:hover {background-color: #0ba961;}
 </div>
 
 
-<div class="govuk-grid-column-full" style="padding:0px;border-top:5px solid #00703C;/* background: #f3f2f1; */">
+<div class="govuk-grid-column-full" style="padding:0px;border-top:5px solid #006637;/* background: #f3f2f1; */">
  
         
   <div style="padding:30px; background: #f3f2f1;">
