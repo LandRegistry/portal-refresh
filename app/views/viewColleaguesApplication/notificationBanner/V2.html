@@ -367,11 +367,6 @@ li:hover {background-color: #0ba961;}
     font-size: 16px;
 }
 
-.govuk-phase-banner {
-    margin-bottom: 30px;
-}
-
-
 </style>
 
 
@@ -691,19 +686,21 @@ li:hover {background-color: #0ba961;}
 </div>
       
   <!-- Table Area - Start -->
-  <div style="width:calc(100% - 352px);float:left;; overflow-x: auto;padding:0px 30px 30px 30px;">   
+  <div style="width:calc(100% - 352px);float:left;; overflow-x: auto;padding:30px;">   
 
-   <div class="govuk-phase-banner">
-      <p class="govuk-phase-banner__content">
-        <strong class="govuk-tag govuk-phase-banner__content__tag">
-          beta
-        </strong>
-        <span class="govuk-phase-banner__text">
-          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-        </span>
-      </p>
+
+   <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Important
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+         Important information about fees: From Monday 31 January, some of <a class="govuk-notification-banner__link" href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.gov.uk%2Fguidance%2Fhm-land-registry-registration-services-fees&data=04%7C01%7CJohn.James%40landregistry.gov.uk%7C6a039c463a3447d66d9908d9db31cc61%7C236309a8284b4e57a7b3fc767736f69d%7C0%7C0%7C637781829183950073%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=bLH%2Fl0yxGVdEiJATvGkzRg7AZ%2Bqfw0ef5kJJHK18sjU%3D&reserved=0">HM Land Registry's land registration fees</a> will increase.
+        </p>
+      </div>
     </div>
-
 
      <!-- My Work Table -->
      <table  class="govuk-table my-work" style="margin-top: 0px; ">
