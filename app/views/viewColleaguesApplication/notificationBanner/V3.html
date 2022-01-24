@@ -5,6 +5,27 @@
 {% endblock %}
 {% block content %}
 
+
+<script type="text/javascript">
+   function goFurther(){
+   if (document.getElementById("chkAgree").checked == true)
+   document.getElementById("btnSubmit").disabled = false;
+   else
+   document.getElementById("btnSubmit").disabled = true;
+   }
+   </script>
+
+<script>
+   function hideNotification() {
+ var x = document.getElementById("hideNotification2");
+ if (x.style.display === "none") {
+   x.style.display = "block";
+ } else {
+   x.style.display = "none";
+ }
+}
+</script>
+
 <style>
 
 .govuk-footer {
@@ -367,13 +388,36 @@ li:hover {background-color: #0ba961;}
     font-size: 16px;
 }
 
-.govuk-phase-banner {
-    margin-bottom: 30px;
+.blue-button {
+    background: #1D70B8;
+    padding: 7px 25px;
+    margin-bottom: 0;
 }
 
-.govuk-button--warning {
-    background-color: #d4351c;
-    box-shadow: 0 2px 0 #55150b;
+.blue-button:hover {
+    background: #1D70B8;
+    opacity:0.8;
+}
+
+.blue-button:focus {
+    background: #1D70B8;
+    opacity:0.8;
+}
+
+input[disabled]
+{
+    color: #B1B4B6;
+    text-decoration: none;
+    background: #F3F2F1;
+    box-shadow: none;
+    opacity:1 !Important;
+}
+
+.govuk-button[disabled]:hover {
+  color: #B1B4B6;
+    text-decoration: none;
+    background: #F3F2F1;
+    cursor: default;
 }
 
 </style>
@@ -509,9 +553,6 @@ li:hover {background-color: #0ba961;}
 
                   <button id="logOut" class="govuk-button" style="margin-top:20px;">Log out</button>
                 </div>
-                </ul>
-                </li>
-                <li class="parent"><a href="#">Log out</a></li>
 </div>
         
 
@@ -566,11 +607,14 @@ li:hover {background-color: #0ba961;}
             <div class="govuk-body" style="margin-bottom: 30px;">
 
                <input type="text" id="search-input" class="searchBox" style="width: calc(100% - 57px);">
-               <button class="searchButton" value="submit" id="search-button" style=""> <img width="20" height="20" style="margin-top:6px;" src="/public/images/search-icon.svg"></button>
-
+               <button class="searchButton" value="submit" id="search-button"><i style="margin-top:3px;" class="fas fa-search"></i></button>
+               <a href="#" id="reset" class="govuk-link govuk-link--no-visited-state" style="font-size: 14px;padding-top: 10px;display: block;"><u> Reset search</u></a>
 
          </div>
 
+
+
+           <hr style="margin-bottom: 25px;background:#b1b4b6;">
 
            <label class="govuk-label form-label-bold" style="margin-bottom: 15px;">
             Filter by application
@@ -667,14 +711,6 @@ li:hover {background-color: #0ba961;}
              </details>
 
 
-             <div>
-               <button id="reset" class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;margin-bottom:10px;" onclick="window.location.href='#'">
-                  Reset search and filters
-                </button>
-               </div>
-
-
-
              <hr style="margin-bottom: 25px;background:#b1b4b6;margin-top: 25px;">
 
             <div>
@@ -703,19 +739,38 @@ li:hover {background-color: #0ba961;}
 </div>
       
   <!-- Table Area - Start -->
-  <div style="width:calc(100% - 352px);float:left;; overflow-x: auto;padding:0px 30px 30px 30px;">   
+  <div style="width:calc(100% - 352px);float:left;; overflow-x: auto;padding:30px;">   
 
-   <div class="govuk-phase-banner">
-      <p class="govuk-phase-banner__content">
-        <strong class="govuk-tag govuk-phase-banner__content__tag">
-          beta
-        </strong>
-        <span class="govuk-phase-banner__text">
-          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-        </span>
-      </p>
+
+   <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+         NEW: View applications
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading" style="line-height: 35px;">
+         You can now view and search applications lodged by your business unit unless your business unit has opted out.<br> To find out more information, please visit the <a style="color:#005ea5;" href="V1-help#ecd" target="_blank">help page</a>.
+        </p>
+
+        <div class="govuk-form-group">
+         <fieldset class="govuk-fieldset" aria-describedby="waste-hint" style="padding:0px;">
+
+           <div class="govuk-checkboxes">
+             
+                 <div class="govuk-checkboxes__item">
+                     <input type="checkbox" id="chkAgree" onclick="goFurther()" class="govuk-checkboxes__input" name="chkAgree">
+                     <label class="govuk-label govuk-checkboxes__label" for="chkAgree" style="font-size:19px;">
+                        I do not want to see this message again
+                     </label>
+                 </div>
+             </div>
+         </fieldset>
+     </div>
+
+     <input type="button" id="btnSubmit" onclick="window.location.href='V8.html'" value="Close" class="govuk-button blue-button" disabled="">
+      </div>
     </div>
-
 
      <!-- My Work Table -->
      <table  class="govuk-table my-work" style="margin-top: 0px; ">
