@@ -183,6 +183,10 @@ window.addEventListener("load", function(event) {
             <a class="govuk-back-link" href="javascript: history.go(-1)">Back</a>
             <form class="form" action="Confirmation_No_historical_copies" method="post">
 
+              {% if data['register'] %}
+              <h1 class="govuk-heading-l" id="largeHeading_whatService">Register selected</h1>
+              {% endif %}
+
     
               <h1 class="govuk-heading-l" id="largeHeading_whatService">Checkout</h1>
 
