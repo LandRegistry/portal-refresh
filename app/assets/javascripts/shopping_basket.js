@@ -855,6 +855,7 @@ function checkbox3C() {
  }
 
  function areBoxesticked(){
+
 	if (noOfboxesChecked == 1 && totalAmounttoPay == 3 && doesEmptyExist === false){
     	var empty_button = document.createElement("BUTTON");
         empty_button.setAttribute("id", "empty_button_id");
@@ -991,7 +992,7 @@ function checkbox3C() {
 
    
 function emptyTheBasket(){
-    console.log(location.href);
+    // console.log(location.href);
     noOfboxesChecked = 0; 
     totalAmounttoPay = 0;
     var twoDP_total = totalAmounttoPay.toFixed(2);
