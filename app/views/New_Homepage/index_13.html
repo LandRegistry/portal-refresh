@@ -571,13 +571,15 @@ display:none;
 }
 
 .parent {display: block;position: relative;float: left;line-height: 70px;}
-.parentIconDown {background-image: url("/public/images/icon_govuk_chevrondown.svg"); background-size: 25px; background-repeat: no-repeat; background-position-x: 83px;background-position-y: center;}
-.parentIconDown2 {background-image: url("/public/images/icon_govuk_chevrondown.svg"); background-size: 25px; background-repeat: no-repeat; background-position-x: 93px;background-position-y: center;}
+.parentIconDown {background-image: url("/public/images/icon_govuk_chevrondownWhite.svg"); background-size: 25px; background-repeat: no-repeat; background-position-x: 83px;background-position-y: center;}
+.parentIconDown2 {background-image: url("/public/images/icon_govuk_chevrondownWhite.svg"); background-size: 25px; background-repeat: no-repeat; background-position-x: 108px;background-position-y: center;}
 .parent a{margin: 20px;color: #FFFFFF;text-decoration: none;}
+.parent a:focus { color:#000000;}
 .parent:hover > ul {display:block;position:absolute;}
 .child {display: none;box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 10%);z-index:99999;}
 .child li {background-color: #ffffff;line-height: 40px;border-right:#CCC 0px solid; width:100%;}
 .child li a{color: #00703C; font-size:15px;}
+.child li a:focus{color:#000000;}
 ul{list-style: none;margin: 0;padding: 0px; min-width:10em;}
 ul ul ul{left: 100%;top: 0;border-left: 1px solid #dedede;}
 li:hover {background-color: #ffffff;color:#00703C;}
@@ -587,6 +589,8 @@ li:hover {background-color: #ffffff;color:#00703C;}
 .parent li:hover {background-color: #F0F0F0;}
 .expand{font-size:12px;float:right;margin-right:5px;}
 .iconRight {background-image: url("/public/images/icon_govuk_chevronrightGreen.svg"); background-size: 25px; background-repeat: no-repeat; background-position-x: 134px;background-position-y: center;}
+
+a:focus { color:#000000 !Important;}
 
 .hmlr-card-group li:hover {background-color: unset;}
 
@@ -661,6 +665,24 @@ li:hover {background-color: #ffffff;color:#00703C;}
     display: none;
     box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 10%);
     z-index: 99999;
+}
+
+.govuk-button:focus {
+   border-color: #fd0;
+    color: #0b0c0c;
+    background-color: #fd0;
+    -webkit-box-shadow: 0 2px 0 #0b0c0c;
+    box-shadow: 0 2px 0 #0b0c0c;
+    outline: 3px solid transparent;
+}
+
+.govuk-button--secondary:focus {
+   border-color: #fd0;
+    color: #0b0c0c;
+    background-color: #fd0;
+    -webkit-box-shadow: 0 2px 0 #0b0c0c;
+    box-shadow: 0 2px 0 #0b0c0c;
+    outline: 3px solid transparent;
 }
 
 </style>
@@ -766,7 +788,7 @@ li:hover {background-color: #ffffff;color:#00703C;}
 
        <li class="parent"><a href="#">Contact us</a></li>
 
-       <li class="parent parentIconDown2"><a style="padding-right: 25px;" href="#">Andy Carr </a>
+       <li class="parent parentIconDown2"><a style="padding-right: 25px;" href="#">John James </a>
            <ul class="child" style="right:0;">
        
        
@@ -794,10 +816,6 @@ li:hover {background-color: #ffffff;color:#00703C;}
                    <!-- <a href="#" style="margin:0px;color:#00703C;"><b>JohnTaylor@bigbusiness.com</b></a> -->
                  </div>
 
-
-
-
-                 <button id="logOut" class="govuk-button" style="margin-top:20px;">Log out</button>
                </div>
                </ul>
                </li>
