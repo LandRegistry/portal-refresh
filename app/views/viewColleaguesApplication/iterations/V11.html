@@ -321,7 +321,7 @@ a:focus { color:#000000 !Important;}
 .paginationDesign {
     padding: 10px 15px;
      background: #ffffff;
-     font-size: 14px;
+     font-size: 16px;
      margin-bottom: 0;
      height: 30px;
      line-height: 29px;display: flex;flex-direction: row;justify-content: flex-end;border: 1px solid #dedede;
@@ -401,6 +401,20 @@ a:focus { color:#000000 !Important;}
     -webkit-box-shadow: 0 2px 0 #0b0c0c;
     box-shadow: 0 2px 0 #0b0c0c;
     outline: 3px solid transparent;
+}
+
+.rowContentSectionLast {
+   float: left;
+    padding-right: 100px;
+    padding-bottom: 0px;
+}
+
+.my-work {
+    font-size: 16px;
+}
+
+.expandedText {
+   font-size: 16px;
 }
 
 </style>
@@ -766,7 +780,47 @@ a:focus { color:#000000 !Important;}
         </thead>
         {% macro rows(page) %}
      
-     
+                   <!-- Application 5 -->
+                   <tbody class="govuk-table__body">
+                     <tr class="govuk-table__row govuk-link-table">
+                        <td class="govuk-table__cell "></td>
+                        <td class="govuk-table__cell " scope="row">
+                         E23-77P
+                           <p class="govuk-visually-hidden"> E23-77P </p>
+                           <!-- THIS IS PAGE {{page}} -->
+                        </td>
+                        <td class="govuk-table__cell ">Spielberg.1975</td>
+                        <td class="govuk-table__cell Substantive" id="">
+                           Register Update
+                           <p class="govuk-visually-hidden">Preliminary Saved </p>
+                        </td>
+                        <td class="govuk-table__cell " scope="row" data-sortable=""></td>
+                        <td class="govuk-table__cell " scope="row">Saved</td>
+                        <td class="govuk-table__cell "  data-sortable="0">Not applicable</td>
+                        <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+                     </tr>
+                     <!-- 1 Expanded row -->
+                     <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1" style="vertical-align: top;">
+                        <td class="govuk-table__cell" colspan="1"></td>
+                        <td class="govuk-table__cell" colspan="7" style="padding-top: 30px;">
+         
+                           <div style="float: left;width: 100%;padding: 0px;">
+                              <div class="rowContentSectionLast">
+                                 <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
+                                 <div class="expandedText">
+                                    <div class="expandedText">
+                                      <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;" onclick="window.location.href='#'">
+                                         Open application
+                                       </button>
+                                    </div>
+                                 </div>
+                              </div> 
+                        </td>
+                     </tr>
+                  </tbody>
+        
+
+
      
         <!-- Application 1 -->
         <tbody class="govuk-table__body">
@@ -847,7 +901,7 @@ a:focus { color:#000000 !Important;}
                   </div>
 
                  <div style="float: left;width: 100%;padding: 0px;">
-                  <div class="rowContentSection">
+                  <div class="rowContentSectionLast">
                      <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
                      <div class="expandedText">
                         <div class="expandedText">
@@ -949,7 +1003,7 @@ a:focus { color:#000000 !Important;}
                   </div>
 
                <div style="float: left;width: 100%;padding: 0px;">
-                  <div class="rowContentSection">
+                  <div class="rowContentSectionLast">
                      <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
                      <div class="expandedText">
                         <div class="expandedText">
@@ -1037,7 +1091,7 @@ a:focus { color:#000000 !Important;}
      
                    </div>
                    <div style="float: left;width: 100%;padding: 0px;">
-                      <div class="rowContentSection">
+                      <div class="rowContentSectionLast">
                          <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
                          <div class="expandedText">
                             <div class="expandedText">
@@ -1126,7 +1180,7 @@ a:focus { color:#000000 !Important;}
      
                    </div>
                    <div style="float: left;width: 100%;padding: 0px;">
-                      <div class="rowContentSection">
+                      <div class="rowContentSectionLast">
                          <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
                          <div class="expandedText">
                             <div class="expandedText">
@@ -1145,6 +1199,9 @@ a:focus { color:#000000 !Important;}
                 </td>
              </tr>
           </tbody>
+
+
+
      
      
         </tr>
