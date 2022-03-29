@@ -467,6 +467,21 @@ a:focus { color:#000000 !Important;}
     top: 12px;
 }
 
+#colleagueSearch {
+    margin-top: 0px;
+    cursor: pointer;
+    border-radius: 0px;
+    border-style: none;
+    height: 44px;
+    width: 44px;
+    background-color: #006637;
+    border-color: #006637;
+    border-radius: 0px 4px 4px 0px;
+    z-index: 99999;
+    left: 275px;
+    position: absolute;
+}
+
 </style>
 
 
@@ -654,6 +669,7 @@ a:focus { color:#000000 !Important;}
 
                <!-- Colleague dropdown menu -->
                <div class="govuk-body desc" style="margin-bottom: 0px;display:block;" id="question1A">
+                  <button class="searchButton" value="submit" id="colleagueSearch" style=""> <img width="20" height="20" style="margin-top:6px;" src="/public/images/search-icon.svg"></button>
                   <select id="cat" class="form-control" onchange="location = this.value;">
                       <optgroup label="Recent searches">
                         <option value="V5_JT.html">John Taylor</option>
