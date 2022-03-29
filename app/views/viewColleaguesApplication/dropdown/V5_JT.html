@@ -5,6 +5,8 @@
 {% endblock %}
 {% block content %}
 
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
 <style>
 
 .govuk-heading-xl, .govuk-heading-l, .govuk-body-m, .govuk-body, .govuk-heading-l, .govuk-heading-m, .govuk-button, .govuk-select, .govuk-link, a, p {
@@ -621,59 +623,26 @@ a:focus { color:#000000 !Important;}
             </div>
     
             <div class="govuk-body" style="margin-bottom: 50px;">
-               <label class="govuk-label form-label-bold" style="font-size:24px">
-                   Colleague
-               </label>
-               <select id="cat" class="form-control" onchange="location = this.value;">
-                   <optgroup label="Recent searches">
-                     <option value="V4_JT.html">John Taylor</option>
-                       <option value="V4.html">John James (you)</option>
-                       <option value="#">Pat Gannon</option>
-                       <option value="#">Nicola Andrews</option>
-                       <option value="#">Jon Parker</option>
-                       </optgroup>
-                       <optgroup label="All colleagues">
-                       <option value="#">Aaron Flynn</option>
-                       <option value="#">Alex Blewett</option>
-                       <option value="#">Andy Carr</option>
-                       <option value="#">Duncan Anderson</option>
-                       <option value="#">James Thomas</option>
-                       <option value="#">John Baptiste-Kelly</option>
-                       <option value="V4.html">John James (You)</option>
-                       <option value="V4_JT.html">John Taylor</option>
-                       <option value="#">Jon Parker</option>
-                       <option value="#">Juan Pinto-del-Rio</option>
-                       <option value="#">Lukas Kroening-Maynard</option>
-                       <option value="#">Mark Hornsby</option>
-                       <option value="#">Melvia Mathew</option>
-                       <option value="#">Neil Butler</option>
-                       <option value="#">Nicola Andrews</option>
-                       <option value="#">Pat Gannon</option>
-                       <option value="#">Romani Davies</option>
-                       <option value="#">Simon Skidmore</option>
-                       <option value="#">Sue Watchman</option>
-                       <option value="#">Tony Watson</option>
-                       </optgroup>
-               </select>
-            </div>
-
-
-
-            <div class="govuk-body" style="margin-bottom: 50px;">
-               <div class="govuk-form-group" style="margin-bottom: 20px;">
+               <div class="govuk-form-group" style="margin-bottom: 10px;">
                   <label class="govuk-label form-label-bold" style="font-size:24px">
-                     Search
+                     Search by
                   </label>
                   <fieldset class="govuk-fieldset" style="padding:0px;">
-                    <div class="govuk-radios govuk-radios--small">
+                    <div class="govuk-radios govuk-radios--small" id="myRadioGroup">
+                     <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" name="question1" value="A" id="Q1A" checked>
+                        <label class="govuk-label govuk-radios__label" for="changed-name">
+                           Colleague
+                        </label>
+                      </div>
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="hmlrRef" checked>
+                        <input class="govuk-radios__input" type="radio" name="question1" value="B" id="Q1B">
                         <label class="govuk-label govuk-radios__label" for="changed-name">
                            HMLR reference or Title number
                         </label>
                       </div>
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="changed-name-3" name="changed-name" type="radio" value="year2">
+                        <input class="govuk-radios__input" type="radio" name="question1" value="C" id="Q1C">
                         <label class="govuk-label govuk-radios__label" for="changed-name-3">
                           Customer reference
                         </label>
@@ -683,14 +652,54 @@ a:focus { color:#000000 !Important;}
                   </fieldset>
                </div>
 
+               <!-- Colleague dropdown menu -->
+               <div class="govuk-body desc" style="margin-bottom: 0px;display:block;" id="question1A">
+                  <select id="cat" class="form-control" onchange="location = this.value;">
+                      <optgroup label="Recent searches">
+                        <option value="V5_JT.html">John Taylor</option>
+                          <option value="V5.html">John James (you)</option>
+                          <option value="#">Pat Gannon</option>
+                          <option value="#">Nicola Andrews</option>
+                          <option value="#">Jon Parker</option>
+                          </optgroup>
+                          <optgroup label="All colleagues">
+                          <option value="#">Aaron Flynn</option>
+                          <option value="#">Alex Blewett</option>
+                          <option value="">Andy Carr</option>
+                          <option value="#">Duncan Anderson</option>
+                          <option value="#">James Thomas</option>
+                          <option value="#">John Baptiste-Kelly</option>
+                          <option value="V5.html">John James (you)</option>
+                          <option value="V5_JT.html">John Taylor</option>
+                          <option value="#">Jon Parker</option>
+                          <option value="#">Juan Pinto-del-Rio</option>
+                          <option value="#">Lukas Kroening-Maynard</option>
+                          <option value="#">Mark Hornsby</option>
+                          <option value="#">Melvia Mathew</option>
+                          <option value="#">Neil Butler</option>
+                          <option value="#">Nicola Andrews</option>
+                          <option value="#">Pat Gannon</option>
+                          <option value="#">Romani Davies</option>
+                          <option value="#">Simon Skidmore</option>
+                          <option value="#">Sue Watchman</option>
+                          <option value="#">Tony Watson</option>
+                          </optgroup>
+                  </select>
+               </div>
 
-               <div class="govuk-body">
-
+               <!-- Standard search box -->
+               <div class="govuk-body desc" style="margin-bottom: 0px;" id="question1B">
                   <input type="text" id="search-input" class="searchBox" style="width: calc(100% - 66px);">
                   <button class="searchButton" value="submit" id="search-button" style=""> <img width="20" height="20" style="margin-top:6px;" src="/public/images/search-icon.svg"></button>
-   
-   
                </div>
+
+               <!-- Standard search box -->
+               <div class="govuk-body desc" style="margin-bottom: 0px;" id="question1C">
+                  <input type="text" id="search-input" class="searchBox" style="width: calc(100% - 66px);">
+                  <button class="searchButton" value="submit" id="search-button" style=""> <img width="20" height="20" style="margin-top:6px;" src="/public/images/search-icon.svg"></button>
+               </div>
+
+
 
            </div>
 
@@ -1677,5 +1686,27 @@ a:focus { color:#000000 !Important;}
 
 
 <!-- Content Area - End -->
+
+
+<script>
+   $(document).ready(function() {
+       $("input[name$='question1']").click(function() {
+           var test = $(this).val();
+   
+           $("div.desc").hide();
+           $("#question1" + test).show();
+       });
+   });
+   
+
+  
+</script>
+
+<style>
+   .desc {
+   display:none;
+   }
+</style>
+
 
 {% endblock %}
