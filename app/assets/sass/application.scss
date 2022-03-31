@@ -134,3 +134,6 @@ padding-left: 25px;
 
 }
 
+.autocomplete__wrapper * {
+  @include govuk-typography-common();
+}

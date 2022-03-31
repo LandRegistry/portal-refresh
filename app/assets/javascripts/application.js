@@ -8,3 +8,12 @@ if (window.console && window.console.info) {
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 })
+
+let selectElement = document.querySelector('#choose-colleague')
+
+accessibleAutocomplete.enhanceSelectElement({
+  defaultValue: '',
+  selectElement: selectElement,
+  minLength: 3,
+
+})
