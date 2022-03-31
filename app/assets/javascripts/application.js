@@ -15,5 +15,6 @@ accessibleAutocomplete.enhanceSelectElement({
   defaultValue: '',
   selectElement: selectElement,
   minLength: 3,
-
+  autoselect:true
 })
+
