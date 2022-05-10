@@ -26,7 +26,9 @@
 {% from "textarea/macro.njk"         import govukTextarea %}
 {% from "warning-text/macro.njk"     import govukWarningText %}
 
-
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
 
 
 {% block bodyEnd %}
