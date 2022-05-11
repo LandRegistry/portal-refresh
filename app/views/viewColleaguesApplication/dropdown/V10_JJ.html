@@ -499,7 +499,6 @@ tr {
    border-bottom: 1px solid #ddd;
 }
 
-
 .open {
     border-bottom: 1px solid #28a45c !important;
     background: #28a45c !important;
@@ -517,7 +516,7 @@ tr {
     outline-offset: -5px;
 }
 
-.open .expandy-row-trigger2 {
+.open .expandy-row-trigger5 {
    color: #fff !important;
 }
 
@@ -558,6 +557,12 @@ color:#0b0c0c;
 
 .govuk-table__header, .govuk-table__cell {
     padding: 10px;
+}
+
+.chevronsize {
+    width: 30px;
+    display: block;
+    margin-top: 0px;
 }
 
 </style>
@@ -706,7 +711,7 @@ color:#0b0c0c;
     <!-- Filters and Search Section - Start -->
 
 
-  <div id="FiltersAndSearch" style="width: 300px;float: left;padding: 30px;background: #fff;padding-top:50px;min-height: 700px;">
+    <div id="FiltersAndSearch" style="width: 300px;float: left;padding: 30px;background: #fff;padding-top:50px;min-height: 700px;">
 
       <div class="" style="">
         <form id="search" style="">
@@ -769,8 +774,8 @@ color:#0b0c0c;
                           <option value="#">Duncan Anderson</option>
                           <option value="#">James Thomas</option>
                           <option value="#">John Baptiste-Kelly</option>
-                          <option value="V9_JJ.html" selected>John James (you)</option>
-                          <option value="V9_JT.html">John Taylor</option>
+                          <option value="V10_JJ.html" selected>John James (you)</option>
+                          <option value="V10_JT.html">John Taylor</option>
                           <option value="#">Jon Parker</option>
                           <option value="#">Juan Pinto-del-Rio</option>
                           <option value="#">Lukas Kroening-Maynard</option>
@@ -942,7 +947,7 @@ color:#0b0c0c;
      <table  class="govuk-table my-work" style="margin-top: 0px; ">
         <thead class="govuk-table__head">
            <tr class="govuk-table__row" style="background-color: #ffffff;">
-              <th class="govuk-table__header" scope="col"></th>
+            <th class="govuk-table__header" scope="col" style="width:30px;"></th>
               <th class="govuk-table__header sortable" scope="col" id="Title">
                  <div>Title number</div>
               </th>
@@ -957,7 +962,6 @@ color:#0b0c0c;
               <th class="govuk-table__header" scope="col">
                  <div>Estimated completion date <a style="font-size:12px;display:block;" href="V1-help#ecd" target="_blank">What's this?</a></div>
               </th>
-              <th class="govuk-table__header"scope="col">Show/hide</th>
            </tr>
         </thead>
         {% macro rows(page) %}
@@ -965,7 +969,7 @@ color:#0b0c0c;
                    <!-- Application 5 -->
                    <tbody class="govuk-table__body">
                      <tr class="govuk-table__row govuk-link-table">
-                        <td class="govuk-table__cell "></td>
+                        <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger5" href="#"><img class="chevronsize" src="/public/images/icon_govuk_chevrondownBlack.svg"></a></td>
                         <td class="govuk-table__cell " scope="row">
                          E23-77P
                            <p class="govuk-visually-hidden"> E23-77P </p>
@@ -979,10 +983,11 @@ color:#0b0c0c;
                         <td class="govuk-table__cell " scope="row" data-sortable=""></td>
                         <td class="govuk-table__cell " scope="row">Saved</td>
                         <td class="govuk-table__cell "  data-sortable="0">Not applicable</td>
-                        <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+                        
                      </tr>
                      <!-- 1 Expanded row -->
                      <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1">
+                        
                         <td class="govuk-table__cell" colspan="1"></td>
                         <td class="govuk-table__cell" colspan="7" style="padding-top: 30px;padding-top: 30px;">
          
@@ -1007,7 +1012,7 @@ color:#0b0c0c;
         <!-- Application 1 -->
         <tbody class="govuk-table__body">
            <tr class="govuk-table__row govuk-link-table">
-              <td class="govuk-table__cell "></td>
+            <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger5" href="#"><img class="chevronsize" src="/public/images/icon_govuk_chevrondownBlack.svg"></a></td>
               <td class="govuk-table__cell " scope="row">
                  E23-66ABCD 
                  <p class="govuk-visually-hidden"> E23-66ABCD </p>
@@ -1021,7 +1026,7 @@ color:#0b0c0c;
               <td class="govuk-table__cell " scope="row" data-sortable="2021-08-05">05/08/21</td>
               <td class="govuk-table__cell " scope="row">Cancelled</td>
               <td class="govuk-table__cell "  data-sortable="0"></td>
-              <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+              
            </tr>
            <!-- 1 Expanded row -->
 
@@ -1052,18 +1057,18 @@ color:#0b0c0c;
                           Correspondence
                        </div>
                        <div>
-                          <div style="float:left;line-height: 26px;">
+                          <div style="float:left;line-height: 30px;">
                              <b>Review</b><br>
                              <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter of cancellation issued 22/09/21</a><br>
                              <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Warning of cancellation issued 15/09/21</a><br>
                              <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Requisition issued 01/09/21</a><br>
                           </div>
-                          <div style="float:left;padding-left: 50px;line-height: 26px;">
+                          <div style="float:left;padding-left: 50px;line-height: 30px;">
                              <b>Resolved</b><br>
      
                              <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 28/08/21</a><br>
                           </div>
-                          <div style="float:left;padding-left: 50px;line-height: 26px;">
+                          <div style="float:left;padding-left: 50px;line-height: 30px;">
                              <b>Information only</b><br>
                              <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 26/08/21</a>
                           </div>
@@ -1077,7 +1082,7 @@ color:#0b0c0c;
                      <div class="expandedTitles">
                         Files
                      </div>
-                     <div class="expandedText" style="line-height: 26px;">
+                     <div class="expandedText" style="line-height: 30px;">
                         <a style="color:#006637;" href="#">Cancellation </a>
                      </div>
                   </div>
@@ -1111,7 +1116,7 @@ color:#0b0c0c;
         <!-- Application 2 -->
         <tbody class="govuk-table__body">
          <tr class="govuk-table__row govuk-link-table">
-            <td class="govuk-table__cell "></td>
+            <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger5" href="#"><img class="chevronsize" src="/public/images/icon_govuk_chevrondownBlack.svg"></a></td>
             <td class="govuk-table__cell " scope="row">
              E23-66EF 
                <p class="govuk-visually-hidden"> E23-66EF </p>
@@ -1125,7 +1130,7 @@ color:#0b0c0c;
             <td class="govuk-table__cell " scope="row" data-sortable="2021-08-01">01/08/21</td>
             <td class="govuk-table__cell " scope="row">Received</td>
             <td class="govuk-table__cell "  data-sortable="0">04/11/2021</td>
-            <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+
          </tr>
          <!-- 1 Expanded row -->
          <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1">
@@ -1155,16 +1160,16 @@ color:#0b0c0c;
                         Correspondence
                      </div>
                      <div>
-                        <div style="float:left;line-height: 26px;min-width: 100px;">
+                        <div style="float:left;line-height: 30px;min-width: 100px;">
                            <b>Review</b><br>
      None
                         </div>
-                        <div style="float:left;padding-left: 50px;line-height: 26px;">
+                        <div style="float:left;padding-left: 50px;line-height: 30px;">
                            <b>Resolved</b><br>
                            <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Warning of cancellation issued 22/09/21</a><br>
                            <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Requisition issued 15/09/21</a><br>
                         </div>
-                        <div style="float:left;padding-left: 50px;line-height: 26px;">
+                        <div style="float:left;padding-left: 50px;line-height: 30px;">
                            <b>Information only</b><br>
                            <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 26/08/21</a><br>
                            <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Notice issued 25/08/21</a>
@@ -1179,7 +1184,7 @@ color:#0b0c0c;
                      <div class="expandedTitles">
                         Files
                      </div>
-                     <div class="expandedText" style="line-height: 26px;">
+                     <div class="expandedText" style="line-height: 30px;">
                         <a style="color:#006637;" href="#">Registration Completion Sheet dated </a><br>
                         <a style="color:#006637;" href="#">Official Copy of Register</a>
                      </div>
@@ -1212,7 +1217,7 @@ color:#0b0c0c;
          <!-- Application 3 -->
          <tbody class="govuk-table__body">
              <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
+               <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger5" href="#"><img class="chevronsize" src="/public/images/icon_govuk_chevrondownBlack.svg"></a></td>
                 <td class="govuk-table__cell " scope="row">
                  E23-66G 
                    <p class="govuk-visually-hidden"> E23-66G </p>
@@ -1226,7 +1231,7 @@ color:#0b0c0c;
                 <td class="govuk-table__cell " scope="row" data-sortable="2021-07-25">25/07/21</td>
                 <td class="govuk-table__cell " scope="row">Delayed</td>
                 <td class="govuk-table__cell "  data-sortable="0">24/10/2021</td>
-                <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+                
              </tr>
              <!-- 1 Expanded row -->
              <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1">
@@ -1256,15 +1261,15 @@ color:#0b0c0c;
                             Correspondence
                          </div>
                          <div>
-                            <div style="float:left;line-height: 26px;min-width: 100px;">
+                            <div style="float:left;line-height: 30px;min-width: 100px;">
                                <b>Review</b><br>
                                None
                             </div>
-                            <div style="float:left;padding-left: 50px;line-height: 26px;min-width: 100px;">
+                            <div style="float:left;padding-left: 50px;line-height: 30px;min-width: 100px;">
                                <b>Resolved</b><br>
                                None
                             </div>
-                            <div style="float:left;padding-left: 50px;line-height: 26px;">
+                            <div style="float:left;padding-left: 50px;line-height: 30px;">
                                <b>Information only</b><br>
                                <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 06/08/21</a><br>
                                <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 05/08/21</a><br>
@@ -1300,7 +1305,7 @@ color:#0b0c0c;
          <!-- Application 4 -->
          <tbody class="govuk-table__body">
              <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
+               <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger5" href="#"><img class="chevronsize" src="/public/images/icon_govuk_chevrondownBlack.svg"></a></td>
                 <td class="govuk-table__cell " scope="row">
                  E23-66H
                    <p class="govuk-visually-hidden"> E23-66H </p>
@@ -1314,7 +1319,6 @@ color:#0b0c0c;
                 <td class="govuk-table__cell " scope="row" data-sortable="2021-07-25">25/07/21</td>
                 <td class="govuk-table__cell " scope="row">Received</td>
                 <td class="govuk-table__cell "  data-sortable="0">28/10/2021</td>
-                <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
              </tr>
              <!-- 1 Expanded row -->
              <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1">
@@ -1345,15 +1349,15 @@ color:#0b0c0c;
                             Correspondence
                          </div>
                          <div>
-                            <div style="float:left;line-height: 26px;min-width: 100px;">
+                            <div style="float:left;line-height: 30px;min-width: 100px;">
                                <b>Review</b><br>
                                None
                             </div>
-                            <div style="float:left;padding-left: 50px;line-height: 26px;min-width: 100px;">
+                            <div style="float:left;padding-left: 50px;line-height: 30px;min-width: 100px;">
                                <b>Resolved</b><br>
                                None
                             </div>
-                            <div style="float:left;padding-left: 50px;line-height: 26px;">
+                            <div style="float:left;padding-left: 50px;line-height: 30px;">
                                <b>Information only</b><br>
                                <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 06/08/21</a><br>
                                <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 05/08/21</a><br>
