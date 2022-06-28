@@ -397,6 +397,9 @@ display: block;
   background: #e4e4e4;
 }
 
+.saved {
+  background: #96C8EF;
+}
 
 tr:hover {
   background: #f2f2f2;

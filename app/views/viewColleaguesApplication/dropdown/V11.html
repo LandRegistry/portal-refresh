@@ -493,6 +493,7 @@ a:focus { color:#000000 !Important;}
 .my-work tbody td {
     border-bottom: 0px solid #ddd;
     border-top: 0px solid #ddd;
+    padding-right: 10px !important;
 }
 
 tr {
@@ -500,15 +501,14 @@ tr {
 }
 
 .open {
+    border-bottom: 1px solid #28a45c !important;
+    background: #28a45c !important;
+    color: #fff !important;
+    font-weight: 600;
 }
 
 .open .govuk-table__cell {
     padding-bottom: 5px;
-    border-bottom: 1px solid #28a45c !important;
-    background: #28a45c !important;
-    color: #fff !important;
-    font-weight: bold;
-    font-size: 14pt;
 }
 
 .expandy-row {
@@ -517,7 +517,7 @@ tr {
     outline-offset: -5px;
 }
 
-.open .expandy-row-trigger2 {
+.open .expandy-row-trigger5 {
    color: #fff !important;
 }
 
@@ -558,6 +558,17 @@ color:#0b0c0c;
 
 .govuk-table__header, .govuk-table__cell {
     padding: 10px;
+}
+
+.chevronsize {
+    width: 30px;
+    display: block;
+    margin-top: 0px;
+}
+
+.tag {
+    border-radius: 0px;
+    color: #0b0c0c;
 }
 
 </style>
@@ -769,8 +780,8 @@ color:#0b0c0c;
                           <option value="#">Duncan Anderson</option>
                           <option value="#">James Thomas</option>
                           <option value="#">John Baptiste-Kelly</option>
-                          <option value="V9.html" selected>John James (you)</option>
-                          <option value="V9_JT.html">John Taylor</option>
+                          <option value="V10.html" selected>John James (you)</option>
+                          <option value="V10_JT.html">John Taylor</option>
                           <option value="#">Jon Parker</option>
                           <option value="#">Juan Pinto-del-Rio</option>
                           <option value="#">Lukas Kroening-Maynard</option>
@@ -803,36 +814,66 @@ color:#0b0c0c;
                     Type
                     </summary>
                     <div class="govuk-details-text">
-                    {{ govukCheckboxes ({
-                    idPrefix: "application-type2",
-                    name: "application-type2",
-                    classes: "govuk-checkboxes govuk-checkboxes--small",
-                    fieldset: {
-                    legend: {
-                    text: ""
-                    }
-                    },
-                    items: [
-                    {
-                    value: "Preliminary",
-                    text: "Register update",
-                    checked: false,
-                    id: "Preliminary"
-                    },
-                    {
-                    value: "Substantive",
-                    text: "Register create"   ,
-                    checked: false,
-                    id: "Substantive"
-                    },
-                    {
-                    value: "Sobstantive",
-                    text: "Register query"   ,
-                    checked: false,
-                    id: "Sobstantive"
-                    }
-                    ]
-                    }) }}
+                     {{ govukCheckboxes ({
+                        idPrefix: "application-type2",
+                        name: "application-type2",
+                        classes: "govuk-checkboxes govuk-checkboxes--small",
+                        fieldset: {
+                          legend: {
+                            text: ""
+                          }
+                        },
+                        items: [
+                        {
+                          value: "NewLease",
+                          text: "New lease",
+                          checked: false,
+                          id: "NewLease"
+                        },
+
+                        {
+                            value: "OfficialCopies",
+                            text: "Official copies"   ,
+                              checked: false,
+                            id: "OfficialCopies"
+                          },
+
+                          {
+                            value: "OfficialSearchPart",
+                            text: "Official search of part with priority"   ,
+                              checked: false,
+                            id: "OfficialSearchPart"
+                          },
+
+                        {
+                            value: "OfficialSearchWhole",
+                            text: "Official search of whole with priority"   ,
+                              checked: false,
+                            id: "OfficialSearchWhole"
+                          },
+
+                          {
+                            value: "RegisterUpdate",
+                            text: "Register update"   ,
+                              checked: false,
+                            id: "RegisterUpdate"
+                          },
+
+                                                        {
+                            value: "SearchIndexMap",
+                            text: "Search of the index map"   ,
+                              checked: false,
+                            id: "SearchIndexMap"
+                          },
+
+                          {
+                            value: "TransferOfPart",
+                            text: "Transfer of part"   ,
+                              checked: false,
+                            id: "TransferOfPart"
+                          }
+                        ]
+                      }) }}     
                     </div>
                 </details>
  
@@ -942,7 +983,7 @@ color:#0b0c0c;
      <table  class="govuk-table my-work" style="margin-top: 0px; ">
         <thead class="govuk-table__head">
            <tr class="govuk-table__row" style="background-color: #ffffff;">
-              <th class="govuk-table__header" scope="col"></th>
+            <th class="govuk-table__header" scope="col" style="width:30px;"></th>
               <th class="govuk-table__header sortable" scope="col" id="Title">
                  <div>Title number</div>
               </th>
@@ -953,11 +994,10 @@ color:#0b0c0c;
               <th class="govuk-table__header sortable" scope="col">
                  <div>Received by HMLR</div>
               </th>
-              <th class="govuk-table__header" scope="col">Application progress</th>
               <th class="govuk-table__header" scope="col">
                  <div>Estimated completion date <a style="font-size:12px;display:block;" href="V1-help#ecd" target="_blank">What's this?</a></div>
               </th>
-              <th class="govuk-table__header"scope="col">Show/hide</th>
+              <th class="govuk-table__header" scope="col"></th>
            </tr>
         </thead>
         {% macro rows(page) %}
@@ -965,7 +1005,7 @@ color:#0b0c0c;
                    <!-- Application 5 -->
                    <tbody class="govuk-table__body">
                      <tr class="govuk-table__row govuk-link-table">
-                        <td class="govuk-table__cell "></td>
+                        <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger5" href="#"><img class="chevronsize" src="/public/images/icon_govuk_chevrondownBlack.svg"></a></td>
                         <td class="govuk-table__cell " scope="row">
                          E23-77P
                            <p class="govuk-visually-hidden"> E23-77P </p>
@@ -977,9 +1017,8 @@ color:#0b0c0c;
                            <p class="govuk-visually-hidden">Preliminary Saved </p>
                         </td>
                         <td class="govuk-table__cell " scope="row" data-sortable=""></td>
-                        <td class="govuk-table__cell " scope="row">Saved</td>
                         <td class="govuk-table__cell "  data-sortable="0">Not applicable</td>
-                        <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+                        <td class="govuk-table__cell " scope="row"><span class="tag saved">Saved</span></td>
                      </tr>
                      <!-- 1 Expanded row -->
                      <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1">
@@ -1008,7 +1047,7 @@ color:#0b0c0c;
         <!-- Application 1 -->
         <tbody class="govuk-table__body">
            <tr class="govuk-table__row govuk-link-table">
-              <td class="govuk-table__cell "></td>
+            <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger5" href="#"><img class="chevronsize" src="/public/images/icon_govuk_chevrondownBlack.svg"></a></td>
               <td class="govuk-table__cell " scope="row">
                  E23-66ABCD 
                  <p class="govuk-visually-hidden"> E23-66ABCD </p>
@@ -1016,13 +1055,12 @@ color:#0b0c0c;
               </td>
               <td class="govuk-table__cell ">Jones.20313</td>
               <td class="govuk-table__cell Substantive" id="">
-                 Register Update
+               Search of the index map
                  <p class="govuk-visually-hidden"> Preliminary Cancelled </p>
               </td>
               <td class="govuk-table__cell " scope="row" data-sortable="2021-08-05">05/08/21</td>
-              <td class="govuk-table__cell " scope="row">Cancelled</td>
               <td class="govuk-table__cell "  data-sortable="0"></td>
-              <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+              <td class="govuk-table__cell " scope="row"><span class="tag cancelled">Cancelled</span></td>
            </tr>
            <!-- 1 Expanded row -->
 
@@ -1055,18 +1093,16 @@ color:#0b0c0c;
                        <div>
                           <div style="float:left;line-height: 30px;">
                              <b>Review</b><br>
-                             <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter of cancellation issued 22/09/21</a><br>
-                             <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Warning of cancellation issued 15/09/21</a><br>
-                             <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Requisition issued 01/09/21</a><br>
+                              None
                           </div>
                           <div style="float:left;padding-left: 50px;line-height: 30px;">
                              <b>Resolved</b><br>
-     
-                             <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 28/08/21</a><br>
+                              None
+
                           </div>
                           <div style="float:left;padding-left: 50px;line-height: 30px;">
                              <b>Information only</b><br>
-                             <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 26/08/21</a>
+                              None
                           </div>
                        </div>
                     </div>
@@ -1079,7 +1115,7 @@ color:#0b0c0c;
                         Files
                      </div>
                      <div class="expandedText" style="line-height: 30px;">
-                        <a style="color:#006637;" href="#">Cancellation </a>
+                        <a style="color:#006637;" href="#">Notification of Cancellation on 31/10/19 </a>
                      </div>
                   </div>
                   </div>
@@ -1089,12 +1125,6 @@ color:#0b0c0c;
                      <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
                      <div class="expandedText">
                         <div class="expandedText">
-                           <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;" onclick="window.location.href='#'">
-                              Respond
-                            </button>
-                            <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;" onclick="window.location.href='#'">
-                              Application enquiry
-                            </button>
                             <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;" onclick="window.location.href='#'">
                               Save as PDF
                             </button>
@@ -1112,7 +1142,7 @@ color:#0b0c0c;
         <!-- Application 2 -->
         <tbody class="govuk-table__body">
          <tr class="govuk-table__row govuk-link-table">
-            <td class="govuk-table__cell "></td>
+            <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger5" href="#"><img class="chevronsize" src="/public/images/icon_govuk_chevrondownBlack.svg"></a></td>
             <td class="govuk-table__cell " scope="row">
              E23-66EF 
                <p class="govuk-visually-hidden"> E23-66EF </p>
@@ -1124,9 +1154,8 @@ color:#0b0c0c;
                <p class="govuk-visually-hidden"> Preliminary Received </p>
             </td>
             <td class="govuk-table__cell " scope="row" data-sortable="2021-08-01">01/08/21</td>
-            <td class="govuk-table__cell " scope="row">Received</td>
             <td class="govuk-table__cell "  data-sortable="0">04/11/2021</td>
-            <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+            <td class="govuk-table__cell " scope="row"><span class="tag received">Received</span></td>
          </tr>
          <!-- 1 Expanded row -->
          <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1">
@@ -1213,7 +1242,7 @@ color:#0b0c0c;
          <!-- Application 3 -->
          <tbody class="govuk-table__body">
              <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
+               <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger5" href="#"><img class="chevronsize" src="/public/images/icon_govuk_chevrondownBlack.svg"></a></td>
                 <td class="govuk-table__cell " scope="row">
                  E23-66G 
                    <p class="govuk-visually-hidden"> E23-66G </p>
@@ -1225,9 +1254,8 @@ color:#0b0c0c;
                    <p class="govuk-visually-hidden"> Preliminary Delayed </p>
                 </td>
                 <td class="govuk-table__cell " scope="row" data-sortable="2021-07-25">25/07/21</td>
-                <td class="govuk-table__cell " scope="row">Delayed</td>
                 <td class="govuk-table__cell "  data-sortable="0">24/10/2021</td>
-                <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+                <td class="govuk-table__cell " scope="row"><span class="tag delayed">Delayed</span></td>
              </tr>
              <!-- 1 Expanded row -->
              <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1">
@@ -1301,7 +1329,7 @@ color:#0b0c0c;
          <!-- Application 4 -->
          <tbody class="govuk-table__body">
              <tr class="govuk-table__row govuk-link-table">
-                <td class="govuk-table__cell "></td>
+               <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger5" href="#"><img class="chevronsize" src="/public/images/icon_govuk_chevrondownBlack.svg"></a></td>
                 <td class="govuk-table__cell " scope="row">
                  E23-66H
                    <p class="govuk-visually-hidden"> E23-66H </p>
@@ -1309,13 +1337,12 @@ color:#0b0c0c;
                 </td>
                 <td class="govuk-table__cell ">Ainsley.Brown.43</td>
                 <td class="govuk-table__cell Substantive" id="">
-                   Register Update
-                   <p class="govuk-visually-hidden"> Preliminary Received </p>
+                  Official search of whole with priority
+                   <p class="govuk-visually-hidden"> Preliminary Completed </p>
                 </td>
                 <td class="govuk-table__cell " scope="row" data-sortable="2021-07-25">25/07/21</td>
-                <td class="govuk-table__cell " scope="row">Received</td>
-                <td class="govuk-table__cell "  data-sortable="0">28/10/2021</td>
-                <td class="govuk-table__cell" scope="row"><a class="expandy-row-trigger2" href="#">+</a></td>
+                <td class="govuk-table__cell " data-sortable="0"></td>
+                <td class="govuk-table__cell " scope="row"><span class="tag completed">Completed</span></td>
              </tr>
              <!-- 1 Expanded row -->
              <tr class="govuk-table__row expandy-row hide-row accordion-default-content-1">
@@ -1327,7 +1354,7 @@ color:#0b0c0c;
                             Application progress
                          </div>
                          <div class="expandedText">
-                            Receieved: Awaiting Processing
+                            Completed
                          </div>
                       </div>
                       <div class="rowContentSection">
@@ -1356,9 +1383,7 @@ color:#0b0c0c;
                             </div>
                             <div style="float:left;padding-left: 50px;line-height: 30px;">
                                <b>Information only</b><br>
-                               <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 06/08/21</a><br>
-                               <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 05/08/21</a><br>
-                               <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Letter issued 04/08/21</a><br>
+                               <a style="color:#006637;" target="_blank" href="/public/files/requisition-example-document.pdf">Search result dated 31/10/19</a><br>
                             </div>
                          </div>
                       </div>
@@ -1369,12 +1394,6 @@ color:#0b0c0c;
                          <div class="expandedTitles" style="padding-bottom: 10px;">Actions</div>
                          <div class="expandedText">
                             <div class="expandedText">
-                              <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;" onclick="window.location.href='#'">
-                                 Respond
-                               </button>
-                               <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;" onclick="window.location.href='#'">
-                                 Application enquiry
-                               </button>
                                <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-right:10px;" onclick="window.location.href='#'">
                                  Save as PDF
                                </button>
@@ -1409,7 +1428,7 @@ color:#0b0c0c;
              <div style="padding-left:30px;">
                <span>&#171;</span> 1 <span>&#187;</span>
              </div>
-     </div>
+         </div>
 
   </div>
 
